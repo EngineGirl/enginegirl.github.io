@@ -1,0 +1,11 @@
+baseURL = "https://www.enginego.org"
+languageCode = "en-us"
+title = "Engine GO"
+theme = "hugo-theme-learn"
+disqusShortname = "www-enginego-org"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+themeVariant = "blue"
