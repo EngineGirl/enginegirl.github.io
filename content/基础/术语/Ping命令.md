@@ -29,7 +29,7 @@ date: 2018-04-25T00:10:14+08:00
 
 这表示从我的计算机发送64个字节的数据到104.24.121.11 (这个是经过[DNS查询](../dns查询/)后的www.enginego.org的ip地址)，从发送到接受对方返回总共经过了170.xxx毫秒。代表www.enginego.org对应的那台服务器是开启并且响应ping指令的。
 
-![ping_gif](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/master/images/ping/ping.gif)
+![ping_gif](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/ping/ping.gif)
 
 如果返回：
 
@@ -85,6 +85,6 @@ ping指令使用的是**ICMP协议**，就像我们每天在用的HTTP协议，�
     0050   26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35
     0060   36 37
 
-![ping_wireshark](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/master/images/ping/ping_wireshark.png)
+![ping_wireshark](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/ping/ping_wireshark.png)
 
 可以看到数据中包含了发送的类别，校验和，发送程序的进程编号（上图中的Identification），IP地址等等，例如**c0 a8 01 58对应着10进制的192 168 1 88，也就是我的计算机的IP地址。**注意ping指令是不需要指定端口的，它是根据协议头部信息纪录的进程编号来辨识返回的数据的。

@@ -9,7 +9,7 @@ date: 2018-04-25T00:10:14+08:00
 
 当你在浏览器输入www.apple.com。按下回车之后，浏览器跳到苹果的官网，把iPhoneX的介绍和图片显示出来。浏览器是如何通过www.apple.com这个域名找到iPhone的内容并且正确显示呢？第一步就要经过**DNS查询**。
 
-![域名browser](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/master/images/browser.png)
+![域名browser](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/browser.png)
 
 1. [DNS查询](#DNS查询)
 2. [为什么要使用域名？](#为什么要使用域名？)
@@ -41,7 +41,7 @@ DNS查询其实很好理解，生活上比较贴近的例子就是使用通讯�
 2. 大部分的网站用户根本不会上，就像大部分联系人一样。每上线一个小网站就要求全球的电脑都进行更新这样显然小题大做了。
 
 
-![更新hosts](https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/basic/%E6%9B%B4%E6%96%B0hosts.png)
+![更新hosts](https://raw.githubusercontent.com/EngineGirl/basic-tutorial/markdown/imgs/basic/%E6%9B%B4%E6%96%B0hosts.png)
 
 **很可惜，这是治标不治本的方法。**那么有什么方法可以解决这个问题呢？
 
