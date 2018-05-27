@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.32.2" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Windows安装Docker教程 :: Engine GO</title>
+    
+    
+    <link href="/css/nucleus.css?1527425422" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1527425422" rel="stylesheet">
+    <link href="/css/hybrid.css?1527425422" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1527425422" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1527425422" rel="stylesheet">
+    <link href="/css/auto-complete.css?1527425422" rel="stylesheet">
+    <link href="/css/theme.css?1527425422" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1527425422" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1527425422" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1527425422"></script>
+    
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{ 
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/%E5%B7%A5%E5%85%B7/docker/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://www.enginego.org"><span style="font-size: 2rem;">Engine Go</span></a>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1527425422"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1527425422"></script>
+<script type="text/javascript">
+    
+        
+        var baseurl = "https://www.enginego.org";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1527425422"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/">
+          基础知识
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+          常见问题
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/" title="一文理解字符串编码" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/">
+        一文理解字符串编码
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95/" title="如何准备技术面试" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95/">
+        如何准备技术面试
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/" title="公私钥加密" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/">
+        公私钥加密
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E7%AE%80%E5%8E%86/" title="如何优化简历（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E7%AE%80%E5%8E%86/">
+        如何优化简历（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9/" title="编程语言选择（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9/">
+        编程语言选择（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/">
+          术语
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/" title="DNS查询" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/">
+        DNS查询
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/" title="Ping命令" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/">
+        Ping命令
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/" title="协议" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/">
+        协议
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/" title="路径" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/">
+        路径
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
+        域名
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" title="服务端" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
+        服务端
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/" title="终端" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/">
+        终端
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/" title="" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%B7%A5%E5%85%B7/" title="工具教程" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/%E5%B7%A5%E5%85%B7/">
+          工具教程
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%B7%A5%E5%85%B7/docker/" title="docker教程" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/%E5%B7%A5%E5%85%B7/docker/">
+          docker教程
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%B7%A5%E5%85%B7/docker/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/" title="Windows安装Docker教程" class="dd-item active">
+        <a href="/%E5%B7%A5%E5%85%B7/docker/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/">
+        Windows安装Docker教程
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%B7%A5%E5%85%B7/docker/macos%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/" title="macOS系统安装docker教程" class="dd-item ">
+        <a href="/%E5%B7%A5%E5%85%B7/docker/macos%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/">
+        macOS系统安装docker教程
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%B7%A5%E5%85%B7/wireshark/" title="wireshark教程" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%B7%A5%E5%85%B7/wireshark/">
+          wireshark教程
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+          机器学习
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/" title="理解贝叶斯分类" class="dd-item ">
+        <a href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">
+        理解贝叶斯分类
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Star on <a href="https://github.com/EngineGirl/enginegirl.github.io"/>GitHub</a></p>
+<p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>目录</a> > <a href='/%E5%B7%A5%E5%85%B7/'>工具教程</a> > <a href='/%E5%B7%A5%E5%85%B7/docker/'>docker教程</a> > Windows安装Docker教程
+          
+         
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#windows安装docker教程">Windows安装Docker教程</a></li>
+</ul></li>
+<li><a href="#安装前须知">安装前须知</a></li>
+<li><a href="#开始安装">开始安装</a>
+<ul>
+<li><a href="#启动docker">启动Docker</a></li>
+<li><a href="#验证安装成功">验证安装成功</a></li>
+</ul></li>
+<li><a href="#第二节">第二节</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Windows安装Docker教程</h1>
+            <h4>更新时间：January 8, 2018</h4>
+          
+
+        
+
+
+
+
+<p>作者：Windson Yang
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+<h4 id="windows安装docker教程">Windows安装Docker教程</h4>
+
+<p><a href="https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows">官方英文教程</a></p>
+
+<h3 id="安装前须知">安装前须知</h3>
+
+<p>你的系统需满足以下几个条件，如果不满足以下要求，请参考<a href="#第二节">第二节</a></p>
+
+<ul>
+<li><p>确保你电脑安装了64位的Windows 10 Pro, Enterprise或者Education(1511 November update, Build 10586 or later)版本。</p></li>
+
+<li><p>如果你的电脑安装了VirtualBox（一个虚拟机软件，默认系统没有安装）请注意，Windows的Docker版本因为需要Microsoft Hyper-V来运作，安装之后会令VirtualBox无效。</p></li>
+
+<li><p>必须启动虚拟化（默认启动），可以在任务管理中找到这一项确保enabled</p>
+
+<p>Windows8检查</p>
+
+<p>点击开始 &gt; 任务管理 &gt; 性能 &gt; CPU</p>
+
+<p><img src="https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/install_docker/Windows/win-virtualization-enabled.png" alt="windows-virtualization" /></p>
+
+<p>黄色的Virtualization为Enabled即可</p>
+
+<p>Windows7检查</p>
+
+<p>运行<a href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Microsoft® Hardware-Assisted Virtualization Detection Tool</a>工具，然后按照步骤来检测。</p></li>
+</ul>
+
+<blockquote>
+<p>Docker建立的容器和镜像会被计算机上面的所有用户共享，多账号的系统中要注意数据安全问题。</p>
+</blockquote>
+
+<h3 id="开始安装">开始安装</h3>
+
+<ol>
+<li>下载<a href="https://download.docker.com/win/stable/InstallDocker.msi">Docker稳定版</a></li>
+<li>双击下载文件夹中的InstallDocker.msi文件。</li>
+<li>阅读协议内容觉得没问题之后点击接受协议（不接受将无法安装:O)，然后安装。</li>
+</ol>
+
+<blockquote>
+<p>一般软件应该安装在非系统盘（C盘）中，这样即使以后需要重装系统，软件也不会丢失。安装路径不要包含中文）</p>
+</blockquote>
+
+<ol>
+<li>输入系统管理员密码使Docker可以安装网络组件。</li>
+<li>完成</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/install_docker/Windows/installer-finishes.png" alt="windows-docker-install-finished" /></p>
+
+<h4 id="启动docker">启动Docker</h4>
+
+<p>安装完成后Docker会自动启动，你可以从状态栏看到Docker正在运作
+<img src="https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/install_docker/Windows/win-install-success-popup-cloud.png" alt="win-install-success-popup-cloud" /></p>
+
+<h4 id="验证安装成功">验证安装成功</h4>
+
+<p>运行<a href="#../基础知识/终端.md">终端</a>(cmd.exe或者PowerShell)</p>
+
+<pre><code>PS C:\Users\Docker&gt; docker --version
+Docker version 17.03.0-ce, build 60ccb22
+</code></pre>
+
+<p>看到Docker version提示的字样代表安装成功了</p>
+
+<h3 id="第二节">第二节</h3>
+
+<p>如果不满足条件（例如你使用的是Windows7或者Windows8系统）我们需要安装另外一款工具来运行Docker</p>
+
+<p>###安装前准备
+- 先确保自己的Windows系统是Windows7以上（Windows7, Windows8，Windows10都可以）的64位系统，可以通过这里确定<a href="https://support.microsoft.com/zh-cn/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system">Windows系统版本</a>，如果不是64位的话请更新64位的系统。</p>
+
+<ul>
+<li><p>必须启动虚拟化（默认启动），可以在任务管理中找到这一项确保enabled</p>
+
+<p>Windows8检查</p>
+
+<p>点击开始 &gt; 任务管理 &gt; 性能 &gt; CPU</p>
+
+<p><img src="https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/install_docker/Windows/win-virtualization-enabled.png" alt="windows-virtualization" /></p>
+
+<p>黄色的Virtualization为Enabled即可</p>
+
+<p>Windows7检查</p>
+
+<p>运行<a href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Microsoft® Hardware-Assisted Virtualization Detection Tool</a>工具，然后按照步骤来检测。</p></li>
+</ul>
+
+<p>###开始安装</p>
+
+<ol>
+<li>确保自己没有运行Virtual Box（默认系统没有按照这个软件）</li>
+<li>点击右边链接下载<a href="https://download.docker.com/win/stable/DockerToolbox.exe">Docker Toolbox</a></li>
+<li>下载完毕后双击安装，如果这时候系统问你是不是允许程序修改，点击Yes</li>
+<li>默认选项直到安装完毕</li>
+</ol>
+
+<p>###验证安装成功</p>
+
+<ol>
+<li>双击打开Docker Toolbox
+<img src="https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/install_docker/Windows/icon-set.png" alt="Docker Toolbox Icon" /></li>
+<li>点击Yes获取修改权限</li>
+<li>然后系统会进行一些操作，你会看到以下的图片
+<img src="https://raw.githubusercontent.com/EngineGirl/basic-tutorial/master/imgs/install_docker/Windows/b2d_shell.png" alt="Docker Toolbox Bash" /></li>
+
+<li><p>看到这个$符号就代表启动完成，这时候在终端输入</p>
+
+<pre><code>docker run hello-world
+</code></pre></li>
+</ol>
+
+<p>然后看到：</p>
+
+<pre><code>$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+Pulling repository hello-world
+91c95931e552: Download complete
+a8219747be10: Download complete
+Status: Downloaded newer image for hello-world:latest
+Hello from Docker.
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker Engine CLI client contacted the Docker Engine daemon.
+ 2. The Docker Engine daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+    (Assuming it was not already locally available.)
+ 3. The Docker Engine daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker Engine daemon streamed that output to the Docker Engine CLI client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+For more examples and ideas, visit:
+ https://docs.docker.com/userguide/
+</code></pre>
+
+<p>就代表Docker已经成功安装并且可以运行啦。</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+<div id="disqus_thread"></div>
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://larnsce.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/%E5%B7%A5%E5%85%B7/docker/" title="docker教程"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/%E5%B7%A5%E5%85%B7/docker/macos%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/" title="macOS系统安装docker教程" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1527425422"></script>
+    <script src="/js/perfect-scrollbar.min.js?1527425422"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1527425422"></script>
+    <script src="/js/jquery.sticky.js?1527425422"></script>
+    <script src="/js/featherlight.min.js?1527425422"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1527425422"></script>
+    <script src="/js/highlight.pack.js?1527425422"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1527425422"></script>
+    <script src="/js/learn.js?1527425422"></script>
+    <script src="/js/hugo-learn.js?1527425422"></script>
+
+    <link href="/mermaid/mermaid.css?1527425422" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1527425422"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
