@@ -6,10 +6,26 @@
     <description>Recent content in 目录 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 May 2018 00:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 May 2018 00:10:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.enginego.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>编程的第一步（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 27 May 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/</guid>
+      <description>要说计算机的本质是什么，其实就三步，接收数据，处理数据，输出数据。在编程的时候，无论我们在做文书处理，网站，手机应用都一样。举个例子，我们现在需要把一个文本文件的数据转换为Excel表格保存。文本的内容是：
+ Shall I compare thee to a summer’s day?
+Thou art more lovely and more temperate.
+Rough winds do shake the darling buds of May,
+And summer’s lease hath all too short a date.
+Sometime too hot the eye of heaven shines,
+ 希望得到的Excel文件是：
+   A1 A2 A3 A4 A5     Shall I compare thee to a summer’s day? Thou art more lovely and more temperate.</description>
+    </item>
     
     <item>
       <title>一文理解字符串编码</title>
@@ -17,11 +33,10 @@
       <pubDate>Fri, 11 May 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/</guid>
-      <description>作者：Windson Yang
+      <description>作者：Windson Yang (感谢Sylv对本文作出的贡献）
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
 在打开网页或者文件的时候，你一定会遇过像这样的字符串乱码问题：
-É��OÇ��，系统包括了...  或者报错
-UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xc4  同时或多或少也遇到Unicode, UTF-8, ASCII, Latin-1这些编码术语。要真正地理解字符串编码，首先要了解计算机的一些基础知识，包括字符串如何存储与转换。如果只是希望靠运气来解决或者避开它，反而会在一次次盲目的尝试中浪费更多的时间。
+É��OÇ��，文件包括了各式各样的编码...  同时或多或少也遇到Unicode, UTF-8, ASCII, Latin-1这些编码术语。编码问题可以说是新人必踩坑，虽然从最后的解决方案来看，可能两三句代码就能解决，但是实际大部分开发者，包括我以前，也没有真正地理解它。原因并不是因为它复杂，而是它涉及了计算机科学中一个常见的问题，理论与工程实现的区别。理论上我们只需要按照A方案就可以解决问题，但是实际上，由于不同语言，不同系统的历史原因，实现的方案就变成多个，许多编程语言的编码实现都不同。所以要真正地理解字符串编码，首先需要了解计算机的一些基础知识，包括字符串如何存储在计算机硬盘中。如果只是希望靠运气来解决或者避开它，反而会在一次次盲目的尝试中浪费更多的时间。如果你不熟悉Python代码的话，完全可以跳过这篇文章所有的代码段，它不会影响你对这篇文章的影响。
  基础术语 计算机如何存储数据 ASCII编码 GBK编码 Unicode UTF-8编码 HTML实体编码 URL编码 常见问题 总结  基础术语  字符 字符串 键值表 字符串编码与解码  字符 A B C 天 气 エ ン コ 😁  上面的用空格分割的都是单个字符(Character)，它代表对人类能看懂的有意义的语言文字。
 字符串 Hello 天气 Hola  字符串(Strings)就是多个字符组成的集合
 键值表 一一对应的表，函数

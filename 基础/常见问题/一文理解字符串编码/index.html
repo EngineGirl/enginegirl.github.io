@@ -13,19 +13,19 @@
     <title>一文理解字符串编码 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1527425422" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1527425422" rel="stylesheet">
-    <link href="/css/hybrid.css?1527425422" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1527425422" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1527425422" rel="stylesheet">
-    <link href="/css/auto-complete.css?1527425422" rel="stylesheet">
-    <link href="/css/theme.css?1527425422" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1527425422" rel="stylesheet">
+    <link href="/css/nucleus.css?1527610185" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1527610185" rel="stylesheet">
+    <link href="/css/hybrid.css?1527610185" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1527610185" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1527610185" rel="stylesheet">
+    <link href="/css/auto-complete.css?1527610185" rel="stylesheet">
+    <link href="/css/theme.css?1527610185" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1527610185" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1527425422" rel="stylesheet">
+      <link href="/css/theme-blue.css?1527610185" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1527425422"></script>
+    <script src="/js/jquery-2.x.min.js?1527610185"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,15 +54,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1527425422"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1527425422"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1527610185"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1527610185"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1527425422"></script>
+<script type="text/javascript" src="/js/search.js?1527610185"></script>
 
     
   </div>
@@ -122,6 +122,25 @@
           
           
         
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/" title="编程的第一步（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/">
+        编程的第一步（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
           
             
             
@@ -821,7 +840,10 @@
 <li><a href="#utf-8编码">UTF-8编码</a></li>
 <li><a href="#html实体编码">HTML实体编码</a></li>
 <li><a href="#url编码">URL编码</a></li>
-<li><a href="#常见问题">常见问题</a></li>
+<li><a href="#常见问题">常见问题</a>
+<ul>
+<li><a href="#python">Python</a></li>
+</ul></li>
 <li><a href="#总结">总结</a></li>
 </ul></li>
 </ul></li>
@@ -847,23 +869,16 @@
 
 
 
-<p>作者：Windson Yang</p>
+<p>作者：Windson Yang (感谢Sylv对本文作出的贡献）</p>
 
 <p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。</p>
 
 <p>在打开网页或者文件的时候，你一定会遇过像这样的字符串乱码问题：</p>
 
-<pre><code>É��OÇ��，系统包括了...
+<pre><code>É��OÇ��，文件包括了各式各样的编码...
 </code></pre>
 
-<p>或者报错</p>
-
-<pre><code>UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4
-</code></pre>
-
-<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/encode/unicode.png" alt="like_unicode" /></p>
-
-<p>同时或多或少也遇到Unicode, UTF-8, ASCII, Latin-1这些编码术语。<strong>要真正地理解字符串编码，首先要了解计算机的一些基础知识，包括字符串如何存储与转换。如果只是希望靠运气来解决或者避开它，反而会在一次次盲目的尝试中浪费更多的时间。</strong></p>
+<p>同时或多或少也遇到Unicode, UTF-8, ASCII, Latin-1这些编码术语。编码问题可以说是新人必踩坑，虽然从最后的解决方案来看，可能两三句代码就能解决，但是实际大部分开发者，包括我以前，也没有真正地理解它。<strong>原因并不是因为它复杂，而是它涉及了计算机科学中一个常见的问题，理论与工程实现的区别。理论上我们只需要按照A方案就可以解决问题，但是实际上，由于不同语言，不同系统的历史原因，实现的方案就变成多个，许多编程语言的编码实现都不同。</strong>所以要真正地理解字符串编码，首先需要了解计算机的一些基础知识，包括字符串如何存储在计算机硬盘中。如果只是希望靠运气来解决或者避开它，反而会在一次次盲目的尝试中浪费更多的时间。<strong>如果你不熟悉Python代码的话，完全可以跳过这篇文章所有的代码段，它不会影响你对这篇文章的影响。</strong></p>
 
 <ol>
 <li><a href="#基础术语">基础术语</a></li>
@@ -929,7 +944,7 @@
 
 <h3 id="计算机如何存储数据">计算机如何存储数据</h3>
 
-<p>因为早期的计算机存储资源非常宝贵。所以计算机科学家们希望用最少的空间来存储字符。同时，计算机是使用二进制存储数据的，无论是文字，图片，数字还是其他数据，都是以数字&rdquo;0&rdquo;或者&rdquo;1&rdquo;存储起来的。举个例子，如果计算机要存储&rdquo;BEE&rdquo;这个字符串，它先根据一个字母与数字的转换表把字母转换成二进制然后存储。这里我们使用一个简单的对应表叫做EngineGo表，EngineGo表用3位的二进制数字就能表示8种不同的字符。</p>
+<p>早期的计算机存储资源非常宝贵。所以计算机科学家们希望用最少的空间来存储字符。同时，计算机是使用二进制存储数据的，无论是文字，图片，数字还是其他数据，都是以数字&rdquo;0&rdquo;或者&rdquo;1&rdquo;存储起来的。<strong>举个例子，如果计算机要存储&rdquo;BEE&rdquo;这个字符串，它会先根据一个字母与数字的转换表把字母转换成二进制然后存储。这里我们使用一个简单的对应表叫做EngineGo表，EngineGo表用3位的二进制数字就能表示8种不同的字符。</strong></p>
 
 <p>EngineGo表：</p>
 
@@ -974,13 +989,15 @@
 </tbody>
 </table>
 
-<p>当我们打开文件编辑器，添加“BEE”这3个字母并保存的时候，计算机会根据EngineGo表存储数据</p>
+<p>当我们打开文件编辑器，添加&rdquo;BEE&rdquo;这3个字母并保存的时候，计算机会根据EngineGo表存储数据</p>
 
 <pre><code>001 100 100
   B   E   E 
 </code></pre>
 
-<p>当读取文件的时候，计算机会猜测应该使用哪个表来把二进制数据还原为字符串，如果它猜对了，使用EngineGo表还原的话，就会重新得到&rdquo;BEE&rdquo;这个字符串。<strong>不过如果计算机猜错了，使用其他键值表来打开这个文件的话，最终可能会报错，也可能是乱码，大部分的乱码都是因为这样而出现。</strong>理解了这个之后，其实就很容易理解字符串编码和解码了！</p>
+<p>当读取文件的时候，计算机会猜测应该使用哪个表来把二进制数据还原为字符串，如果它猜对了，使用EngineGo表还原的话，就会重新得到&rdquo;BEE&rdquo;这个字符串。<strong>不过如果计算机猜错了，使用其他键值表来打开这个文件的话，最终可能会报错，也可能是乱码，大部分的乱码都是因为这样而出现。理解了这个之后，其实就很容易理解字符串编码和解码了！</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/encode/unicode.png" alt="unicode" /></p>
 
 <h3 id="ascii编码">ASCII编码</h3>
 
@@ -993,364 +1010,127 @@
 <th align="center">字符</th>
 <th>编号</th>
 <th>字符</th>
-<th>编号</th>
-<th>字符</th>
-<th>编号</th>
-<th>字符</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>0</td>
-<td align="center">NUT</td>
-<td>32</td>
-<td>(space)</td>
+<td>（省略）&hellip;</td>
+<td align="center">&hellip;</td>
 <td>64</td>
 <td>@</td>
-<td>96</td>
-<td>、</td>
 </tr>
 
 <tr>
-<td>1</td>
-<td align="center">SOH</td>
-<td>33</td>
-<td>!</td>
+<td>48</td>
+<td align="center">0</td>
 <td>65</td>
 <td>A</td>
-<td>97</td>
-<td>a</td>
 </tr>
 
 <tr>
-<td>2</td>
-<td align="center">STX</td>
-<td>34</td>
-<td>&ldquo;</td>
-<td>66</td>
+<td>49</td>
+<td align="center">1</td>
+<td>66(1000010)</td>
 <td>B</td>
-<td>98</td>
-<td>b</td>
 </tr>
 
 <tr>
-<td>3</td>
-<td align="center">ETX</td>
-<td>35</td>
-<td>#</td>
+<td>50</td>
+<td align="center">2</td>
 <td>67</td>
 <td>C</td>
-<td>99</td>
-<td>c</td>
 </tr>
 
 <tr>
-<td>4</td>
-<td align="center">EOT</td>
-<td>36</td>
-<td>$</td>
+<td>51</td>
+<td align="center">3</td>
 <td>68</td>
 <td>D</td>
-<td>100</td>
-<td>d</td>
 </tr>
 
 <tr>
-<td>5</td>
-<td align="center">ENQ</td>
-<td>37</td>
-<td>%</td>
-<td>69</td>
+<td>52</td>
+<td align="center">4</td>
+<td>69(1000101)</td>
 <td>E</td>
-<td>101</td>
-<td>e</td>
 </tr>
 
 <tr>
-<td>6</td>
-<td align="center">ACK</td>
-<td>38</td>
-<td>&amp;</td>
+<td>53</td>
+<td align="center">5</td>
 <td>70</td>
 <td>F</td>
-<td>102</td>
-<td>f</td>
 </tr>
 
 <tr>
-<td>7</td>
-<td align="center">BEL</td>
-<td>39</td>
-<td>,</td>
+<td>54</td>
+<td align="center">6</td>
 <td>71</td>
 <td>G</td>
-<td>103</td>
-<td>g</td>
 </tr>
 
 <tr>
-<td>8</td>
-<td align="center">BS</td>
-<td>40</td>
-<td>(</td>
+<td>55</td>
+<td align="center">7</td>
 <td>72</td>
 <td>H</td>
-<td>104</td>
-<td>h</td>
 </tr>
 
 <tr>
-<td>9</td>
-<td align="center">HT</td>
-<td>41</td>
-<td>)</td>
+<td>56</td>
+<td align="center">8</td>
 <td>73</td>
 <td>I</td>
-<td>105</td>
-<td>i</td>
 </tr>
 
 <tr>
-<td>10</td>
-<td align="center">LF</td>
-<td>42</td>
-<td>*</td>
+<td>57</td>
+<td align="center">9</td>
 <td>74</td>
 <td>J</td>
-<td>106</td>
-<td>j</td>
 </tr>
 
 <tr>
-<td>11</td>
-<td align="center">VT</td>
-<td>43</td>
-<td>+</td>
+<td>58</td>
+<td align="center">:</td>
 <td>75</td>
 <td>K</td>
-<td>107</td>
-<td>k</td>
 </tr>
 
 <tr>
-<td>12</td>
-<td align="center">FF</td>
-<td>44</td>
-<td>,</td>
+<td>59</td>
+<td align="center">;</td>
 <td>76</td>
 <td>L</td>
-<td>108</td>
-<td>l</td>
 </tr>
 
 <tr>
-<td>13</td>
-<td align="center">CR</td>
-<td>45</td>
-<td>-</td>
+<td>60</td>
+<td align="center">&lt;</td>
 <td>77</td>
 <td>M</td>
-<td>109</td>
-<td>m</td>
 </tr>
 
 <tr>
-<td>14</td>
-<td align="center">SO</td>
-<td>46</td>
-<td>.</td>
+<td>61</td>
+<td align="center">=</td>
 <td>78</td>
 <td>N</td>
-<td>110</td>
-<td>n</td>
 </tr>
 
 <tr>
-<td>15</td>
-<td align="center">SI</td>
-<td>47</td>
-<td>/</td>
+<td>62</td>
+<td align="center">&gt;</td>
 <td>79</td>
 <td>O</td>
-<td>111</td>
-<td>o</td>
 </tr>
 
 <tr>
-<td>16</td>
-<td align="center">DLE</td>
-<td>48</td>
-<td>0</td>
-<td>80</td>
-<td>P</td>
-<td>112</td>
-<td>p</td>
-</tr>
-
-<tr>
-<td>17</td>
-<td align="center">DCI</td>
-<td>49</td>
-<td>1</td>
-<td>81</td>
-<td>Q</td>
-<td>113</td>
-<td>q</td>
-</tr>
-
-<tr>
-<td>18</td>
-<td align="center">DC2</td>
-<td>50</td>
-<td>2</td>
-<td>82</td>
-<td>R</td>
-<td>114</td>
-<td>r</td>
-</tr>
-
-<tr>
-<td>19</td>
-<td align="center">DC3</td>
-<td>51</td>
-<td>3</td>
-<td>83</td>
-<td>S</td>
-<td>115</td>
-<td>s</td>
-</tr>
-
-<tr>
-<td>20</td>
-<td align="center">DC4</td>
-<td>52</td>
-<td>4</td>
-<td>84</td>
-<td>T</td>
-<td>116</td>
-<td>t</td>
-</tr>
-
-<tr>
-<td>21</td>
-<td align="center">NAK</td>
-<td>53</td>
-<td>5</td>
-<td>85</td>
-<td>U</td>
-<td>117</td>
-<td>u</td>
-</tr>
-
-<tr>
-<td>22</td>
-<td align="center">SYN</td>
-<td>54</td>
-<td>6</td>
-<td>86</td>
-<td>V</td>
-<td>118</td>
-<td>v</td>
-</tr>
-
-<tr>
-<td>23</td>
-<td align="center">TB</td>
-<td>55</td>
-<td>7</td>
-<td>87</td>
-<td>W</td>
-<td>119</td>
-<td>w</td>
-</tr>
-
-<tr>
-<td>24</td>
-<td align="center">CAN</td>
-<td>56</td>
-<td>8</td>
-<td>88</td>
-<td>X</td>
-<td>120</td>
-<td>x</td>
-</tr>
-
-<tr>
-<td>25</td>
-<td align="center">EM</td>
-<td>57</td>
-<td>9</td>
-<td>89</td>
-<td>Y</td>
-<td>121</td>
-<td>y</td>
-</tr>
-
-<tr>
-<td>26</td>
-<td align="center">SUB</td>
-<td>58</td>
-<td>:</td>
-<td>90</td>
-<td>Z</td>
-<td>122</td>
-<td>z</td>
-</tr>
-
-<tr>
-<td>27</td>
-<td align="center">ESC</td>
-<td>59</td>
-<td>;</td>
-<td>91</td>
-<td>[</td>
-<td>123</td>
-<td>{</td>
-</tr>
-
-<tr>
-<td>28</td>
-<td align="center">FS</td>
-<td>60</td>
-<td>&lt;</td>
-<td>92</td>
-<td>/</td>
-<td>124</td>
-<td></td>
-</tr>
-
-<tr>
-<td>29</td>
-<td align="center">GS</td>
-<td>61</td>
-<td>=</td>
-<td>93</td>
-<td>]</td>
-<td>125</td>
-<td>}</td>
-</tr>
-
-<tr>
-<td>30</td>
-<td align="center">RS</td>
-<td>62</td>
-<td>&gt;</td>
-<td>94</td>
-<td>^</td>
-<td>126</td>
-<td>`</td>
-</tr>
-
-<tr>
-<td>31</td>
-<td align="center">US</td>
 <td>63</td>
-<td>?</td>
-<td>95</td>
-<td>_</td>
-<td>127</td>
-<td>DE</td>
+<td align="center">?</td>
+<td>（省略）&hellip;</td>
+<td>&hellip;</td>
 </tr>
 </tbody>
 </table>
@@ -1358,7 +1138,6 @@
 <p>早期计算机科学家们统一用这张表作字符串编码，称为ASCII编码。存储和读取也是像使用EngineGo表一样简单。这时候存储&rdquo;BEE&rdquo;就会存储为：</p>
 
 <pre><code>1000010 1000101 1000101
-     66      69      69
       B       E       E
 </code></pre>
 
@@ -1366,17 +1145,17 @@
 
 <h3 id="gbk编码">GBK编码</h3>
 
-<p>ASCII编码只能表示128个字符。遇到中文，常用字就几千个肯定应付不来，其他亚洲语言也遇到这样的问题。所以一开始国内使用的并不是ASCII编码，而是GBK编码。本质其实也一样，一张更大的表，用更多的位来表示字符。GBK的编码方式比较有趣，是可变长度的编码，它为了兼容ASCII编码，使用了单字节编码和双字节编码。 <strong>如果遇到一个小于127的字符，那么编码方式就与ASCII表一样，遇到大于127的字符，就表示一个汉字。也就是说当我们把&rdquo;BEE&rdquo;用GBK编码存储的时候，它和使用ASCII表存储的二进制数据是一样的。</strong> 这里我们以Python2为例：</p>
+<p>ASCII编码只能表示128个字符。遇到中文，常用字就几千个肯定应付不来，其他亚洲语言也遇到这样的问题。所以一开始国内使用的并不是ASCII编码，而是GBK编码。本质其实也一样，一张更大的表，用更多的位来表示字符。GBK的编码方式比较有趣，是可变长度的编码，它为了兼容ASCII编码，使用了单字节编码和双字节编码。 <strong>如果遇到一个小于127的字符，那么编码方式就与ASCII表一样，遇到大于127的字符，就用两个字节表示一个汉字。当我们把&rdquo;BEE&rdquo;用GBK编码存储的时候，它和使用ASCII表存储的二进制数据是一样的。</strong></p>
 
-<pre><code>1000010 1000101 1000101
+<pre><code>1000010 1000101 1000101 (无论使用ASCII编码还是GBK编码都得到这个结果）
       B       E       E
 
-# encode是Python中编码的方法
+# 以Python2为例，encode是Python中编码的方法
 &gt;&gt;&gt; foo = 'BEE'.encode('ascii')
 &gt;&gt;&gt; bar = 'BEE'.encode('gb2312')
 &gt;&gt;&gt; foo == bar
 True
-# 虽然bar是使用gb2312编码，但是因为只包含ASCII中的字符，所以可以用ASCII来解码
+# 虽然bar使用gb2312编码保存，但是因为只包含ASCII中的字符，所以可以用ASCII来解码
 &gt;&gt;&gt; bar.decode('ascii')
 u'BEE'
 &gt;&gt;&gt; u'BEE' == 'BEE'
@@ -1385,63 +1164,39 @@ True
 
 <p>从上面的输出可以看到，<strong>如果只是存储ASCII表出现的字符，那么大部分编码表保存的结果都是一样。都能被ASCII解码，因为它们都需要兼容ASCII表</strong></p>
 
-<p>不过如果我们要存储中文的时候，就不一样啦，例如存储“你好”，GBK编码会把这个字符串编码成</p>
+<p>不过如果我们要存储中文的时候，就不一样啦，例如存储&rdquo;你好&rdquo;，GBK编码会把这个字符串编码成</p>
 
 <pre><code>11000100 11100011 10111010 11000011
 </code></pre>
 
-<p>&ldquo;你&rdquo;和&rdquo;好&rdquo;这两个字符是用两个字节保存的。 这时候使用python2就会报错：</p>
+<p>&ldquo;你&rdquo;和&rdquo;好&rdquo;这两个字符是用两个字节保存的。 这时候使用ASCII编码保存的话就会报错，因为ASCII编码中没有&rdquo;你&rdquo;和&rdquo;好&rdquo;对应的值：</p>
 
-<pre><code>&gt;&gt;&gt; '你好'.encode('gb2312')
+<pre><code>&gt;&gt;&gt; u'你好'.encode('ascii')
 Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xe4 in position 0: ordinal not in range(128)
-</code></pre>
-
-<p><strong>出错的原因是因为python2当遇到ASCII表中没有的字符的时候，默认会把它们使用utf-8编码来存储，但是gbk编码表无法对utf-8编码进行解码，这句话你可能需要读完文章才能理解。</strong>：</p>
-
-<pre><code># \x代表使用了16进制，e4 bd a0 e5 a5 bd是你好的utf-8编码 
-&gt;&gt;&gt; '你好'
-'\xe4\xbd\xa0\xe5\xa5\xbd'
-# 需要先解码再编码
-&gt;&gt;&gt; '你好'.decode('utf-8').encode('gb2312')
-'\xc4\xe3\xba\xc3'
-</code></pre>
-
-<p><strong>另外常见编码错误就是使用错误的编码保存字符串，例如使用ASCII表保存&rdquo;你好&rdquo;，因为ASCII表里面没有对应的字符，它不知道如何保存。</strong></p>
-
-<pre><code>&gt;&gt;&gt; '你好'.encode('ascii')
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
 </code></pre>
 
-<p>同理，使用ASCII解码无法解析使用GBK编码保存包含非ASCII字符的二进制数据</p>
+<p>使用gbk编码就没有问题了。</p>
 
-<pre><code># decode是Python中解码的方法
-&gt;&gt;&gt; foo = '你好'.decode('utf-8').encode('gb2312')
-&gt;&gt;&gt; foo
+<pre><code>&gt;&gt;&gt; u'你好'.encode('gbk')
 '\xc4\xe3\xba\xc3'
-&gt;&gt;&gt; foo.decode('ascii')
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal not in range(128)
 </code></pre>
 
-<p>当你使用GBK编码保存文件，而文件里面包含了中文字符，那么别人使用ASCII表就无法解码。不过，<strong>如果GBK编码的文件只存储ASCII编码出现的字符，那么解码的时候也能正确解码</strong>，其实大多数编码问题都很好解决，<strong>只需要在文档的信息上面添加这是用什么编码的，打开的时候选择对应的解码就好</strong>，不过另外一个问题就比较头痛，很多国家都开始使用自己的编码，例如日本使用Shift JIS，韩国使用KS X 1001。而且即使是中文，还有繁体中文，简体中文，编码经过发展也有几个不同版本。这样下去就越来越乱了，即使你知道文档里面存的是中文，也不知道用哪个中文编码才能正确打开，<strong>当文档中没有包含编码信息的时候，计算机就会猜测是什么编码。</strong></p>
+<p><strong>要注意这里的&rsquo;你好&rsquo;带有&rsquo;u&rsquo;前缀，代表这是一个unicode字符串。这与Python语言有关，如果有兴趣可以从常见问题中找到解答。</strong>当你使用GBK编码保存文件，而文件里面包含了中文字符，那么别人使用ASCII表就无法解码。不过，<strong>如果GBK编码的文件只存储ASCII编码出现的字符，那么解码的时候也能正确解码</strong>，其实大多数编码问题都很好解决，<strong>只需要在文档的信息上面添加这是用什么编码的，打开的时候选择对应的解码就好</strong>，但是当文档中没有包含编码信息的时候，计算机就会猜测这是什么编码。很多国家都有自己的编码表，例如日本使用Shift JIS，韩国使用KS X 1001。即使是中文，还有繁体中文，简体中文不同的类别。即使你知道文档里面存的是中文，也不知道用哪个中文编码才能正确打开。</p>
 
-<pre><code>&gt;&gt;&gt; hello = &quot;你好&quot;
-&gt;&gt;&gt; hello_gbk = hello.decode('utf-8').encode(&quot;gb2312&quot;)
-# 'ﾄ羲ﾃ'
-&gt;&gt;&gt; hello_gbk.decode(&quot;Shift-JIS&quot;)
-u'\uff84\u7fb2\uff83'
+<pre><code>&gt;&gt;&gt; hello = '你好'
+&gt;&gt;&gt; hello_gbk = hello.decode('utf-8').encode(&quot;gb2312&quot;) # 使用gb2312编码保存
+'\xc4\xe3\xba\xc3'
+&gt;&gt;&gt; hello_gbk.decode(&quot;Shift-JIS&quot;) # 使用Shift-JIS解码
+u'\uff84\u7fb2\uff83' -&gt; 'ﾄ羲ﾃ' 
 &gt;&gt;&gt; hello_gbk.decode('ascii')
 Traceback (most recent call last):
   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal not in range(128)
 </code></pre>
 
-<p>&ldquo;你好&rdquo;经过GBK编码变成4个字节，从这4个字节，计算机无法知道它原本是什么编码的，它尝试用用日本的Shift JIS编码来解码，这个情况下没有报错，因为Shift JIS中刚好有这4个字节对应的字符串。如果我们用ASCII表来解码，就会因为找不到对应的字符串而报错。</p>
+<p>&ldquo;你好&rdquo;经过GBK编码变成4个字节，从这4个字节，计算机无法知道它原本是什么编码的，它尝试用日本的Shift JIS编码来解码，这个情况下没有报错，因为Shift JIS中刚好有这4个字节对应的字符串。所以计算机就会猜这个文件是使用Shift JIS编码保存的。如果我们用ASCII表来解码，就会因为找不到对应的字符串而报错。</p>
 
 <h3 id="unicode编码">Unicode编码</h3>
 
@@ -1521,7 +1276,7 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal 
 </tbody>
 </table>
 
-<p>从上表可以看到，使用UTF-8编码之后，A还是只需要一个字节存储，而汉字“你”从4个字节减少为3个字节。把Unicode编码转换成UTF-8编码非常简单，我们首先需要一张转换表：</p>
+<p>从上表可以看到，使用UTF-8编码之后，&rdquo;A&rdquo;还是只需要一个字节存储，而汉字&rdquo;你&rdquo;从4个字节减少为3个字节。把Unicode编码转换成UTF-8编码非常简单，我们首先需要一张转换表：</p>
 
 <table>
 <thead>
@@ -1555,12 +1310,12 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal 
 </table>
 
 <ol>
-<li>找出要转换的字符的Unicode范围，我们以“你”为例子，它的Unicode编码是U+4f60，对应的是第三列（07FF&lt;4f60&lt;FFFF），找到右边的转换规则。</li>
+<li>找出要转换的字符的Unicode范围，我们以&rdquo;你&rdquo;为例子，它的Unicode编码是U+4f60，对应的是第三列（07FF&lt;4f60&lt;FFFF），找到右边的转换规则。</li>
 <li>把4f60的二进制<strong>1001111 01100000</strong>从右到左填入转换规则的x中，空的填0。<strong>1001111 01100000</strong> -&gt; <strong>1110xxxx 10xxxxxx 10xxxxxx</strong> -&gt; <strong>11100100 10111101 10100000</strong></li>
-<li>最后得到的<strong>11100100 10111101 10100000(e4bda0)</strong>也就是你的UTF-8编码了。</li>
+<li>最后得到的<strong>11100100 10111101 10100000(e4bda0)</strong>也就是&rdquo;你&rdquo;的UTF-8编码了。</li>
 </ol>
 
-<p>很可惜，<strong>大部分国内的在线转码工具都把Unicode和UTF-8混淆了，如果你尝试汉字转换成UTF-8编码，工具返回的是它的Unicode编码。</strong></p>
+<p>很可惜，<strong>大部分国内的在线转码工具都把Unicode和UTF-8混淆了，如果你尝试汉字转换成UTF-8编码，工具返回的是它的HTML实体编码。</strong></p>
 
 <p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/encode/wrong_example.png" alt="example" />
 <img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/encode/wrong_example2.png" alt="example2" /></p>
@@ -1625,7 +1380,7 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal 
 </tr>
 
 <tr>
-<td>“</td>
+<td>&ldquo;</td>
 <td align="center">双引号</td>
 <td><code>&amp;quot;</code></td>
 <td align="right"><code>&amp;#34;</code></td>
@@ -1682,14 +1437,14 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal 
 </tbody>
 </table>
 
-<p>从上表可以看到，**特殊字符串是强制需要转换的，而且实际上，所有字符都可以经过转换表示，只需要用</p>
+<p>从上表可以看到，<strong>特殊字符串是强制需要转换的，</strong>而且实际上，所有字符都可以经过转换表示，只需要用</p>
 
 <ul>
 <li><strong>&amp;#x</strong>加上其16进制Unicode编码或者</li>
 <li><strong>&amp;#</strong>加上其10进制Unicode编码</li>
 </ul>
 
-<p>作为实体编号即可，浏览器既能解析字符串本身，也能解析其UTF-8编码**</p>
+<p>作为实体编号即可，浏览器既能解析字符串本身，也能解析其UTF-8编码。</p>
 
 <h3 id="url编码">URL编码</h3>
 
@@ -1704,39 +1459,33 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 0: ordinal 
 <p><a href="https://www.example.com/你好">https://www.example.com/你好</a></p>
 </blockquote>
 
-<p>浏览器会自动把不合规定的字符转换成%加UTF-8编码再进行请求（但是在地址栏还是会显示原本的字符“你好”），当你粘贴在文本编辑器的时候就可以看到原本的URL变成：</p>
+<p>浏览器会自动把不合规定的字符转换成%加UTF-8编码再进行请求（但是在地址栏还是会显示原本的字符&rdquo;你好&rdquo;），当你粘贴在文本编辑器的时候就可以看到原本的URL变成：</p>
 
 <blockquote>
 <p><a href="https://www.example.com/%E4%BD%A0%E5%A5%BD">https://www.example.com/%E4%BD%A0%E5%A5%BD</a></p>
 </blockquote>
 
-<p>这里可以看到“你好”使用了它的UTF-8编码表示</p>
+<p>这里可以看到&rdquo;你好&rdquo;使用了它的UTF-8编码表示</p>
 
 <h3 id="常见问题">常见问题</h3>
 
-<p>了解编码之后，python2的编码问题其实也容易理解了。<strong>python2是把字符串直接经过utf-8编码保存的</strong></p>
+<h4 id="python">Python</h4>
 
-<pre><code># utf-8编码
-&gt;&gt;&gt; &quot;你好&quot;
-'\xe4\xbd\xa0\xe5\xa5\xbd'
+<p><strong>python2在保存字符串的时候，是直接用终端的默认编码保存的。</strong>一般Linux或者苹果系统的默认终端编码是UTF-8，Windows中文版的默认终端编码是cp936 (gbk)。当前终端的默认编码可以通过以下命令查看：</p>
+
+<pre><code>&gt;&gt;&gt; import sys 
+&gt;&gt;&gt; sys.stdin.encoding 
+'UTF-8' # 'cp936'在Windows系统下
 </code></pre>
 
-<p><strong>打印出来的就是&rdquo;你好&rdquo;的utf-8编码的16进制(e4bda0-&gt;你 e5a5bd-&gt;好)</strong></p>
+<p>我们可以测试一下：</p>
 
-<pre><code># 获得unicode编码
-&gt;&gt;&gt; '你好'.decode('utf-8')
-u'\u4f60\u597d'
+<pre><code>&gt;&gt;&gt; &quot;你好&quot;
+'\xe4\xbd\xa0\xe5\xa5\xbd' # Linux/mac系统使用&quot;你好&quot;的utf-8编码保存
+'\xc4\xe3\xba\xc3' # Windows系统使用&quot;你好&quot;的cp936编码保存
 </code></pre>
 
-<p>使用ASCII解码就无法解析使用utf-8编码保存的&rdquo;你好&rdquo;</p>
-
-<pre><code>&gt;&gt;&gt; '你好'.decode('ascii')
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xe4 in position 0: ordinal not in range(128)
-</code></pre>
-
-<p>进行字符串相加的时候要注意，非ASCII编码的字符，unicode编码和utf-8编码不能直接相加</p>
+<p>&lsquo;u&rsquo;前缀是Python语言的特色，加上&rsquo;u&rsquo;前缀的字符串会被当成unicode编码，进行字符串相加的时候要注意，<strong>非ASCII编码的字符，unicode编码和utf-8编码不能直接相加：</strong></p>
 
 <pre><code>&gt;&gt;&gt; u'你好' + '费曼'
 Traceback (most recent call last):
@@ -1745,6 +1494,23 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xe8 in position 0: ordinal 
 &gt;&gt;&gt; u'hello ' + 'world'
 u'hello world'
 </code></pre>
+
+<p>另外一个常见的问题是：</p>
+
+<pre><code>&gt;&gt;&gt; '你好'.encode('gb2312')
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe4 in position 0: ordinal not in range(128)
+</code></pre>
+
+<p>留意报错的信息，居然说的是ASCII编码无法解码字符串，为什么呢？其实在Python2中，当它要执行encode方法的时候，需要先把字符串转变成unicode编码，所以：</p>
+
+<pre><code>&gt;&gt;&gt; '你好'.encode('gb2312') # 实际python会这样处理
+            |
+&gt;&gt;&gt;'你好'.decode('ascii').encode('gb2312') 
+</code></pre>
+
+<p>解决这个问题也很容易，把&rsquo;你好&rsquo;改成u&rsquo;你好&rsquo;就可以了。</p>
 
 <h3 id="总结">总结</h3>
 
@@ -1827,6 +1593,25 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -2289,7 +2074,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/" title="编程的第一步（未完成）"> <i class="fa fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%87%86%E5%A4%87%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95/" title="如何准备技术面试" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -2301,20 +2086,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1527425422"></script>
-    <script src="/js/perfect-scrollbar.min.js?1527425422"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1527425422"></script>
-    <script src="/js/jquery.sticky.js?1527425422"></script>
-    <script src="/js/featherlight.min.js?1527425422"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1527425422"></script>
-    <script src="/js/highlight.pack.js?1527425422"></script>
+    <script src="/js/clipboard.min.js?1527610185"></script>
+    <script src="/js/perfect-scrollbar.min.js?1527610185"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1527610185"></script>
+    <script src="/js/jquery.sticky.js?1527610185"></script>
+    <script src="/js/featherlight.min.js?1527610185"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1527610185"></script>
+    <script src="/js/highlight.pack.js?1527610185"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1527425422"></script>
-    <script src="/js/learn.js?1527425422"></script>
-    <script src="/js/hugo-learn.js?1527425422"></script>
+    <script src="/js/modernizr.custom.71422.js?1527610185"></script>
+    <script src="/js/learn.js?1527610185"></script>
+    <script src="/js/hugo-learn.js?1527610185"></script>
 
-    <link href="/mermaid/mermaid.css?1527425422" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1527425422"></script>
+    <link href="/mermaid/mermaid.css?1527610185" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1527610185"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
