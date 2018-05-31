@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Engine GO"
 theme = "hugo-theme-learn"
 disqusShortname = "www-enginego-org"
+googleAnalytics = "UA-101956048-3"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
