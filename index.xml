@@ -13,18 +13,17 @@
     
     <item>
       <title>编程的第一步（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/</link>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</link>
       <pubDate>Sun, 27 May 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B/</guid>
-      <description>要说计算机的本质是什么，其实就三步，接收数据，处理数据，输出数据。在编程的时候，无论我们在做文书处理，网站，手机应用都一样。举个例子，我们现在需要把一个文本文件的数据转换为Excel表格保存。文本的内容是：
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</guid>
+      <description>在电子计算机还没有被发明的时候。计算机指的并不是我们现在常识中的电脑硬件，而是使用计算器计算的人（大多是女性，我猜因为女性比较细心，容易管理）。她们会被分配一些数据和需要计算的步骤，然后按照步骤耐心地操作计算器，然后写出结果。如果你看过电影《隐藏人物》应该会对一大堆女生拿着计算器埋头计算的场景有印象。你不会把用计算器按下5*28，然后得到140当作在编程，但是它与编程并没有太大的区别。举个例子，我们现在需要把一个文本文件的数据转换为Excel表格保存。文本的内容是：
  Shall I compare thee to a summer’s day?
 Thou art more lovely and more temperate.
 Rough winds do shake the darling buds of May,
-And summer’s lease hath all too short a date.
-Sometime too hot the eye of heaven shines,
  希望得到的Excel文件是：
-   A1 A2 A3 A4 A5     Shall I compare thee to a summer’s day? Thou art more lovely and more temperate.</description>
+   A1 A2 A3     Shall I compare thee to a summer’s day? Thou art more lovely and more temperate. Rough winds do shake the darling buds of May,    不一样的是，这里5*28变成了三行的文本，乘法法则变成了格式转换。140变成了表格。那解决这个问题就变得非常简单：
+ 读取文本文件中的文字。 把文字按照Excel的格式需要转换成新的文字。 把新的文字存储起来。  即使不会编程，我们可以猜到读取文字与存储文字应该非常简单（如果没猜对的话我偷偷告诉你），难点应该在转换这一部分。我们分析下这部分要怎么解决，首先我们假设Excel里面的文字都是这样存储的：</description>
     </item>
     
     <item>
