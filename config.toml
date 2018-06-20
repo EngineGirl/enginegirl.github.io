@@ -1,9 +1,9 @@
 baseURL = "https://www.enginego.org"
 languageCode = "en-us"
 title = "Engine GO"
+googleAnalytics = "UA-101956048-3"
 theme = "hugo-theme-learn"
 disqusShortname = "www-enginego-org"
-googleAnalytics = "UA-101956048-3"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
