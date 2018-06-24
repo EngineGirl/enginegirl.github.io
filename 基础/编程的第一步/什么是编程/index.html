@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>术语 :: Engine GO</title>
+    <title>什么是编程（未完成） :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1529853541" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/">
+  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/">
     <nav id="sidebar" class="">
 
 
@@ -115,7 +115,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" title="编程的第一步" class="dd-item 
-        
+        parent
         
         
         ">
@@ -139,7 +139,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/" title="什么是编程（未完成）" class="dd-item ">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/" title="什么是编程（未完成）" class="dd-item active">
         <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/">
         什么是编程（未完成）
         
@@ -221,8 +221,8 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/">
@@ -885,6 +885,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -897,7 +899,13 @@
             
           
           
-            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > 术语
+            
+            
+          
+          
+            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/'>编程的第一步</a> > 什么是编程（未完成）
+          
+         
           
          
           
@@ -907,32 +915,89 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>什么是编程（未完成）</h1>
+            <h4>更新时间：June 1, 2018</h4>
           
 
         
 
 
+<p>我常常去参加一些编程的活动，例如黑客马拉松，开发者聚会。另外意外的是，我也接触到很多想学习计算机的朋友。他们想学习编程，但是常常被计算机不同的范畴弄得头昏脑胀，<strong>先学编程语言呢，还是数据结构和算法，先学建网站，写app，还是大数据，人工智能？</strong>我希望通过这篇文章让读者们编程有个初步的了解。我非常推荐Crash Course计算机科学的视频，非常有趣，而且浅显易懂。适合完全零基础甚至初中生去看。</p>
 
+<p><a href="https://www.bilibili.com/video/av21376839?from=search&amp;seid=8590621800275634720">计算机科学速成课</a></p>
 
-<h3 id="基础术语">基础术语</h3>
+<p>在电子计算机还没有被发明的时候。计算机指的并不是我们现在常识中的电脑硬件，而是使用计算器计算的人（大多是女性，我猜因为女性比较细心，容易管理）。她们会被分配一些数据和需要计算的步骤，接着按照步骤耐心地操作计算器，然后写出结果。如果你看过电影《隐藏人物》应该会对一大堆女生拿着计算器埋头计算的场景有印象。不过，你不会把用计算器按下数字得到答案当作在编程，只会把它当成是使用工具的一种方式，但是实际上它与编程并没有太大的区别。举个例子，我们现在需要把一个文本文件的数据转换为Excel表格保存。文本的内容是：</p>
 
-<h4 id="一般我们从搜索引擎得到的名词解释都非常难懂-我希望用实际生活的例子来解析这些计算机的基础术语">一般我们从搜索引擎得到的名词解释都非常难懂，我希望用实际生活的例子来解析这些计算机的基础术语</h4>
+<blockquote>
+<p>Shall I compare thee to a summer’s day?</p>
+
+<p>Thou art more lovely and more temperate.</p>
+
+<p>Rough winds do shake the darling buds of May,</p>
+</blockquote>
+
+<p>我们想把这些数据转换成Excel文件：</p>
+
+<table>
+<thead>
+<tr>
+<th>A1</th>
+<th>A2</th>
+<th>A3</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Shall I compare thee to a summer’s day?</td>
+<td>Thou art more lovely and more temperate.</td>
+<td>Rough winds do shake the darling buds of May,</td>
+</tr>
+</tbody>
+</table>
+
+<p>与按计算器不一样的是，这里的数字变成了三行的文本，乘法法则变成了格式转换。得到的结果变成了Excel的文件。不过它们两者都遵循三个原则，<strong>接受数据，处理数据，输出数据</strong>，要解决这个问题就像按计算器一样简单：</p>
+
+<ol>
+<li>读取文本文件中的数据。</li>
+<li>把文字按照Excel的格式需要转换成新的格式。</li>
+<li>把新的数据存储起来。</li>
+</ol>
+
+<p>即使不会编程，我们也可以猜测到读取数据与存储数据应该非常简单（如果没猜对的话我偷偷告诉你），难点应该在转换这一部分。我们分析下这部分要怎么解决，要存储为Excel格式的文件，我们可以先参考Excel是如何存储数据的。我们假设我们要得到的Excel表格是这样存储的：</p>
+
+<blockquote>
+<p>A1: Shall I compare thee to a summer’s day? (black, bold, normal, 20)</p>
+
+<p>A2: Thou art more lovely and more temperate. (black, bold, normal, 20)</p>
+
+<p>A3: Rough winds do shake the darling buds of May, (black, bold, normal, 20)</p>
+</blockquote>
+
+<p>看起来不像表格？没关系，Excel程序会自己处理的，你可以想象Excel程序是一条流水线，先把所有的数据读出来放在流水线上，当符合要求的产品经过，就进行加工，显示为不同的表格样式。上面的这种格式在编程中我们称这个为列表，它就像我们平时手机上的备忘录，或者购物前列出的购物清单，把要做的每一项按照顺序写下来。最后面的括号里面的是什么？我们试试把&rdquo;black&rdquo;改为&rdquo;blue&rdquo;再保存，发现字体的颜色都变成蓝色了，原来这些就是字体的设置，在编程中，我们称为参数。回到我们刚刚的任务，要把文本文件的数据转成Excel格式，只需要在原本文本文件的数据的每一行前面加上&rdquo;A&rdquo;，行号，冒号和用括号包含的一些参数就行了吧。Yoo！我们解决了一个重要的问题。实际上，Excel并不是这么存储数据的，不过我们可以把它当成这样，Excel提供了外部接口给我们使用，。等等，外部接口又是什么意思？回到计算器的例子，当我们输入5*28，按下等号的时候，我们不需要知道计算器是通过什么方式计算结果的，我们只知道只要我按照正确的规则输入，而不是输入*5 28，我就能得到正确的答案。这里计算器提供的就是外部接口。你只需要按照规则把数据传进它提供的接口，就能得到结果。同样地，Excel也提供了类似的接口，只要你按照语法与顺序告诉它每一行的属性，它就能按照要求得到数据。</p>
+
+<p>不如先把数据转换成中间数据，再进行转换。其实当我们想到这一点，我们已经解决了这个问题了。什么？还没开始写代码？写代码是最简单的事情。初入编程的同学觉得编程难，往往他们纠结于编程的语法与编程语言的特性中，其实这些都不是最重要的。就像写作一样，你的文笔固然重要，但是更重要的是故事的构思与思想。这也是作家与语言学家最重要的区别。</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -990,6 +1055,40 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1037,42 +1136,6 @@ s.setAttribute('data-timestamp', +new Date());
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1532,10 +1595,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" title="Python爬虫基础（未完成）"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" title="编程的第一步"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/" title="DNS查询" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/" title="爬虫基础" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
