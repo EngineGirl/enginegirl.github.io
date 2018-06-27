@@ -1,6 +1,6 @@
 ---
 title: 常见问题
-weight: 5
+weight: 3
 chapter: true
 ---
 
