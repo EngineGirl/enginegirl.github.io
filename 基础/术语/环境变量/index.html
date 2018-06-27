@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>公私钥加密 :: Engine GO</title>
+    <title>环境变量（未完成） :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1530105915" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/">
+  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
     <nav id="sidebar" class="">
 
 
@@ -168,7 +168,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题" class="dd-item 
-        parent
+        
         
         
         ">
@@ -249,7 +249,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/" title="公私钥加密" class="dd-item active">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/" title="公私钥加密" class="dd-item ">
         <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/">
         公私钥加密
         
@@ -350,7 +350,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
-        
+        parent
         
         
         ">
@@ -488,7 +488,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量（未完成）" class="dd-item ">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量（未完成）" class="dd-item active">
         <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
         环境变量（未完成）
         
@@ -903,7 +903,7 @@
             
           
           
-            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/'>常见问题</a> > 公私钥加密
+            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/'>术语</a> > 环境变量（未完成）
           
          
           
@@ -917,29 +917,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#简介">简介</a></li>
-<li><a href="#对称密码">对称密码</a>
-<ul>
-<li><a href="#密钥配送">密钥配送</a></li>
-</ul></li>
-<li><a href="#非对称密码">非对称密码</a></li>
-<li><a href="#数字签名">数字签名</a></li>
-<li><a href="#数字证书">数字证书</a></li>
-<li><a href="#ssh登录">SSH登录</a></li>
-<li><a href="#https传输">Https传输</a></li>
-<li><a href="#api调用">API调用</a></li>
-<li><a href="#总结">总结</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -951,330 +929,13 @@
         
         <div id="body-inner">
           
-            <h1>公私钥加密</h1>
-            <h4>更新时间：May 7, 2018</h4>
+            <h1>环境变量（未完成）</h1>
+            <h4>更新时间：June 8, 2018</h4>
           
 
         
 
 
-
-
-<p>作者：Windson Yang</p>
-
-<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。（www.enginego.org）</p>
-
-<ul>
-<li><a href="#简介">简介</a></li>
-<li><a href="#对称密码">对称密码</a></li>
-<li><a href="#非对称密码">非对称密码</a></li>
-<li><a href="#数字签名">数字签名</a></li>
-<li><a href="#ssh登录">SSH登录</a></li>
-<li><a href="#https传输">Https传输</a></li>
-<li><a href="#api调用">API调用</a></li>
-</ul>
-
-<h3 id="简介">简介</h3>
-
-<p>我接触过不少工程师对于对称加密，非对称加密，公钥和私钥只停留在应用的层面，而并不了解背后的原理。所以在开发过程中犯了不少错误，而通常涉及加密传输或者加密存储的错误都比较严重，这篇文章着重介绍了密码学常用的工具以及常见场景。</p>
-
-<h3 id="对称密码">对称密码</h3>
-
-<p>我们日常接触最多的就是对称密码，它最重要的性质有两点：</p>
-
-<ul>
-<li>对称密码中加密和解密使用的是同一个密码。</li>
-<li>对称密码中加密后的密文只有该对称密码才能解密。</li>
-</ul>
-
-<p>对称加密有很多名称，例如<strong>对称密码</strong>，<strong>私钥密码</strong>，它类似家里的保险柜，把密码设置成9527然后锁上，那么也需要使用9527才能打开。当你要把“芹菜，香菜”利用对称密码“000111”传输给朋友：</p>
-
-<pre><code># 原文
-芹菜，香菜
-
-# 约定一个密钥（不能被第三方知道）
-000111 
-
-# 把信息和对称密钥异或运算，得到密文
-101100
-</code></pre>
-
-<p>这时候你可以直接把密文“101100”告诉你的朋友。你的朋友使用约定的密钥“000111”对密文进行再一次异或就能得到原文。<strong>实际使用中，加解密不止异或一次那么简单，通常会使用分组密码多次迭代异或。常用的对称加密算法有DES与AES。</strong></p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>DES</th>
-<th>AES</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>密钥长度</td>
-<td>56位</td>
-<td>128, 192, 256 位</td>
-</tr>
-
-<tr>
-<td>加密方式</td>
-<td>对称分组密码</td>
-<td>对称分组密码</td>
-</tr>
-
-<tr>
-<td>加密轮数</td>
-<td>16轮</td>
-<td>128位10轮，192位12轮，256位14轮</td>
-</tr>
-
-<tr>
-<td>安全性</td>
-<td>被攻破</td>
-<td>安全</td>
-</tr>
-
-<tr>
-<td>速度</td>
-<td>较慢</td>
-<td>较快</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="密钥配送">密钥配送</h4>
-
-<p><strong>对称密码最大的问题是密钥配送问题，也就是如何约定只有传输者和接受者都知道并且足够长的密钥“000111”，任何得到这个密钥的人都能够解密信息。</strong>常用的解决方法有两种：</p>
-
-<ul>
-<li><p>使用密钥分配中心</p>
-
-<ol>
-<li><p>Sunkist与Cherry想要加密传输信息。</p></li>
-
-<li><p>密钥分配中心为每个人都生成一个密钥。</p>
-
-<blockquote>
-<p>Sunkist的密钥是000000。</p>
-
-<p>Cherry的密钥是111111。</p>
-</blockquote></li>
-
-<li><p>当Sunkist与Cherry准备加密传输信息的时候，密钥分配中心使用伪随机生成器生成一个会话密钥。
-&gt; 会话密钥000111。</p></li>
-
-<li><p>分别用Sunkist与Cherry的密钥来加密会话密钥，并且分别发送给Sunkist与Cherry。</p>
-
-<blockquote>
-<p>“Hello, Sunkist，会话密钥通过你的密钥加密后是000111。”</p>
-
-<p>“Hello, Cherry，会话密钥通过你的密钥加密后是111000。”</p>
-</blockquote></li>
-
-<li><p>Sunkist与Cherry使用自己的密钥对信息解密，得到会话密钥，然后使用会话密钥进行对称加密传输信息，传输完毕后销毁会话密钥。</p></li>
-</ol>
-
-<p>不过这个方法的缺点也非常明显：</p>
-
-<ol>
-<li>必须要有密钥分配中心才能加密传输信息，实际应用中非常不方便。</li>
-<li>这个方法同样也会遇到密钥配送问题，要保证第二步中密钥分配中心生成为每个人生成密钥发送给他们的时候不被窃听。</li>
-<li>密钥分配中心如果出现问题或者被攻击了。那么公司的所有传输信息都会被破解。</li>
-</ol>
-
-<p>有什么更好地解决密钥配送方法吗？</p></li>
-</ul>
-
-<h3 id="非对称密码">非对称密码</h3>
-
-<p><strong>非对称密码（也称为公钥密码）与对称密码的不同点是非对称密码包含一个公钥和一个私钥。</strong>它有几个性质：</p>
-
-<ul>
-<li>公钥和私钥是严格符合数学关系一一对应且不可互换的。</li>
-<li>公钥可以公开发布，私钥必须自己保管，不可以泄露。</li>
-<li>使用公钥加密的内容只有对应的私钥才能解密，使用私钥签名的内容只有对应的公钥才能解密。</li>
-</ul>
-
-<p><strong>要注意的第三点，虽然使用同样的分组迭代算法（AES，DES），但是公钥对明文运算称为“加密”，私钥对明文运算称为“签名”。</strong>在RSA算法中，公钥和私钥的数学关系满足：</p>
-
-<pre><code>公钥 * 私钥 mod L = 1
-</code></pre>
-
-<p>有些读者看到这个公式，可能会误以为公钥和私钥可以互换，都能用作加密，然后用另外一个解密。而且实际应用中，确实也能互相“解密”。<strong>不过，公钥在选取的时候还需要满足一些额外条件。（例如与L互质）所以使用公钥加密才符合严格的数学安全，而私钥“加密”不能。私钥只能用作签名，让持有公钥的人来验证这条信息确实是私钥持有者认证过的，实际用作加密的话安全性没有那么高。</strong></p>
-
-<p>回到密钥配送的问题，<strong>想象一个场景，Sunkist，Cherry，Wing三个约在一起见面。任意两个人沟通的内容，第三个人都可以听到。而且他们之间只能通过聊天沟通，不能通过肢体语言或者传纸条的方式交流。Sunkist与Cherry要如何传输信息而不被Wing发现？</strong>这是一个非常有趣的问题，在阅读接下来的内容之前，读者们可以先自己尝试去解决这个问题。</p>
-
-<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/base/encryption/waiting.png" alt="time" /></p>
-
-<p>要解决这个问题需要两个步骤，<strong>第一是商议密钥，要在Wing在旁边的情况下约定一个只有Sunkist与Cherry知道的密钥。（很神奇吧）第二是通过密钥把信息进行对称加密传输，这一步就和文章一开始提到的对称加密一样。</strong>为了简单起见，我们假定这个场景中的三人都只会乘法，不会除法。简化版称为Sunkist-Cherry算法：</p>
-
-<ol>
-<li><p>让Sunkist与Cherry都确定一个算法（通常是公开的算法）。</p>
-
-<blockquote>
-<p>Sunkist： “我会Diffie-Hellman算法和Sunkist-Cherry算法。”</p>
-
-<p>Cherry：“我只会Sunkist-Cherry算法，那我们就用这个算法吧。”</p>
-
-<p>Wing：“我知道你们要用Sunkist-Cherry算法了。”</p>
-</blockquote></li>
-
-<li><p>Sunkist与Cherry分别选择一个私人数字，这个私人数字必须保密。</p>
-
-<blockquote>
-<p>Sunkist： “我不会告诉你我选择了什么数字。”（Sunkist选择了数字5，其他两人都不知道。）</p>
-
-<p>Cherry： “我不会告诉你我选择了什么数字。”（Cherry选择了数字10，其他两人都不知道。）</p>
-
-<p>Wing：“我知道你们要用Sunkist-Cherry算法了。”</p>
-</blockquote></li>
-
-<li><p>共同选择一个数字，作为公有数字。</p>
-
-<blockquote>
-<p>Sunkist： “我们就选择数字2作为公有数字吧。”</p>
-
-<p>Cherry：“好的！”</p>
-
-<p>Wing：“你们要用Sunkist-Cherry算法，而且公有数字是2。”</p>
-</blockquote></li>
-
-<li><p>Sunkist与Cherry分别把公有数字乘以自己的私人数字得到混合数字，然后告诉对方。</p>
-
-<blockquote>
-<p>Sunkist： “我的混合数字是10。”（5 * 2 = 10）</p>
-
-<p>Cherry： “我的混合数字是20。”（10 * 2 = 20）</p>
-</blockquote>
-
-<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/base/encryption/s-c.png" alt="s-c" /></p>
-
-<blockquote>
-<p>Wing：“你们要用Sunkist-Cherry算法，而且公有数字是2。Sunkist的混合数字是10，Cherry的混合数字是20。”</p>
-</blockquote>
-
-<p>还记得我们一开始的假设吗？在这个世界没有人会做除法，如果Wing会除法的话那么它马上就能用混合数字除以公有数字，得到Sunkist与Cherry的私人数字了。幸好，在我们的假设下，它不知道如何计算出私人数字。</p></li>
-
-<li><p>Sunkist与Cherry分别把私人数字与对方的混合数字相乘，得到最终的密钥</p>
-
-<blockquote>
-<p>Sunkist把私人数字5以及Cherry的混合数字20相乘得到100。</p>
-
-<p>Cherry把私人数字10以及Sunkist的混合数字10相乘得到100。</p>
-</blockquote>
-
-<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/base/encryption/s-c2.png" alt="s-c2" /></p>
-
-<p><strong>整个过程中，公钥是2，最终商议出的密钥是100，Wing虽然知道Sunkist与Cherry聊天的全部内容，知道公有数字与它们的混合数字，但是却无法计算出密钥。</strong></p></li>
-</ol>
-
-<p>Sunkist-Cherry算法利用了一个容易运算（乘法）但不可逆（除法）的数学技巧。在实际应用，我们最常使用Diffie–Hellman算法，它利用了基于有限域上的离散对数的性质。<strong>Sunkist-Cherry算法与Diffie-Hellman算法解决了当双方只能公开交换信息的时候商议密钥的问题。要注意，在这里的公私钥并不是用作互相加解密的。</strong></p>
-
-<p>非对称密码除了解决商议密钥的问题，还常常用来解决另外一个问题，<strong>例如使用RSA算法，生成一对一一对应的公私钥，经过公钥加密的内容只有私钥才能解密。通过私钥签名的内容通过公钥才能验证。</strong>在实际应用中，使用公钥加密，私钥解密用在<a href="#ssh登录">SSH登录</a>以及<a href="#https传输">Https传输</a>中，而私钥签名，公钥解密则用在<a href="#数字签名">数字签名</a>中。我们接下来详细说明下。</p>
-
-<h3 id="数字签名">数字签名</h3>
-
-<p>Sunkist要找Cherry借钱，大家商议立一个借据。不过如果在无法见面的情况下，如何立借据并且证明这个借据是Sunkist写的呢？这里需要用到RSA算法，Sunkist使用RSA算法生成一对公私钥，把公钥公布在自己的网站上，然后把借据通过私钥签名，<strong>所有人都可以通过Sunkist的公钥尝试对签名后的内容解密，能解密成功则证明这个借据是Sunkist写的。</strong>使用数字签名有几个好处</p>
-
-<ol>
-<li>无需物理接触</li>
-<li>容易验证，只需要用公钥去尝试解密就能验证。</li>
-<li>防止Sunkist否认，因为公钥能解密的内容必定是对应的私钥加密的。</li>
-</ol>
-
-<p>不过有一个问题，就是Cherry如何确定这个公钥是Sunkist的，当它要获取Sunkist的公钥的时候，有可能Sunkist的网站被黑了，被换作其他人的公钥了（中间人攻击）。要解决这个问题，我们可以使用数字证书来确保获取正确的公钥。</p>
-
-<h3 id="数字证书">数字证书</h3>
-
-<p>数字证书的作用就是获取某人的正确公钥，怎么做呢？首先我们需要一个中立可信的<a href="https://en.wikipedia.org/wiki/Certificate_authority">证书机构</a>，它有点像注册中心，大家可以把自己的公钥放在它那里保管。当Cherry要获取Sunkist的公钥的时候：</p>
-
-<ol>
-<li>Sunkist先向证书机构注册自己的公钥。</li>
-<li>Cherry向证书机构请求Sunkist的公钥。</li>
-<li>证书机构用自己的私钥把Sunkist的公钥进行签名后发送给Cherry，一般来说我们浏览器默认会存储了证书机构的公钥，使用证书机构的公钥把签名后信息解密，然后得到Sunkist的公钥。</li>
-<li>使用Sunkist的公钥把Sunkist发送的信息进行解密。</li>
-</ol>
-
-<p><strong>这里有个信任链，我们默认信任了浏览器中的证书机构的公钥，证书机构信任了Sunkist提交的公钥。我们使用证书机构的公钥解密就能得到Sunkist正确的公钥。</strong></p>
-
-<h3 id="ssh登录">SSH登录</h3>
-
-<p>SSH登录有两种方式：</p>
-
-<ol>
-<li>使用密码登录</li>
-<li>使用公钥登录</li>
-</ol>
-
-<p>SSH在第一次登录主机的时候，会有类似的信息：</p>
-
-<pre><code>The authenticity of host 'host (12.18.429.21)' can't be established.
-RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.
-Are you sure you want to continue connecting (yes/no)?
-</code></pre>
-
-<p>什么意思呢？主机会发送它的公钥指纹，你需要验证这个公钥是该主机的。<strong>确认之后，它们一开始都需要通过Diffie–Hellman算法商议密钥进行加密传输。</strong>然后再进入认证过程，之后的数据传输使用对称加密传输。其中密码登录方式的话直接使用对称加密验证密码。而使用公钥登录分为几个步骤</p>
-
-<ol>
-<li>客户端使用非对称加密算法（RSA，椭圆曲线算法）生成一对公私钥对。</li>
-<li>客户端把公钥放在服务端的anthority_key文件中。</li>
-<li>客户端与服务端建立了加密通道之后，服务端会使用客户端的公钥随机加密一个信息然后发送给本机</li>
-<li>客户端用自己的私钥解密，并且返回信息。</li>
-<li>服务端认证返回的信息与随机生成的信息是否相同，相同则认证成功。</li>
-</ol>
-
-<h3 id="https传输">Https传输</h3>
-
-<p><a href="https://blog.csdn.net/nyyjs/article/details/72832896">Https和ssl握手的理解</a>这篇文章有详细地解释Https传输的具体过程：</p>
-
-<blockquote>
-<ol>
-<li>客户端的浏览器向服务器传送客户端 SSL 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种信息。</li>
-<li>服务器向客户端传送 SSL 协议的版本号，加密算法的种类，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。</li>
-<li>客户利用服务器传过来的信息验证服务器的合法性，服务器的合法性包括：证书是否过期，发行服务器证书的 CA 是否可靠，发行者证书的公钥能否正确解开服务器证书的“发行者的数字签名”，服务器证书上的域名是否和服务器的实际域名相匹配。如果合法性验证没有通过，通讯将断开；如果合法性验证通过，将继续进行第四步。</li>
-<li>用户端随机产生一个用于后面通讯的“对称密码”，然后用服务器的公钥（服务器的公钥从步骤②中的服务器的证书中获得）对其加密，然后将加密后的“预主密码”传给服务器。</li>
-<li>&hellip;.</li>
-</ol>
-</blockquote>
-
-<p><strong>我们可以看到，在第三步，客户端就使用数字证书技术来获取网站的公钥。接下来就商议密钥进行对称加密传输。可以说，总的来说，Https传输是先使用非对称加密验证以及商议密钥，再经过对称加密传输数据的。</strong></p>
-
-<h3 id="api调用">API调用</h3>
-
-<p>当我们使用第三方的API（例如七牛云，腾讯云的人工智能API），第三方为了验证调用是某个用户发起的，会提供一个公钥和一个私钥，<strong>要注意，这里的公钥和私钥并不是一一对应的，而是从两对公私钥中，分别取出一对的公钥与另外一对的私钥。</strong></p>
-
-<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/base/encryption/s-c3.png" alt="s-c3" /></p>
-
-<p>剩下的公私钥由第三方保存。我们有两种方式使用这对公私钥：</p>
-
-<ol>
-<li><p>客户端调用
-我们把公钥放在客户端文件中（js文件，手机客户端），因为公钥是可以公开的，不用担心被窃取。调用的时候通过公钥把信息进行加密发到第三方，第三方用对应的私钥解密。</p></li>
-
-<li><p>服务端调用
-我们把私钥放在自己的服务端中。然后调用的时候通过私钥把信息进行签名发送给第三方，第三方用对应的公钥解密，如果能成功解密则代表验证成功。</p></li>
-</ol>
-
-<h3 id="总结">总结</h3>
-
-<ul>
-<li>因为对称加密比非对称加密快得多。在实际应用例如<a href="#https传输">Https传输</a>，<a href="#api调用">API调用</a>，都是使用非对称加密验证以及商议密钥。然后通过密钥进行对称加密传输数据。</li>
-<li>公钥和私钥是符合严格数学关系的一对一对应，一个公钥有且只有一个对应的私钥。</li>
-<li>公钥加密的信息只有相应的私钥才能解密，私钥签名的内容只有相应的公钥才能解密。</li>
-<li>为了保证系统的保密性，虽然公私钥能互相加解密，但是公钥和私钥并不能交换使用。（不能把私钥当成公钥用，把公钥当成私钥用。）</li>
-<li>用公钥加密，私钥解密，通常用在数据传输协商对称密钥。或者进行少量信息传输与验证（SSH登录）</li>
-<li>用私钥签名-公钥解密通常用在数字签名中。（证明文件是由私钥拥有者认证的。）</li>
-</ul>
-
-<p>无论是对称加密还是非对称加密，密钥都需要保管好，只要其他人获得密钥，就能破解信息。要注意的是，在非对称加密中，公钥是可以公开的，只需要保管好私钥就好。</p>
-
-<h3 id="参考">参考</h3>
-
-<ul>
-<li>《图解密码技术》</li>
-<li>《改变未来的九大算法》</li>
-</ul>
 
 
 <footer class=" footline" >
@@ -1374,7 +1035,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
                 
                 
 
@@ -1387,9 +1047,6 @@ s.setAttribute('data-timestamp', +new Date());
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1439,7 +1096,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
                 
                 
 
@@ -1455,9 +1111,6 @@ s.setAttribute('data-timestamp', +new Date());
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1510,6 +1163,7 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
+                    
                 
                 
 
@@ -1523,21 +1177,8 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1635,6 +1276,7 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
+                    
                 
                 
 
@@ -1650,6 +1292,9 @@ s.setAttribute('data-timestamp', +new Date());
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1758,6 +1403,22 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1885,10 +1546,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" title="如何准备技术面试"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统（未完成）"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9/" title="编程语言选择（未完成）" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/" title="进程（未完成）" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

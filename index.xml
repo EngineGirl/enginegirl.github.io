@@ -18,38 +18,98 @@
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/</guid>
       <description>作者：Windson Yang
-本文章由ResumeJob贡献，ResumeJob能帮助你重新规划你的职业生涯，商业转载请联系作者获得授权，非商业转载请注明出处。
+本文章由 ResumeJob贡献，ResumeJob 能帮助你重新规划你的职业生涯，商业转载请联系作者获得授权，非商业转载请注明出处。
 之前我写了一篇如何准备技术面试的文章，得到了不少读者的支持，也给了我更多动力把求职系列教程写下去。
-面试前要准备的第一件事就是写简历，从零开始写简历是一件痛苦的事，因为它既重要又耗时。现在就有很多求职者在电脑前急躁不安地搜索简历模版和参考例句，却不知道如何下笔。写得太短的话HR一定觉得没诚意，写得太长的话又无从下手。有的求职者写完连自己都不忍心看，错别字连篇，排版混乱就投出去，所以海投简历也没有回应。而且程序员工资相对较高，有大量人才从其他专业转来，竞争非常激烈，所以如何从众多简历中脱颖而出，赢得面试的机会就非常重要了。这篇文章会从两个方面介绍简历的常见问题
-1. 简历中的常见错误
-2. 简历应该怎么写
-看完之后，读者就能从中学习到如何写一份更好的简历。
+面试前要准备的第一件事就是写简历，从零开始写简历是一件痛苦的事，因为它既重要又耗时。现在就有很多求职者在电脑前急躁不安地搜索简历模版和参考例句，却不知道如何下笔。写得太短的话 HR 一定觉得没诚意，写得太长的话又无从下手。有的求职者写完连自己都不忍心看，错别字连篇，排版混乱就投出去，所以海投简历也没有回应。而且程序员工资相对较高，有大量人才从其他专业转来，竞争非常激烈，所以如何从众多简历中脱颖而出，赢得面试的机会就非常重要了。这篇文章会从两个方面介绍简历的常见问题
+ 简历中的常见错误
+ 简历应该怎么写
+  看完之后，读者就能从中学习到如何写一份能吸引住 HR 眼光的更好的简历。
 简历中的常见错误 1. 信息过多，缺乏重点 常见表现是一开始十几行的技能列表
  熟悉使用Python，Go，熟悉C++，HTML，CSS, Vue, jQuery。
 熟悉基本数据结构，算法设计能力。
-熟悉TCP/IP，UDP，HTTP，DNS，WebSocket等网络协议。
+熟悉 TCP/IP，UDP，HTTP，DNS，WebSocket 等网络协议。
 &amp;hellip;
  我举一个血淋淋的真实例子：
- 没错，这就是我收到的一份简历的开头，20行的熟悉掌握。这位求职者开始就把自己了解的所有工具都列出来，希望通过长长的技能列表突显自己的经验和学习能力。但是却适得其反。因为HR只有在通过简介或者技能列表觉得求职者初步符合资格了，才会认真把简历看下去，其余情况都是快速搜索关键字。例如要招前端工程师，HR会先搜索Vue，React，jQuery等前端框架的关键字，如果看了5秒都没找到的话，就会看下一份。其实不单单是HR，大部分人遇到大段文字都会选择跳读，不信你回头看看，第3行和14行其实是一样的。所以，越简洁清晰的简历，HR反而越有可能认真看。还有另外一个问题，当扫到里面有几行是一些基础的技能的时候，HR就会开始质疑求职者的能力。想象下，终于到周末休息了，你想找部轻松的电影看看，上网搜索到一个20大最佳喜剧电影榜单。当你快速浏览的时候，如果发现好几项都是烂片，一点都不好笑，完全浪费时间，这个情况下，你就会开始怀疑这个喜剧电影排行榜有问题，不会继续看下去，HR看简历也是一样的。 那么技能列表应该这么写呢，因为HR可能是工程师，也可能是非技术员工，所以技能列表也应该简短而排版清晰，让外行人也能快速定位技能。我建议参考这种方式（因为熟练度见仁见智，所以不写也没什么关系）：
+ 没错，这就是我收到的一份简历的开头，20行 的熟悉掌握。这位求职者开始就把自己了解的所有工具都列出来，希望通过长长的技能列表突显自己的经验和学习能力。但是却适得其反。因为 HR 只有在通过简介或者技能列表觉得求职者初步符合资格了，才会认真把简历看下去，其余情况都是快速搜索关键字。例如要招前端工程师，HR会先搜索 Vue，React，jQuery 等前端框架的关键字，如果看了5秒都没找到的话，就会看下一份。
+其实不单单是 HR，大部分人遇到大段文字都会选择跳读，不信你回头看看，第3行 和 14行 其实是一样的。所以，越简洁清晰的简历，HR 反而越有可能认真看。还有另外一个问题，当扫到里面有几行是一些基础的技能的时候，HR 就会开始质疑求职者的能力。想象下，终于到周末休息了，你想找部轻松的电影看看，上网搜索到一个 20大 最佳喜剧电影榜单。当你快速浏览的时候，如果发现好几项都是烂片，一点都不好笑，完全浪费时间，这个情况下，你就会开始怀疑这个喜剧电影排行榜有问题，不会继续看下去，HR 看简历也是一样的。 那么技能列表应该这么写呢，因为 HR 可能是工程师，也可能是非技术员工，所以技能列表也应该简短而排版清晰，让外行人也能快速定位技能。我建议参考这种方式（因为熟练度见仁见智，所以不写也没什么关系）：
  后端框架：Django, Flask, Scrapy
 前端框架：Vue, React, jQuery
 数据库：Redis, MySQL
 工具：Docker, Jenkins, Git
 其他：HTTP, TCP/IP, WebSocket
-外语：大学英语四级，能流畅阅读英文文档
- 就是如此简短，让HR能快速定位到求职者的技能，做出是否看下去的判断。另外这个技能列表应该放在简介之后，我们之后会介绍。
-2. 无意义描述 第二个常见错误就是叙述项目经验的时候进行无意义的描述：
- XXX平台
-根据项目任务要求完成规划工作和按时完成软件开发。
-完成爬虫模块，展示模块。
-开发后台管理系统，实现自定义分页，第三方登录。
-完成数据整理与入库功能。
- HR无法从这样的描述中得到有效的信息，也无法判断求职者的技术能力。需要根据
- 什么时区： 构建IP代理池，优化爬虫策略和防屏蔽规则 使用什么工具： 使用Scrapy开发异步爬虫系统 结果怎么样： 提升200%网页抓取速度  三个点来修改，最好加上数据来证明。
- XXX平台
-构建IP代理池，使用Scrapy开发异步爬虫系统，优化爬虫策略和防屏蔽规则，提升200%网页抓取速度。
-使用Vue框架完成后台管理系统，实现自定义分页，第三方登录等6个主要功能。
-负责数据的清洗与存储到MySQL数据库，使用数据库索引减少50%数据查询时间。</description>
+外语：大学英语四级，能流畅阅读英文文档</description>
+    </item>
+    
+    <item>
+      <title>hook（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>内存（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>堆栈（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>嵌套字（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>抓包（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>环境变量（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>进程（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -368,78 +428,6 @@ Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
 Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  终端还有很多其他命令，例如输出当前路径</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</guid>
-      <description></description>
     </item>
     
   </channel>
