@@ -41,78 +41,6 @@
     </item>
     
     <item>
-      <title>hook（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>内存（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>堆栈（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>嵌套字（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>抓包（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>操作系统（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>环境变量（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>进程（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</link>
-      <pubDate>Fri, 08 Jun 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>什么是编程（未完成）</title>
       <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Fri, 01 Jun 2018 00:10:14 +0800</pubDate>
@@ -302,6 +230,78 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
 绝对路径和相对路径 有一天，Cherry在路上遇到Sunkist，它问Sunkist的公司地址在哪里，Sunkist可能有两个答案：
  以这里为起点，西南方向500米的石室大厦 中国广东省广州市思哲路石室大厦  第一个答案以当前的位置为起点所描述的称为相对路径。根据Sunkist当前的位置不一样，它回答的相对路径会不一样，第二个答案从国家到省份城市巨细无遗地描述称为绝对路径，一个文件除非被移动，否则绝对路径是不会变化的。每个文件/文件夹在一台计算机中可能会有无数个相对路径，但是只有一个绝对路径。回到文章最初的文件存储结构，first.md的绝对路径是
 /usr/foo/first.md (first.md的绝对路径)  这是从根目录&amp;rdquo;/&amp;ldquo;开始一层一层描述的位置。了解相对路径之前先有一点预备知识。在路径命令中&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>hook（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>内存（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>堆栈（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>嵌套字（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>抓包（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>环境变量（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>进程（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</link>
+      <pubDate>Sun, 08 Apr 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/</guid>
+      <description></description>
     </item>
     
     <item>
