@@ -2,6 +2,7 @@
 title: 工具教程
 weight: 2
 chapter: true
+pre: "<b>2. </b>"
 ---
 
 ### 配置基础开发环境

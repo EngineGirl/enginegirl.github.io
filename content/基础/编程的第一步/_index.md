@@ -2,6 +2,7 @@
 title: 编程的第一步
 weight: 1
 chapter: true
+pre: "<b>1.1 </b>"
 ---
 
 ### 编程的第一步

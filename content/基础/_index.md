@@ -2,6 +2,7 @@
 title: 基础知识
 weight: 1
 chapter: true
+pre: "<b>1. </b>"
 ---
 
 ### 基础知识

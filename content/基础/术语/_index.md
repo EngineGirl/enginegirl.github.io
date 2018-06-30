@@ -2,6 +2,7 @@
 title: 术语
 weight: 4
 chapter: true
+pre: "<b>1.4 </b>"
 ---
 
 ### 基础术语
