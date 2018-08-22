@@ -1,6 +1,6 @@
 ---
 title: "Windows安装Python教程（未完成）"
-date: 2018-08-022T00:21:14+08:00
+date: 2018-08-22T00:10:14+08:00
 ---
 
 作者：Windson Yang
