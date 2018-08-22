@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Windows安装Python教程（未完成）</title>
+      <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</guid>
+      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+以下步骤极其简单，不要担心😊
+首先点击Python下载地址
+![Python-Windows下载地址]()
+点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。</description>
+    </item>
+    
+    <item>
       <title>macOS安装Python教程</title>
       <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
@@ -442,19 +455,6 @@ Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
 Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  终端还有很多其他命令，例如输出当前路径</description>
-    </item>
-    
-    <item>
-      <title>Windows安装Python教程（未完成）</title>
-      <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-首先点击Python下载地址
-![Python-Windows下载地址]()
-点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。</description>
     </item>
     
   </channel>

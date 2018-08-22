@@ -77,6 +77,13 @@
 	"content": " 本章节介绍如何安装Python语言到计算机中 Python是一门编程语言，它需要用到编译器和解析器（关于这两个组件的介绍可以自行搜索，在本系列课程中，只需要把它们当成普通的软件就好，不会影响你的超能力发挥。）我们像普通软件一样安装下载就可以，请根据自己的操作系统浏览以下章节（Linux用户，请自行安装 :D）：\n macOS安装Python教程 Windows安装Python教程  "
 },
 {
+	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/",
+	"title": "Windows安装Python教程（未完成）",
+	"tags": [],
+	"description": "",
+	"content": "作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n首先点击Python下载地址\n![Python-Windows下载地址]()\n点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。\n"
+},
+{
 	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/",
 	"title": "macOS安装Python教程",
 	"tags": [],
@@ -271,11 +278,4 @@
 	"tags": [],
 	"description": "",
 	"content": ""
-},
-{
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/",
-	"title": "Windows安装Python教程（未完成）",
-	"tags": [],
-	"description": "",
-	"content": "作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n首先点击Python下载地址\n![Python-Windows下载地址]()\n点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。\n"
 }]
