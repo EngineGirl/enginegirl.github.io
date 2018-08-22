@@ -1,6 +1,6 @@
 ---
 title: "macOS安装Python教程"
-date: 2018-08-022T00:21:14+08:00
+date: 2018-08-22T00:10:14+08:00
 ---
 
 作者：Windson Yang
@@ -9,43 +9,32 @@ date: 2018-08-022T00:21:14+08:00
 **以下步骤极其简单，不要担心😊**
 
 ### 安装Python
-首先点击[Python下载地址](https://www.python.org/downloads/mac-osx/)
+1. **访问[Python下载地址](https://www.python.org/downloads/mac-osx/)**，如下图：
 
-![Python-macOS下载地址]()
+    ![Python-macOS下载地址](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%B8%8B%E8%BD%BD%E9%A1%B5.png)
 
-点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。下载完毕之后双击安装包：
+2. **点击上图蓝色框中的链接**，就像下载普通文件一样，这个时候浏览器会自动开始下载安装包，或者电脑中的默认下载软件会弹出来，请你选择下载目的地，再点击确认。**下载完毕之后双击该安装包**（一般情况下在下载目录中），出现下图，**点击继续**：
 
-![Python-macOS欢迎页]()
+    ![Python-macOS欢迎页](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%BB%8B%E7%BB%8D.png)
 
-点击继续
+3. 下图包括软件的基本介绍，**点击继续**。
 
-![Python-macOS请先阅读]()
-这里包括软件的基本介绍，点击右下角的继续。
+    ![Python-macOS请先阅读](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E8%AF%B7%E5%85%88%E9%98%85%E8%AF%BB.png)
 
-![Python-macOS许可]()
-这里包括软件的使用协议，点击继续，软件会弹出一个小窗口，点击右下角的同意。
+4. 下图包括软件的使用协议，**点击继续**，接着软件会弹出一个小窗口，需要你同意协议，**点击同意按钮即可**。
 
-![Python-macOS目的地]()
-这里选择安装的地方，macOS一般只有一个盘，点击继续即可。
+    ![Python-macOS许可](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E8%AE%B8%E5%8F%AF.png)
 
-![Python-macOS类型]()
-点击安装，弹窗中输入管理密码，然后软件会开始安装，稍等几分钟。
+5. 下图选择安装的地方，macOS一般只有一个盘，**点击继续**即可。
 
-![Python-macOS安装完成]()
-显示这个界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。
+![Python-macOS目的地](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E7%9B%AE%E7%9A%84%E5%9C%B0.png)
+
+5. 出现下图后，**点击安装**，软件会弹出一个小窗口，要求输入管理密码，**你输入管理密码之后，回车**，然后软件会开始安装，稍等几分钟。
+
+![Python-macOS类型](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E5%AE%89%E8%A3%85%E7%B1%BB%E5%9E%8B.png)
+
+6. 显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。
+![Python-macOS安装完成](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E6%AC%A2%E8%BF%8E.png)
 
 ### 使用Python
-好吧，安装了怎么也要试试吧，打开[终端]，输入python3（macOS默认自带Python2，所以这里需要指明使用刚刚安装的Python3版本），然后回车
-
-    Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 26 2018, 23:26:24) 
-    [Clang 6.0 (clang-600.0.57)] on darwin
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
-
-这里第一行是Python的版本，我们教程使用的是3.7，一般来说版本号差别越多差别越大。第二行是编译器的信息与版本。我们可以随便玩下，你会发现光标停留在>>>的右边，>>>代表的是可输入，我们输入
-
-    >>> import this
-   
-然后回车。
-
-不用担心，无论输入什么都不会让你的电脑死机。如果你发现卡住了或者不知道如何处理的情况，按几下"command"+"d"就可以退出Python了。
+好吧，安装了怎么也要试试吧，请到[终端](../../../基础/术语/终端/)章节学习如何在终端使用Python。
