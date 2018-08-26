@@ -42,6 +42,13 @@
 	"content": " 常见问题 这里包含了计算机初学者常见的问题 "
 },
 {
+	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/",
+	"title": "术语",
+	"tags": [],
+	"description": "",
+	"content": " 基础术语 一般我们从搜索引擎得到的名词解释都非常难懂，我希望用实际生活的例子来解析这些计算机的基础术语 "
+},
+{
 	"uri": "https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/",
 	"title": "机器学习",
 	"tags": [],
@@ -54,13 +61,6 @@
 	"tags": [],
 	"description": "",
 	"content": " 爬虫基础 从零开始学习计算机爬虫 "
-},
-{
-	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/",
-	"title": "术语",
-	"tags": [],
-	"description": "",
-	"content": " 基础术语 一般我们从搜索引擎得到的名词解释都非常难懂，我希望用实际生活的例子来解析这些计算机的基础术语 "
 },
 {
 	"uri": "https://www.enginego.org/",
