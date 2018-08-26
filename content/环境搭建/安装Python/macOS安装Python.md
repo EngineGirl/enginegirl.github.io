@@ -13,7 +13,7 @@ date: 2018-08-22T00:10:14+08:00
 
     ![Python-macOS下载地址](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%B8%8B%E8%BD%BD%E9%A1%B5.png)
 
-2. **点击上图蓝色框中的链接**，就像下载普通文件一样，这个时候浏览器会自动开始下载安装包，或者电脑中的默认下载软件会弹出来，请你选择下载目的地，再点击确认。**下载完毕之后双击该安装包**（一般情况下在下载目录中），出现下图，**点击继续**：
+2. **点击上图蓝色框中的链接**，像普通文件一样下载即可。**下载完毕之后双击该安装包**（一般情况下在下载目录中），出现下图，**点击继续**：
 
     ![Python-macOS欢迎页](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%BB%8B%E7%BB%8D.png)
 
