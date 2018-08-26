@@ -1,8 +1,8 @@
 ---
-title: 工具教程
-weight: 2
+title: 环境搭建
+weight: 1
 chapter: true
-pre: "<b>2. </b>"
+pre: "<b>1. </b>"
 ---
 
 ### 配置基础开发环境

@@ -1,8 +1,8 @@
 ---
 title: 基础知识
-weight: 1
+weight: 2
 chapter: true
-pre: "<b>1. </b>"
+pre: "<b>2. </b>"
 ---
 
 ### 基础知识

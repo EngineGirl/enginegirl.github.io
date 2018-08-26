@@ -1,5 +1,5 @@
 ---
-title: "macOS安装Python教程"
+title: "Windows安装Python"
 date: 2018-08-22T00:10:14+08:00
 ---
 
@@ -9,7 +9,7 @@ date: 2018-08-22T00:10:14+08:00
 **以下步骤极其简单，不要担心😊**
 
 ### 安装Python
-1. **访问[Python下载地址](https://www.python.org/downloads/mac-osx/)**，如下图：
+1. **访问[Python下载地址](https://www.python.org/downloads/windows/)**，如下图：
 
     ![Python-macOS下载地址](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%B8%8B%E8%BD%BD%E9%A1%B5.png)
 
@@ -38,3 +38,4 @@ date: 2018-08-22T00:10:14+08:00
 
 ### 使用Python
 好吧，安装了怎么也要试试吧，请到[终端](../../../基础/术语/终端/)章节学习如何在终端使用Python。
+

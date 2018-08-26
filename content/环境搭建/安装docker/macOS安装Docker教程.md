@@ -1,6 +1,7 @@
 ---
 title: "macOS安装docker教程"
 date: 2018-01-08T00:10:14+08:00
+draft: true
 ---
 
 作者：Windson Yang
