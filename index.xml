@@ -12,32 +12,49 @@
     
     
     <item>
-      <title>Windows安装Python教程（未完成）</title>
-      <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</link>
+      <title>Windows安装Python</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/</guid>
       <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 以下步骤极其简单，不要担心😊
-首先点击Python下载地址
-![Python-Windows下载地址]()
-点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。</description>
+安装Python  访问Python下载地址，点击下图中蓝色框的链接，像普通文件一样下载即可。
+ 下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，勾选 Add Python 3.7 to PATH 之后点击 Customize installation。
+ 这是安装的选择，直接点击 Next
+ 点击 Browse 选择安装路径，推荐安装在非系统盘，下面的例子安装在E盘，你也可以根据自己的情况选择路径，然后点击Install。
+ 这时候就会开始安装：
+ 恭喜，安装成功！
+  使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。</description>
     </item>
     
     <item>
-      <title>macOS安装Python教程</title>
-      <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</link>
+      <title>macOS安装Python</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/</guid>
       <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 以下步骤极其简单，不要担心😊
 安装Python  访问Python下载地址，如下图：
- 点击上图蓝色框中的链接，就像下载普通文件一样，这个时候浏览器会自动开始下载安装包，或者电脑中的默认下载软件会弹出来，请你选择下载目的地，再点击确认。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：
+ 点击上图蓝色框中的链接，像普通文件一样下载即可。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：
  下图包括软件的基本介绍，点击继续。
  下图包括软件的使用协议，点击继续，接着软件会弹出一个小窗口，需要你同意协议，点击同意按钮即可。
  下图选择安装的地方，macOS一般只有一个盘，点击继续即可。
    出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。</description>
+    </item>
+    
+    <item>
+      <title>macOS安装编辑器</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+以下步骤极其简单，不要担心😊
+安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮
+![atom_mac下载]()
+  2.</description>
     </item>
     
     <item>
@@ -362,46 +379,6 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
 完成设计 前端工程师需要用代码来实现设计图，例如界面的布局，按钮的颜色等等。这期间需要和设计师合作交流，讨论哪些方面在工程实现中可能会有困难，可能影响性能这类的因素。
 后端交互 完成设计之后，前端工程师需要根据不同的页面以及业务逻辑来与后端交互，这句话什么意思呢？假如你开发的是一个让用户写日记的应用。那么当用户写完日记之后，点击保存按钮，这个按钮要触发一个保存日记的事件，需要把日记根据协议传输到服务器，然后存储在数据库里面。听起来有点复杂，其实非常简单，因为都有通用的工具帮助你完成。
 后端工程师。  业务逻辑处理 前端交互  业务逻辑处理 前端交互 运维工程师 数据分析／机器学习工程师 </description>
-    </item>
-    
-    <item>
-      <title>Windows安装Docker教程</title>
-      <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/windows%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/windows%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-Windows安装Docker教程 官方英文教程
-安装前须知 你的系统需满足以下几个条件，如果不满足以下要求，请参考第二节
- 确保你电脑安装了64位的Windows 10 Pro, Enterprise或者Education(1511 November update, Build 10586 or later)版本。
- 如果你的电脑安装了VirtualBox（一个虚拟机软件，默认系统没有安装）请注意，Windows的Docker版本因为需要Microsoft Hyper-V来运作，安装之后会令VirtualBox无效。
- 必须启动虚拟化（默认启动），可以在任务管理中找到这一项确保enabled
-Windows8检查
-点击开始 &amp;gt; 任务管理 &amp;gt; 性能 &amp;gt; CPU
-黄色的Virtualization为Enabled即可
-Windows7检查
-运行Microsoft® Hardware-Assisted Virtualization Detection Tool工具，然后按照步骤来检测。
-   Docker建立的容器和镜像会被计算机上面的所有用户共享，多账号的系统中要注意数据安全问题。
- 开始安装  下载Docker稳定版 双击下载文件夹中的InstallDocker.msi文件。 阅读协议内容觉得没问题之后点击接受协议（不接受将无法安装:O)，然后安装。   一般软件应该安装在非系统盘（C盘）中，这样即使以后需要重装系统，软件也不会丢失。安装路径不要包含中文）
-  输入系统管理员密码使Docker可以安装网络组件。 完成  启动Docker 安装完成后Docker会自动启动，你可以从状态栏看到Docker正在运作 验证安装成功 运行终端(cmd.exe或者PowerShell)
-PS C:\Users\Docker&amp;gt; docker --version Docker version 17.03.0-ce, build 60ccb22  看到Docker version提示的字样代表安装成功了</description>
-    </item>
-    
-    <item>
-      <title>macOS安装docker教程</title>
-      <link>https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/macos%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/macos%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-(官方英文教程)[https://docs.docker.com/toolbox/toolbox_install_mac/]
- 系统必须满足以下全部要求：  2010后的苹果电脑，支持英特尔MMU内存虚拟 10.10.3或者更新的苹果系统 从Docker1.13版本（准备推出）之后不再支持10.10版本（OS X 10.10 Yosemite） 不能安装4.3.30版本之前的VirtualBox（默认系统并没有这个软件）    下载软件Docker for macOS 双击Docker.dmg安装
- 双击应用程序中的Docker.app来启动Docker
- 系统会请求你输入密码来启动Docker，Docker需要特殊权限来安装网络组件
- 然后可以在屏幕右上角看到Docker的标志
- 可以点击这个标志浏览设置
- 如此简单就安装成功啦，可以吃点巧克力奖励下自己了。:D
-  </description>
     </item>
     
     <item>

@@ -1,10 +1,17 @@
 [
 {
-	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/",
-	"title": "基础知识",
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/",
+	"title": "安装Python",
 	"tags": [],
 	"description": "",
-	"content": " 基础知识 这章解释了计算机基础中常见的术语以及常见问题。\n常见问题  一文理解字符串编码 公私钥加密 编程语言选择 如何准备技术面试 如何写一份更好的简历  术语  Ping命令 DNS查询 协议 域名 终端 路径  "
+	"content": " 本章节介绍如何安装Python语言 Python是一门编程语言，它需要用到编译器和解析器（关于这两个组件的介绍可以自行搜索，在本系列课程中，只需要把它们当成普通的软件就好，不会影响你的超能力发挥。）我们像普通软件一样安装下载就可以，请根据自己的操作系统浏览以下章节（Linux用户，请自行安装 :D）：\n macOS安装Python Windows安装Python  "
+},
+{
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/",
+	"title": "环境搭建",
+	"tags": [],
+	"description": "",
+	"content": " 配置基础开发环境 我们开始安装一些工具来方便我们学习编程，一般初接触编程的同学使用的都是Windows系统或者macOS系统。从这节课开始我们将使用Linux系统来学习编程，不同于Windows以及macOS系统，\n Linux系统是一个开源(open source)系统，也就是说它的所有源代码都可以让大家浏览以及审核，提出修改。\n 如何在Windows系统或者macOS系统上运行Linux系统呢？我们可以使用Docker来在本地使用Linux系统。\n"
 },
 {
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/",
@@ -14,11 +21,18 @@
 	"content": " 编程的第一步 这一章节会讲述编程是什么，如何从零基础开始学习编程，我们不会教特定的编程语言，只会从最基础的计算机基础开始。 "
 },
 {
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/",
-	"title": "工具教程",
+	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/",
+	"title": "基础知识",
 	"tags": [],
 	"description": "",
-	"content": " 配置基础开发环境 我们开始安装一些工具来方便我们学习编程，一般初接触编程的同学使用的都是Windows系统或者macOS系统。从这节课开始我们将使用Linux系统来学习编程，不同于Windows以及macOS系统，\n Linux系统是一个开源(open source)系统，也就是说它的所有源代码都可以让大家浏览以及审核，提出修改。\n 如何在Windows系统或者macOS系统上运行Linux系统呢？我们可以使用Docker来在本地使用Linux系统。\n"
+	"content": " 基础知识 这章解释了计算机基础中常见的术语以及常见问题。\n常见问题  一文理解字符串编码 公私钥加密 编程语言选择 如何准备技术面试 如何写一份更好的简历  术语  Ping命令 DNS查询 协议 域名 终端 路径  "
+},
+{
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/",
+	"title": "安装Atom编辑器",
+	"tags": [],
+	"description": "",
+	"content": " 本章节介绍如何安装Atom编辑器 大家常用Word写文章或者论文，因为里面文字排版，添加目录等功能。对应的代码也需要高亮，缩进等功能，所以需要有专门的编辑软件。本教程我们使用的是Atom，当然你也可以选择自己喜欢的编辑器，例如Pycharm, Vim等。\n macOS安装Python Windows安装Python  "
 },
 {
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/",
@@ -26,6 +40,13 @@
 	"tags": [],
 	"description": "",
 	"content": " 常见问题 这里包含了计算机初学者常见的问题 "
+},
+{
+	"uri": "https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/",
+	"title": "机器学习",
+	"tags": [],
+	"description": "",
+	"content": " 机器学习基础  理解贝叶斯分类  "
 },
 {
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/",
@@ -42,27 +63,6 @@
 	"content": " 基础术语 一般我们从搜索引擎得到的名词解释都非常难懂，我希望用实际生活的例子来解析这些计算机的基础术语 "
 },
 {
-	"uri": "https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/",
-	"title": "机器学习",
-	"tags": [],
-	"description": "",
-	"content": " 机器学习基础  理解贝叶斯分类  "
-},
-{
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/",
-	"title": "docker教程",
-	"tags": [],
-	"description": "",
-	"content": " 安装以及使用docker "
-},
-{
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/wireshark/",
-	"title": "安装wireshark",
-	"tags": [],
-	"description": "",
-	"content": " 安装以及使用wireshark "
-},
-{
 	"uri": "https://www.enginego.org/",
 	"title": "目录",
 	"tags": [],
@@ -70,25 +70,25 @@
 	"content": " 计算机基础首页 作者：Windson Yang\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n在我们建立EngineGirls组织的时候，本意是希望组织定期的线下课程，向女性免费教授计算机编程的知识。她们对计算机很有热情，也希望学习到数据分析，网络爬虫，人工智能等方面的知识，从而运用在她们工作上。不过在教学的过程中, 我们发现课程往往花费了大量时间在解答计算机的基础知识。例如什么是终端（Terminal），路径（PATH），环境变量 (PATH)等术语。另外更重要的是，如果缺乏这些计算机的基础，即使最终学生们可以依葫芦画瓢写出一个应用，也并没有学到真正的知识，因为她们并没有真正的理解自己学到了什么。\n其实在刚接触编程的时候，我也常常被这些术语所困扰，而且在网上也没找到通俗易懂的解释。我希望各位可以把这本电子书当作计算机基础的入门课，令你不用因为专业术语而对编程却步。除此之外，我推荐可以上udacity的初级教程，里面有来自世界顶尖公司的工程师讲解，视频还穿插着精心选择的习题，包括我也在里面学习到非常多的知识，更重要的是，很多课程都是免费的。:D\n学习完这一部分的课程并不能使你成为一位程序员，你不需要成为一名程序员，你可以是会编程的老师，会编程的助理，这点可以使你在行业中更具有竞争力。而且世界上很多问题都没被解决。当你学会编程，用编程的眼光再去看自己平常的工作，或者就能找到一些属于你们行业的独特的问题，去解决它们。\n不要听别人说编程很难，或者你学不会这样的鬼话，相信自己的能力，去尝试，去努力一次。大部分程序员都不是从小就会计算机的，大部分程序员数学都很一般，大部分靠的只是刻苦。最后我引用鲁迅的一段话，共勉：\n 所以我时常害怕，愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。 此后如竟没有炬火：我便是唯一的光。倘若有了炬火，出了太阳，我们自然心悦诚服的消失，不但毫无不平，而且还要随喜赞美这炬火或太阳；因为他照了人类，连我都在内。\n 让我们开始吧 :D\n"
 },
 {
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/",
-	"title": "如何安装Python",
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/",
+	"title": "Windows安装Python",
 	"tags": [],
 	"description": "",
-	"content": " 本章节介绍如何安装Python语言到计算机中 Python是一门编程语言，它需要用到编译器和解析器（关于这两个组件的介绍可以自行搜索，在本系列课程中，只需要把它们当成普通的软件就好，不会影响你的超能力发挥。）我们像普通软件一样安装下载就可以，请根据自己的操作系统浏览以下章节（Linux用户，请自行安装 :D）：\n macOS安装Python教程 Windows安装Python教程  "
+	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Python  访问Python下载地址，点击下图中蓝色框的链接，像普通文件一样下载即可。\n 下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，勾选 Add Python 3.7 to PATH 之后点击 Customize installation。\n 这是安装的选择，直接点击 Next\n 点击 Browse 选择安装路径，推荐安装在非系统盘，下面的例子安装在E盘，你也可以根据自己的情况选择路径，然后点击Install。\n 这时候就会开始安装：\n 恭喜，安装成功！\n  使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。\n"
 },
 {
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/",
-	"title": "Windows安装Python教程（未完成）",
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/",
+	"title": "macOS安装Python",
 	"tags": [],
 	"description": "",
-	"content": "作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n首先点击Python下载地址\n![Python-Windows下载地址]()\n点击上图框框中的链接，通常这个时候浏览器会自动开始下载，或者电脑中的默认下载软件会弹出，选择好下载的目的地，点击确认即可。\n"
+	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Python  访问Python下载地址，如下图：\n 点击上图蓝色框中的链接，像普通文件一样下载即可。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：\n 下图包括软件的基本介绍，点击继续。\n 下图包括软件的使用协议，点击继续，接着软件会弹出一个小窗口，需要你同意协议，点击同意按钮即可。\n 下图选择安装的地方，macOS一般只有一个盘，点击继续即可。\n   出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。\n"
 },
 {
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python%E6%95%99%E7%A8%8B/",
-	"title": "macOS安装Python教程",
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/",
+	"title": "macOS安装编辑器",
 	"tags": [],
 	"description": "",
-	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Python  访问Python下载地址，如下图：\n 点击上图蓝色框中的链接，就像下载普通文件一样，这个时候浏览器会自动开始下载安装包，或者电脑中的默认下载软件会弹出来，请你选择下载目的地，再点击确认。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：\n 下图包括软件的基本介绍，点击继续。\n 下图包括软件的使用协议，点击继续，接着软件会弹出一个小窗口，需要你同意协议，点击同意按钮即可。\n 下图选择安装的地方，macOS一般只有一个盘，点击继续即可。\n   出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。\n"
+	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮\n![atom_mac下载]()\n  2.\n"
 },
 {
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/",
@@ -229,20 +229,6 @@
 	"tags": [],
 	"description": "",
 	"content": " 作者：Windson Yang\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处 (www.enginego.org)。\n刚开始学习编程的时候，我也很困惑这个问题，有那么那么多的编程语言，常见的有\n python ruby php Go c java R \u0026hellip;  我们可以根据你的职业职业规划来选择要学习的语言：\n前端工程师  完成设计 后端交互  前端工程师主要的职责是把设计师的设计图实现，当设计师设计完界面之后\n![design]()\n完成设计 前端工程师需要用代码来实现设计图，例如界面的布局，按钮的颜色等等。这期间需要和设计师合作交流，讨论哪些方面在工程实现中可能会有困难，可能影响性能这类的因素。\n后端交互 完成设计之后，前端工程师需要根据不同的页面以及业务逻辑来与后端交互，这句话什么意思呢？假如你开发的是一个让用户写日记的应用。那么当用户写完日记之后，点击保存按钮，这个按钮要触发一个保存日记的事件，需要把日记根据协议传输到服务器，然后存储在数据库里面。听起来有点复杂，其实非常简单，因为都有通用的工具帮助你完成。\n后端工程师。  业务逻辑处理 前端交互  业务逻辑处理 前端交互 运维工程师 数据分析／机器学习工程师 "
-},
-{
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/windows%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/",
-	"title": "Windows安装Docker教程",
-	"tags": [],
-	"description": "",
-	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\nWindows安装Docker教程 官方英文教程\n安装前须知 你的系统需满足以下几个条件，如果不满足以下要求，请参考第二节\n 确保你电脑安装了64位的Windows 10 Pro, Enterprise或者Education(1511 November update, Build 10586 or later)版本。\n 如果你的电脑安装了VirtualBox（一个虚拟机软件，默认系统没有安装）请注意，Windows的Docker版本因为需要Microsoft Hyper-V来运作，安装之后会令VirtualBox无效。\n 必须启动虚拟化（默认启动），可以在任务管理中找到这一项确保enabled\nWindows8检查\n点击开始 \u0026gt; 任务管理 \u0026gt; 性能 \u0026gt; CPU\n黄色的Virtualization为Enabled即可\nWindows7检查\n运行Microsoft® Hardware-Assisted Virtualization Detection Tool工具，然后按照步骤来检测。\n   Docker建立的容器和镜像会被计算机上面的所有用户共享，多账号的系统中要注意数据安全问题。\n 开始安装  下载Docker稳定版 双击下载文件夹中的InstallDocker.msi文件。 阅读协议内容觉得没问题之后点击接受协议（不接受将无法安装:O)，然后安装。   一般软件应该安装在非系统盘（C盘）中，这样即使以后需要重装系统，软件也不会丢失。安装路径不要包含中文）\n  输入系统管理员密码使Docker可以安装网络组件。 完成  启动Docker 安装完成后Docker会自动启动，你可以从状态栏看到Docker正在运作 验证安装成功 运行终端(cmd.exe或者PowerShell)\nPS C:\\Users\\Docker\u0026gt; docker --version Docker version 17.03.0-ce, build 60ccb22  看到Docker version提示的字样代表安装成功了\n第二节 如果不满足条件（例如你使用的是Windows7或者Windows8系统）我们需要安装另外一款工具来运行Docker\n###安装前准备 - 先确保自己的Windows系统是Windows7以上（Windows7, Windows8，Windows10都可以）的64位系统，可以通过这里确定Windows系统版本，如果不是64位的话请更新64位的系统。\n 必须启动虚拟化（默认启动），可以在任务管理中找到这一项确保enabled\nWindows8检查\n点击开始 \u0026gt; 任务管理 \u0026gt; 性能 \u0026gt; CPU\n黄色的Virtualization为Enabled即可\nWindows7检查\n运行Microsoft® Hardware-Assisted Virtualization Detection Tool工具，然后按照步骤来检测。\n  ###开始安装\n 确保自己没有运行Virtual Box（默认系统没有按照这个软件） 点击右边链接下载Docker Toolbox 下载完毕后双击安装，如果这时候系统问你是不是允许程序修改，点击Yes 默认选项直到安装完毕  ###验证安装成功\n 双击打开Docker Toolbox  点击Yes获取修改权限 然后系统会进行一些操作，你会看到以下的图片  看到这个$符号就代表启动完成，这时候在终端输入\ndocker run hello-world   然后看到：\n$ docker run hello-world Unable to find image 'hello-world:latest' locally Pulling repository hello-world 91c95931e552: Download complete a8219747be10: Download complete Status: Downloaded newer image for hello-world:latest Hello from Docker. This message shows that your installation appears to be working correctly. To generate this message, Docker took the following steps: 1. The Docker Engine CLI client contacted the Docker Engine daemon. 2. The Docker Engine daemon pulled the \u0026quot;hello-world\u0026quot; image from the Docker Hub. (Assuming it was not already locally available.) 3. The Docker Engine daemon created a new container from that image which runs the executable that produces the output you are currently reading. 4. The Docker Engine daemon streamed that output to the Docker Engine CLI client, which sent it to your terminal. To try something more ambitious, you can run an Ubuntu container with: $ docker run -it ubuntu bash For more examples and ideas, visit: https://docs.docker.com/userguide/  就代表Docker已经成功安装并且可以运行啦。\n"
-},
-{
-	"uri": "https://www.enginego.org/%E5%B7%A5%E5%85%B7/docker/macos%E5%AE%89%E8%A3%85docker%E6%95%99%E7%A8%8B/",
-	"title": "macOS安装docker教程",
-	"tags": [],
-	"description": "",
-	"content": "作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n(官方英文教程)[https://docs.docker.com/toolbox/toolbox_install_mac/]\n 系统必须满足以下全部要求：  2010后的苹果电脑，支持英特尔MMU内存虚拟 10.10.3或者更新的苹果系统 从Docker1.13版本（准备推出）之后不再支持10.10版本（OS X 10.10 Yosemite） 不能安装4.3.30版本之前的VirtualBox（默认系统并没有这个软件）    下载软件Docker for macOS 双击Docker.dmg安装\n 双击应用程序中的Docker.app来启动Docker\n 系统会请求你输入密码来启动Docker，Docker需要特殊权限来安装网络组件\n 然后可以在屏幕右上角看到Docker的标志\n 可以点击这个标志浏览设置\n 如此简单就安装成功啦，可以吃点巧克力奖励下自己了。:D\n  "
 },
 {
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/",

@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>域名 :: Engine GO</title>
+    <title>macOS安装Python :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1535297129" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
+  <body class="" data-url="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/">
     <nav id="sidebar" class="">
 
 
@@ -88,7 +88,7 @@
   
     
     <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="环境搭建" class="dd-item 
-        
+        parent
         
         
         ">
@@ -115,7 +115,7 @@
   
     
     <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/" title="安装Python" class="dd-item 
-        
+        parent
         
         
         ">
@@ -158,7 +158,7 @@
  
   
     
-      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/" title="macOS安装Python" class="dd-item ">
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/" title="macOS安装Python" class="dd-item active">
         <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/">
         macOS安装Python
         
@@ -247,7 +247,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
-        parent
+        
         
         
         ">
@@ -509,7 +509,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
-        parent
+        
         
         
         ">
@@ -761,7 +761,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item active">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item ">
         <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
         域名
         
@@ -932,7 +932,7 @@
             
           
           
-            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/'>术语</a> > 域名
+            <a href='/'>目录</a> > <a href='/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/'>环境搭建</a> > <a href='/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/'>安装Python</a> > macOS安装Python
           
          
           
@@ -946,7 +946,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#安装python">安装Python</a></li>
+<li><a href="#使用python">使用Python</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -958,39 +969,58 @@
         
         <div id="body-inner">
           
-            <h1>域名</h1>
-            <h4>更新时间：January 8, 2018</h4>
+            <h1>macOS安装Python</h1>
+            <h4>更新时间：August 22, 2018</h4>
           
 
         
 
 
-<p>作者：Windson Yang</p>
 
-<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。</p>
 
-<p>计算机知识往往互相关联，要真正了解域名是什么，必须先了解什么是URI。这里有一些常见的例子。</p>
+<p>作者：Windson Yang
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
-<pre><code>https://www.apple.com
-http://www.w3c.org
-ftp://example.org/resource.txt
-file:///Users/example/hello.jpg
-</code></pre>
+<p><strong>以下步骤极其简单，不要担心😊</strong></p>
 
-<p>最后两个大家可能不太熟悉，以最后一个为例子，你们可以尝试把自己电脑中任意的文件拖放到浏览器中，浏览器会去猜这个文件类型，一些常见的文件类型例如图片，浏览器可以判断并渲染出来。同时浏览器的地址栏也会变成file开头。这个例子中的file就是这个URI所使用的协议。常见的协议还有</p>
+<h3 id="安装python">安装Python</h3>
 
-<pre><code>HTTP 超文本传输协议
-SMTP 邮件协议
-telnet 终端传输协议
-DNS 域名系统协议
-DHCP 动态主机配置协议
-</code></pre>
+<ol>
+<li><p><strong>访问<a href="https://www.python.org/downloads/mac-osx/">Python下载地址</a></strong>，如下图：</p>
 
-<p>好吧，我承认部分对于一般大众不是很常见，不过如果你想认真学习编程，起码看到这些名词的时候知道是什么。感兴趣的学生可以前往<a href="https://en.wikipedia.org/wiki/Lists_of_network_protocols">Lists of network protocols</a>。那么协议又是什么呢？其实协议的本质非常简单。</p>
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%B8%8B%E8%BD%BD%E9%A1%B5.png" alt="Python-macOS下载地址" /></p></li>
 
-<pre><code>域名（Domain names）是互联网基础架构的关键部分。它们为互联网上任何可用的网页服务器提供了人类可读的地址。
-任何连上互联网的电脑都可以通过一个公共IP地址访问到，对于IPv4来说，这个地址由32位组成（它们通常写成四个范围在0~255以内，由点分隔的数字组成，比如173.194.121.32），而对于IPv6来说，这个地址由128位组成，通常写成八组由冒号分隔的四进制数(e.g., 2027:0da8:8b73:0000:0000:8a2e:0370:1337).
-</code></pre>
+<li><p><strong>点击上图蓝色框中的链接</strong>，像普通文件一样下载即可。<strong>下载完毕之后双击该安装包</strong>（一般情况下在下载目录中），出现下图，<strong>点击继续</strong>：</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%BB%8B%E7%BB%8D.png" alt="Python-macOS欢迎页" /></p></li>
+
+<li><p>下图包括软件的基本介绍，<strong>点击继续</strong>。</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E8%AF%B7%E5%85%88%E9%98%85%E8%AF%BB.png" alt="Python-macOS请先阅读" /></p></li>
+
+<li><p>下图包括软件的使用协议，<strong>点击继续</strong>，接着软件会弹出一个小窗口，需要你同意协议，<strong>点击同意按钮即可</strong>。</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E8%AE%B8%E5%8F%AF.png" alt="Python-macOS许可" /></p></li>
+
+<li><p>下图选择安装的地方，macOS一般只有一个盘，<strong>点击继续</strong>即可。</p></li>
+</ol>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E7%9B%AE%E7%9A%84%E5%9C%B0.png" alt="Python-macOS目的地" /></p>
+
+<ol>
+<li>出现下图后，<strong>点击安装</strong>，软件会弹出一个小窗口，要求输入管理密码，<strong>你输入管理密码之后，回车</strong>，然后软件会开始安装，稍等几分钟。</li>
+</ol>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E5%AE%89%E8%A3%85%E7%B1%BB%E5%9E%8B.png" alt="Python-macOS类型" /></p>
+
+<ol>
+<li>显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。
+<img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E6%AC%A2%E8%BF%8E.png" alt="Python-macOS安装完成" /></li>
+</ol>
+
+<h3 id="使用python">使用Python</h3>
+
+<p>好吧，安装了怎么也要试试吧，请到<a href="../../../基础/术语/终端/">终端</a>章节学习如何在终端使用Python。</p>
 
 
 <footer class=" footline" >
@@ -1039,8 +1069,112 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1064,6 +1198,86 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1132,41 +1346,6 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1179,189 +1358,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1528,26 +1524,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1575,6 +1551,54 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1620,10 +1644,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/" title="进程（未完成）"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/" title="Windows安装Python"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" title="服务端" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="安装Atom编辑器" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

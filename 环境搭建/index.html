@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>域名 :: Engine GO</title>
+    <title>环境搭建 :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1535297129" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
+  <body class="" data-url="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
     <nav id="sidebar" class="">
 
 
@@ -88,8 +88,8 @@
   
     
     <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="环境搭建" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
@@ -247,7 +247,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
-        parent
+        
         
         
         ">
@@ -509,7 +509,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
-        parent
+        
         
         
         ">
@@ -761,7 +761,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item active">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item ">
         <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
         域名
         
@@ -914,8 +914,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
-                  
                   <span class="links">
                     
           
@@ -924,19 +922,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/'>术语</a> > 域名
-          
-         
-          
-         
+            <a href='/'>目录</a> > 环境搭建
           
          
           
@@ -944,60 +930,38 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
 
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>域名</h1>
-            <h4>更新时间：January 8, 2018</h4>
           
 
         
 
 
-<p>作者：Windson Yang</p>
 
-<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。</p>
 
-<p>计算机知识往往互相关联，要真正了解域名是什么，必须先了解什么是URI。这里有一些常见的例子。</p>
+<h3 id="配置基础开发环境">配置基础开发环境</h3>
 
-<pre><code>https://www.apple.com
-http://www.w3c.org
-ftp://example.org/resource.txt
-file:///Users/example/hello.jpg
-</code></pre>
+<p>我们开始安装一些工具来方便我们学习编程，一般初接触编程的同学使用的都是Windows系统或者macOS系统。从这节课开始我们将使用Linux系统来学习编程，不同于Windows以及macOS系统，</p>
 
-<p>最后两个大家可能不太熟悉，以最后一个为例子，你们可以尝试把自己电脑中任意的文件拖放到浏览器中，浏览器会去猜这个文件类型，一些常见的文件类型例如图片，浏览器可以判断并渲染出来。同时浏览器的地址栏也会变成file开头。这个例子中的file就是这个URI所使用的协议。常见的协议还有</p>
+<blockquote>
+<p>Linux系统是一个开源(open source)系统，也就是说它的所有源代码都可以让大家浏览以及审核，提出修改。</p>
+</blockquote>
 
-<pre><code>HTTP 超文本传输协议
-SMTP 邮件协议
-telnet 终端传输协议
-DNS 域名系统协议
-DHCP 动态主机配置协议
-</code></pre>
-
-<p>好吧，我承认部分对于一般大众不是很常见，不过如果你想认真学习编程，起码看到这些名词的时候知道是什么。感兴趣的学生可以前往<a href="https://en.wikipedia.org/wiki/Lists_of_network_protocols">Lists of network protocols</a>。那么协议又是什么呢？其实协议的本质非常简单。</p>
-
-<pre><code>域名（Domain names）是互联网基础架构的关键部分。它们为互联网上任何可用的网页服务器提供了人类可读的地址。
-任何连上互联网的电脑都可以通过一个公共IP地址访问到，对于IPv4来说，这个地址由32位组成（它们通常写成四个范围在0~255以内，由点分隔的数字组成，比如173.194.121.32），而对于IPv6来说，这个地址由128位组成，通常写成八组由冒号分隔的四进制数(e.g., 2027:0da8:8b73:0000:0000:8a2e:0370:1337).
-</code></pre>
+<p>如何在Windows系统或者macOS系统上运行Linux系统呢？我们可以使用<a href="https://www.docker.com/">Docker</a>来在本地使用Linux系统。</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
+        
+            </div> 
         
         </div> 
         
@@ -1039,8 +1003,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1051,6 +1013,57 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -1081,19 +1094,6 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1110,42 +1110,6 @@ s.setAttribute('data-timestamp', +new Date());
 
                     
                     
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1155,9 +1119,6 @@ s.setAttribute('data-timestamp', +new Date());
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1319,7 +1280,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
                 
                 
 
@@ -1327,25 +1287,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1528,26 +1469,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1575,6 +1496,38 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1620,10 +1573,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/" title="进程（未完成）"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/" title="目录"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" title="服务端" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/" title="安装Python" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
