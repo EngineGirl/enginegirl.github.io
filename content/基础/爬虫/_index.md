@@ -1,8 +1,8 @@
 ---
 title: 爬虫基础
-weight: 3
+weight: 4
 chapter: true
-pre: "<b>1.3 </b>"
+pre: "<b>2.4 </b>"
 ---
 
 ### 爬虫基础

@@ -2,7 +2,7 @@
 title: 安装Atom编辑器
 weight: 2
 chapter: true
-pre: "<b>2. </b>"
+pre: "<b>1.2 </b>"
 ---
 
 ### 本章节介绍如何安装Atom编辑器

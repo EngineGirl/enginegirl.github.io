@@ -1,8 +1,8 @@
 ---
 title: 常见问题
-weight: 3
+weight: 2
 chapter: true
-pre: "<b>1.2 </b>"
+pre: "<b>2.2 </b>"
 ---
 
 ### 常见问题

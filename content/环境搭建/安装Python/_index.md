@@ -2,7 +2,7 @@
 title: 安装Python
 weight: 1
 chapter: true
-pre: "<b>1. </b>"
+pre: "<b>1.1 </b>"
 ---
 
 ### 本章节介绍如何安装Python语言
