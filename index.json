@@ -92,10 +92,10 @@
 },
 {
 	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/",
-	"title": "macOS安装编辑器（未完成）",
+	"title": "macOS安装编辑器",
 	"tags": [],
 	"description": "",
-	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮\n![atom_mac下载]()\n  2.\n"
+	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮\n 下载完之后安装，安装之后打开Atom程序，出现下图，点击蓝色框中的 Install a Package\n 在左边的搜索框中输入 script，然后点击右边的 Install，稍等5分钟\n 安装成功\n 在非系统盘（D盘或者E盘）中新建一个专门存放代码的文件夹 code，然后在 Atom 中新建名为 first.py 的文件。粘贴这段代码进去：\nprint('hello world')  如下图：\n然后使用快捷键\u0026rdquo;command\u0026rdquo; + \u0026ldquo;i\u0026rdquo;就能运行代码了。你可以看到上图的最下面显示了：\nhello, world [Finished in 0.276s]   "
 },
 {
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/",
