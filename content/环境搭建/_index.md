@@ -1,12 +1,12 @@
 ---
 title: 环境搭建
-weight: 1
+weight: 2
 chapter: true
 pre: "<b>1. </b>"
 ---
 
 ### 配置基础开发环境
-我们开始安装一些工具来方便我们学习编程
+在编程之前，我们需要开始安装一些工具来方便学习，本教程用到的工具包括Python以及Atom编辑器：
 
 - [安装Python](./安装python)
     - [Windows安装Python](./安装python/windows安装python/)

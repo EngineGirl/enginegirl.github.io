@@ -1,6 +1,6 @@
 ---
 title: 机器学习
-weight: 3
+weight: 4
 chapter: true
 pre: "<b>3. </b>"
 ---

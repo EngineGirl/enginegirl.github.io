@@ -1,6 +1,6 @@
 ---
 title: 基础知识
-weight: 2
+weight: 3
 chapter: true
 pre: "<b>2. </b>"
 ---
