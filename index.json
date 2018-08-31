@@ -42,6 +42,13 @@
 	"content": " 配置基础开发环境 在编程之前，我们需要开始安装一些工具来方便学习，本教程用到的工具包括Python以及Atom编辑器：\n 安装Python  Windows安装Python macOS安装Python  安装编辑器  Windows安装Atom macOS安装Atom   "
 },
 {
+	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E4%BD%BF%E7%94%A8%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%8Epython/",
+	"title": "使用Python与编辑器（未完成）",
+	"tags": [],
+	"description": "",
+	"content": " 本章节介绍如何使用这些工具 "
+},
+{
 	"uri": "https://www.enginego.org/%E5%9F%BA%E7%A1%80/",
 	"title": "基础知识",
 	"tags": [],
@@ -85,10 +92,10 @@
 },
 {
 	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/",
-	"title": "Windows安装编辑器（未完成）",
+	"title": "Windows安装编辑器",
 	"tags": [],
 	"description": "",
-	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮\n![atom_mac下载]()\n  2.\n"
+	"content": " 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n以下步骤极其简单，不要担心😊\n安装Atom编辑器  访问Atom下载地址，点击下图中的 Download 按钮\n 下载后双击打开就可以了，软件的界面如下：\n  "
 },
 {
 	"uri": "https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/",
