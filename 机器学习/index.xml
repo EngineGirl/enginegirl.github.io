@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on Engine GO</title>
+    <link>https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on Engine GO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Mar 2018 00:19:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>理解贝叶斯分类</title>
+      <link>https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Mon, 26 Mar 2018 00:19:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/</guid>
+      <description>作者：Windson Yang
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
+贝叶斯模型在机器学习以及人工智能中都有出现，cherry分类器使用了朴素贝叶斯模型算法，经过简单的优化，使用1000个训练数据就能得到97.5%的准确率。虽然现在主流的框架都带有朴素贝叶斯模型算法，大多数开发者只需要直接调用api就能使用。但是在实际业务中，面对不同的数据集，必须了解算法的原理，实现以及懂得对结果进行分析，才能达到高准确率。
+ cherry分类器 关键字过滤 贝叶斯模型 数学推导 贝叶斯模型实现 测试 统计分析 总结  cherry分类器 基础术语： cherry分类器默认支持中英文分类，用作例子的数据缓存中，中文训练数据包含正常，政治敏感，赌博，色情4个类别，英文训练数据包含正常邮件，垃圾邮件两个类别 (训练数据可以通过Google drive下载)。调用非常容易，使用pip安装后，输入句子：
+ 警方召开了全省集中打击赌博违法犯罪活动专项行动电视电话会议。会议的重点是“查处”六合彩、赌球赌马等赌博活动。
+ &amp;gt;&amp;gt;&amp;gt; import cherry &amp;gt;&amp;gt;&amp;gt; result = cherry.classify(&#39;警方召开了全省集中打击赌博违法犯罪活动专项行动电 电话会议。会议的重点是“查处”六合彩、赌球赌马等赌博活动。&#39;) Building prefix dict from the default dictionary ... Loading model from cache /var/folders/md/0251yy51045d6nknpkbn6dc80000gn/T/jieba.cache Loading model cost 0.894 seconds. Prefix dict has been built succesfully.  分类器判断输入句子有99.7%的概率是正常句子，0.2%是政治敏感，剩余0.1%是其他两个类别
+&amp;gt;&amp;gt;&amp;gt; result.percentage [(&#39;normal.dat&#39;, 0.997), (&#39;politics.dat&#39;, 0.002), (&#39;gamble.dat&#39;, 0.0), (&#39;sex.dat&#39;, 0.0)]  其中对分类器判断影响最大的词语分别是赌博，活动，会议，违法犯罪，警方，打击
+&amp;gt;&amp;gt;&amp;gt; result.</description>
+    </item>
+    
+  </channel>
+</rss>

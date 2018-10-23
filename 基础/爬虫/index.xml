@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>爬虫基础 on Engine GO</title>
+    <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫基础 on Engine GO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 May 2018 00:10:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python爬虫基础（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 11 May 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/</guid>
+      <description>这篇文章要求读者有一定的HTML基础知识，如果之前没有学习过HTML的话，可以先花一些时间在这里学习。当进行数据分析统计，或者数据收集之前，我们需要有数据。（这不是废话吗）数据的来源既可以是搜寻已有的数据集，也可以自己去收集数据。计算机中爬虫就是获取目标应用数据的方式，例如当你要做一个项目，你觉得知乎现在广告太多了，回答下面都是二维码，你打算统计答案中包含二维码占全部答案的比例。那么如何获取这些数据呢？第一个方法当然可以像平时一样一个个答案点开，这样的问题是效率太低。如果要统计1万个答案的话怎么办，再如果下次统计的是包含广告链接的话难道要重新一个个点开吗？这显然不现实。有没有一种高效率的方法解决这个重复性的问题。
+没有
+好啦，我只是开玩笑，怎么可能没有呢？:D，爬虫就是一个方法，如果你之前接触过Python爬虫，应该听过一堆requests, Scrapy, Asyncio, Beautifulsoup等库，也听过多线程，多进程，异步IO爬虫什么的。应该怎么选择呢？先不用急。如果你问这个问题，代表你对爬虫了解得不多，我们一步步从零开始介绍爬虫，之后也会涉及这些高级的爬虫。
+为了方便读者，我搭建了一个非常简单的网站，教程列表，它的结构非常简单，包括一个首页和三个子页面。
+/（首页） │ └── 子页面 ├── 1.html ├── 2.html ├── 3.html  点击首页的不同链接就跳转到对应的子页面。
+第一个小任务 我们的第一个小任务是获取首页中所有子页面的标题，也就是获取
+DNS查询 Ping命令 终端  好吧，这个任务看起来很简单，不写程序也能几秒钟完成，用鼠标复制粘贴就可以，不过先跟着我们一步步来。在首页空白处点击鼠标右键，然后点击查看网页源代码，可以看到一些HTML代码。
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;首页&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h2&amp;gt;教程列表&amp;lt;/h2&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;../1.html&amp;quot;&amp;gt;DNS查询&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;../2.html&amp;quot;&amp;gt;Ping命令&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;../3.html&amp;quot;&amp;gt;终端&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  浏览器的作用就是根据这些代码渲染成我们平时看到的网站，可能包括背景，字体的大小，颜色。爬虫要做的其实也一样，不过要简单一点，爬虫是抽取HTML中出现的数据。当你观察上面的HTML代码的时候，发现我们要获取的标题都在&amp;lt;li&amp;gt;标签的&amp;lt;a&amp;gt;标签里面。**所以我们的任务就变成，
+ 获取页面的HTML代码 从HTML代码中获取所有&amp;lt;a&amp;gt;标签中的文字  刚刚我们是通过浏览器获取源代码，如何用程序获取呢？第一个方法是使用Requests库，之后我们会介绍使用其他库获取的方式，一开始我们先从最简单开始。
+ 打开终端 新建一个文件夹crawl，并进入文件夹 运行pip install requests（如果遇到错误信息的话，请把错误信息的最后一句复制到搜索引擎搜索解决方案，这也是锻炼编程与解决能力的一步） 遇到类似这样的信息代表安装成功啦，撒花。
+Collecting requests Downloading https://files.pythonhosted.org/packages/65/47/7e02164a2a3db50ed6d8a6ab1d6d60b69c4c3fdf57a284257925dfc12bda/requests-2.19.1-py2.py3-none-any.whl (91kB) 100% |████████████████████████████████| 92kB 208kB/s &amp;hellip; Installing collected packages: certifi, chardet, urllib3, idna, requests Successfully installed certifi-2018.</description>
+    </item>
+    
+  </channel>
+</rss>

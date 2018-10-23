@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安装Atom编辑器 on Engine GO</title>
+    <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+    <description>Recent content in 安装Atom编辑器 on Engine GO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Aug 2018 00:10:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows安装编辑器</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description> 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+以下步骤极其简单，不要担心😊
+安装Atom编辑器  访问Atom下载地址，点击下图中的 Download 按钮
+ 下载后双击打开就可以了，软件的界面如下：
+  </description>
+    </item>
+    
+    <item>
+      <title>macOS安装编辑器</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description> 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+以下步骤极其简单，不要担心😊
+安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮
+ 下载完之后安装，安装之后打开Atom程序，出现下图，点击蓝色框中的 Install a Package
+ 在左边的搜索框中输入 script，然后点击右边的 Install，稍等5分钟
+ 安装成功
+ 在非系统盘（D盘或者E盘）中新建一个专门存放代码的文件夹 code，然后在 Atom 中新建名为 first.py 的文件。粘贴这段代码进去：
+print(&#39;hello world&#39;)  如下图：
+然后使用快捷键&amp;rdquo;command&amp;rdquo; + &amp;ldquo;i&amp;rdquo;就能运行代码了。你可以看到上图的最下面显示了：
+hello, world [Finished in 0.276s]   </description>
+    </item>
+    
+  </channel>
+</rss>

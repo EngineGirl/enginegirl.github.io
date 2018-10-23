@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>序章 on Engine GO</title>
+    <link>https://www.enginego.org/%E5%BA%8F%E7%AB%A0/</link>
+    <description>Recent content in 序章 on Engine GO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://www.enginego.org/%E5%BA%8F%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
