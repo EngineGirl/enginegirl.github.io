@@ -22,3 +22,5 @@ chapter: true
 > 此后如竟没有炬火：我便是唯一的光。倘若有了炬火，出了太阳，我们自然心悦诚服的消失，不但毫无不平，而且还要随喜赞美这炬火或太阳；因为他照了人类，连我都在内。
 
 让我们开始吧 :D
+
+![img](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/engine_girls.png)
