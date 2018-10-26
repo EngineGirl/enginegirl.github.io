@@ -115,5 +115,14 @@ y = x * 2  中每个x都对应着唯一的一个y值，x与y组成的集合就�
 后端工程师。  业务逻辑处理 前端交互  业务逻辑处理 前端交互 运维工程师 数据分析／机器学习工程师 </description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
