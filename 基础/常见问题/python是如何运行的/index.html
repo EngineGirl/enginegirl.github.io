@@ -13,19 +13,19 @@
     <title>Python是如何运行的（未完成） :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1540904679" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1540904679" rel="stylesheet">
-    <link href="/css/hybrid.css?1540904679" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1540904679" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1540904679" rel="stylesheet">
-    <link href="/css/auto-complete.css?1540904679" rel="stylesheet">
-    <link href="/css/theme.css?1540904679" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1540904679" rel="stylesheet">
+    <link href="/css/nucleus.css?1540910908" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1540910908" rel="stylesheet">
+    <link href="/css/hybrid.css?1540910908" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1540910908" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1540910908" rel="stylesheet">
+    <link href="/css/auto-complete.css?1540910908" rel="stylesheet">
+    <link href="/css/theme.css?1540910908" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1540910908" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1540904679" rel="stylesheet">
+      <link href="/css/theme-blue.css?1540910908" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1540904679"></script>
+    <script src="/js/jquery-2.x.min.js?1540910908"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1540904679"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1540904679"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1540910908"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1540910908"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1540904679"></script>
+<script type="text/javascript" src="/js/search.js?1540910908"></script>
 
     
   </div>
@@ -876,25 +876,6 @@
           
         
           
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" title="Python爬虫基础（未完成）" class="dd-item ">
-        <a href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/">
-        Python爬虫基础（未完成）
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
         
         </ul>
               
@@ -1036,9 +1017,12 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#编译过程">编译过程</a></li>
-<li><a href="#解析过程">解析过程</a></li>
+<li><a href="#解释过程">解释过程</a></li>
 <li><a href="#运行过程">运行过程</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1063,13 +1047,30 @@
 
 
 
-<p>这篇文章是从一个高层次的角度来分析 Python 语言的运行原理和流程，希望给从没接触过编程或者 Python 初学者初步的了解。果各位想了解更深层的实现原理，我推荐一些资源，[10 hours]()，[Python源码剖析]()。虽然一般把 Python 称为解析性语言，但是大部分的解释性语言为了优化速度都会增加编译过程，Python 语言有多种实现方式，最流行的是 CPython，也就是用 C 语言实现的，CPython 包含一个解释器和编译器。</p>
+<p>这篇文章着重分析 Python 语言的运行原理和流程，希望给从没接触过编程或者 Python 初学者一个简单的了解。各位想了解更深层的实现原理，推荐阅读，[10 hours]()和[Python源码剖析]()。Python 语言有多种实现方式，最流行的是 CPython，用 C 语言实现的，CPython 包含一个解释器和编译器。那么计算机是如何运行 Python 的源代码的呢？</p>
 
-<h3 id="编译过程">编译过程</h3>
+<h4 id="编译过程">编译过程</h4>
 
-<h3 id="解析过程">解析过程</h3>
+<p>一般我们把 Python 称为解释性语言，但是大部分的解释性语言为了优化速度都会增加编译过程。编译器首先经过 tokenizer 分析代码的主要部分，就像获取句子的主谓宾一样。</p>
 
-<h3 id="运行过程">运行过程</h3>
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/tokenizer.png" alt="compile" /></p>
+
+<p>然后经过 parser 分析代码的结构，就像组合</p>
+
+<p>和 parse 之后把源代码转换成 bytecode
+<img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/compiler.png" alt="compile" /></p>
+
+<p>Python 的编译器把 .py 后缀的源代码转换成 bytecode 也就是我们在 __pycache__ 文件夹中出现的 .pyc 文件。这个文件是二进制也就是 0 和 1 组成的，不能直接阅读，我们可以通过 Python 自带的 dis 模块阅读 bytecode 包含的指令。这就到解析过程</p>
+
+<h4 id="解释过程">解释过程</h4>
+
+<p>我们通过 dis 模块获取了解释器所需要的反汇编码</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/interpreter.png" alt="interpreter" /></p>
+
+<h4 id="运行过程">运行过程</h4>
+
+<p>运行过程其实就是解释器（包含了基于栈的虚拟机）一句句地执行这些反汇编码，例如把变量压入栈，获取栈顶的变量。</p>
 
 
 <footer class=" footline" >
@@ -1772,20 +1773,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1540904679"></script>
-    <script src="/js/perfect-scrollbar.min.js?1540904679"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1540904679"></script>
-    <script src="/js/jquery.sticky.js?1540904679"></script>
-    <script src="/js/featherlight.min.js?1540904679"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1540904679"></script>
-    <script src="/js/highlight.pack.js?1540904679"></script>
+    <script src="/js/clipboard.min.js?1540910908"></script>
+    <script src="/js/perfect-scrollbar.min.js?1540910908"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1540910908"></script>
+    <script src="/js/jquery.sticky.js?1540910908"></script>
+    <script src="/js/featherlight.min.js?1540910908"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1540910908"></script>
+    <script src="/js/highlight.pack.js?1540910908"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1540904679"></script>
-    <script src="/js/learn.js?1540904679"></script>
-    <script src="/js/hugo-learn.js?1540904679"></script>
+    <script src="/js/modernizr.custom.71422.js?1540910908"></script>
+    <script src="/js/learn.js?1540910908"></script>
+    <script src="/js/hugo-learn.js?1540910908"></script>
 
-    <link href="/mermaid/mermaid.css?1540904679" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1540904679"></script>
+    <link href="/mermaid/mermaid.css?1540910908" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1540910908"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
