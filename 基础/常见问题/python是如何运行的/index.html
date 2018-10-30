@@ -13,19 +13,19 @@
     <title>Python是如何运行的（未完成） :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1540911017" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1540911017" rel="stylesheet">
-    <link href="/css/hybrid.css?1540911017" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1540911017" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1540911017" rel="stylesheet">
-    <link href="/css/auto-complete.css?1540911017" rel="stylesheet">
-    <link href="/css/theme.css?1540911017" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1540911017" rel="stylesheet">
+    <link href="/css/nucleus.css?1540912869" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1540912869" rel="stylesheet">
+    <link href="/css/hybrid.css?1540912869" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1540912869" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1540912869" rel="stylesheet">
+    <link href="/css/auto-complete.css?1540912869" rel="stylesheet">
+    <link href="/css/theme.css?1540912869" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1540912869" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1540911017" rel="stylesheet">
+      <link href="/css/theme-blue.css?1540912869" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1540911017"></script>
+    <script src="/js/jquery-2.x.min.js?1540912869"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1540911017"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1540911017"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1540912869"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1540912869"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1540911017"></script>
+<script type="text/javascript" src="/js/search.js?1540912869"></script>
 
     
   </div>
@@ -936,25 +936,6 @@
           
         
           
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/" title="理解贝叶斯分类" class="dd-item ">
-        <a href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">
-        理解贝叶斯分类
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
         
         </ul>
               
@@ -1038,7 +1019,12 @@
 <ul>
 <li>
 <ul>
-<li><a href="#编译过程">编译过程</a></li>
+<li><a href="#编译过程">编译过程</a>
+<ul>
+<li><a href="#tokenizer-过程">tokenizer 过程</a></li>
+<li><a href="#parser-过程">parser 过程</a></li>
+<li><a href="#pyc-文件">pyc 文件</a></li>
+</ul></li>
 <li><a href="#解释过程">解释过程</a></li>
 <li><a href="#运行过程">运行过程</a></li>
 </ul></li>
@@ -1070,22 +1056,32 @@
 
 <h4 id="编译过程">编译过程</h4>
 
-<p>一般我们把 Python 称为解释性语言，但是大部分的解释性语言为了优化速度都会增加编译过程。编译器首先经过 tokenizer 分析代码的主要部分，就像获取句子的主谓宾一样。</p>
+<p>一般我们会把 Python 称为解释性语言，不过大部分的解释性语言为了优化速度都会增加编译过程。编译过程同一般的编译性语言如 C 语言，Go 语言类似，主要包括 tokenizer 过程和 parser 过程。</p>
+
+<h5 id="tokenizer-过程">tokenizer 过程</h5>
+
+<p>编译器首先经过 tokenizer 分析代码，就像获取文章每个句子的主谓宾成分一样。</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/tokenizer.png" alt="tokenizer" /></p>
 
-<p>然后经过 parser 分析代码的结构，就像使用主谓宾组合句子一样：</p>
+<h5 id="parser-过程">parser 过程</h5>
 
-<p>和 parse 之后把源代码转换成 bytecode
-<img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/parser.png" alt="parser" /></p>
+<p>获取了主要成分之后，经过 parser 分析代码的结构，并且组合成解释器能够理解的句子：</p>
 
-<p>Python 的编译器把 .py 后缀的源代码转换成 bytecode 也就是我们在 __pycache__ 文件夹中出现的 .pyc 文件。这个文件是二进制也就是 0 和 1 组成的，不能直接阅读，我们可以通过 Python 自带的 dis 模块阅读 bytecode 包含的指令。这就到解析过程</p>
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/parser.png" alt="parser" /></p>
+
+<h5 id="pyc-文件">pyc 文件</h5>
+
+<p>经过 tokenizer 和 parser ，编译器把 .py 后缀的源代码转换成了二进制的 bytecode。也就是 __pycache__ 文件夹中的 .pyc 文件。</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/compiler.png" alt="compiler" /></p>
+
+<p>在解释器眼中的 bytecode 就是一条条指令，我们可以通过 Python 自带的 dis 模块阅读 bytecode 包含的指令。
+<img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/interpreter.png" alt="interpreter" /></p>
 
 <h4 id="解释过程">解释过程</h4>
 
 <p>我们通过 dis 模块获取了解释器所需要的反汇编码</p>
-
-<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/how_python/interpreter.png" alt="interpreter" /></p>
 
 <h4 id="运行过程">运行过程</h4>
 
@@ -1792,20 +1788,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1540911017"></script>
-    <script src="/js/perfect-scrollbar.min.js?1540911017"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1540911017"></script>
-    <script src="/js/jquery.sticky.js?1540911017"></script>
-    <script src="/js/featherlight.min.js?1540911017"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1540911017"></script>
-    <script src="/js/highlight.pack.js?1540911017"></script>
+    <script src="/js/clipboard.min.js?1540912869"></script>
+    <script src="/js/perfect-scrollbar.min.js?1540912869"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1540912869"></script>
+    <script src="/js/jquery.sticky.js?1540912869"></script>
+    <script src="/js/featherlight.min.js?1540912869"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1540912869"></script>
+    <script src="/js/highlight.pack.js?1540912869"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1540911017"></script>
-    <script src="/js/learn.js?1540911017"></script>
-    <script src="/js/hugo-learn.js?1540911017"></script>
+    <script src="/js/modernizr.custom.71422.js?1540912869"></script>
+    <script src="/js/learn.js?1540912869"></script>
+    <script src="/js/hugo-learn.js?1540912869"></script>
 
-    <link href="/mermaid/mermaid.css?1540911017" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1540911017"></script>
+    <link href="/mermaid/mermaid.css?1540912869" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1540912869"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
