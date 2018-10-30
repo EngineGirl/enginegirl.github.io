@@ -6,10 +6,20 @@
     <description>Recent content in 常见问题 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 00:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Oct 2018 00:10:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python是如何运行的（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
+      <pubDate>Mon, 29 Oct 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
+      <description> 这篇文章是从一个高层次的角度来分析 Python 语言的运行原理和流程，希望给从没接触过编程或者 Python 初学者初步的了解。果各位想了解更深层的实现原理，我推荐一些资源，[10 hours]()，[Python源码剖析]()。虽然一般把 Python 称为解析性语言，但是大部分的解释性语言为了优化速度都会增加编译过程，Python 语言有多种实现方式，最流行的是 CPython，也就是用 C 语言实现的，CPython 包含一个解释器和编译器。
+编译过程 解析过程 运行过程 </description>
+    </item>
     
     <item>
       <title>如何准备技术面试</title>
@@ -113,15 +123,6 @@ y = x * 2  中每个x都对应着唯一的一个y值，x与y组成的集合就�
 完成设计 前端工程师需要用代码来实现设计图，例如界面的布局，按钮的颜色等等。这期间需要和设计师合作交流，讨论哪些方面在工程实现中可能会有困难，可能影响性能这类的因素。
 后端交互 完成设计之后，前端工程师需要根据不同的页面以及业务逻辑来与后端交互，这句话什么意思呢？假如你开发的是一个让用户写日记的应用。那么当用户写完日记之后，点击保存按钮，这个按钮要触发一个保存日记的事件，需要把日记根据协议传输到服务器，然后存储在数据库里面。听起来有点复杂，其实非常简单，因为都有通用的工具帮助你完成。
 后端工程师。  业务逻辑处理 前端交互  业务逻辑处理 前端交互 运维工程师 数据分析／机器学习工程师 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
-      <description></description>
     </item>
     
   </channel>

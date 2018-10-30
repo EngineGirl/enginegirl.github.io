@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>抓包（未完成） :: Engine GO</title>
+    <title>Python是如何运行的（未完成） :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1540904623" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/">
+  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/">
     <nav id="sidebar" class="">
 
 
@@ -392,7 +392,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题" class="dd-item 
-        
+        parent
         
         
         ">
@@ -416,7 +416,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/" title="Python是如何运行的（未完成）" class="dd-item ">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/" title="Python是如何运行的（未完成）" class="dd-item active">
         <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/">
         Python是如何运行的（未完成）
         
@@ -540,7 +540,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
-        parent
+        
         
         
         ">
@@ -716,7 +716,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/" title="抓包（未完成）" class="dd-item active">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/" title="抓包（未完成）" class="dd-item ">
         <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/">
         抓包（未完成）
         
@@ -1016,7 +1016,7 @@
             
           
           
-            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/'>术语</a> > 抓包（未完成）
+            <a href='/'>目录</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/'>常见问题</a> > Python是如何运行的（未完成）
           
          
           
@@ -1030,7 +1030,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#编译过程">编译过程</a></li>
+<li><a href="#解析过程">解析过程</a></li>
+<li><a href="#运行过程">运行过程</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1042,13 +1054,22 @@
         
         <div id="body-inner">
           
-            <h1>抓包（未完成）</h1>
-            <h4>更新时间：April 8, 2018</h4>
+            <h1>Python是如何运行的（未完成）</h1>
+            <h4>更新时间：October 29, 2018</h4>
           
 
         
 
 
+
+
+<p>这篇文章是从一个高层次的角度来分析 Python 语言的运行原理和流程，希望给从没接触过编程或者 Python 初学者初步的了解。果各位想了解更深层的实现原理，我推荐一些资源，[10 hours]()，[Python源码剖析]()。虽然一般把 Python 称为解析性语言，但是大部分的解释性语言为了优化速度都会增加编译过程，Python 语言有多种实现方式，最流行的是 CPython，也就是用 C 语言实现的，CPython 包含一个解释器和编译器。</p>
+
+<h3 id="编译过程">编译过程</h3>
+
+<h3 id="解析过程">解析过程</h3>
+
+<h3 id="运行过程">运行过程</h3>
 
 
 <footer class=" footline" >
@@ -1297,18 +1318,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1317,237 +1326,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1573,22 +1351,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1697,6 +1459,262 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1742,10 +1760,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/" title="嵌套字（未完成）"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统（未完成）" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" title="如何准备技术面试" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

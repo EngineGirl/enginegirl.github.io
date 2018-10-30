@@ -6,10 +6,20 @@
     <description>Recent content in 目录 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Oct 2018 00:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Oct 2018 00:10:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.enginego.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python是如何运行的（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
+      <pubDate>Mon, 29 Oct 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
+      <description> 这篇文章是从一个高层次的角度来分析 Python 语言的运行原理和流程，希望给从没接触过编程或者 Python 初学者初步的了解。果各位想了解更深层的实现原理，我推荐一些资源，[10 hours]()，[Python源码剖析]()。虽然一般把 Python 称为解析性语言，但是大部分的解释性语言为了优化速度都会增加编译过程，Python 语言有多种实现方式，最流行的是 CPython，也就是用 C 语言实现的，CPython 包含一个解释器和编译器。
+编译过程 解析过程 运行过程 </description>
+    </item>
     
     <item>
       <title>如何准备技术面试</title>
@@ -450,15 +460,6 @@ Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
 Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  终端还有很多其他命令，例如输出当前路径</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
-      <description></description>
     </item>
     
   </channel>
