@@ -17,14 +17,11 @@
       <pubDate>Mon, 29 Oct 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
-      <description>这篇文章着重简单介绍 Python 语言的运行原理和流程，希望给 Python 初学者一个简单的了解。Python 语言有多种实现方式，最流行的 CPython 是用 C 语言实现的，CPython 包含编译器和解释器。计算机是如何理解并且运行 Python 的源代码的呢？不出意外，计算机是按照顺序从上到下一条条执行指令的，不过计算机不能像人类去理解过于抽象的内容，例如函数，类，它只会做一些重复加减的操作。所以它需要先把源代码转换为可以理解的代码。那么怎么样的代码才是计算机理解的呢？
-基于栈的虚拟机 栈是计算机中常用的数据结构，栈符合“后进先出”的规则，就像抽屉一样，按照顺序放 A，B，C。那么 C 会在抽屉顶，那么从栈中获取到的第一个元素是 C
-![stack]()
-Python 使用的是基于栈的虚拟机，（另外还有基于寄存器的虚拟机），Python 会把源代码：
-a = &#39;A&#39; b = &#39;B&#39; a + b  转换成类似
-STORE_NAME（把 a 与 b 两个变量的值存在栈中） ... LOAD_NAME（获取栈顶的元素 a 和 b） ... BINARY_ADD（把 a 和 b 相加）  这样的字节码，Python 通过 STORE_NAME 先把 a 与 b 两个变量的值存在栈中，LOAD_NAME 获取栈顶的两个元素。
-编译过程 一般我们会把 Python 称为解释性语言，不过大部分的解释性语言为了优化速度都会增加编译过程。编译过程主要包括 tokenizer 过程和 parser 过程。
-tokenizer 过程 要理解源代码，首先要分析源代码的内容，了解每个字符串的含义，例如 def 和 class 这类关键字的含义与普通的字符串就不一样。</description>
+      <description>这篇文章着重介绍 Python 语言的运行原理和流程，Python 语言有多种实现方式，最流行的 CPython 是用 C 语言实现的。那么计算机是如何理解并且运行 Python 的源代码的呢？CPython 分为编译与解释两个过程，首先，计算机按照顺序从上到下一条条执行指令的，计算机的优点是它能迅速地完成一些重复的工作，例如1秒钟进行百万次的加减，赋值。由于计算机不能像人类一样理解过于抽象的内容，例如函数，类（即使可以，也会非常耗时），所以需要把复杂，抽象的源代码简化为机器能够理解，能够快速运行的代码，这个过程就是 Python 的编译过程。
+tokenizer 过程 编译器首先要理解源代码，首先要分析每个字符串的含义，例如 def 和 class 这类关键字的含义与普通的字符串就不一样。
+举一个例子 hello.py
+def say_hello(): print(&amp;quot;Hello, World!&amp;quot;)  下面我们使用 Python 自带的 tokenize 模块分析 hello.py，我们可以看到 tokenize 模块把 &amp;ldquo;Hello, World&amp;rdquo; 当成 STRING 类型，而 def, say_hello 等当成了 NAME 类型。
+$ python -m tokenize hello.py 0,0-0,0: ENCODING &#39;utf-8&#39; 1,0-1,3: NAME &#39;def&#39; 1,4-1,13: NAME &#39;say_hello&#39; 1,13-1,14: OP &#39;(&#39; 1,14-1,15: OP &#39;)&#39; 1,15-1,16: OP &#39;:&#39; 1,16-1,17: NEWLINE &#39;\n&#39; 2,0-2,4: INDENT &#39; &#39; 2,4-2,9: NAME &#39;print&#39; 2,9-2,10: OP &#39;(&#39; 2,10-2,25: STRING &#39;&amp;quot;Hello, World!</description>
     </item>
     
     <item>
