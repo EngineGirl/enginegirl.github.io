@@ -15,7 +15,7 @@ date: 2018-04-25T00:10:14+08:00
 
 DNS 查询其实很好理解，生活上比较贴近的例子就是通讯录，我们通常能够记住自己的电话号码，不过要找其他人的电话，一般都需要通过通讯录。我们输入朋友的名字，通讯录就会找到对应的电话号码。在这里，通讯录担任了把难记的电话号码转成好记的人名的工作。DNS查询其实也一样，负责把难记的 IP 地址转成容易记忆的域名。
 
-![dns_convert]()
+![dns_convert](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/dns/dns_convert.png)
 
 互联网刚开始发展的时候，联网的电脑加起来才几千台（没错～）。每台电脑都需要保存一个文件（称为 **hosts 文件**）用作记录域名对应哪个IP地址（就像通讯录记录人名对应哪个电话号码）。
 
@@ -35,6 +35,8 @@ DNS 查询其实很好理解，生活上比较贴近的例子就是通讯录，�
 
     如果你之前访问过这个网站，那么浏览器会保存网站对应的 IP 地址，这样下一次访问就能直接从缓存中取出地址，减少查询 IP 地址的时间。
 
+![browser_cache](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/dns/browser_cache.png)
+
 2. 查询本地的hosts文件
 
     如果hosts文件有对应域名包含的 IP 地址，例如
@@ -48,6 +50,8 @@ DNS 查询其实很好理解，生活上比较贴近的例子就是通讯录，�
 
         macOS
         /etc/hosts
+
+![hosts_file](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/dns/root.png)
 
 3. DNS 服务器查询
 
