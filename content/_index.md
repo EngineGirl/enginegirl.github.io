@@ -6,7 +6,7 @@ chapter: true
 
 ### 计算机基础首页
 
-作者：Windson Yang
+作者：Windson Yang ([Github](https://github.com/Windsooon), [Blog](http://windsooon.github.io))
 
 商业转载请联系作者获得授权，非商业转载请注明出处。
 

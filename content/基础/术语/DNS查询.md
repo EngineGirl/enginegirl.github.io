@@ -3,10 +3,6 @@ title: "DNS查询"
 date: 2018-11-11T00:10:14+08:00
 ---
 
-作者：Windson Yang
-
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
-
 当你在浏览器输入 www.apple.com。按下回车之后，浏览器跳到苹果的官网，把 iPhone 的介绍和图片显示出来。浏览器是如何通过这个域名找到 iPhone 的内容并且正确显示呢？第一步就要经过 **DNS 查询**。
 
 ![域名browser](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/browser.png)
