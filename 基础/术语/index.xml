@@ -35,26 +35,19 @@ www.apple.com 119.145.144.223  那么计算机就会直接使用这个 IP 地址
       <pubDate>Sun, 11 Nov 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</guid>
-      <description>无论是运行程序，或者了解计算机的基本信息都可以用到终端。可以说，学会使用终端是我们开始编程的第一步，
-命令行界面 在计算机技术刚发展的时候，并没有像现在手机应用那么容易上手的操作界面，大家都是通过一个黑乎乎的程序输入命令，然后等待计算机执行。
-这时候运行程序或者打开文件，则需要使用不同的命令。在我们平时使用的操作系统中，如果需要打开一个叫做 normal.txt 的文本文件，双击文件就能打开文件看到内容了，不过在命令行界面中，需要使用 cat 命令：
-cat normal.txt  那么文本的内容会显示出来。其实终端就是一个符合命令行界面要求，能够通过特定指令控制计算机的程序。
+      <description>命令行界面 在计算机技术刚发展的时候，并没有像现在手机/计算机那么容易上手的操作界面。大家都需要通过一个黑乎乎的程序输入命令，然后等待计算机执行。
+上面我运行了 ls 这个命令，这个命令的作用是列出当前路径下的所有文件。可以看到里面包含了 10个 文件。
+└── 当前目录 ├── README.md ├── config.toml ├── data ├── layouts ├── static ├── archetypes ├── content ├── docs ├── public ├── themes  运行不同的程序需要使用不同的命令。在我们平时使用的操作系统中，如果需要打开一个叫做 normal.txt 的文本文件，双击文件就能打开文件看到内容了，不过在命令行界面中，需要使用 cat 命令：
+cat normal.txt  那么文本的内容会显示出来。其实终端就是一个能够接收输入（键盘，鼠标），能够通过特定指令运行计算机功能的软件。
 亲自试试吧 你可以尝试先打开自己计算机的终端：
  macOS: 同时按住&amp;rdquo;control&amp;rdquo;+&amp;ldquo;space&amp;rdquo;键，在搜索框输入termianl，&amp;rdquo;回车&amp;rdquo;
 Windows 7：打开&amp;rdquo;开始&amp;rdquo;菜单，在搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
 Windows 8+：同时按住&amp;rdquo;win&amp;rdquo;+&amp;ldquo;Q&amp;rdquo;键，然后在弹出的搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
  成功打开之后，光标会停留在某一行。类似：
-WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是Bash（Bourne Again SHell）或者sh，你可以尝试输入一个命令，然后让终端执行。
+WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是 Bash（Bourne Again SHell）或者 sh，你可以尝试输入一个命令，然后让终端执行。
  macOS: &amp;ldquo;ls&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
 Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入
- macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
-Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 终端还有很多其他命令，例如输出当前路径
- macOS: &amp;ldquo;pwd&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
-Windows: &amp;ldquo;cc&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 或者ping命令可以用作网络诊断。
-ping www.apple.com 64 bytes from 27.148.139.136: icmp_seq=0 ttl=54 time=21.056 ms 64 bytes from 27.148.139.136: icmp_seq=1 ttl=54 time=21.</description>
+ 输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir 这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir 只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入</description>
     </item>
     
     <item>

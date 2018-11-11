@@ -13,19 +13,19 @@
     <title>终端 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1541941193" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1541941193" rel="stylesheet">
-    <link href="/css/hybrid.css?1541941193" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1541941193" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1541941193" rel="stylesheet">
-    <link href="/css/auto-complete.css?1541941193" rel="stylesheet">
-    <link href="/css/theme.css?1541941193" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1541941193" rel="stylesheet">
+    <link href="/css/nucleus.css?1541942736" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1541942736" rel="stylesheet">
+    <link href="/css/hybrid.css?1541942736" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1541942736" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1541942736" rel="stylesheet">
+    <link href="/css/auto-complete.css?1541942736" rel="stylesheet">
+    <link href="/css/theme.css?1541942736" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1541942736" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1541941193" rel="stylesheet">
+      <link href="/css/theme-blue.css?1541942736" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1541941193"></script>
+    <script src="/js/jquery-2.x.min.js?1541942736"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1541941193"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1541941193"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1541942736"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1541942736"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1541941193"></script>
+<script type="text/javascript" src="/js/search.js?1541942736"></script>
 
     
   </div>
@@ -1037,7 +1037,7 @@
             <h5>作者：Windson Yang</h5>
             <h5>更新时间：November 11, 2018</h5>
             <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
-            <br>
+            <hr>
           
 
         
@@ -1045,20 +1045,34 @@
 
 
 
-<p>无论是运行程序，或者了解计算机的基本信息都可以用到终端。可以说，学会使用终端是我们开始编程的第一步，</p>
-
 <h4 id="命令行界面">命令行界面</h4>
 
-<p>在计算机技术刚发展的时候，并没有像现在手机应用那么容易上手的操作界面，大家都是通过一个黑乎乎的程序输入命令，然后等待计算机执行。</p>
+<p>在计算机技术刚发展的时候，并没有像现在手机/计算机那么容易上手的操作界面。大家都需要通过一个黑乎乎的程序输入命令，然后等待计算机执行。</p>
 
 <p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/terminal/terminal.png" alt="terminal" /></p>
 
-<p>这时候运行程序或者打开文件，则需要使用不同的命令。在我们平时使用的操作系统中，如果需要打开一个叫做 normal.txt 的文本文件，双击文件就能打开文件看到内容了，不过在命令行界面中，需要使用 cat 命令：</p>
+<p>上面我运行了 <strong>ls</strong> 这个命令，这个命令的作用是列出当前路径下的所有文件。可以看到里面包含了 10个 文件。</p>
+
+<pre><code>└── 当前目录
+
+    ├── README.md
+    ├── config.toml
+    ├── data
+    ├── layouts
+    ├── static
+    ├── archetypes
+    ├── content
+    ├── docs
+    ├── public
+    ├── themes
+</code></pre>
+
+<p>运行不同的程序需要使用不同的命令。在我们平时使用的操作系统中，如果需要打开一个叫做 normal.txt 的文本文件，双击文件就能打开文件看到内容了，不过在命令行界面中，需要使用 cat 命令：</p>
 
 <pre><code>cat normal.txt
 </code></pre>
 
-<p>那么文本的内容会显示出来。其实<strong>终端就是一个符合命令行界面要求，能够通过特定指令控制计算机的程序。</strong></p>
+<p>那么文本的内容会显示出来。其实<strong>终端就是一个能够接收输入（键盘，鼠标），能够通过特定指令运行计算机功能的软件。</strong></p>
 
 <h4 id="亲自试试吧">亲自试试吧</h4>
 
@@ -1077,7 +1091,7 @@
 <pre><code>WindsondeMacBook-Air:~ windson$ |
 </code></pre>
 
-<p>因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是Bash（Bourne Again SHell）或者sh，你可以尝试输入一个命令，然后让终端执行。</p>
+<p>因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是 Bash（Bourne Again SHell）或者 sh，你可以尝试输入一个命令，然后让终端执行。</p>
 
 <blockquote>
 <p>macOS: &ldquo;ls&rdquo;+&ldquo;回车&rdquo;</p>
@@ -1085,7 +1099,7 @@
 <p>Windows: &ldquo;dir&rdquo;+&ldquo;回车&rdquo;</p>
 </blockquote>
 
-<p>输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。<strong>ls/dir这个命令就是列出当前目录的文件。</strong> 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入</p>
+<p>输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。<strong>ls/dir 这个命令就是列出当前目录的文件。</strong> 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir 只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入</p>
 
 <blockquote>
 <p>macOS: &ldquo;ls -a&rdquo;+&ldquo;回车&rdquo;</p>
@@ -1101,9 +1115,10 @@
 <p>Windows: &ldquo;cc&rdquo;+&ldquo;回车&rdquo;</p>
 </blockquote>
 
-<p>或者<a href="../ping命令/">ping命令</a>可以用作网络诊断。</p>
+<p>或者 <a href="../ping命令/">ping 命令</a>可以用作网络诊断。</p>
 
 <pre><code>ping www.apple.com
+
 64 bytes from 27.148.139.136: icmp_seq=0 ttl=54 time=21.056 ms
 64 bytes from 27.148.139.136: icmp_seq=1 ttl=54 time=21.575 ms
 64 bytes from 27.148.139.136: icmp_seq=2 ttl=54 time=20.989 ms
@@ -1114,25 +1129,25 @@
 <p>以前的计算机根本没有图形界面，只能对着这样黑乎乎的界面一行行输入指令，然后祈祷它不会出错。既然现在已经有图形界面了，为什么我们还需要学习用终端呢？</p>
 
 <ol>
-<li><p>多功能，一般一个软件只会专注于一个功能，例如Word进行文字编辑，PowerPoint进行幻灯片编辑。<strong>你可以通过终端让计算机调用不同的程序完成多种多样的功能。</strong></p></li>
+<li><p>多功能，一般一个软件只会专注于一个功能，例如 Word 进行文字编辑，PowerPoint 进行幻灯片编辑。<strong>你可以通过终端让计算机调用不同的程序完成多种多样的功能。</strong></p></li>
 
-<li><p>方便，对，一开始可能难以置信，但是使用终端确实比图形界面方便。你可能也会曾经遇过某一款软件更新，你找不到原本功能的按钮在哪里了。（例如某段时间Windows系统就把把“开始”菜单隐藏了。）使用命令（例如上面的ls/dir）的话即使系统如何更新都能显示当前目录的文件。</p></li>
+<li><p>方便，对，一开始可能难以置信，但是使用终端确实比图形界面方便。你可能也会曾经遇过某一款软件更新，你找不到原本功能的按钮在哪里了。（例如某段时间Windows系统就把把“开始”菜单隐藏了。）使用命令（例如上面的 ls/dir ）的话即使系统如何更新都能显示当前目录的文件。</p></li>
 
 <li><p>速度快，效率高。当你要连接远程的服务器的时候，如果连接的是图形界面，那么由于网络原因以及机器性能的影响，通常都会卡得一塌糊涂。不过如果只连接命令行界面的话，那么对于网络以及机器的性能要求就非常低，能够极大地提高工作效率。</p></li>
 
-<li><p>高效，跨平台，跨机器，假如今天你要清理电脑，<strong>要删除一个大型文件夹中（可能包含子文件夹）超过90天之前创建的所有文件，</strong>一般来说的话你需要一个个文件夹找，然后对每个文件夹里的文件进行时间排序，再手动删除超过90天的，如果里面包含了100个文件夹那么会费很多时间，同时也容易出错。使用终端的话可以直接运行</p>
+<li><p>高效，跨平台，跨机器，假如今天你要清理电脑，<strong>要删除一个大型文件夹中（可能包含子文件夹）超过 90天 之前创建的所有文件，</strong>一般来说的话你需要一个个文件夹找，然后对每个文件夹里的文件进行时间排序，再手动删除超过 90天 的，如果里面包含了 100个 文件夹那么会费很多时间，同时也容易出错。使用终端的话可以直接运行</p>
 
 <pre><code>find /path/to/base/dir/* -type f -ctime +90 -delete
 </code></pre>
 
 <p>而且只要跑同一个系统就不用担心命令会执行出错。</p></li>
 
-<li><p>容易定制，使用指令的好处是很容易根据需求来修改，加入想删除的是所有超过90天之前创建的文件夹，只需要修改&rsquo;-type f&rsquo;为&rsquo;-type d&rsquo;即可，这里type代表的是指令针对什么类型操作，f是files，d这是directory。</p></li>
+<li><p>容易定制，使用指令的好处是很容易根据需求来修改，加入想删除的是所有超过 90天 之前创建的文件夹，只需要修改 &lsquo;-type f&rsquo; 为 &lsquo;-type d&rsquo; 即可，这里 type 代表的是指令针对什么类型操作，f 是 files，d 则是 directory。</p></li>
 </ol>
 
 <p>当然，要学会基本的指令也要花时间，例如一个find指令就有超过50个参数（这个命令比较特殊，参数比较多，我也常不记得，想用的时候搜索一下就好）。</p>
 
-<p>如果你使用对的是Windows系统请注意，Windows有自己的一套特殊指令, 我不建议大家使用Windows来学习编程，相对来说macOX与Linux系统对开发者（也就是你）更加友好，<strong>使用他们会节约你很多时间。</strong> 不过这不代表你需要额外买一台电脑才能学习编程，只需要安装双系统或者虚拟系统就好，如果你没有接触过，没关系。我们会一步步介绍，你可以先在Windows中安装<a href="../Docker基础/Windows系统安装Docker教程/">Docker</a>，然后就可以在Windows系统中使用Linux了。</p>
+<p>如果你使用对的是Windows系统请注意，Windows有自己的一套特殊指令, 我不建议大家使用Windows来学习编程，相对来说macOX与Linux系统对开发者（也就是你）更加友好，<strong>使用他们会节约你很多时间。</strong> 不过这不代表你需要额外买一台电脑才能学习编程，只需要安装双系统或者虚拟系统就好，如果你没有接触过，没关系。我们会一步步介绍，你可以先在Windows中安装<a href="https://www.docker.com/">Docker</a>，然后就可以在Windows系统中使用Linux了。</p>
 
 
 <footer class=" footline" >
@@ -1822,20 +1837,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1541941193"></script>
-    <script src="/js/perfect-scrollbar.min.js?1541941193"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1541941193"></script>
-    <script src="/js/jquery.sticky.js?1541941193"></script>
-    <script src="/js/featherlight.min.js?1541941193"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1541941193"></script>
-    <script src="/js/highlight.pack.js?1541941193"></script>
+    <script src="/js/clipboard.min.js?1541942736"></script>
+    <script src="/js/perfect-scrollbar.min.js?1541942736"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1541942736"></script>
+    <script src="/js/jquery.sticky.js?1541942736"></script>
+    <script src="/js/featherlight.min.js?1541942736"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1541942736"></script>
+    <script src="/js/highlight.pack.js?1541942736"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1541941193"></script>
-    <script src="/js/learn.js?1541941193"></script>
-    <script src="/js/hugo-learn.js?1541941193"></script>
+    <script src="/js/modernizr.custom.71422.js?1541942736"></script>
+    <script src="/js/learn.js?1541942736"></script>
+    <script src="/js/hugo-learn.js?1541942736"></script>
 
-    <link href="/mermaid/mermaid.css?1541941193" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1541941193"></script>
+    <link href="/mermaid/mermaid.css?1541942736" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1541942736"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
