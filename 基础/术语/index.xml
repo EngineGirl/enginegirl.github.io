@@ -17,9 +17,7 @@
       <pubDate>Sun, 11 Nov 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
-当你在浏览器输入 www.apple.com。按下回车之后，浏览器跳到苹果的官网，把 iPhone 的介绍和图片显示出来。浏览器是如何通过这个域名找到 iPhone 的内容并且正确显示呢？第一步就要经过 DNS 查询。
+      <description>当你在浏览器输入 www.apple.com。按下回车之后，浏览器跳到苹果的官网，把 iPhone 的介绍和图片显示出来。浏览器是如何通过这个域名找到 iPhone 的内容并且正确显示呢？第一步就要经过 DNS 查询。
 DNS 查询 DNS 查询其实很好理解，生活上比较贴近的例子就是通讯录，我们通常能够记住自己的电话号码，不过要找其他人的电话，一般都需要通过通讯录。我们输入朋友的名字，通讯录就会找到对应的电话号码。在这里，通讯录担任了把难记的电话号码转成好记的人名的工作。DNS查询其实也一样，负责把难记的 IP 地址转成容易记忆的域名。
 互联网刚开始发展的时候，联网的电脑加起来才几千台（没错～）。每台电脑都需要保存一个文件（称为 hosts 文件）用作记录域名对应哪个IP地址（就像通讯录记录人名对应哪个电话号码）。
 www.enginego.org 104.24.120.11（每一行分别对应着域名和 IP 地址） www.apple.com 119.145.144.223 www.ieee.org 23.38.177.118  所以早期的时候，当我们在浏览器输入域名的时候，浏览器会先查询 hosts 文件，找到该域名对应的 IP 地址。然后再通过 IP 地址获取到服务器里面的内容并且显示在浏览器中。不过问题随着互联网的发展慢慢显现了：
@@ -32,14 +30,40 @@ www.apple.com 119.145.144.223  那么计算机就会直接使用这个 IP 地址
     </item>
     
     <item>
+      <title>终端</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</link>
+      <pubDate>Sun, 11 Nov 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</guid>
+      <description>无论是运行程序，或者了解计算机的基本信息都可以用到终端。可以说，学会使用终端是我们开始编程的第一步，
+命令行界面 在计算机技术刚发展的时候，并没有像现在手机应用那么容易上手的操作界面，大家都是通过一个黑乎乎的程序输入命令，然后等待计算机执行。
+这时候运行程序或者打开文件，则需要使用不同的命令。在我们平时使用的操作系统中，如果需要打开一个叫做 normal.txt 的文本文件，双击文件就能打开文件看到内容了，不过在命令行界面中，需要使用 cat 命令：
+cat normal.txt  那么文本的内容会显示出来。其实终端就是一个符合命令行界面要求，能够通过特定指令控制计算机的程序。
+亲自试试吧 你可以尝试先打开自己计算机的终端：
+ macOS: 同时按住&amp;rdquo;control&amp;rdquo;+&amp;ldquo;space&amp;rdquo;键，在搜索框输入termianl，&amp;rdquo;回车&amp;rdquo;
+Windows 7：打开&amp;rdquo;开始&amp;rdquo;菜单，在搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
+Windows 8+：同时按住&amp;rdquo;win&amp;rdquo;+&amp;ldquo;Q&amp;rdquo;键，然后在弹出的搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
+ 成功打开之后，光标会停留在某一行。类似：
+WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是Bash（Bourne Again SHell）或者sh，你可以尝试输入一个命令，然后让终端执行。
+ macOS: &amp;ldquo;ls&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+ 输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入
+ macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+ 终端还有很多其他命令，例如输出当前路径
+ macOS: &amp;ldquo;pwd&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+Windows: &amp;ldquo;cc&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+ 或者ping命令可以用作网络诊断。
+ping www.apple.com 64 bytes from 27.148.139.136: icmp_seq=0 ttl=54 time=21.056 ms 64 bytes from 27.148.139.136: icmp_seq=1 ttl=54 time=21.</description>
+    </item>
+    
+    <item>
       <title>Ping命令</title>
       <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Wed, 25 Apr 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处 (www.enginego.org)。
- 基础版 进阶版  基础版 ping命令 有时候当我们无法上网，会计算机的朋友会说，你ping一下网关，或者你ping一个网站看看。ping这个命令，其实是操作系统自带的命令之一，常用作在网络诊断中。你可以在终端中输入：
+      <description>基础版 进阶版  基础版 ping命令 有时候当我们无法上网，会计算机的朋友会说，你ping一下网关，或者你ping一个网站看看。ping这个命令，其实是操作系统自带的命令之一，常用作在网络诊断中。你可以在终端中输入：
 ping www.enginego.org  你可以把&amp;rdquo;www.enginego.org&amp;rdquo;替换成其他任意的域名，终端会显示：
 PING www.enginego.org (104.24.120.11): 56 data bytes 64 bytes from 104.24.121.11: icmp_seq=0 ttl=54 time=170.383 ms 64 bytes from 104.24.121.11: icmp_seq=1 ttl=54 time=170.053 ms 64 bytes from 104.24.121.11: icmp_seq=2 ttl=54 time=171.298 ms 64 bytes from 104.24.121.11: icmp_seq=3 ttl=54 time=170.352 ms 64 bytes from 104.24.121.11: icmp_seq=4 ttl=54 time=170.636 ms ...  这表示从我的计算机发送64个字节的数据到104.24.121.11 (这个是经过DNS查询后的www.enginego.org的ip地址)，从发送到接受对方返回总共经过了170.xxx毫秒。代表www.enginego.org对应的那台服务器是开启并且响应ping指令的。
 如果返回：
@@ -52,9 +76,7 @@ PING www.enginego.org (104.24.121.11): 56 data bytes Request timeout for icmp_se
       <pubDate>Wed, 25 Apr 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
- 什么是协议 协议的优点 协议与API  什么是协议 计算机使用了多种多样的协议，大家接触得比较多的是HTTP, TCP/IP, FTP, ICMP等，计算机中的协议和我们现实生活中签的协议其实挺像，双方按照协议上的约定发送和解析数据。举个例子，你和你的朋友通过短信约定明天吃饭的时间地点：
+      <description>什么是协议 协议的优点 协议与API  什么是协议 计算机使用了多种多样的协议，大家接触得比较多的是HTTP, TCP/IP, FTP, ICMP等，计算机中的协议和我们现实生活中签的协议其实挺像，双方按照协议上的约定发送和解析数据。举个例子，你和你的朋友通过短信约定明天吃饭的时间地点：
  明天
 中午12点
 在公司等
@@ -74,7 +96,7 @@ PING www.enginego.org (104.24.121.11): 56 data bytes Request timeout for icmp_se
 协议的优点 无论对计算机或者人类来说，信息都变得有序和容易处理。当我们知道信息遵守协议A的时候，我们不需要阅读信息都知道前两个字是日期，接着是四个字的时间，最后是四个字的地点。
 举个常见的例子，当你使用浏览器访问www.apple.com，浏览器其实是按照HTTP协议的约定向苹果服务器发出信息，协议要求内容：
 第一行：请求方法和协议版本（8个字节） 第二行：请求的URL（30个字节） 第三行：缓存策略（30个字节） ...  实际发送的文字内容是：
-GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（请求的URL） Connection: keep-alive\r\n（缓存策略） Pragma: no-cache\r\n Cache-Control: no-cache\r\n Upgrade-Insecure-Requests: 1\r\n User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.</description>
+GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（请求的URL） Connection: keep-alive\r\n（缓存策略） Pragma: no-cache\r\n Cache-Control: no-cache\r\n Upgrade-Insecure-Requests: 1\r\n User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.</description>
     </item>
     
     <item>
@@ -83,9 +105,7 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
       <pubDate>Wed, 25 Apr 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
- 计算机文件存储 当前路径 绝对路径和相对路径 切换路径  计算机文件存储 计算机文件的存储结构如下：
+      <description>计算机文件存储 当前路径 绝对路径和相对路径 切换路径  计算机文件存储 计算机文件的存储结构如下：
 /（根目录） │ └── usr ├── foo │ ├── first.md │ └── second.md ├── bar │ ├── sunkist.toml │ ├── cherry.toml  我们平时使用计算机，都会接触到文件夹以及目录，上图中，计算机中只有一个usr文件夹，usr 文件夹中又包含了foo和bar两个文件夹，分别包含两个文件。路径指的是文件／文件夹存放在计算机中的位置。要描述first.md这个文件的位置可以有两种方式，绝对路径和相对路径，其中绝对路径是
 /usr/foo/first.md  每个文件／文件夹都只有一个绝对路径，无数个相对路径，如果你不理解的话，没关系，我们从头一步步开始介绍。
 当前路径 我们平时用导航软件的时候，首先需要知道的是现在的位置，在计算机中也是一样，我们首先要知道自己在哪里，当你打开终端的时候：
@@ -93,7 +113,8 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
 (masOS) WindsondeMacBook-Air:foo/ windson$ pwd /usr/foo/ (Windsons) C:foo\: cd \usr\foo\  当你在终端中输入命令，默认命令针对的是当前路径。例如输入&amp;rdquo;ls&amp;rdquo;，计算机会理解成&amp;rdquo;ls /usr/foo/&amp;ldquo;(Windows下输入&amp;rdquo;dir&amp;rdquo;，理解为&amp;rdquo;dir \usr\foo\&amp;ldquo;)，两个命令都会列出当前路径下的所有文件名称。
 绝对路径和相对路径 有一天，Cherry在路上遇到Sunkist，它问Sunkist的公司地址在哪里，Sunkist可能有两个答案：
  以这里为起点，西南方向500米的石室大厦 中国广东省广州市思哲路石室大厦  第一个答案以当前的位置为起点所描述的称为相对路径。根据Sunkist当前的位置不一样，它回答的相对路径会不一样，第二个答案从国家到省份城市巨细无遗地描述称为绝对路径，一个文件除非被移动，否则绝对路径是不会变化的。每个文件/文件夹在一台计算机中可能会有无数个相对路径，但是只有一个绝对路径。回到文章最初的文件存储结构，first.md的绝对路径是
-/usr/foo/first.md (first.md的绝对路径)  这是从根目录&amp;rdquo;/&amp;ldquo;开始一层一层描述的位置。了解相对路径之前先有一点预备知识。在路径命令中&amp;rdquo;.</description>
+/usr/foo/first.md (first.md的绝对路径)  这是从根目录&amp;rdquo;/&amp;ldquo;开始一层一层描述的位置。了解相对路径之前先有一点预备知识。在路径命令中&amp;rdquo;.&amp;ldquo;以及&amp;rdquo;..&amp;ldquo;这两个符号有特殊意义，分别代表当前目录以及上一级目录。如果当前路径是&amp;rdquo;/usr/foo/&amp;rdquo;
+/usr/foo/ (当前路径) .</description>
     </item>
     
     <item>
@@ -174,9 +195,7 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
       <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
-计算机知识往往互相关联，要真正了解域名是什么，必须先了解什么是URI。这里有一些常见的例子。
+      <description>计算机知识往往互相关联，要真正了解域名是什么，必须先了解什么是URI。这里有一些常见的例子。
 https://www.apple.com http://www.w3c.org ftp://example.org/resource.txt file:///Users/example/hello.jpg  最后两个大家可能不太熟悉，以最后一个为例子，你们可以尝试把自己电脑中任意的文件拖放到浏览器中，浏览器会去猜这个文件类型，一些常见的文件类型例如图片，浏览器可以判断并渲染出来。同时浏览器的地址栏也会变成file开头。这个例子中的file就是这个URI所使用的协议。常见的协议还有
 HTTP 超文本传输协议 SMTP 邮件协议 telnet 终端传输协议 DNS 域名系统协议 DHCP 动态主机配置协议  好吧，我承认部分对于一般大众不是很常见，不过如果你想认真学习编程，起码看到这些名词的时候知道是什么。感兴趣的学生可以前往Lists of network protocols。那么协议又是什么呢？其实协议的本质非常简单。
 域名（Domain names）是互联网基础架构的关键部分。它们为互联网上任何可用的网页服务器提供了人类可读的地址。 任何连上互联网的电脑都可以通过一个公共IP地址访问到，对于IPv4来说，这个地址由32位组成（它们通常写成四个范围在0~255以内，由点分隔的数字组成，比如173.194.121.32），而对于IPv6来说，这个地址由128位组成，通常写成八组由冒号分隔的四进制数(e.g., 2027:0da8:8b73:0000:0000:8a2e:0370:1337).  </description>
@@ -188,37 +207,7 @@ HTTP 超文本传输协议 SMTP 邮件协议 telnet 终端传输协议 DNS 域�
       <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/</guid>
-      <description> 作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-服务端 很简单，服务器就是一台**24小时运行**，运行着**专为服务器设计的系统**的**高性能计算机**。它也是由内存，硬盘，CPU组成。不过它会根据这台服务器的用途来配置不同的组件。有些服务器专门用来存储文件，图片，那么它就需要更大的硬盘，对CPU的要求就没那么高。有些专门用来进行高密度的计算，例如视频转格式，数据分析那么就要更快的CPU。 服务器会根据不同客户端的请求返回不同的内容，当你使用浏览器访问一个页面的时候，实际上浏览器就是寻找该页面对应的服务器获取相应的图片和文字内容。  客户端 常见的客户端包括浏览器，手机，它请求服务器需要的资源，然后客户端解析返回的内容并且显示给用户。  </description>
-    </item>
-    
-    <item>
-      <title>终端</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</link>
-      <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处 (www.enginego.org)。
-使用终端是我们开始编程的第一步，无论是运行程序，或者了解计算机的基本信息都需要用到。让我们愉快地和它玩耍把。
-基础版  什么是终端 为什么要用终端  什么是终端  图形界面 命令行界面 亲自试试吧  图形界面 我们平时习惯了使用图形界面，当我们双击图标打开文件，计算机会先通过后续去猜测用什么程序运行文件，如果是图片（.jpg, .png）的话，计算机就会用图片浏览器打开，如果是可执行文件（macOS下的dmg后缀文件，Windows下的exe后缀文件），计算机会先找到该应用的在硬盘中的位置，然后根据可执行文件里面包含的信息（需要加载什么资源）来运行程序。
-命令行界面 在计算机刚开始发展的时候，并没有那么容易上手的操作界面，大家都是通过一个黑乎乎的程序输入命令，然后等待计算机执行。
-这时候运行程序或者打开文件，则需要使用不同的命令。例如打开当前路径下一个名为normal.txt的文本文件，可以用cat命令：
-cat normal.txt  要打开图片的话，需要安装额外的软件来打开。要运行一个名为hello.py的python程序，在安装了python软件之后，在终端直接输入
-python hello.py  回车之后就可以看到程序的输出结果了。其实图形界面与命令行界面运行的本质是一样的，运行程序或者打开文件：
- 安装对应的软件 指定程序运行（图形界面会根据后缀名帮你选择用什么程序来打开。）  亲自试试吧 你可以尝试先打开自己计算机的终端：
- macOS: 同时按住&amp;rdquo;control&amp;rdquo;+&amp;ldquo;space&amp;rdquo;键，在搜索框输入termianl，&amp;rdquo;回车&amp;rdquo;
-Windows 7：打开&amp;rdquo;开始&amp;rdquo;菜单，在搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
-Windows 8+：同时按住&amp;rdquo;win&amp;rdquo;+&amp;ldquo;Q&amp;rdquo;键，然后在弹出的搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
- 成功打开之后，光标会停留在某一行。类似：
-WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是Bash（Bourne Again SHell）或者sh，你可以尝试输入一个命令，然后让终端执行。
- macOS: &amp;ldquo;ls&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
-Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入
- macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
-Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 终端还有很多其他命令，例如输出当前路径</description>
+      <description> 服务端 很简单，服务器就是一台**24小时运行**，运行着**专为服务器设计的系统**的**高性能计算机**。它也是由内存，硬盘，CPU组成。不过它会根据这台服务器的用途来配置不同的组件。有些服务器专门用来存储文件，图片，那么它就需要更大的硬盘，对CPU的要求就没那么高。有些专门用来进行高密度的计算，例如视频转格式，数据分析那么就要更快的CPU。 服务器会根据不同客户端的请求返回不同的内容，当你使用浏览器访问一个页面的时候，实际上浏览器就是寻找该页面对应的服务器获取相应的图片和文字内容。  客户端 常见的客户端包括浏览器，手机，它请求服务器需要的资源，然后客户端解析返回的内容并且显示给用户。  </description>
     </item>
     
   </channel>

@@ -17,9 +17,7 @@
       <pubDate>Sun, 11 Nov 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
-当你在浏览器输入 www.apple.com。按下回车之后，浏览器跳到苹果的官网，把 iPhone 的介绍和图片显示出来。浏览器是如何通过这个域名找到 iPhone 的内容并且正确显示呢？第一步就要经过 DNS 查询。
+      <description>当你在浏览器输入 www.apple.com。按下回车之后，浏览器跳到苹果的官网，把 iPhone 的介绍和图片显示出来。浏览器是如何通过这个域名找到 iPhone 的内容并且正确显示呢？第一步就要经过 DNS 查询。
 DNS 查询 DNS 查询其实很好理解，生活上比较贴近的例子就是通讯录，我们通常能够记住自己的电话号码，不过要找其他人的电话，一般都需要通过通讯录。我们输入朋友的名字，通讯录就会找到对应的电话号码。在这里，通讯录担任了把难记的电话号码转成好记的人名的工作。DNS查询其实也一样，负责把难记的 IP 地址转成容易记忆的域名。
 互联网刚开始发展的时候，联网的电脑加起来才几千台（没错～）。每台电脑都需要保存一个文件（称为 hosts 文件）用作记录域名对应哪个IP地址（就像通讯录记录人名对应哪个电话号码）。
 www.enginego.org 104.24.120.11（每一行分别对应着域名和 IP 地址） www.apple.com 119.145.144.223 www.ieee.org 23.38.177.118  所以早期的时候，当我们在浏览器输入域名的时候，浏览器会先查询 hosts 文件，找到该域名对应的 IP 地址。然后再通过 IP 地址获取到服务器里面的内容并且显示在浏览器中。不过问题随着互联网的发展慢慢显现了：
@@ -29,6 +27,34 @@ www.enginego.org 104.24.120.11（每一行分别对应着域名和 IP 地址） 
    查询本地的hosts文件
 如果hosts文件有对应域名包含的 IP 地址，例如
 www.apple.com 119.145.144.223  那么计算机就会直接使用这个 IP 地址，你可以查看自己电脑的 hosts 文件，不同系统分别存储在不同的位置</description>
+    </item>
+    
+    <item>
+      <title>终端</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</link>
+      <pubDate>Sun, 11 Nov 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</guid>
+      <description>无论是运行程序，或者了解计算机的基本信息都可以用到终端。可以说，学会使用终端是我们开始编程的第一步，
+命令行界面 在计算机技术刚发展的时候，并没有像现在手机应用那么容易上手的操作界面，大家都是通过一个黑乎乎的程序输入命令，然后等待计算机执行。
+这时候运行程序或者打开文件，则需要使用不同的命令。在我们平时使用的操作系统中，如果需要打开一个叫做 normal.txt 的文本文件，双击文件就能打开文件看到内容了，不过在命令行界面中，需要使用 cat 命令：
+cat normal.txt  那么文本的内容会显示出来。其实终端就是一个符合命令行界面要求，能够通过特定指令控制计算机的程序。
+亲自试试吧 你可以尝试先打开自己计算机的终端：
+ macOS: 同时按住&amp;rdquo;control&amp;rdquo;+&amp;ldquo;space&amp;rdquo;键，在搜索框输入termianl，&amp;rdquo;回车&amp;rdquo;
+Windows 7：打开&amp;rdquo;开始&amp;rdquo;菜单，在搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
+Windows 8+：同时按住&amp;rdquo;win&amp;rdquo;+&amp;ldquo;Q&amp;rdquo;键，然后在弹出的搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
+ 成功打开之后，光标会停留在某一行。类似：
+WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是Bash（Bourne Again SHell）或者sh，你可以尝试输入一个命令，然后让终端执行。
+ macOS: &amp;ldquo;ls&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+ 输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入
+ macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+ 终端还有很多其他命令，例如输出当前路径
+ macOS: &amp;ldquo;pwd&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+Windows: &amp;ldquo;cc&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
+ 或者ping命令可以用作网络诊断。
+ping www.apple.com 64 bytes from 27.148.139.136: icmp_seq=0 ttl=54 time=21.056 ms 64 bytes from 27.148.139.136: icmp_seq=1 ttl=54 time=21.</description>
     </item>
     
     <item>
@@ -50,8 +76,7 @@ $ python -m tokenize hello.py 0,0-0,0: ENCODING &#39;utf-8&#39; 1,0-1,3: NAME &#
       <pubDate>Mon, 22 Oct 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/</guid>
-      <description>作者：Windson Yang
-本文章由ResumeJob贡献，ResumeJob能帮助你重新规划你的职业生涯，商业转载请联系作者获得授权，非商业转载请注明出处。
+      <description>本文章由ResumeJob贡献，ResumeJob能帮助你重新规划你的职业生涯，商业转载请联系作者获得授权，非商业转载请注明出处。
 刚开始工作的时候，我对面试总是很恐惧，一方面怕简历无法通过筛选，另一方面因为面试的经验不多，往往也发挥得不好，一些常见套路也不知道怎么回答，也不想浪费时间去面试多几家公司。我当初并不知道对比其他求职者，自己的优势和劣势在哪里，也不知道如何去准备面试，面试官看重的是哪些方面，更不知道自己到底值多少钱。
 现在回过头看，我觉得当初只是在欺骗自己，我担心的是即使自己认真准备简历和面试也对结果毫无影响，更不敢去想如果放弃这个 Offer，找不到其他工作怎么办。 我刚工作的时候是一份很普通的简历（专业不是计算机，作品也没多少）也得到一间大厂的面试机会，但是我反而很紧张，因为我根本没有做好准备。工作了几年之后，当我有了面试官的经历之后，我越来越发现认真准备简历和面试是很重要的，因为毫无准备，随便面试的求职者真的太多了。而且互联网公司招人实在困难，有计算机基础知识，有项目经验，愿意学习而且愿意来这家公司，靠的完全是缘分。所以只要求职者有一定的实力，愿意努力，市场上还是有非常多机会的。我把这几年作为面试者和面试官身份的的经验給大家，希望大家可以从中学到一些面试的技巧，找到心仪的工作。大家也可以使用ResumeJob进行简历Review和模拟面试，这样在真实面试的时候更有把握。
 分析阶段 公司需要怎样的员工 我很喜欢 Google 前 CEO 施密特分享的一个故事，他刚到 Google 的时候，Google 还只是个小的创业公司。他以为 Google 和其他公司没什么两样，直到有一个周五，拉里佩奇在用谷歌搜索一些关键字的时候，他发现出现了一些不相干的广告推荐（这个情况我们现在在国内最大的搜索引擎也经常看到）。施密特以为接下来就是开几个会议，然后分到具体的工程师手上解决。但是拉里佩奇没有这么做，他用纸条写下&amp;rdquo;These Ads Suck!&amp;ldquo;，附上相关的截图贴在布告栏上就回家了。接下来的 72 小时彻底改变了施密特的认知。在周一凌晨 5点，有几位并不是负责广告业务的工程师发来一份邮件，从头到尾阐述了这个问题产生的原因，他们的解决方案，以及这个计划对公司有什么影响。这和我们强制的 996 加班解决不一样，他们从公司的角度去思考，自愿自发地用周末的时间去解决并不属于自己范畴的问题。 这样的员工我想就是每个公司都需要的：
@@ -140,8 +165,7 @@ hello, world [Finished in 0.276s]   </description>
       <pubDate>Mon, 18 Jun 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/</guid>
-      <description>作者：Windson Yang
-本文章由 ResumeJob贡献，ResumeJob 能帮助你重新规划你的职业生涯，商业转载请联系作者获得授权，非商业转载请注明出处。
+      <description>本文章由 ResumeJob贡献，ResumeJob 能帮助你重新规划你的职业生涯，商业转载请联系作者获得授权，非商业转载请注明出处。
 之前我写了一篇如何准备技术面试的文章，得到了不少读者的支持，也给了我更多动力把求职系列教程写下去。
 面试前要准备的第一件事就是写简历，从零开始写简历是一件痛苦的事，因为它既重要又耗时。现在就有很多求职者在电脑前急躁不安地搜索简历模版和参考例句，却不知道如何下笔。写得太短的话 HR 一定觉得没诚意，写得太长的话又无从下手。有的求职者写完连自己都不忍心看，错别字连篇，排版混乱就投出去，所以海投简历也没有回应。而且程序员工资相对较高，有大量人才从其他专业转来，竞争非常激烈，所以如何从众多简历中脱颖而出，赢得面试的机会就非常重要了。这篇文章会从两个方面介绍简历的常见问题
  简历中的常见错误
@@ -160,7 +184,8 @@ hello, world [Finished in 0.276s]   </description>
 数据库：Redis, MySQL
 工具：Docker, Jenkins, Git
 其他：HTTP, TCP/IP, WebSocket
-外语：大学英语四级，能流畅阅读英文文档</description>
+外语：大学英语四级，能流畅阅读英文文档
+ 就是如此简短，让 HR 能快速定位到求职者的技能，做出是否看下去的判断。另外这个技能列表应该放在简介之后，我们之后会介绍。</description>
     </item>
     
     <item>
@@ -203,9 +228,7 @@ Collecting requests Downloading https://files.pythonhosted.org/packages/65/47/7e
       <pubDate>Fri, 11 May 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/</guid>
-      <description>作者：Windson Yang (感谢Sylv对本文作出的贡献）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
-在打开网页或者文件的时候，你一定会遇过像这样的字符串乱码问题：
+      <description>在打开网页或者文件的时候，你一定会遇过像这样的字符串乱码问题：
 É��OÇ��，文件包括了各式各样的编码...  同时或多或少也遇到Unicode, UTF-8, ASCII, Latin-1这些编码术语。编码问题可以说是新人必踩坑，虽然从最后的解决方案来看，可能两三句代码就能解决，但是实际大部分开发者，包括我以前，也没有真正地理解它。原因并不是因为它复杂，而是它涉及了计算机科学中一个常见的问题，理论与工程实现的区别。理论上我们只需要按照A方案就可以解决问题，但是实际上，由于不同语言，不同系统的历史原因，实现的方案就变成多个，许多编程语言的编码实现都不同。所以要真正地理解字符串编码，首先需要了解计算机的一些基础知识，包括字符串如何存储在计算机硬盘中。如果只是希望靠运气来解决或者避开它，反而会在一次次盲目的尝试中浪费更多的时间。如果你不熟悉Python代码的话，完全可以跳过这篇文章所有的代码段，它不会影响你对这篇文章的影响。
  基础术语 计算机如何存储数据 ASCII编码 GBK编码 Unicode UTF-8编码 HTML实体编码 URL编码 常见问题 总结  基础术语  字符 字符串 键值表 字符串编码与解码  字符 A B C 天 气 エ ン コ 😁  上面的用空格分割的都是单个字符(Character)，它代表对人类能看懂的有意义的语言文字。
 字符串 Hello 天气 Hola  字符串(Strings)就是多个字符组成的集合
@@ -220,9 +243,7 @@ y = x * 2  中每个x都对应着唯一的一个y值，x与y组成的集合就�
       <pubDate>Mon, 07 May 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。（www.enginego.org）
- 简介 对称密码 非对称密码 数字签名 SSH登录 Https传输 API调用  简介 我接触过不少工程师对于对称加密，非对称加密，公钥和私钥只停留在应用的层面，而并不了解背后的原理。所以在开发过程中犯了不少错误，而通常涉及加密传输或者加密存储的错误都比较严重，这篇文章着重介绍了密码学常用的工具以及常见场景。
+      <description>简介 对称密码 非对称密码 数字签名 SSH登录 Https传输 API调用  简介 我接触过不少工程师对于对称加密，非对称加密，公钥和私钥只停留在应用的层面，而并不了解背后的原理。所以在开发过程中犯了不少错误，而通常涉及加密传输或者加密存储的错误都比较严重，这篇文章着重介绍了密码学常用的工具以及常见场景。
 对称密码 我们日常接触最多的就是对称密码，它最重要的性质有两点：
  对称密码中加密和解密使用的是同一个密码。 对称密码中加密后的密文只有该对称密码才能解密。  对称加密有很多名称，例如对称密码，私钥密码，它类似家里的保险柜，把密码设置成9527然后锁上，那么也需要使用9527才能打开。当你要把“芹菜，香菜”利用对称密码“000111”传输给朋友：
 # 原文 芹菜，香菜 # 约定一个密钥（不能被第三方知道） 000111 # 把信息和对称密钥异或运算，得到密文 101100  这时候你可以直接把密文“101100”告诉你的朋友。你的朋友使用约定的密钥“000111”对密文进行再一次异或就能得到原文。实际使用中，加解密不止异或一次那么简单，通常会使用分组密码多次迭代异或。常用的对称加密算法有DES与AES。
@@ -235,9 +256,7 @@ y = x * 2  中每个x都对应着唯一的一个y值，x与y组成的集合就�
       <pubDate>Wed, 25 Apr 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处 (www.enginego.org)。
- 基础版 进阶版  基础版 ping命令 有时候当我们无法上网，会计算机的朋友会说，你ping一下网关，或者你ping一个网站看看。ping这个命令，其实是操作系统自带的命令之一，常用作在网络诊断中。你可以在终端中输入：
+      <description>基础版 进阶版  基础版 ping命令 有时候当我们无法上网，会计算机的朋友会说，你ping一下网关，或者你ping一个网站看看。ping这个命令，其实是操作系统自带的命令之一，常用作在网络诊断中。你可以在终端中输入：
 ping www.enginego.org  你可以把&amp;rdquo;www.enginego.org&amp;rdquo;替换成其他任意的域名，终端会显示：
 PING www.enginego.org (104.24.120.11): 56 data bytes 64 bytes from 104.24.121.11: icmp_seq=0 ttl=54 time=170.383 ms 64 bytes from 104.24.121.11: icmp_seq=1 ttl=54 time=170.053 ms 64 bytes from 104.24.121.11: icmp_seq=2 ttl=54 time=171.298 ms 64 bytes from 104.24.121.11: icmp_seq=3 ttl=54 time=170.352 ms 64 bytes from 104.24.121.11: icmp_seq=4 ttl=54 time=170.636 ms ...  这表示从我的计算机发送64个字节的数据到104.24.121.11 (这个是经过DNS查询后的www.enginego.org的ip地址)，从发送到接受对方返回总共经过了170.xxx毫秒。代表www.enginego.org对应的那台服务器是开启并且响应ping指令的。
 如果返回：
@@ -250,9 +269,7 @@ PING www.enginego.org (104.24.121.11): 56 data bytes Request timeout for icmp_se
       <pubDate>Wed, 25 Apr 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
- 什么是协议 协议的优点 协议与API  什么是协议 计算机使用了多种多样的协议，大家接触得比较多的是HTTP, TCP/IP, FTP, ICMP等，计算机中的协议和我们现实生活中签的协议其实挺像，双方按照协议上的约定发送和解析数据。举个例子，你和你的朋友通过短信约定明天吃饭的时间地点：
+      <description>什么是协议 协议的优点 协议与API  什么是协议 计算机使用了多种多样的协议，大家接触得比较多的是HTTP, TCP/IP, FTP, ICMP等，计算机中的协议和我们现实生活中签的协议其实挺像，双方按照协议上的约定发送和解析数据。举个例子，你和你的朋友通过短信约定明天吃饭的时间地点：
  明天
 中午12点
 在公司等
@@ -272,7 +289,7 @@ PING www.enginego.org (104.24.121.11): 56 data bytes Request timeout for icmp_se
 协议的优点 无论对计算机或者人类来说，信息都变得有序和容易处理。当我们知道信息遵守协议A的时候，我们不需要阅读信息都知道前两个字是日期，接着是四个字的时间，最后是四个字的地点。
 举个常见的例子，当你使用浏览器访问www.apple.com，浏览器其实是按照HTTP协议的约定向苹果服务器发出信息，协议要求内容：
 第一行：请求方法和协议版本（8个字节） 第二行：请求的URL（30个字节） 第三行：缓存策略（30个字节） ...  实际发送的文字内容是：
-GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（请求的URL） Connection: keep-alive\r\n（缓存策略） Pragma: no-cache\r\n Cache-Control: no-cache\r\n Upgrade-Insecure-Requests: 1\r\n User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.</description>
+GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（请求的URL） Connection: keep-alive\r\n（缓存策略） Pragma: no-cache\r\n Cache-Control: no-cache\r\n Upgrade-Insecure-Requests: 1\r\n User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.</description>
     </item>
     
     <item>
@@ -281,9 +298,7 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
       <pubDate>Wed, 25 Apr 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
- 计算机文件存储 当前路径 绝对路径和相对路径 切换路径  计算机文件存储 计算机文件的存储结构如下：
+      <description>计算机文件存储 当前路径 绝对路径和相对路径 切换路径  计算机文件存储 计算机文件的存储结构如下：
 /（根目录） │ └── usr ├── foo │ ├── first.md │ └── second.md ├── bar │ ├── sunkist.toml │ ├── cherry.toml  我们平时使用计算机，都会接触到文件夹以及目录，上图中，计算机中只有一个usr文件夹，usr 文件夹中又包含了foo和bar两个文件夹，分别包含两个文件。路径指的是文件／文件夹存放在计算机中的位置。要描述first.md这个文件的位置可以有两种方式，绝对路径和相对路径，其中绝对路径是
 /usr/foo/first.md  每个文件／文件夹都只有一个绝对路径，无数个相对路径，如果你不理解的话，没关系，我们从头一步步开始介绍。
 当前路径 我们平时用导航软件的时候，首先需要知道的是现在的位置，在计算机中也是一样，我们首先要知道自己在哪里，当你打开终端的时候：
@@ -291,7 +306,8 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
 (masOS) WindsondeMacBook-Air:foo/ windson$ pwd /usr/foo/ (Windsons) C:foo\: cd \usr\foo\  当你在终端中输入命令，默认命令针对的是当前路径。例如输入&amp;rdquo;ls&amp;rdquo;，计算机会理解成&amp;rdquo;ls /usr/foo/&amp;ldquo;(Windows下输入&amp;rdquo;dir&amp;rdquo;，理解为&amp;rdquo;dir \usr\foo\&amp;ldquo;)，两个命令都会列出当前路径下的所有文件名称。
 绝对路径和相对路径 有一天，Cherry在路上遇到Sunkist，它问Sunkist的公司地址在哪里，Sunkist可能有两个答案：
  以这里为起点，西南方向500米的石室大厦 中国广东省广州市思哲路石室大厦  第一个答案以当前的位置为起点所描述的称为相对路径。根据Sunkist当前的位置不一样，它回答的相对路径会不一样，第二个答案从国家到省份城市巨细无遗地描述称为绝对路径，一个文件除非被移动，否则绝对路径是不会变化的。每个文件/文件夹在一台计算机中可能会有无数个相对路径，但是只有一个绝对路径。回到文章最初的文件存储结构，first.md的绝对路径是
-/usr/foo/first.md (first.md的绝对路径)  这是从根目录&amp;rdquo;/&amp;ldquo;开始一层一层描述的位置。了解相对路径之前先有一点预备知识。在路径命令中&amp;rdquo;.</description>
+/usr/foo/first.md (first.md的绝对路径)  这是从根目录&amp;rdquo;/&amp;ldquo;开始一层一层描述的位置。了解相对路径之前先有一点预备知识。在路径命令中&amp;rdquo;.&amp;ldquo;以及&amp;rdquo;..&amp;ldquo;这两个符号有特殊意义，分别代表当前目录以及上一级目录。如果当前路径是&amp;rdquo;/usr/foo/&amp;rdquo;
+/usr/foo/ (当前路径) .</description>
     </item>
     
     <item>
@@ -388,9 +404,7 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
       <pubDate>Tue, 27 Feb 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9/</guid>
-      <description> 作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处 (www.enginego.org)。
-刚开始学习编程的时候，我也很困惑这个问题，有那么那么多的编程语言，常见的有
+      <description> 刚开始学习编程的时候，我也很困惑这个问题，有那么那么多的编程语言，常见的有
  python ruby php Go c java R &amp;hellip;  我们可以根据你的职业职业规划来选择要学习的语言：
 前端工程师  完成设计 后端交互  前端工程师主要的职责是把设计师的设计图实现，当设计师设计完界面之后
 ![design]()
@@ -405,9 +419,7 @@ GET / HTTP/1.1\r\n（请求方法和协议版本） Host: www.apple.com\r\n（�
       <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处（www.enginego.org）。
-计算机知识往往互相关联，要真正了解域名是什么，必须先了解什么是URI。这里有一些常见的例子。
+      <description>计算机知识往往互相关联，要真正了解域名是什么，必须先了解什么是URI。这里有一些常见的例子。
 https://www.apple.com http://www.w3c.org ftp://example.org/resource.txt file:///Users/example/hello.jpg  最后两个大家可能不太熟悉，以最后一个为例子，你们可以尝试把自己电脑中任意的文件拖放到浏览器中，浏览器会去猜这个文件类型，一些常见的文件类型例如图片，浏览器可以判断并渲染出来。同时浏览器的地址栏也会变成file开头。这个例子中的file就是这个URI所使用的协议。常见的协议还有
 HTTP 超文本传输协议 SMTP 邮件协议 telnet 终端传输协议 DNS 域名系统协议 DHCP 动态主机配置协议  好吧，我承认部分对于一般大众不是很常见，不过如果你想认真学习编程，起码看到这些名词的时候知道是什么。感兴趣的学生可以前往Lists of network protocols。那么协议又是什么呢？其实协议的本质非常简单。
 域名（Domain names）是互联网基础架构的关键部分。它们为互联网上任何可用的网页服务器提供了人类可读的地址。 任何连上互联网的电脑都可以通过一个公共IP地址访问到，对于IPv4来说，这个地址由32位组成（它们通常写成四个范围在0~255以内，由点分隔的数字组成，比如173.194.121.32），而对于IPv6来说，这个地址由128位组成，通常写成八组由冒号分隔的四进制数(e.g., 2027:0da8:8b73:0000:0000:8a2e:0370:1337).  </description>
@@ -419,37 +431,7 @@ HTTP 超文本传输协议 SMTP 邮件协议 telnet 终端传输协议 DNS 域�
       <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/</guid>
-      <description> 作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-服务端 很简单，服务器就是一台**24小时运行**，运行着**专为服务器设计的系统**的**高性能计算机**。它也是由内存，硬盘，CPU组成。不过它会根据这台服务器的用途来配置不同的组件。有些服务器专门用来存储文件，图片，那么它就需要更大的硬盘，对CPU的要求就没那么高。有些专门用来进行高密度的计算，例如视频转格式，数据分析那么就要更快的CPU。 服务器会根据不同客户端的请求返回不同的内容，当你使用浏览器访问一个页面的时候，实际上浏览器就是寻找该页面对应的服务器获取相应的图片和文字内容。  客户端 常见的客户端包括浏览器，手机，它请求服务器需要的资源，然后客户端解析返回的内容并且显示给用户。  </description>
-    </item>
-    
-    <item>
-      <title>终端</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</link>
-      <pubDate>Mon, 08 Jan 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/</guid>
-      <description>作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处 (www.enginego.org)。
-使用终端是我们开始编程的第一步，无论是运行程序，或者了解计算机的基本信息都需要用到。让我们愉快地和它玩耍把。
-基础版  什么是终端 为什么要用终端  什么是终端  图形界面 命令行界面 亲自试试吧  图形界面 我们平时习惯了使用图形界面，当我们双击图标打开文件，计算机会先通过后续去猜测用什么程序运行文件，如果是图片（.jpg, .png）的话，计算机就会用图片浏览器打开，如果是可执行文件（macOS下的dmg后缀文件，Windows下的exe后缀文件），计算机会先找到该应用的在硬盘中的位置，然后根据可执行文件里面包含的信息（需要加载什么资源）来运行程序。
-命令行界面 在计算机刚开始发展的时候，并没有那么容易上手的操作界面，大家都是通过一个黑乎乎的程序输入命令，然后等待计算机执行。
-这时候运行程序或者打开文件，则需要使用不同的命令。例如打开当前路径下一个名为normal.txt的文本文件，可以用cat命令：
-cat normal.txt  要打开图片的话，需要安装额外的软件来打开。要运行一个名为hello.py的python程序，在安装了python软件之后，在终端直接输入
-python hello.py  回车之后就可以看到程序的输出结果了。其实图形界面与命令行界面运行的本质是一样的，运行程序或者打开文件：
- 安装对应的软件 指定程序运行（图形界面会根据后缀名帮你选择用什么程序来打开。）  亲自试试吧 你可以尝试先打开自己计算机的终端：
- macOS: 同时按住&amp;rdquo;control&amp;rdquo;+&amp;ldquo;space&amp;rdquo;键，在搜索框输入termianl，&amp;rdquo;回车&amp;rdquo;
-Windows 7：打开&amp;rdquo;开始&amp;rdquo;菜单，在搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
-Windows 8+：同时按住&amp;rdquo;win&amp;rdquo;+&amp;ldquo;Q&amp;rdquo;键，然后在弹出的搜索框里输入cmd，&amp;rdquo;回车&amp;rdquo;
- 成功打开之后，光标会停留在某一行。类似：
-WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的指令规则，终端默认会运行一个程序，常见的是Bash（Bourne Again SHell）或者sh，你可以尝试输入一个命令，然后让终端执行。
- macOS: &amp;ldquo;ls&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
-Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入
- macOS: &amp;ldquo;ls -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
-Windows: &amp;ldquo;dir -a&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
- 终端还有很多其他命令，例如输出当前路径</description>
+      <description> 服务端 很简单，服务器就是一台**24小时运行**，运行着**专为服务器设计的系统**的**高性能计算机**。它也是由内存，硬盘，CPU组成。不过它会根据这台服务器的用途来配置不同的组件。有些服务器专门用来存储文件，图片，那么它就需要更大的硬盘，对CPU的要求就没那么高。有些专门用来进行高密度的计算，例如视频转格式，数据分析那么就要更快的CPU。 服务器会根据不同客户端的请求返回不同的内容，当你使用浏览器访问一个页面的时候，实际上浏览器就是寻找该页面对应的服务器获取相应的图片和文字内容。  客户端 常见的客户端包括浏览器，手机，它请求服务器需要的资源，然后客户端解析返回的内容并且显示给用户。  </description>
     </item>
     
   </channel>
