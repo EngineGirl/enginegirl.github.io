@@ -13,19 +13,19 @@
     <title>从微博抽奖到数据分析 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1542198470" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1542198470" rel="stylesheet">
-    <link href="/css/hybrid.css?1542198470" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1542198470" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1542198470" rel="stylesheet">
-    <link href="/css/auto-complete.css?1542198470" rel="stylesheet">
-    <link href="/css/theme.css?1542198470" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1542198470" rel="stylesheet">
+    <link href="/css/nucleus.css?1542199131" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1542199131" rel="stylesheet">
+    <link href="/css/hybrid.css?1542199131" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542199131" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542199131" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542199131" rel="stylesheet">
+    <link href="/css/theme.css?1542199131" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542199131" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1542198470" rel="stylesheet">
+      <link href="/css/theme-blue.css?1542199131" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1542198470"></script>
+    <script src="/js/jquery-2.x.min.js?1542199131"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1542198470"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1542198470"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1542199131"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542199131"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1542198470"></script>
+<script type="text/javascript" src="/js/search.js?1542199131"></script>
 
     
   </div>
@@ -1107,7 +1107,7 @@
 
 <p>这次微博抽奖有 2200万 人参加，男女比例 <strong>1 比 1.2，</strong>，中奖者有 132名，其中 131名都是男生或者都是女生的概率是多少。这是一个超几何分布的问题，有兴趣的读者可以自己了解，从结果来看，概率低得难以置信，<strong>数字上来说是把 0.01% 中间再加多 30个 0。形象地说，假设每秒都进行这样抽奖一亿次，对，一亿次，那么一亿年也不会抽到这样的结果。</strong>这样的极少概率事件的发生非常不现实。到这里，我们是否就能确定有人控制抽奖结果或者有当中有猫腻呢？</p>
 
-<p>我们再看看这条微博，微博方解释，核心是为了排除僵尸粉，微博赋予每个人的权重都不一样，所以才会有有那么悬殊的结果。这是什么意思呢？从彩票的例子来说，微博发现僵尸粉的特征是很少原创微博，微博很少被评论以及被转发。所以微博就认为符合这类特征的就是僵尸粉，反之则为活跃用户。这样看来，确实排除了大量的僵尸粉。</p>
+<p>我们再看看这条微博，微博方解释，核心是为了排除僵尸粉，微博赋予每个人的权重都不一样，所以才会有有那么悬殊的结果。这是什么意思呢？从彩票的例子来说，微博发现僵尸粉的特征是很少原创微博，微博很少被评论以及被转发。所以微博就认为符合这类特征的就是僵尸粉，反之则为活跃用户。从图像来看这样确实排除了大量的僵尸粉。</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/two_overlap.png" alt="two_overlap" /></p>
 
@@ -1116,7 +1116,11 @@
 <pre><code>彩票数量 = 近30天发布原创微博数量 x 10 + 微博被评论量 x 5 + 微博被转发量 x 2
 </code></pre>
 
-<p>我们先不讨论这个公式合不合理，男生一般都是浏览微博，比较少发与比较少被评论，和僵尸粉的行为差不多。而且微博的技术薄弱，无法区分两者，要降低抽到僵尸粉概率的话就会把抽到行为类似的普通男生中奖的概率也降低。我们先不讨论这样合不合理，这是一个两难的选择，允许僵尸粉中奖与允许中奖者偏向某一类特定的人群，微博选择了后者。</p>
+<p>不过我们忽略了一点，有的人平时只浏览，很少发微博。但却不是僵尸粉，这类人被大幅度地降权</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/three_overlap.png" alt="three_overlap" /></p>
+
+<p>男生一般都是浏览微博，比较少发与比较少被评论，和僵尸粉的行为差不多。而且微博的技术薄弱，无法区分两者，要降低抽到僵尸粉概率的话就会把抽到行为类似的普通男生中奖的概率也降低。我们先不讨论这样合不合理，这是一个两难的选择，允许僵尸粉中奖与允许中奖者偏向某一类特定的人群，微博选择了后者。</p>
 
 <p>解答了这个问题之后，我们看看，作为一名普通女生是一名普通男生中奖概率的多少倍。这是一个有趣的问题，从结果来看，是 131 倍，但是这只是一次抽奖，不能真正地代表背后的比例。女生中奖概率是120倍，125倍都有可能得到最终的这个结构，在统计学中，我们常常关注最有可能发生的事情，舍弃不太可能发生的事情。回到刚刚这张图片，我们可以认为，男女比例发生在中间的话，才正常。如果发生在两边，那么就代表有问题。</p>
 
@@ -1831,20 +1835,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1542198470"></script>
-    <script src="/js/perfect-scrollbar.min.js?1542198470"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1542198470"></script>
-    <script src="/js/jquery.sticky.js?1542198470"></script>
-    <script src="/js/featherlight.min.js?1542198470"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1542198470"></script>
-    <script src="/js/highlight.pack.js?1542198470"></script>
+    <script src="/js/clipboard.min.js?1542199131"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542199131"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542199131"></script>
+    <script src="/js/jquery.sticky.js?1542199131"></script>
+    <script src="/js/featherlight.min.js?1542199131"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542199131"></script>
+    <script src="/js/highlight.pack.js?1542199131"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1542198470"></script>
-    <script src="/js/learn.js?1542198470"></script>
-    <script src="/js/hugo-learn.js?1542198470"></script>
+    <script src="/js/modernizr.custom.71422.js?1542199131"></script>
+    <script src="/js/learn.js?1542199131"></script>
+    <script src="/js/hugo-learn.js?1542199131"></script>
 
-    <link href="/mermaid/mermaid.css?1542198470" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1542198470"></script>
+    <link href="/mermaid/mermaid.css?1542199131" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542199131"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
