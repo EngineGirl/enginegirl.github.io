@@ -13,19 +13,19 @@
     <title>从微博抽奖到数据分析 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1542177717" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1542177717" rel="stylesheet">
-    <link href="/css/hybrid.css?1542177717" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1542177717" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1542177717" rel="stylesheet">
-    <link href="/css/auto-complete.css?1542177717" rel="stylesheet">
-    <link href="/css/theme.css?1542177717" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1542177717" rel="stylesheet">
+    <link href="/css/nucleus.css?1542189145" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1542189145" rel="stylesheet">
+    <link href="/css/hybrid.css?1542189145" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542189145" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542189145" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542189145" rel="stylesheet">
+    <link href="/css/theme.css?1542189145" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542189145" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1542177717" rel="stylesheet">
+      <link href="/css/theme-blue.css?1542189145" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1542177717"></script>
+    <script src="/js/jquery-2.x.min.js?1542189145"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1542177717"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1542177717"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1542189145"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542189145"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1542177717"></script>
+<script type="text/javascript" src="/js/search.js?1542189145"></script>
 
     
   </div>
@@ -1056,25 +1056,23 @@
 
 
 
-<p>感谢王思聪微博抽奖这个热点事件，我们有一个非常好的学习数据分析的机会😄😄。对不了解的读者，我们先回顾一下事件内容：</p>
+<p>感谢王思聪微博抽奖这个热点事件，我们有一个非常好的学习数据分析的机会😄😄。对不了解事件的读者，我们先回顾一下事件内容：</p>
 
-<p>IG 战队在 LOL 比赛中夺冠，某王姓土豪发布了微博</p>
+<p>IG 战队在 LOL 比赛中夺冠，某王姓土豪发布了微博，转发可以参与抽奖。</p>
 
-<p>![wsc_weibo]()</p>
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/wsc_weibo.png" alt="wsc_weibo" /></p>
 
-<p>简单来说就是从转发者中抽奖，我们可以看到大概有 2200万 人转发了该微博，抽奖结束，一切正常，唯一奇怪的是中奖者有112名女生，仅有1名男生。</p>
+<p>我们可以看到大概有 <strong>2200万</strong> 人转发了该微博，开奖之后，出现了奇怪的事情，中奖者有 <strong>112名</strong> 女生，仅有 <strong>1名</strong> 男生。 这个悬殊的比例引起了一些争议：</p>
 
-<p>这个悬殊的比例引起了很大的争议：
-- 有的人说王思聪在选后宫，只抽女生。
-- 有的人从直觉出发说微博抽奖明显有猫腻，在怎么男生用户也不可能那么少。属于偷偷筛选抽奖人的抽奖。暗箱操作，虚伪抽奖，欺诈行为。
-- 有的人说抽到的都不是 ig 的粉丝，这不公平。
-- 有的人按照抽奖的历史数据发现微博抽奖只抽取对流量贡献有价值的用户，而且得出了少女 &gt; 小孩 &gt; 男人的鄙视链。从而引出微博抽奖扭曲了价值观，之类的言论。
-- 有的从新浪的角度出发，表明这只是为了清除僵尸粉的措施，不过顺便也把大部分男粉丝清除掉了。</p>
+<ul>
+<li>有的人说王思聪在选后宫，只抽女生。</li>
+<li>有的人认为抽到的都不是 ig 的粉丝，这样就像把演唱会门票送给不是粉丝的人一样，并不公平。</li>
+<li>有的人从直觉出发说微博抽奖明显有猫腻，再怎么男生用户也不可能那么少。属于偷偷筛选抽奖人的抽奖。暗箱操作，虚伪抽奖，欺诈行为。</li>
+<li>有的人从中奖者的历史数据发现微博抽奖只抽取对流量贡献有价值的用户，而且得出了少女 &gt; 小孩 &gt; 男人的用户价值鄙视链。引出微博抽奖扭曲了价值观之类的言论。</li>
+<li>有的从新浪的角度出发，表明这只是新浪为了清除僵尸粉的措施，不小心把大部分男粉丝清除掉了。</li>
+</ul>
 
-<p>作为一名旁观者，如果没有统计与概率论背景，容易被数字所困扰，不容易明白他们在说什么，更不用说判断对错了。从我负责任地来看，极大部分知乎，微博上的回答都很片面而且带有情绪，统计学是一个工具，而且是可以根据使用者的主观意识去操控的工具。我个人并不喜欢微博，但是我不会带着个人情绪去分析，这既容易落入自己都不知道的陷阱。这篇文章我从我的角度来分析下这个事件，要知道概率论里面并没有绝对的正确，只有相对的正确。不过，我希望读者能阅读完之后能有一些初步地理解，然后能够告诉自己的孩子，学数学有什么用。更好的消息是，这篇文章不需要数学背景知识。
-- 我属于最后一种，我希望能通俗地解释清楚背后的数据，让读者得出自己的结论，我们的教育使我们缺乏独立思考的人。</p>
-
-<p>我们这篇文章只涉及极少的数学知识，可以说，只要在双十一懂得凑单，都能看懂。</p>
+<p>作为一名旁观者，如果没有统计与概率论背景，不容易明白他们在说什么，更不用说判断对错了。统计学是一个工具，而且是可以根据使用者的主观意识去操控的工具。我希望能通俗地解释清楚背后的数据，让读者得出自己的结论，我们的教育使我们缺乏独立思考的人。大部分知乎，微博上的回答都很片面而且带有主观情绪，这样很难得出一个客观的结论。我个人并不喜欢微博，但我不会根据自己的喜好来收集数据和推出结论，因为这样毫无意义。<strong>更好的消息是，这篇文章不需要任何数学背景知识。可以说，只要在双十一懂得凑单，都能看懂。</strong></p>
 
 <h4 id="小型微博">小型微博</h4>
 
@@ -1825,20 +1823,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1542177717"></script>
-    <script src="/js/perfect-scrollbar.min.js?1542177717"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1542177717"></script>
-    <script src="/js/jquery.sticky.js?1542177717"></script>
-    <script src="/js/featherlight.min.js?1542177717"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1542177717"></script>
-    <script src="/js/highlight.pack.js?1542177717"></script>
+    <script src="/js/clipboard.min.js?1542189145"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542189145"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542189145"></script>
+    <script src="/js/jquery.sticky.js?1542189145"></script>
+    <script src="/js/featherlight.min.js?1542189145"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542189145"></script>
+    <script src="/js/highlight.pack.js?1542189145"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1542177717"></script>
-    <script src="/js/learn.js?1542177717"></script>
-    <script src="/js/hugo-learn.js?1542177717"></script>
+    <script src="/js/modernizr.custom.71422.js?1542189145"></script>
+    <script src="/js/learn.js?1542189145"></script>
+    <script src="/js/hugo-learn.js?1542189145"></script>
 
-    <link href="/mermaid/mermaid.css?1542177717" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1542177717"></script>
+    <link href="/mermaid/mermaid.css?1542189145" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542189145"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
