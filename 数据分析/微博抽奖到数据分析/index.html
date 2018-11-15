@@ -13,19 +13,19 @@
     <title>微博抽奖到数据分析 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1542249643" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1542249643" rel="stylesheet">
-    <link href="/css/hybrid.css?1542249643" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1542249643" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1542249643" rel="stylesheet">
-    <link href="/css/auto-complete.css?1542249643" rel="stylesheet">
-    <link href="/css/theme.css?1542249643" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1542249643" rel="stylesheet">
+    <link href="/css/nucleus.css?1542252468" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1542252468" rel="stylesheet">
+    <link href="/css/hybrid.css?1542252468" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542252468" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542252468" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542252468" rel="stylesheet">
+    <link href="/css/theme.css?1542252468" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542252468" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1542249643" rel="stylesheet">
+      <link href="/css/theme-blue.css?1542252468" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1542249643"></script>
+    <script src="/js/jquery-2.x.min.js?1542252468"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1542249643"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1542249643"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1542252468"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542252468"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1542249643"></script>
+<script type="text/javascript" src="/js/search.js?1542252468"></script>
 
     
   </div>
@@ -1107,7 +1107,7 @@
 
 <p>参加男女比例相近，那么出现如此悬殊的比例，可信吗？不可信，有的人说这是<strong>小概率事件，</strong>有可能发生。首先我们理解下什么是<strong>小概率事件。</strong>生活中最容易接触的就是彩票，假设中彩票头奖的概率是一千万分之一，那么从个人来说，如果只买一张的话就中头奖，这就是一个小概率事件。不过如果我们从整体来说，假设一共有 2000万 人买彩票，每人买 1注，那么中彩票这件事就不是一个小概率事件了。可以说每开一次奖，都很有可能有人中头奖。</p>
 
-<p>那么抽到 132名 女生发生的概率是多少？我们要知道的是当微博抽奖有 2200万 人参加，男女比例 <strong>1 比 1.2，</strong>中奖者有 133名，其中 132名 都是男生或者都是女生的概率是多少。这是一个超几何分布的问题，没听过这个名词？没关系，因为我一开始也忘了。听起来复杂，最终只需要把上面的几个值代入一个公式就好，从结果来看，这个结果的概率低得难以置信，<strong>数字上来说是把 0.01% 中间再加多 30个 0。</strong>如果中彩票的概率是下图左边的圆，那么这个结果的概率就是右边那个点。</p>
+<p>那么抽到 112名 女生发生的概率是多少？我们要知道的是当微博抽奖有 2200万 人参加，男女比例 <strong>1 比 1.2，</strong>中奖者有 113名，其中 112名 都是男生或者都是女生的概率是多少。这是一个超几何分布的问题，没听过这个名词？没关系，因为我一开始也忘了。听起来复杂，最终只需要把上面的几个值代入一个公式就好，从结果来看，这个结果的概率低得难以置信，<strong>数字上来说是把 0.01% 中间再加多 30个 0。</strong>如果中彩票的概率是下图左边的圆，那么这个结果的概率就是右边那个点。</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/ball.png" alt="weibo_ceo" /></p>
 
@@ -1129,21 +1129,21 @@
 
 <h3 id="多少倍">多少倍</h3>
 
-<p>那么许多读者想知道的，一名女生的中奖概率是男生的多少倍呢？或者换个问法，一名女生的中奖概率最少是男生的多少倍， <strong>132 比 1</strong> 这个抽奖结果才在可信区域呢。我们可以推理得知，当男女中奖概率一样的情况下，最有可能（中间）抽到的是 66名 女生。下面的图表显示了中奖女生数量的概率，其中黄色区域为可信范围。我们刚刚已经讨论过，这种情况下抽到 132 比 1 的结果是不可信的。</p>
+<p>那么许多读者想知道的，一名女生的中奖概率是男生的多少倍呢？或者换个问法，一名女生的中奖概率最少是男生的多少倍， <strong>112 比 1</strong> 这个抽奖结果才在可信区域呢。我们可以推理得知，当男女中奖概率一样的情况下，最有可能（中间）抽到的是 66名 女生。下面的图表显示了中奖女生数量的概率，其中黄色区域为可信范围。我们刚刚已经讨论过，这种情况下抽到 112 比 1 的结果是不可信的。</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/normal_100_color.png" alt="three_overlap" /></p>
 
-<p><strong>也就是说，我们需要计算当女生的中奖概率是男生的多少倍下，黄色区域右边的边界刚好能碰到 132。</strong>这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过几行简单的代码：</p>
+<p><strong>也就是说，我们需要计算当女生的中奖概率是男生的多少倍下，黄色区域右边的边界刚好能碰到 112。</strong>这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过几行简单的代码：</p>
 
 <pre><code>all = 22000000
-k = 132
+k = 112
 m = 19000000:all
 cumulative = qhyper(0.95, m, all-m, k)
 result = m[which.max(cumulative)] # 21506336
-weight = result / (all-result) # 43.56472
+weight = result / (all-result) # 36.8
 </code></pre>
 
-<p><strong>我们得知当女生中奖概率是男生的 43倍 的情况下，出现 132 比 1 这个结果是可信的。</strong></p>
+<p><strong>我们得知当女生中奖概率是男生的 36.8倍 的情况下，出现 112 比 1 这个结果是可信的。</strong></p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/half_half.png" alt="half_half" /></p>
 
@@ -1862,20 +1862,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1542249643"></script>
-    <script src="/js/perfect-scrollbar.min.js?1542249643"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1542249643"></script>
-    <script src="/js/jquery.sticky.js?1542249643"></script>
-    <script src="/js/featherlight.min.js?1542249643"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1542249643"></script>
-    <script src="/js/highlight.pack.js?1542249643"></script>
+    <script src="/js/clipboard.min.js?1542252468"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542252468"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542252468"></script>
+    <script src="/js/jquery.sticky.js?1542252468"></script>
+    <script src="/js/featherlight.min.js?1542252468"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542252468"></script>
+    <script src="/js/highlight.pack.js?1542252468"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1542249643"></script>
-    <script src="/js/learn.js?1542249643"></script>
-    <script src="/js/hugo-learn.js?1542249643"></script>
+    <script src="/js/modernizr.custom.71422.js?1542252468"></script>
+    <script src="/js/learn.js?1542252468"></script>
+    <script src="/js/hugo-learn.js?1542252468"></script>
 
-    <link href="/mermaid/mermaid.css?1542249643" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1542249643"></script>
+    <link href="/mermaid/mermaid.css?1542252468" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542252468"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
