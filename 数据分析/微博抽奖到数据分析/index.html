@@ -13,19 +13,19 @@
     <title>微博抽奖到数据分析 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1542245403" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1542245403" rel="stylesheet">
-    <link href="/css/hybrid.css?1542245403" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1542245403" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1542245403" rel="stylesheet">
-    <link href="/css/auto-complete.css?1542245403" rel="stylesheet">
-    <link href="/css/theme.css?1542245403" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1542245403" rel="stylesheet">
+    <link href="/css/nucleus.css?1542247239" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1542247239" rel="stylesheet">
+    <link href="/css/hybrid.css?1542247239" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542247239" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542247239" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542247239" rel="stylesheet">
+    <link href="/css/theme.css?1542247239" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542247239" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1542245403" rel="stylesheet">
+      <link href="/css/theme-blue.css?1542247239" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1542245403"></script>
+    <script src="/js/jquery-2.x.min.js?1542247239"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1542245403"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1542245403"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1542247239"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542247239"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1542245403"></script>
+<script type="text/javascript" src="/js/search.js?1542247239"></script>
 
     
   </div>
@@ -1027,7 +1027,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#回到小型微博">回到小型微博</a></li>
+<li><a href="#小型微博">小型微博</a></li>
 <li><a href="#现代微博">现代微博</a></li>
 </ul></li>
 <li><a href="#多少倍">多少倍</a></li>
@@ -1067,16 +1067,16 @@
 <ul>
 <li>有的人说王思聪在选后宫，只抽女生。</li>
 <li>有的人从直觉出发说微博抽奖明显有猫腻，再怎么男生用户也不可能那么少。属于暗箱操作，虚伪抽奖，欺诈行为。</li>
-<li>有的人从历史数据中发现微博抽奖女生中奖的概率要比男生打得多，而且得出了少女 &gt; 小孩 &gt; 男人的用户价值鄙视链。发表了微博抽奖扭曲了价值观之类的言论。</li>
+<li>有的人从历史数据中发现微博抽奖女生中奖的概率要比男生大得多，而且得出了少女 &gt; 小孩 &gt; 男人的用户价值鄙视链。发表了微博抽奖扭曲了价值观之类的言论。</li>
 <li>有的从新浪的角度出发，表明这只是新浪为了清除僵尸粉的措施，不小心把大部分男粉丝清除掉了。</li>
 <li>有的人认为抽到的都不是 ig 的粉丝，这样就像把演唱会门票送给不是粉丝的人一样，并不公平。</li>
 </ul>
 
-<p>作为一名旁观者，如果没有一定的统计与概率论背景，不太容易明白他们在说什么，更不用说判断对错了。如果你本身就不喜欢微博，会更容易认同诋毁微博方的观点。不过，这种根据自己的喜好所得出的结论是自欺欺人而不是真相。统计学是一个工具，而且是可以根据使用者的主观意识去操控的工具。<strong>我希望通过这篇文章通俗地解释整个事件背后的原理，让读者得出自己的结论，独立思考远比随波逐流重要。更好的消息是，这篇文章不需要任何数学背景知识。可以说，只要在今年双十一懂得如何凑单，都能看懂。</strong></p>
+<p>作为一名旁观者，如果没有一定的统计与概率论背景，不太容易明白他们在说什么，更不用说判断对错了。如果你本身就不喜欢微博，会更容易认同诋毁微博方的观点。不过，这种根据自己的喜好所得出的结论是自欺欺人而不是真相。统计学是一个工具，而且是可以根据使用者的主观意识去操控的工具。<strong>我希望通过这篇文章通俗地解释整个事件背后的原理，让读者得出自己的结论，独立思考远比随波逐流重要。更好的消息是，这篇文章不需要任何数学背景知识。可以说，只要在今年双十一懂得如何凑单，都能看懂。</strong>（好吧，凑单其实好难，😂😂）</p>
 
-<h4 id="回到小型微博">回到小型微博</h4>
+<h4 id="小型微博">小型微博</h4>
 
-<p><strong>要知道这个抽奖有没有问题，我们先要知道怎么的结果是有问题，怎样的是正常的。</strong>我们坐上时光机器，回到微博刚开始发展的时候，那时候微博一共只有 100名 用户，刚好 50名 男生 50名 女生，</p>
+<p><strong>要知道这个抽奖有没有猫腻，我们先要知道怎么的结果是有问题的，怎样的是正常的。</strong>我们坐上时光机器，回到微博刚开始发展的时候，那时候微博一共只有 100名 用户，刚好 50名 男生 50名 女生，</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/male_female.png" alt="男女" /></p>
 
@@ -1090,13 +1090,13 @@
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/normal_100.png" alt="normal_dis" /></p>
 
-<p>我们可以看到中间 50 的高度最高，那么是不是抽到 50名 女生的概率最高呢？是，也不是，在考试中如果这样回答可能会得到满分，但这并不代表是事实。如果你手边有硬币的话，可以试试抛 10次，你会发现更有可能出现 6次 正面或者 6次 反面的情况，而不是刚刚好 5次 正面，5次 反面。奇怪，既然正反面出现的概率都是 50%，那为什么不是出现 5次 正面的概率最高呢？这和理论不符合。<strong>其实，这是因为上面的图表没有列出所有的可能性</strong>，我重新绘制了一张新的图表，如下：</p>
+<p>我们可以看到中间 50 的高度最高，那么是不是抽到 50名 女生的概率最高呢？是，也不是，在考试中如果这样回答可能会得到满分，但这并不代表是事实。如果你手边有硬币的话，可以试试抛 10次，你会发现更有可能出现 6次 正面或者 6次 反面的情况，而不是刚刚好 5次 正面，5次 反面。奇怪，既然正反面出现的概率都是 50%，那为什么不是出现 5次 正面的概率最高呢？这和理论不符合。<strong>其实，这是因为这类图表没有列出所有的可能性</strong>，我重新绘制了一张新的图表，如下：</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/new_normal_100.png" alt="normal_dis2" /></p>
 
-<p><strong>新的图表中，中间是抽到 50名 女生的概率，最右边是抽到 100名 女生的概率。而+2 出现的概率最高，+2 的意思是一方比另一方多 2名 的情况，也就是抽到 49名 女生和抽到 51名 女生这两种情况的概率相加，</strong>你可能会问，这算一种情况吗？这就是现实问题有趣的地方，它跳脱于理论的束缚。这个抽奖如果抽到 100名 女生，我们会很惊讶。同时，如果抽到 100名 男生的话，我们也是同样地惊讶。<strong>我们更关注的是一边比另外一边多的数量，也就是相对的关系。抽到 49名 女生和 51名 女生 这2种 情况都是一方比另一方多 2名。所以都属于一种情况。</strong>理解这点就能理解为什么硬币更容易出现 6次 正面或者 6次 反面，因为它们加起来出现的概率最高。</p>
+<p><strong>新的图表中，中间是抽到 50名 女生的概率，最右边是抽到 100名 女生的概率。而最左边 +2 出现的概率最高，+2 的意思是一方比另一方多 2名 的情况，也就是抽到 49名 女生和抽到 49名 男生这两种情况的概率相加，</strong>你可能会问，这算一种情况吗？这就是现实问题有趣的地方，它跳脱于理论的束缚。这个抽奖如果抽到 100名 女生，我们会很惊讶。同时，如果抽到 100名 男生的话，我们也是同样地惊讶。<strong>我们更关注的是一边比另外一边多的数量，也就是相对的关系。抽到 49名 女生和 49名 男生 这两种情况都是一方比另一方多 2名。所以都属于一种情况。</strong>理解这点就能理解为什么硬币更容易出现 6次 正面或者 6次 反面，因为它们加起来出现的概率最高。</p>
 
-<p>从图表中我们看到，抽奖中最有可能出现的是一方比另一方多一些这种情况，其次是两边相等的情况，再其次是两边差距非常大的情况。这个时候，我们需要定义什么是可信的抽奖结果，也就是回答我们一开始的问题，怎样的结果才是正常的？<strong>从统计上来说，一般我们会选取最有可能出现的 95% 的区间作为可信范围，也就是上图的黄色区域，最右边的白色区域虽然是可能发生的，但是由于发生的概率太低，我们认为这种情况，是不可信的结果。也就是说，</strong>抽到 99名 女生，100名 女生的结果都代表这次抽奖不可信。**</p>
+<p>从图表中我们看到，抽奖中最有可能出现的是一方比另一方多一些这种情况，其次是两边相等的情况，再其次是两边差距非常大的情况。这个时候，我们需要定义什么是可信的抽奖结果，也就是回答我们一开始的问题，怎样的结果才是正常的？<strong>从统计上来说，一般我们会选取最有可能出现的 95% 的区间作为可信范围，也就是上图的黄色区域，最右边的白色区域虽然是可能发生的，但是由于发生的概率太低，我们认为这种情况，是不可信的结果。也就是说，如果这次抽奖抽到 99名 女生，100名 女生的结果都代表这次抽奖不可信。</strong></p>
 
 <h4 id="现代微博">现代微博</h4>
 
@@ -1106,13 +1106,13 @@
 
 <p>参加男女比例相近，那么出现如此悬殊的比例，可信吗？不可信，有的人说这是<strong>小概率事件，</strong>有可能发生。首先我们理解下什么是<strong>小概率事件。</strong>生活中最容易接触的就是彩票，假设中彩票头奖的概率是一千万分之一，那么从个人来说，如果只买一张的话就中头奖，这就是一个小概率事件。不过如果我们从整体来说，假设一共有 2000万 人买彩票，每人买 1注，那么中彩票这件事就不是一个小概率事件了。可以说每开一次奖，都很有可能有人中头奖。</p>
 
-<p>我们要知道的是当微博抽奖有 2200万 人参加，男女比例 <strong>1 比 1.2，</strong>中奖者有 133名，其中 132名 都是男生或者都是女生的概率是多少。这是一个超几何分布的问题，没听过这个名词？没关系，因为我一开始也忘了。听起来复杂，最终只需要把上面的几个值代入一个公式就好，从结果来看，这个结果的概率低得难以置信，<strong>数字上来说是把 0.01% 中间再加多 30个 0。</strong>如果中彩票的概率是下图左边的圆，那么这个结果的概率就是右边那个点。</p>
+<p>那么抽到 132名 女生发生的概率是多少？我们要知道的是当微博抽奖有 2200万 人参加，男女比例 <strong>1 比 1.2，</strong>中奖者有 133名，其中 132名 都是男生或者都是女生的概率是多少。这是一个超几何分布的问题，没听过这个名词？没关系，因为我一开始也忘了。听起来复杂，最终只需要把上面的几个值代入一个公式就好，从结果来看，这个结果的概率低得难以置信，<strong>数字上来说是把 0.01% 中间再加多 30个 0。</strong>如果中彩票的概率是下图左边的圆，那么这个结果的概率就是右边那个点。</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/ball.png" alt="weibo_ceo" /></p>
 
-<p>什么，没找到点？对啊，因为小到我根本画不了。<strong>形象地说，假设每秒都进行这样抽奖一亿次，对，一亿次，那么一亿年也不会抽到这样的结果。</strong>这样的极少概率事件的发生非常不现实。到这里，这样看来，抽奖结果并不可信。我们是否就能确定有人控制抽奖结果呢？</p>
+<p>什么，没找到点？对啊，因为小到我根本画不了。<strong>形象地说，假设每秒都进行这样抽奖一亿次，对，一亿次，那么一亿年也不会抽到这样的结果。</strong>这样的极少概率事件的发生非常不现实。在上面的图表中也属于白色区域中，到这里，这样看来，抽奖结果并不可信。我们是否就能确定有人控制抽奖结果呢？</p>
 
-<p>我们再看看这条微博，微博方解释，为了排除僵尸粉，微博赋予每名用户的权重都不一样，所以才会有那么悬殊的结果。权重是什么意思呢？我们可以这样理解，<strong>微博根据情况给每位参加的用户发不同注的彩票，自然，彩票多的人中奖的概率就高。这里的彩票就是权重。</strong>那么每位用户的权重怎么计算出来的呢？微博官方并没有给出公式，不过这里我们假设微博发现僵尸粉的特征是很少原创微博，微博很少被评论以及被转发。所以微博就认为符合这类特征的就是僵尸粉。反之则为活跃用户，假设</p>
+<p>我们再看看这条微博，微博方解释，为了排除僵尸粉，微博赋予每名用户的权重都不一样，所以才会有那么悬殊的结果。权重是什么意思呢？我们可以这样理解，<strong>微博根据情况给每位参加的用户发不同注的彩票，自然，彩票多的人中奖的概率就高。这里的彩票就是权重。</strong>那么每位用户的权重怎么计算出来的呢？微博官方并没有给出公式，不过这里我们假设微博发现僵尸粉的特征是很少原创微博，微博很少被评论以及被转发。微博认为符合这类特征的就是僵尸粉。反之则为活跃用户，应该赋予高权重，假设</p>
 
 <pre><code>彩票数量 = 近30天发布原创微博数量 x 10 + 微博被评论量 x 5 + 微博被转发量 x 2
 </code></pre>
@@ -1132,13 +1132,25 @@
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/normal_100_color.png" alt="three_overlap" /></p>
 
-<p>我们可以通过计算当男女比例达到某个值时，黄色区域右边的边界刚好是 132 的情况。这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算。我们得到当女生中奖概率是男生的 43倍 的情况下，这个结果是可信的。</p>
+<p>我们可以通过计算当男女比例达到某个值时，黄色区域右边的边界刚好是 132 的情况。这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过简单的几行代码，我们得知当女生中奖概率是男生的 43倍 的情况下，这个结果是可信的。</p>
 
-<p>总的来说，虽然看起来男女参加比例是 1 比 1.2，实际上，女生的中奖概率是男生的 43倍。这并不是新浪的性别歧视，而只是它的无能为力。这个抽奖公平吗？看不同人的理解，ig 的粉丝可能觉得起码要喜欢 ig 才行，那么怎么才算喜欢呢？发过微博算喜欢吗？去过现场算更喜欢吗？这没有定量的标准。也很难得到一个真正公平的抽奖。如果阅读完这篇文章，你能独立思考得到自己的结论，那么实在太好了。</p>
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/half_half.png" alt="half_half" /></p>
 
-<p>我最近作为老师参加广外 coding girls club 的活动，我们用一天的时间免费教授学生用 Python 做数据分析，这是一个非常有趣的体验，有趣得能放上 Airbnb 做付费体验了，很多学生来自翻译专业，工商管理，她们大部分以后并不会成为程序员，那为什么要去学习数据分析，艾倫伯格在他的书《数学教你不犯错》中给了一个很好的回答：</p>
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/big_small.png" alt="big_small" /></p>
+
+<p><strong>总的来说，虽然看起来男女参加比例是 1 比 1.2，实际上，女生的中奖概率是男生的 43倍。这并不是新浪的性别歧视，而是它的无能为力。</strong>这个抽奖公平吗？看不同人的理解：</p>
+
+<ul>
+<li>活跃用户会觉得公平，因为他们经常觉得自己给微博带来更多了的流量，</li>
+<li>部分男生觉得不公平，因为微博扼杀了他们中奖的概率。</li>
+<li>部分 IG 的粉丝觉得不公平，中奖者起码要喜欢 IG 才行，那么怎么才算喜欢呢？发过微博算喜欢吗？去过现场算更喜欢吗？这没有定量的标准。</li>
+</ul>
+
+<p>我最近作为老师参加广外 Coding girls club 的活动，我们用一天的时间免费教授学生用 Python 做数据分析，这是一个非常有趣的体验，有趣得能放上 Airbnb 做付费体验了。很多学生来自翻译专业，工商管理，她们大部分以后并不会成为程序员，那为什么要去学习数据分析，艾倫伯格在他的书《数学教你不犯错》中给了一个很好的回答：</p>
 
 <p>“会数学就像戴上了X光眼镜，能从混乱无序的世界表象里，看透其后隐藏的结构。数学是一门不会把事情搞错的学问，它的技术与习惯经历过许多世纪的辛勤努力与论辩。一旦手中有数学当工具，你可以更深刻，更稳健，更有意义地了解世界。”</p>
+
+<p>阅读完这篇文章，希望你能独立思考得到自己的结论 🎉🎉</p>
 
 
 <footer class=" footline" >
@@ -1837,20 +1849,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1542245403"></script>
-    <script src="/js/perfect-scrollbar.min.js?1542245403"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1542245403"></script>
-    <script src="/js/jquery.sticky.js?1542245403"></script>
-    <script src="/js/featherlight.min.js?1542245403"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1542245403"></script>
-    <script src="/js/highlight.pack.js?1542245403"></script>
+    <script src="/js/clipboard.min.js?1542247239"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542247239"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542247239"></script>
+    <script src="/js/jquery.sticky.js?1542247239"></script>
+    <script src="/js/featherlight.min.js?1542247239"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542247239"></script>
+    <script src="/js/highlight.pack.js?1542247239"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1542245403"></script>
-    <script src="/js/learn.js?1542245403"></script>
-    <script src="/js/hugo-learn.js?1542245403"></script>
+    <script src="/js/modernizr.custom.71422.js?1542247239"></script>
+    <script src="/js/learn.js?1542247239"></script>
+    <script src="/js/hugo-learn.js?1542247239"></script>
 
-    <link href="/mermaid/mermaid.css?1542245403" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1542245403"></script>
+    <link href="/mermaid/mermaid.css?1542247239" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542247239"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
