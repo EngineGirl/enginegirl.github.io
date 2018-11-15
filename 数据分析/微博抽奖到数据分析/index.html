@@ -13,19 +13,19 @@
     <title>微博抽奖到数据分析 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1542247239" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1542247239" rel="stylesheet">
-    <link href="/css/hybrid.css?1542247239" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1542247239" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1542247239" rel="stylesheet">
-    <link href="/css/auto-complete.css?1542247239" rel="stylesheet">
-    <link href="/css/theme.css?1542247239" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1542247239" rel="stylesheet">
+    <link href="/css/nucleus.css?1542248554" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1542248554" rel="stylesheet">
+    <link href="/css/hybrid.css?1542248554" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542248554" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542248554" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542248554" rel="stylesheet">
+    <link href="/css/theme.css?1542248554" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542248554" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1542247239" rel="stylesheet">
+      <link href="/css/theme-blue.css?1542248554" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1542247239"></script>
+    <script src="/js/jquery-2.x.min.js?1542248554"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1542247239"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1542247239"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1542248554"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542248554"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1542247239"></script>
+<script type="text/javascript" src="/js/search.js?1542248554"></script>
 
     
   </div>
@@ -1031,6 +1031,7 @@
 <li><a href="#现代微博">现代微博</a></li>
 </ul></li>
 <li><a href="#多少倍">多少倍</a></li>
+<li><a href="#结束">结束</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1112,7 +1113,7 @@
 
 <p>什么，没找到点？对啊，因为小到我根本画不了。<strong>形象地说，假设每秒都进行这样抽奖一亿次，对，一亿次，那么一亿年也不会抽到这样的结果。</strong>这样的极少概率事件的发生非常不现实。在上面的图表中也属于白色区域中，到这里，这样看来，抽奖结果并不可信。我们是否就能确定有人控制抽奖结果呢？</p>
 
-<p>我们再看看这条微博，微博方解释，为了排除僵尸粉，微博赋予每名用户的权重都不一样，所以才会有那么悬殊的结果。权重是什么意思呢？我们可以这样理解，<strong>微博根据情况给每位参加的用户发不同注的彩票，自然，彩票多的人中奖的概率就高。这里的彩票就是权重。</strong>那么每位用户的权重怎么计算出来的呢？微博官方并没有给出公式，不过这里我们假设微博发现僵尸粉的特征是很少原创微博，微博很少被评论以及被转发。微博认为符合这类特征的就是僵尸粉。反之则为活跃用户，应该赋予高权重，假设</p>
+<p>我们再看看这条微博，微博方解释，为了排除僵尸粉，微博赋予每名用户的权重都不一样，所以才会有那么悬殊的结果。权重是什么意思呢？我们可以这样理解，<strong>微博根据情况给每位参加的用户发不同注的彩票，自然，彩票多的人中奖的概率就高。这里的彩票就是权重。</strong>那么每位用户的权重怎么计算出来的呢？微博官方并没有给出公式，不过这里我们假设微博发现僵尸粉的特征是很少原创微博，微博很少被评论以及被转发。微博认为符合这类特征的就是僵尸粉。应该赋予低权重，反之则为活跃用户，应该赋予高权重，假设</p>
 
 <pre><code>彩票数量 = 近30天发布原创微博数量 x 10 + 微博被评论量 x 5 + 微博被转发量 x 2
 </code></pre>
@@ -1128,11 +1129,16 @@
 
 <h3 id="多少倍">多少倍</h3>
 
-<p>那么许多读者想知道的，一名女生的中奖概率是男生的多少倍呢？或者换个问法，一名女生的中奖概率最少是男生的多少倍， <strong>132 比 1</strong> 这个抽奖结果才可信呢。下面的图表显示了中奖女生数量的概率，其中黄色区域为可信范围。</p>
+<p>那么许多读者想知道的，一名女生的中奖概率是男生的多少倍呢？或者换个问法，一名女生的中奖概率最少是男生的多少倍， <strong>132 比 1</strong> 这个抽奖结果才在可信区域呢。我们可以推理得知，当男女中奖概率一样的情况下，最有可能（中间）抽到的是 66名 女生。下面的图表显示了中奖女生数量的概率，其中黄色区域为可信范围。我们刚刚已经讨论过，这种情况下抽到 132 比 1 的结果是不可信的。</p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/normal_100_color.png" alt="three_overlap" /></p>
 
-<p>我们可以通过计算当男女比例达到某个值时，黄色区域右边的边界刚好是 132 的情况。这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过简单的几行代码，我们得知当女生中奖概率是男生的 43倍 的情况下，这个结果是可信的。</p>
+<p><strong>也就是说，我们需要计算当女生的中奖概率是男生的一定倍数下，黄色区域右边的边界刚好能碰到 132。</strong>这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过一行关键的代码：</p>
+
+<pre><code>cumulative = qhyper(0.95, m, n, k)
+</code></pre>
+
+<p><strong>我们得知当女生中奖概率是男生的 43倍 的情况下，出现 132 比 1 这个结果是可信的。</strong></p>
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/half_half.png" alt="half_half" /></p>
 
@@ -1146,7 +1152,9 @@
 <li>部分 IG 的粉丝觉得不公平，中奖者起码要喜欢 IG 才行，那么怎么才算喜欢呢？发过微博算喜欢吗？去过现场算更喜欢吗？这没有定量的标准。</li>
 </ul>
 
-<p>我最近作为老师参加广外 Coding girls club 的活动，我们用一天的时间免费教授学生用 Python 做数据分析，这是一个非常有趣的体验，有趣得能放上 Airbnb 做付费体验了。很多学生来自翻译专业，工商管理，她们大部分以后并不会成为程序员，那为什么要去学习数据分析，艾倫伯格在他的书《数学教你不犯错》中给了一个很好的回答：</p>
+<h3 id="结束">结束</h3>
+
+<p>我最近作为老师参加广外 <a href="http://codingirlsclub.com/">Coding girls club</a> 的活动，我们用一天的时间免费教授学生用 Python 做数据分析，这是一个非常有趣的体验，有趣得能放上 Airbnb 做付费体验了。很多学生来自翻译专业，工商管理，她们大部分以后并不会成为程序员，那为什么要去学习数据分析，艾倫伯格在他的书《数学教你不犯错》中给了一个很好的回答：</p>
 
 <p>“会数学就像戴上了X光眼镜，能从混乱无序的世界表象里，看透其后隐藏的结构。数学是一门不会把事情搞错的学问，它的技术与习惯经历过许多世纪的辛勤努力与论辩。一旦手中有数学当工具，你可以更深刻，更稳健，更有意义地了解世界。”</p>
 
@@ -1849,20 +1857,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1542247239"></script>
-    <script src="/js/perfect-scrollbar.min.js?1542247239"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1542247239"></script>
-    <script src="/js/jquery.sticky.js?1542247239"></script>
-    <script src="/js/featherlight.min.js?1542247239"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1542247239"></script>
-    <script src="/js/highlight.pack.js?1542247239"></script>
+    <script src="/js/clipboard.min.js?1542248554"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542248554"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542248554"></script>
+    <script src="/js/jquery.sticky.js?1542248554"></script>
+    <script src="/js/featherlight.min.js?1542248554"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542248554"></script>
+    <script src="/js/highlight.pack.js?1542248554"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1542247239"></script>
-    <script src="/js/learn.js?1542247239"></script>
-    <script src="/js/hugo-learn.js?1542247239"></script>
+    <script src="/js/modernizr.custom.71422.js?1542248554"></script>
+    <script src="/js/learn.js?1542248554"></script>
+    <script src="/js/hugo-learn.js?1542248554"></script>
 
-    <link href="/mermaid/mermaid.css?1542247239" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1542247239"></script>
+    <link href="/mermaid/mermaid.css?1542248554" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542248554"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
