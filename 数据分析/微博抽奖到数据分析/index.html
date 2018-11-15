@@ -13,19 +13,19 @@
     <title>微博抽奖到数据分析 :: Engine GO</title>
     
     
-    <link href="/css/nucleus.css?1542248711" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1542248711" rel="stylesheet">
-    <link href="/css/hybrid.css?1542248711" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1542248711" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1542248711" rel="stylesheet">
-    <link href="/css/auto-complete.css?1542248711" rel="stylesheet">
-    <link href="/css/theme.css?1542248711" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1542248711" rel="stylesheet">
+    <link href="/css/nucleus.css?1542248920" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1542248920" rel="stylesheet">
+    <link href="/css/hybrid.css?1542248920" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542248920" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542248920" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542248920" rel="stylesheet">
+    <link href="/css/theme.css?1542248920" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542248920" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1542248711" rel="stylesheet">
+      <link href="/css/theme-blue.css?1542248920" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1542248711"></script>
+    <script src="/js/jquery-2.x.min.js?1542248920"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -63,15 +63,15 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1542248711"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1542248711"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1542248920"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542248920"></script>
 <script type="text/javascript">
     
         
         var baseurl = "https://www.enginego.org";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1542248711"></script>
+<script type="text/javascript" src="/js/search.js?1542248920"></script>
 
     
   </div>
@@ -1133,9 +1133,10 @@
 
 <p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/weibo/normal_100_color.png" alt="three_overlap" /></p>
 
-<p><strong>也就是说，我们需要计算当女生的中奖概率是男生的多少倍下，黄色区域右边的边界刚好能碰到 132。</strong>这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过一行关键的代码：</p>
+<p><strong>也就是说，我们需要计算当女生的中奖概率是男生的多少倍下，黄色区域右边的边界刚好能碰到 132。</strong>这不是一个简单的问题，因为需要计算累积概率。不过我们能用最容易想到的方法来解决。一个个地尝试，感谢 wanqi 老师的计算，通过几行简单的代码：</p>
 
 <pre><code>cumulative = qhyper(0.95, m, n, k)
+result = m[which.max(cumulative)]
 </code></pre>
 
 <p><strong>我们得知当女生中奖概率是男生的 43倍 的情况下，出现 132 比 1 这个结果是可信的。</strong></p>
@@ -1148,7 +1149,7 @@
 
 <ul>
 <li>活跃用户会觉得公平，因为他们经常觉得自己给微博带来更多了的流量，</li>
-<li>部分男生觉得不公平，因为微博扼杀了他们中奖的概率。</li>
+<li>部分男生觉得不公平，因为他们的中奖率比微博眼中的活跃用户低得多。</li>
 <li>部分 IG 的粉丝觉得不公平，中奖者起码要喜欢 IG 才行，那么怎么才算喜欢呢？发过微博算喜欢吗？去过现场算更喜欢吗？这没有定量的标准。</li>
 </ul>
 
@@ -1857,20 +1858,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1542248711"></script>
-    <script src="/js/perfect-scrollbar.min.js?1542248711"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1542248711"></script>
-    <script src="/js/jquery.sticky.js?1542248711"></script>
-    <script src="/js/featherlight.min.js?1542248711"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1542248711"></script>
-    <script src="/js/highlight.pack.js?1542248711"></script>
+    <script src="/js/clipboard.min.js?1542248920"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542248920"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542248920"></script>
+    <script src="/js/jquery.sticky.js?1542248920"></script>
+    <script src="/js/featherlight.min.js?1542248920"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542248920"></script>
+    <script src="/js/highlight.pack.js?1542248920"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1542248711"></script>
-    <script src="/js/learn.js?1542248711"></script>
-    <script src="/js/hugo-learn.js?1542248711"></script>
+    <script src="/js/modernizr.custom.71422.js?1542248920"></script>
+    <script src="/js/learn.js?1542248920"></script>
+    <script src="/js/hugo-learn.js?1542248920"></script>
 
-    <link href="/mermaid/mermaid.css?1542248711" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1542248711"></script>
+    <link href="/mermaid/mermaid.css?1542248920" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542248920"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
