@@ -6,10 +6,25 @@
     <description>Recent content in 编程超能力入门班 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Dec 2018 14:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 00:21:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.enginego.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python是如何运行的（未完成）</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
+      <pubDate>Wed, 16 Jan 2019 00:21:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
+      <description>世界上最好的编程语言是什么，取决于你用来做什么，不过正确的答案往往是提问者喜欢的编程语言。不过无可否认的是，Python 正慢慢变成全球最受欢迎的语言，没有之一。
+[]()
+各个编程语言的实现方法各不相同，尽量从设计角度来介绍 Python 的运行原理。这篇文章着重介绍 Python 语言的运行原理和流程，尽量少涉及代码。Python 语言有多种实现方式，Guido van Rossum 在 1989 年趁着家人去旅游写下的第一个版本是用 C 语言实现的（感谢那次旅游），至今最流行的实现也是这个版本，称为 CPython。如果你从来没接触过编程或者 Python 也没关系，它的代码以可读性高而闻名（可能也是他流行的原因）如果你听过欧几里得算法（找出两个数字的最大公因数）这就是欧几里得算法的实现代码：
+def euclid(m, n): if n &amp;gt; m: m, n = n, m r = m % n while r: m, n = n, r r = m % n return n  那么计算机是如何理解并且运行 Python 的源代码的呢？CPython 分为编译与解释两个过程，首先，计算机按照顺序从上到下一条条执行指令的，计算机的优点是它能迅速地完成一些重复的工作，例如 1秒钟 进行百万次的加减，赋值。由于计算机不能像人类一样理解过于抽象的内容，例如函数，类（即使可以，也会非常耗时），所以需要把复杂，抽象的源代码简化为机器能够理解，能够快速运行的代码，这个过程就是 Python 的编译过程。
+tokenizer 过程 编译器首先要理解源代码，首先要分析每个字符串的含义，例如 def 和 class 这类关键字的含义与普通的字符串就不一样。
+举一个例子 hello.py
+def say_hello(): print(&amp;quot;Hello, World!</description>
+    </item>
     
     <item>
       <title>劳动法赔偿 101</title>
@@ -136,19 +151,6 @@ WindsondeMacBook-Air:~ windson$ |  因为和计算机交互需要遵守一定的
  macOS: &amp;ldquo;ls&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
 Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
  输入回车之后，你会发现终端显示出了一些文字，仔细观察的话你会发现其实是你电脑中某个目录下的文件。ls/dir 这个命令就是列出当前目录的文件。 当然这个命令还有很多参数，也就是你可以告诉计算机显示什么文件（隐藏／非隐藏），显示文件的详细内容（创建日期，大小），ls/dir 只会调用一个常用的默认配置，假如你想把隐藏文件也显示的话，在终端输入</description>
-    </item>
-    
-    <item>
-      <title>Python是如何运行的（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</link>
-      <pubDate>Mon, 29 Oct 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/</guid>
-      <description>这篇文章着重介绍 Python 语言的运行原理和流程，Python 语言有多种实现方式，最流行的 CPython 是用 C 语言实现的。那么计算机是如何理解并且运行 Python 的源代码的呢？CPython 分为编译与解释两个过程，首先，计算机按照顺序从上到下一条条执行指令的，计算机的优点是它能迅速地完成一些重复的工作，例如1秒钟进行百万次的加减，赋值。由于计算机不能像人类一样理解过于抽象的内容，例如函数，类（即使可以，也会非常耗时），所以需要把复杂，抽象的源代码简化为机器能够理解，能够快速运行的代码，这个过程就是 Python 的编译过程。
-tokenizer 过程 编译器首先要理解源代码，首先要分析每个字符串的含义，例如 def 和 class 这类关键字的含义与普通的字符串就不一样。
-举一个例子 hello.py
-def say_hello(): print(&amp;quot;Hello, World!&amp;quot;)  下面我们使用 Python 自带的 tokenize 模块分析 hello.py，我们可以看到 tokenize 模块把 &amp;ldquo;Hello, World&amp;rdquo; 当成 STRING 类型，而 def, say_hello 等当成了 NAME 类型。
-$ python -m tokenize hello.py 0,0-0,0: ENCODING &#39;utf-8&#39; 1,0-1,3: NAME &#39;def&#39; 1,4-1,13: NAME &#39;say_hello&#39; 1,13-1,14: OP &#39;(&#39; 1,14-1,15: OP &#39;)&#39; 1,15-1,16: OP &#39;:&#39; 1,16-1,17: NEWLINE &#39;\n&#39; 2,0-2,4: INDENT &#39; &#39; 2,4-2,9: NAME &#39;print&#39; 2,9-2,10: OP &#39;(&#39; 2,10-2,25: STRING &#39;&amp;quot;Hello, World!</description>
     </item>
     
     <item>
