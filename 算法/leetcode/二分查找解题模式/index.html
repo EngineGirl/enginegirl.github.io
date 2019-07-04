@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>算法 :: Engine GO</title>
+    <title>二分查找解题模式（未完成） :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1562227936" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E7%AE%97%E6%B3%95/">
+  <body class="" data-url="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
     <nav id="sidebar" class="">
 
 
@@ -1061,7 +1061,7 @@
     
     <li data-nav-id="/%E7%AE%97%E6%B3%95/" title="算法" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/%E7%AE%97%E6%B3%95/">
@@ -1087,7 +1087,7 @@
   
     
     <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/" title="Leetcode 算法" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1130,7 +1130,7 @@
  
   
     
-      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="二分查找解题模式（未完成）" class="dd-item ">
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="二分查找解题模式（未完成）" class="dd-item active">
         <a href="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
         二分查找解题模式（未完成）
         
@@ -1194,6 +1194,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -1202,7 +1204,19 @@
             
           
           
-            <a href='/'>编程超能力入门班</a> > 算法
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>编程超能力入门班</a> > <a href='/%E7%AE%97%E6%B3%95/'>算法</a> > <a href='/%E7%AE%97%E6%B3%95/leetcode/'>Leetcode 算法</a> > 二分查找解题模式（未完成）
+          
+         
+          
+         
           
          
           
@@ -1210,14 +1224,40 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#概述">概述</a></li>
+<li><a href="#辨别问题">辨别问题</a></li>
+<li><a href="#解题模式">解题模式</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>二分查找解题模式（未完成）</h1>
+            <h5>作者：Windson Yang</h5>
+            <h5>更新时间：July 1, 2019</h5>
+            <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
+            <hr>
           
 
         
@@ -1225,15 +1265,102 @@
 
 
 
-<h3 id="算法基础">算法基础</h3>
+<h4 id="概述">概述</h4>
+
+<p>二分查找是 Leetcode 常见的题型，难点主要有二，第一是编写正确的二分查找程序，过来人都知道，这并不是容易的事情。第二是想到用二分查找来解这道题，这点可能还比较难，因为要从题目中阅读到二分查找的必须条件，递增的有限区间，而且答案就在其中。</p>
+
+<h4 id="辨别问题">辨别问题</h4>
+
+<blockquote>
+<p>从一个有限的递增区间，找到目标值或其索引</p>
+</blockquote>
+
+<p>这个看起来容易，但是比较难的题目往往不那么好找到这个递增区间，常见的提示是
+1. 数组都是正整数（知道二分查找的最小范围不会低于0）
+2. 题目要求的与数组的和有关，而且数组的数字不会为负数（保证前n项的和递增）</p>
+
+<p>这里有两个例子，你可以从中找下递增区间，相信可以慢慢找到感觉。</p>
+
+<p>Leetcode</p>
+
+<h4 id="解题模式">解题模式</h4>
+
+<p>如果我们找到了递增区间，那么就可以开始编写二分查找的程序了，二分查找的程序有几种返回值
+1. 查找目标元素是否在区间内
+2. 查找目标元素插入的索引值（左边或者右边）
+3. 查找区间内符合 is_valid 函数的最大值/最小值</p>
+
+<p>我们先过一遍二分查找的程序，二分查找实现方式有多种，这里只要不混淆即可，里面有几个要注意的点，循环不变式：</p>
+
+<p>在左边界以及右边界之间的递增区间中，找到目标值或其索引</p>
+
+<p>这里面有几个容易犯错的地方</p>
+
+<table>
+<thead>
+<tr>
+<th>实现方式</th>
+<th>右边界初始值</th>
+<th>右边界是否可达</th>
+<th>左右边界能否相等</th>
+<th>更新右边界</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>数组长度</td>
+<td>不能</td>
+<td>不能</td>
+<td>等于 mid</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>数组长度减一</td>
+<td>可以</td>
+<td>可以</td>
+<td>等于 mid - 1</td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>右边界的范围
+常见的实现方式中，右边界可以是数组长度（因为索引从零开始，所以不可达），也可以是数组长度减一（可达），
+之后的几点都是间接地遵循这个初始条件。这里可以推理出，因为</li>
+</ol>
+
+<p>右边界是数组长度-&gt;不可达-&gt;循环是找有效值，所以当左边界等于右边界的时候应该跳出循环。—&gt;右边界更新的时候更新为mid而是mid-1（因为mid-1还没验证过，可能是结果）
+以下的实现是形式1，同时注解中描述了两种形式都要注意的问题</p>
+
+<pre><code>function binary_search(array, target):
+    left = 0 or minimal val
+    right = length of array
+    while left &lt; right:
+        # 1. 根据题目要求，有时候会使用 left += (right-left)/2 的方式防止正整数移除，之后就把 left 当作 mid 即可。
+        # 2. 我们找的目标值是整数还是浮点数来觉得是否使用整除。
+        # Leetcode xxx 这里要对比的值是浮点数，就不能使用整除，而且之后 left 与 right 都应该更新为 mid，因为 mid + 1 有可能会错过正确答案
+        mid = (left+right) / 2
+        if array-&gt;mid equal to target:
+            return mid
+        else if array-&gt;mid &lt; target:
+            left = mid + 1
+        else:
+            right = mid
+</code></pre>
+
+<p>找目标值这个是最基础的二分查找，比较复杂的是找插入的索引值，或者查找数组中满足 is_valid 函数的值。这里举例：</p>
+
+<p>Leetcode 778. Swim in Rising Water</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1623,35 +1750,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
 
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1683,86 +1781,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
             
         
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -1796,12 +1814,6 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
-            
-        
-                    
-            
-        
-                    
                         
             
             
@@ -1818,6 +1830,19 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1826,24 +1851,37 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
                 
                 
 
                     
                     
-                        
-                    
                     
 
+                    
+            
+        
                     
                         
             
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1852,6 +1890,73 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1888,6 +1993,190 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -1898,10 +2187,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/" title="理解贝叶斯分类"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="DFS 解题模式"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E7%AE%97%E6%B3%95/leetcode/" title="Leetcode 算法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="DFS 解题模式" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
