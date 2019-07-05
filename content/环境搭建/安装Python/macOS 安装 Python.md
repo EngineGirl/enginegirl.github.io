@@ -1,15 +1,10 @@
 ---
-title: "macOS安装Python"
+title: "macOS 安装 Python"
 date: 2018-08-22T00:10:14+08:00
 ---
 
-作者：Windson Yang
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-**以下步骤极其简单，不要担心😊**
-
-### 安装Python
-1. **访问[Python下载地址](https://www.python.org/downloads/mac-osx/)**，如下图：
+### 安装 Python
+1. **访问 [Python 下载地址](https://www.python.org/downloads/mac-osx/)**，如下图：
 
     ![Python-macOS下载地址](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E4%B8%8B%E8%BD%BD%E9%A1%B5.png)
 
@@ -25,7 +20,7 @@ date: 2018-08-22T00:10:14+08:00
 
     ![Python-macOS许可](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E8%AE%B8%E5%8F%AF.png)
 
-5. 下图选择安装的地方，macOS一般只有一个盘，**点击继续**即可。
+5. 下图选择安装的地方，macOS 一般只有一个盘，**点击继续**即可。
 
 ![Python-macOS目的地](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E7%9B%AE%E7%9A%84%E5%9C%B0.png)
 
@@ -35,6 +30,3 @@ date: 2018-08-22T00:10:14+08:00
 
 6. 显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。
 ![Python-macOS安装完成](https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/python_install/macos/%E6%AC%A2%E8%BF%8E.png)
-
-### 使用Python
-好吧，安装了怎么也要试试吧，请到[终端](../../../基础/术语/终端/)章节学习如何在终端使用Python。
