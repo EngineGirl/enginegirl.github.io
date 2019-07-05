@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>基础知识 :: Engine GO</title>
+    <title>App Store 无用评价过滤 :: Engine GO</title>
     
     
     <link href="/css/nucleus.css?1562335505" rel="stylesheet">
@@ -45,7 +45,7 @@
 
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/">
+  <body class="" data-url="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/">
     <nav id="sidebar" class="">
 
 
@@ -288,8 +288,8 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/%E5%9F%BA%E7%A1%80/">
@@ -952,7 +952,7 @@
   
     
     <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="数据分析" class="dd-item 
-        
+        parent
         
         
         ">
@@ -976,7 +976,7 @@
  
   
     
-      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/" title="App Store 无用评价过滤" class="dd-item ">
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/" title="App Store 无用评价过滤" class="dd-item active">
         <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/">
         App Store 无用评价过滤
         
@@ -1193,6 +1193,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -1201,7 +1203,13 @@
             
           
           
-            <a href='/'>编程超能力入门班</a> > 基础知识
+            
+            
+          
+          
+            <a href='/'>编程超能力入门班</a> > <a href='/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/'>数据分析</a> > App Store 无用评价过滤
+          
+         
           
          
           
@@ -1209,14 +1217,41 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#苹果的不作为">苹果的不作为</a></li>
+<li><a href="#目标">目标</a></li>
+<li><a href="#结果">结果</a></li>
+<li><a href="#有用的评价">有用的评价</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>App Store 无用评价过滤</h1>
+            <h5>作者：Windson Yang</h5>
+            <h5>更新时间：June 20, 2019</h5>
+            <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
+            <hr>
           
 
         
@@ -1224,38 +1259,70 @@
 
 
 
-<h3 id="基础知识">基础知识</h3>
+<p>App Store 的垃圾评论不是一天两天了，垃圾短信</p>
 
-<p>这章解释了计算机基础中常见的术语以及常见问题。</p>
+<h4 id="苹果的不作为">苹果的不作为</h4>
 
-<h4 id="常见问题">常见问题</h4>
+<p>我不清楚为什么苹果并没有用心在过滤垃圾评价这里，垃圾评价多得我几乎找不到正常的评价，而且我在美国区的 APP STORE 找不到这些情况，我不确定是因为美国区刷评价情况比较少（但是 刷亚马逊评价的多得一塌糊涂，即使现在比较少，将来刷评价的也会多）还是苹果放弃了这一块。苹果或者觉得减少垃圾评价对它的业绩毫无帮助，作为一名开发者，当看到别的应用因为刷评价排到搜索的前面而自己却在后面的时候，很难开心得起来。这篇文章让我们用一些简单常用的方法来识别垃圾评价，顺便学习下数据分析吧。</p>
 
-<ul>
-<li><a href="./常见问题/一文理解字符串编码/">一文理解字符串编码</a></li>
-<li><a href="./常见问题/公私钥加密/">公私钥加密</a></li>
-<li><a href="./常见问题/编程语言选择/">编程语言选择</a></li>
-<li><a href="./常见问题/面试准备/">如何准备技术面试</a></li>
-<li><a href="./常见问题/如何写一份更好的简历/">如何写一份更好的简历</a></li>
-</ul>
+<h4 id="目标">目标</h4>
 
-<h4 id="术语">术语</h4>
+<p>看起来我们的目标很一致，过滤垃圾评价，保留正常用户的真实评价。不过这里对于“真实”可能大家的理解不一致，每个用户的背景以及受教育程度同，评低分的原因也各不相同（有的可能因为这个应用要求评分就评低分，有的可能仅仅是发泄情绪，有的为了让评论能置顶所以评5星，但是里面的实际内容却是差评），所以这里我们的目标并不是筛选海军/机器人刷的评论，而是找出对用户最有用的评论，这里在 App Store 的默认评价也可以看到，虽然，往往出来的都没有用。</p>
 
-<ul>
-<li><a href="./术语/ping命令/">Ping命令</a></li>
-<li><a href="./术语/dns查询/">DNS查询</a></li>
-<li><a href="./术语/协议/">协议</a></li>
-<li><a href="./术语/域名/">域名</a></li>
-<li><a href="./术语/终端/">终端</a></li>
-<li><a href="./术语/路径/">路径</a></li>
-</ul>
+<p><img src="useful.jpg" alt="app_store_most_useful" /></p>
+
+<h4 id="结果">结果</h4>
+
+<p>虽然最终我们会通过我实现的代码来找到这些有用的评价，但是代码以及算法本身却不是最重要的，如何理解数据并且懂得对数据进行不同维度的分析才是最应该学习的地方，这篇文章不会涉及太多代码以及技术细节，你们可以把它当成一个即开即用的工具就好，问题是如何使用这些工具，以什么顺序，什么方式来使用，如何测量最终的结果。</p>
+
+<h4 id="有用的评价">有用的评价</h4>
+
+<p>直接想什么是有用的评价可能不是太容易，我们先判断什么是没用的</p>
+
+<ol>
+<li>评价字数过短或者过长的</li>
+</ol>
+
+<p>![]()
+这点一开始大家不一定认同，不过我们对比下知乎以及Quora，你会发现知乎上有非常多抖机灵的回答，通常依旧是一两句话。但是 Quora 却规定回答必须超过一定的长度，硬性地确保回答的信息量达到一定标准。虽然这是产品选择的不同，不过从一定程度也能够杜绝一些纯粹发泄情绪或者无用的评价信息。同样，防止过长以及不相关的评价是防止用户在发现限制后乱填内容，我们也能通过其他方式来检测到。或者说，就苹果现在的情况来说，越少的评价反而更好。</p>
+
+<ol>
+<li>语法错误问题严重的，语句不通顺</li>
+</ol>
+
+<p>![]()</p>
+
+<p>这点我想大家没有异议，语法错误严重的，语句不通顺代表没有深思熟虑思考过就提交的。</p>
+
+<ol>
+<li>评价与应用主题不相关的</li>
+</ol>
+
+<p>![]()</p>
+
+<ol>
+<li><p>评论本身重复程度过高</p></li>
+
+<li><p>评价之间重复程度过多</p></li>
+</ol>
+
+<p>![]()</p>
+
+<ol>
+<li>打广告的，让大家去哪里下载什么的</li>
+</ol>
+
+<p>![]()
+这个防止恶意刷评价（无论是刷自己还是刷竞争对手）</p>
+
+<p>当然，还有其他标准，这里只列举最常见的几种。中国区的评价数量都较多，我们可以列举最有用的50条评价，我想已经足够大家去了解这个应用的情况。让我们一条条来分析，</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1430,773 +1497,16 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
                 
-                    
-                
                 
-
-                    
-                    
-                    
 
                     
-            
-        
                     
                         
-            
-            
-                
-                    
-                
-                
-
-                    
                     
                     
 
                     
-            
-        
-                    
                         
             
             
@@ -2209,9 +1519,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2241,39 +1548,10 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
                     
-                    
-
-                    
             
         
                     
@@ -2289,9 +1567,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2420,20 +1695,7 @@ s.setAttribute('data-timestamp', +new Date());
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
                     
-                    
-
-                    
             
         
                     
@@ -2449,9 +1711,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2497,26 +1756,10 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
-
-                    
                         
             
             
@@ -2529,12 +1772,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
-                    
-            
-        
                     
             
         
@@ -2667,22 +1904,6 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2699,12 +1920,6 @@ s.setAttribute('data-timestamp', +new Date());
             
         
                     
-            
-        
-                    
-            
-        
-                    
                         
             
             
@@ -2736,20 +1951,7 @@ s.setAttribute('data-timestamp', +new Date());
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
                     
-                    
-
-                    
             
         
                     
@@ -2765,9 +1967,6 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2784,35 +1983,9 @@ s.setAttribute('data-timestamp', +new Date());
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
                     
-                    
-
-                    
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -2822,21 +1995,6 @@ s.setAttribute('data-timestamp', +new Date());
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2845,30 +2003,12 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
-                    
-            
-        
                     
                         
             
             
-                
-                    
-                
                 
-
-                    
-                    
-                    
-
                     
-                        
-            
-            
-                
                     
                 
                 
@@ -2877,49 +2017,17 @@ s.setAttribute('data-timestamp', +new Date());
                     
                     
 
-                    
-            
-        
                     
             
         
                     
-            
-        
-                    
                         
             
             
-                
-                    
-                
                 
-
-                    
                     
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -3040,10 +2148,10 @@ s.setAttribute('data-timestamp', +new Date());
 
 
         
-            <a class="nav nav-prev" href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="macOS 安装编辑器"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="数据分析"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" title="编程的第一步" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%BE%AE%E5%8D%9A%E6%8A%BD%E5%A5%96%E5%88%B0%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="微博抽奖到数据分析" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

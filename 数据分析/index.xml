@@ -13,10 +13,10 @@
     
     <item>
       <title>App Store 无用评价过滤</title>
-      <link>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E6%97%A0%E7%94%A8%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4/</link>
+      <link>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/</link>
       <pubDate>Thu, 20 Jun 2019 00:19:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E6%97%A0%E7%94%A8%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4/</guid>
+      <guid>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/</guid>
       <description>App Store 的垃圾评论不是一天两天了，垃圾短信
 苹果的不作为 我不清楚为什么苹果并没有用心在过滤垃圾评价这里，垃圾评价多得我几乎找不到正常的评价，而且我在美国区的 APP STORE 找不到这些情况，我不确定是因为美国区刷评价情况比较少（但是 刷亚马逊评价的多得一塌糊涂，即使现在比较少，将来刷评价的也会多）还是苹果放弃了这一块。苹果或者觉得减少垃圾评价对它的业绩毫无帮助，作为一名开发者，当看到别的应用因为刷评价排到搜索的前面而自己却在后面的时候，很难开心得起来。这篇文章让我们用一些简单常用的方法来识别垃圾评价，顺便学习下数据分析吧。
 目标 看起来我们的目标很一致，过滤垃圾评价，保留正常用户的真实评价。不过这里对于“真实”可能大家的理解不一致，每个用户的背景以及受教育程度同，评低分的原因也各不相同（有的可能因为这个应用要求评分就评低分，有的可能仅仅是发泄情绪，有的为了让评论能置顶所以评5星，但是里面的实际内容却是差评），所以这里我们的目标并不是筛选海军/机器人刷的评论，而是找出对用户最有用的评论，这里在 App Store 的默认评价也可以看到，虽然，往往出来的都没有用。
@@ -63,6 +63,15 @@
  &amp;gt;&amp;gt;&amp;gt; import cherry &amp;gt;&amp;gt;&amp;gt; result = cherry.classify(&#39;警方召开了全省集中打击赌博违法犯罪活动专项行动电 电话会议。会议的重点是“查处”六合彩、赌球赌马等赌博活动。&#39;) Building prefix dict from the default dictionary ... Loading model from cache /var/folders/md/0251yy51045d6nknpkbn6dc80000gn/T/jieba.cache Loading model cost 0.894 seconds. Prefix dict has been built succesfully.  分类器判断输入句子有99.7%的概率是正常句子，0.2%是政治敏感，剩余0.1%是其他两个类别
 &amp;gt;&amp;gt;&amp;gt; result.percentage [(&#39;normal.dat&#39;, 0.997), (&#39;politics.dat&#39;, 0.002), (&#39;gamble.dat&#39;, 0.0), (&#39;sex.dat&#39;, 0.0)]  其中对分类器判断影响最大的词语分别是赌博，活动，会议，违法犯罪，警方，打击
 &amp;gt;&amp;gt;&amp;gt; result.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/</guid>
+      <description></description>
     </item>
     
   </channel>

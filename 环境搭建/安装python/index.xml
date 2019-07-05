@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>安装Python on Engine GO</title>
+    <title>安装 Python on Engine GO</title>
     <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/</link>
-    <description>Recent content in 安装Python on Engine GO</description>
+    <description>Recent content in 安装 Python on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2018 00:10:14 +0800</lastBuildDate>
@@ -12,36 +12,32 @@
     
     
     <item>
-      <title>Windows安装Python</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/</link>
+      <title>Windows 安装 Python</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-安装Python  访问Python下载地址，点击下图中蓝色框的链接，像普通文件一样下载即可。
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/</guid>
+      <description> 安装 Python  访问 Python 下载地址，点击下图中蓝色框的链接，像普通文件一样下载即可。
  下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，勾选 Add Python 3.7 to PATH 之后点击 Customize installation。
  这是安装的选择，直接点击 Next
- 点击 Browse 选择安装路径，推荐安装在非系统盘，下面的例子安装在E盘，你也可以根据自己的情况选择路径，然后点击Install。
+ 点击 Browse 选择安装路径，推荐安装在非系统盘，下面的例子安装在 E 盘，你也可以根据自己的情况选择路径，然后点击 Install。
  这时候就会开始安装：
  恭喜，安装成功！
-  使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。</description>
+  </description>
     </item>
     
     <item>
-      <title>macOS安装Python</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/</link>
+      <title>macOS 安装 Python</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-安装Python  访问Python下载地址，如下图：
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/</guid>
+      <description> 安装 Python  访问 Python 下载地址，如下图：
  点击上图蓝色框中的链接，像普通文件一样下载即可。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：
  下图包括软件的基本介绍，点击继续。
  下图包括软件的使用协议，点击继续，接着软件会弹出一个小窗口，需要你同意协议，点击同意按钮即可。
- 下图选择安装的地方，macOS一般只有一个盘，点击继续即可。
-   出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。</description>
+ 下图选择安装的地方，macOS 一般只有一个盘，点击继续即可。
+   出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   </description>
     </item>
     
   </channel>

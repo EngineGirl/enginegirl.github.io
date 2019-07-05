@@ -48,10 +48,10 @@ function binary_search(array, target): left = 0 or minimal val right = length of
     
     <item>
       <title>App Store 无用评价过滤</title>
-      <link>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E6%97%A0%E7%94%A8%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4/</link>
+      <link>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/</link>
       <pubDate>Thu, 20 Jun 2019 00:19:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E6%97%A0%E7%94%A8%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4/</guid>
+      <guid>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/</guid>
       <description>App Store 的垃圾评论不是一天两天了，垃圾短信
 苹果的不作为 我不清楚为什么苹果并没有用心在过滤垃圾评价这里，垃圾评价多得我几乎找不到正常的评价，而且我在美国区的 APP STORE 找不到这些情况，我不确定是因为美国区刷评价情况比较少（但是 刷亚马逊评价的多得一塌糊涂，即使现在比较少，将来刷评价的也会多）还是苹果放弃了这一块。苹果或者觉得减少垃圾评价对它的业绩毫无帮助，作为一名开发者，当看到别的应用因为刷评价排到搜索的前面而自己却在后面的时候，很难开心得起来。这篇文章让我们用一些简单常用的方法来识别垃圾评价，顺便学习下数据分析吧。
 目标 看起来我们的目标很一致，过滤垃圾评价，保留正常用户的真实评价。不过这里对于“真实”可能大家的理解不一致，每个用户的背景以及受教育程度同，评低分的原因也各不相同（有的可能因为这个应用要求评分就评低分，有的可能仅仅是发泄情绪，有的为了让评论能置顶所以评5星，但是里面的实际内容却是差评），所以这里我们的目标并不是筛选海军/机器人刷的评论，而是找出对用户最有用的评论，这里在 App Store 的默认评价也可以看到，虽然，往往出来的都没有用。
@@ -66,22 +66,6 @@ function binary_search(array, target): left = 0 or minimal val right = length of
   ![]()
  打广告的，让大家去哪里下载什么的  ![]() 这个防止恶意刷评价（无论是刷自己还是刷竞争对手）
 当然，还有其他标准，这里只列举最常见的几种。中国区的评价数量都较多，我们可以列举最有用的50条评价，我想已经足够大家去了解这个应用的情况。让我们一条条来分析，</description>
-    </item>
-    
-    <item>
-      <title>为什么我们不应该赌博（未完成）</title>
-      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%BB%9F%E8%AE%A1%E5%AD%A6/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A/</link>
-      <pubDate>Fri, 10 May 2019 20:21:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E7%BB%9F%E8%AE%A1%E5%AD%A6/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A/</guid>
-      <description> 我身边有些朋友染上了赌博，因为赌博没了家人以及朋友。我写下这篇文章希望大家能对赌博有真正的认知，希望能帮助到一些人脱离赌博。本篇文章虽然涉及一些数学知识，但是跳过它们并不会影响你对这篇文章的理解。
-从运气开始 我们都知道赌博是通过运气以及策略的。先从运气讲起吧。今天你拿了一万块到赌场，希望能通过自己的运气小赚一笔，大多数“有理智”的人并不会把全部钱都押在一把里，如果你问他们为什么，他们可能有几个回答，
- 把所有钱都押在一把，这样太傻太冒险了。 我的运气会随着不同时间改变，如果我一开始运气不好，后来运气好的话那一开始就输光不就亏大了。 这样賭太快了，我想慢慢玩。  但是这个反直觉的方法反而是胜率最高的方法。或者我们从另外一个角度来看，有一天，费德勒约你打网球。由于实力的差距，他让你选择比赛的规则。是一球定胜负还是需要一方领先两分时才胜利，作为一个像我这样的业余选手，知道和费德勒只能拼运气，而打的回合越多，实力的差距就会越明显。直觉告诉我打得越多我越可能输，但是直觉也告诉我直觉不可靠，所以，来点数学计算吧 :D。
-![tennis]()
-那么从数学上怎么解释呢？我们假设费德勒和我打的时候每球的胜率是 66.7%，也就是平均来说，三球赢两球。那么在一球定胜负的情况下，费德勒赢得比赛的概率当然也就是 66.7%。解决第一种情况毫不费力。那么第二种情况呢？费德勒赢我们可以分为几种情况，2.1，一开始他连拿两分（才没那么容易呢！），2.2, 平局后他连拿两分。那么他赢的概率就是两者加起来，我这里略过计算的步骤，可以计算出第二种情况下费德勒的胜率为 80%。好吧，我的第一个直觉没错，果然打得越多我输的概率越高，同时我们也可以观察到。费德勒的优势随着比赛长度的增加而越来越大。按照正式的网球规则，费德勒赢一局的概率为85.5%，赢一盘的概率为99.8%，赢一场比赛的概率为99.99999%（参考《数学也荒唐，20个脑洞大开的数学趣题》）。我们看到，虽然每球的差距并不是很大。但是累积起来，费德勒的优势非常大。
-我们可以从赌博中看到类似的情况，赌博的规则有点像网球，也会陷入平局（一人赢一把然后重新开始）。而下注的盘数越多，那么输的概率也越大。
-策略1：慢慢下 假设我们一开始定下目标，赢了 5千块就走，我们每把应该怎么下呢？是每把下100，还是1000，还是2000？在一个公平的游戏下，每把下多少都对最后的胜率没有影响，但是如果在现实的赌博（骰子，百家乐）中，这个影响就大了。按照我们上面的推断，那玩得次数越少越好。应该下一把 5千就走人。
-策略2: 输了翻倍 体育博彩是怎么调整赔率的 </description>
     </item>
     
     <item>
@@ -271,64 +255,57 @@ Windows: &amp;ldquo;dir&amp;rdquo;+&amp;ldquo;回车&amp;rdquo;
     </item>
     
     <item>
-      <title>Windows安装Python</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/</link>
+      <title>Windows 安装 Python</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows%E5%AE%89%E8%A3%85python/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-安装Python  访问Python下载地址，点击下图中蓝色框的链接，像普通文件一样下载即可。
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/</guid>
+      <description> 安装 Python  访问 Python 下载地址，点击下图中蓝色框的链接，像普通文件一样下载即可。
  下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，勾选 Add Python 3.7 to PATH 之后点击 Customize installation。
  这是安装的选择，直接点击 Next
- 点击 Browse 选择安装路径，推荐安装在非系统盘，下面的例子安装在E盘，你也可以根据自己的情况选择路径，然后点击Install。
+ 点击 Browse 选择安装路径，推荐安装在非系统盘，下面的例子安装在 E 盘，你也可以根据自己的情况选择路径，然后点击 Install。
  这时候就会开始安装：
  恭喜，安装成功！
-  使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。</description>
-    </item>
-    
-    <item>
-      <title>Windows安装编辑器</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
-      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
-      <description> 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-安装Atom编辑器  访问Atom下载地址，点击下图中的 Download 按钮
- 下载后双击打开就可以了，软件的界面如下：
   </description>
     </item>
     
     <item>
-      <title>macOS安装Python</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/</link>
+      <title>Windows 安装编辑器</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos%E5%AE%89%E8%A3%85python/</guid>
-      <description>作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-安装Python  访问Python下载地址，如下图：
- 点击上图蓝色框中的链接，像普通文件一样下载即可。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：
- 下图包括软件的基本介绍，点击继续。
- 下图包括软件的使用协议，点击继续，接着软件会弹出一个小窗口，需要你同意协议，点击同意按钮即可。
- 下图选择安装的地方，macOS一般只有一个盘，点击继续即可。
-   出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   使用Python 好吧，安装了怎么也要试试吧，请到终端章节学习如何在终端使用Python。</description>
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description> 安装 Atom 编辑器  访问 Atom 下载地址，点击下图中的 Download 按钮
+ 下载后双击打开就可以了，软件的界面如下：
+ 点击左上角 File 然后 new 来创建新的文件，接下来就可以在文档中写代码并且保存。
+  </description>
     </item>
     
     <item>
-      <title>macOS安装编辑器</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <title>macOS 安装 Python</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
-      <description> 作者：Windson Yang 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-以下步骤极其简单，不要担心😊
-安装Atom编辑器  访问Atom下载地址，点击下图中的Download按钮
- 下载完之后安装，安装之后打开Atom程序，出现下图，点击蓝色框中的 Install a Package
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/</guid>
+      <description> 安装 Python  访问 Python 下载地址，如下图：
+ 点击上图蓝色框中的链接，像普通文件一样下载即可。下载完毕之后双击该安装包（一般情况下在下载目录中），出现下图，点击继续：
+ 下图包括软件的基本介绍，点击继续。
+ 下图包括软件的使用协议，点击继续，接着软件会弹出一个小窗口，需要你同意协议，点击同意按钮即可。
+ 下图选择安装的地方，macOS 一般只有一个盘，点击继续即可。
+   出现下图后，点击安装，软件会弹出一个小窗口，要求输入管理密码，你输入管理密码之后，回车，然后软件会开始安装，稍等几分钟。   显示下图界面则代表安装成功了。如果没有安装成功的话请仔细核对以上的步骤重新安装一次。   </description>
+    </item>
+    
+    <item>
+      <title>macOS 安装编辑器</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description> 安装Atom编辑器  访问 Atom 下载地址，点击下图中的 Download 按钮
+ 下载完之后安装，安装之后打开 Atom 程序，出现下图，点击蓝色框中的 Install a Package
  在左边的搜索框中输入 script，然后点击右边的 Install，稍等5分钟
  安装成功
- 在非系统盘（D盘或者E盘）中新建一个专门存放代码的文件夹 code，然后在 Atom 中新建名为 first.py 的文件。粘贴这段代码进去：
+ 安装成功之后可以尝试运行，在 Atom 中新建名为 first.py 的文件。粘贴这段代码进去：
 print(&#39;hello world&#39;)  如下图：
 然后使用快捷键&amp;rdquo;command&amp;rdquo; + &amp;ldquo;i&amp;rdquo;就能运行代码了。你可以看到上图的最下面显示了：
 hello, world [Finished in 0.276s]   </description>
@@ -578,6 +555,15 @@ HTTP 超文本传输协议 SMTP 邮件协议 telnet 终端传输协议 DNS 域�
       
       <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/</guid>
       <description> 服务端 很简单，服务器就是一台**24小时运行**，运行着**专为服务器设计的系统**的**高性能计算机**。它也是由内存，硬盘，CPU组成。不过它会根据这台服务器的用途来配置不同的组件。有些服务器专门用来存储文件，图片，那么它就需要更大的硬盘，对CPU的要求就没那么高。有些专门用来进行高密度的计算，例如视频转格式，数据分析那么就要更快的CPU。 服务器会根据不同客户端的请求返回不同的内容，当你使用浏览器访问一个页面的时候，实际上浏览器就是寻找该页面对应的服务器获取相应的图片和文字内容。  客户端 常见的客户端包括浏览器，手机，它请求服务器需要的资源，然后客户端解析返回的内容并且显示给用户。  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.enginego.org/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/</guid>
+      <description></description>
     </item>
     
   </channel>
