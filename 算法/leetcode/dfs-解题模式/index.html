@@ -12,20 +12,20 @@
     <title>DFS 解题模式 :: Engine GO</title>
 
     
-    <link href="/css/nucleus.css?1562380423" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1562380423" rel="stylesheet">
-    <link href="/css/hybrid.css?1562380423" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1562380423" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1562380423" rel="stylesheet">
-    <link href="/css/auto-complete.css?1562380423" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1562380423" rel="stylesheet">
-    <link href="/css/theme.css?1562380423" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1562380423" rel="stylesheet">
+    <link href="/css/nucleus.css?1562416314" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1562416314" rel="stylesheet">
+    <link href="/css/hybrid.css?1562416314" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1562416314" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1562416314" rel="stylesheet">
+    <link href="/css/auto-complete.css?1562416314" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1562416314" rel="stylesheet">
+    <link href="/css/theme.css?1562416314" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1562416314" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1562380423" rel="stylesheet">
+      <link href="/css/theme-blue.css?1562416314" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1562380423"></script>
+    <script src="/js/jquery-3.3.1.min.js?1562416314"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -1252,17 +1252,17 @@
 
 <h4 id="概述">概述</h4>
 
-<p>这篇文章介绍如何解决 Leetcode 常见的 DFS 问题的模式，了解这个基本模式之后，相信面对大部分 DFS 问题（如果 hard 难度的需要一些变形）都能够迎刃而解。阅读之前希望你对图的基础知识有一定的了解，例如什么是图，常见的图有那些，如何遍历图，Leetcode 上 DFS 问题常见的都是无环图，所以我们这里也只讨论无环图的解法。</p>
+<p>这篇文章介绍如何解决 <strong>Leetcode 常见的 DFS</strong> 问题的模式，希望你了解了这个模式之后，面对大部分 DFS 问题（hard 难度的需要一些变形）都能够迎刃而解。阅读本文之前希望你对图的基础知识有一定的了解，例如什么是图？常见的图的类型有那些？（有向图，有环图），如何遍历图？（前序遍历以及后序遍历），由于 Leetcode 上 DFS 问题中常见的都是无环图，所以我们这里也只讨论无环图的解题模式。</p>
 
 <h4 id="辨别问题">辨别问题</h4>
 
-<p>那么什么样的问题可以用 DFS 来解决呢？在 Leetcode 中，DFS 问题常见的表达形式为：</p>
+<p>那么什么样的问题可以用 DFS 来解决呢？，DFS 问题常见的表达形式为：</p>
 
 <blockquote>
 <p>“给定一个图（树，字符串，矩阵），找到在遍历图的过程中，符合特定条件的数值或路径。”</p>
 </blockquote>
 
-<p>（这里我把返回布尔值当成返回默认值或空路径的特殊情况），上面的这个定义有点抽象，举两个例子：</p>
+<p>上面的这个定义有点抽象，举两个例子：</p>
 
 <ul>
 <li><p><a href="https://leetcode.com/problems/path-sum-ii/">Leetcode 113 Path Sum II</a></p>
@@ -1270,7 +1270,7 @@
 <blockquote>
 <p>&ldquo;Given a binary tree and a sum, find all root-to-leaf paths where each path&rsquo;s sum equals the given sum.&rdquo;</p>
 
-<p>“给定一个有向无环图（非空二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”</p>
+<p>“给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”</p>
 </blockquote>
 
 <pre><code>Given the below binary tree and sum = 22, 
@@ -1313,16 +1313,44 @@ Output: 1
 
 <h4 id="解题模式">解题模式</h4>
 
-<p>很多 DFS 问题可以用 DP 来解决，通常效率也会更高。不过 DP 的状态转移方程有时候不好想，那么这时候即使头脑空白也能遵循一个固定的思路，先实现 DFS 的解法然后优化成 DP，首先我们先描述算法中要做的事情。</p>
+<p>许多 DFS 问题都可以用 DP 来解决，通常效率也会更高。不过 DP 的状态转移方程不太容易想到，在头脑空白的时候，<strong>先按照这个解题模式实现 DFS 的解法然后优化成 DP 也是一个不错的方法</strong>。首先我们先描述算法中要做的事情。</p>
 
 <ol>
 <li><p>遍历图</p>
 
-<p>如果题目要求返回的只是布尔值的话，遍历可以提早结束，不然遍历目标都是遍历整个图，若根节点不能访问所有其他节点，<strong>那么就需要对每个节点进行 DFS 遍历</strong>。</p></li>
+<p>如果题目要求返回的只是布尔值（是否存在符合此条件的路径），遍历可以提早结束，不然遍历目标都是整个图，若根节点不能访问所有其他节点，<strong>那么在主函数就需要对每个节点进行 DFS 遍历</strong>。例如上面的例子 <strong>Leetcode 200 Number of Islands</strong>，因为当 节点值为 0 的时候遍历结束，所以从根节点出发并不能遍历到所有子节点。</p>
+
+<table>
+<thead>
+<tr>
+<th>题目</th>
+<th>要求</th>
+<th>根节点可以访问到整个图</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Leetcode 113 Path Sum II</td>
+<td>返回所有符合条件的路径</td>
+<td>是</td>
+</tr>
+
+<tr>
+<td>Leetcode 200 Number of Islands</td>
+<td>返回符合条件的路径的数量</td>
+<td>否</td>
+</tr>
+</tbody>
+</table></li>
 
 <li><p>DFS 函数</p>
 
-<p>这个函数是一个递归函数，里面包含了 <strong>is_valid</strong> 以及 <strong>match</strong> 两个子函数。分别用作判断子节点是否合法，以及当前状态是否符合条件。</p></li>
+<p>这个函数是一个递归函数，对当前节点的子节点（如果是无向图则临近节点）进行遍历</p></li>
+
+<li><p>辅助函数</p>
+
+<p>里面包含了 <strong>is_valid</strong> 以及 <strong>match</strong> 两个子函数。分别用作判断子节点是否合法，以及当前状态是否符合条件。</p></li>
 
 <li><p>返回结果</p></li>
 </ol>
@@ -1330,16 +1358,13 @@ Output: 1
 <h4 id="具体实现">具体实现</h4>
 
 <ol>
-<li>遍历图</li>
-</ol>
-
-<p>注意这里我把 is_valid 的状态判断放到了 DFS 的子节点遍历中，所以主函数需要处理一些边界条件</p>
+<li><p>主函数</p>
 
 <ol>
 <li><p>从根节点可以访问所有其他节点（例子 1）：</p>
 
 <pre><code>function main_function(graph):
-    # 边界条件，例如如果图是空的，或者根节点本身就符合条件
+    # 边界情况，例如如果图是空的，或者根节点本身就符合条件
     if not graph:
         return []
     # 如果需要返回数值则创建变量（例如最大值，最小值），返回路径则创建数组：
@@ -1372,17 +1397,18 @@ Output: 1
             return True
     return False
 </code></pre></li>
+</ol></li>
 
 <li><p>DFS 递归函数</p>
 
 <ol>
-<li><p>找到需要遍历的子节点</p>
+<li><p>找到需要遍历的节点</p>
 
-<p>遍历的子节点有时候不好找，对于有向图来说，树结构通常是它的子树节点，字符串根据实际情况可以是其他任意一个字符。无向图如某些矩阵则可能是上下左右节点，或者下右节点，这些看题目要求，同时因为要防止重复遍历，所以这里可以使用一个小技巧，把当前节点的值设为无效，DFS 遍历结束再还原。（下面的可选 2），函数中的的 <strong>is_valid</strong> 和 <strong>match</strong> 都是子函数</p></li>
+<p>对于有向图来说，树结构通常是它的子树节点，字符串根据实际情况可以是其他任意一个字符。无向图如某些矩阵则可能是临近节点，这些看题目要求，因为要防止重复遍历，这里可以使用一个小技巧，把当前节点的值设为无效，DFS 遍历结束再还原。（下面的可选 2）。</p></li>
 
 <li><p>函数实现</p>
 
-<p>这里有四个重点，<strong>1. 防止点被重复遍历</strong>，<strong>2. 检查节点是否合法</strong>，<strong>3. 检查更新后的状态是否符合要求</strong>，<strong>4. 更新接下来 DFS 的参数</strong>。形式一我们把 match 函数放在子节点的遍历中，这样速度相对比较快，不过主函数需要处理边界情况。形式二则把 match 函数放在 DFS 函数的开头，虽然速度较慢，但是容易实现：</p>
+<p>这里有四个重点，<strong>1. 防止点被重复遍历</strong>，<strong>2. 检查节点是否合法</strong>，<strong>3. 检查更新后的状态是否符合要求</strong>，<strong>4. 更新接下来 DFS 遍历的参数</strong>。以下实现了两种形式，形式一把 match 函数放在子节点的遍历中，这样速度相对比较快，不过主函数需要处理边界情况。形式二则把 match 函数放在 DFS 函数的开头，虽然速度较慢，但是容易实现，以下是伪代码：</p>
 
 <pre><code>function dfs_first(element, res, current, target, path):
     # 输入参数中，
@@ -2358,20 +2384,20 @@ function match(current, child, target):
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1562380423"></script>
-    <script src="/js/perfect-scrollbar.min.js?1562380423"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1562380423"></script>
-    <script src="/js/jquery.sticky.js?1562380423"></script>
-    <script src="/js/featherlight.min.js?1562380423"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1562380423"></script>
-    <script src="/js/highlight.pack.js?1562380423"></script>
+    <script src="/js/clipboard.min.js?1562416314"></script>
+    <script src="/js/perfect-scrollbar.min.js?1562416314"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1562416314"></script>
+    <script src="/js/jquery.sticky.js?1562416314"></script>
+    <script src="/js/featherlight.min.js?1562416314"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1562416314"></script>
+    <script src="/js/highlight.pack.js?1562416314"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1562380423"></script>
-    <script src="/js/learn.js?1562380423"></script>
-    <script src="/js/hugo-learn.js?1562380423"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1562416314"></script>
+    <script src="/js/learn.js?1562416314"></script>
+    <script src="/js/hugo-learn.js?1562416314"></script>
 
-    <link href="/mermaid/mermaid.css?1562380423" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1562380423"></script>
+    <link href="/mermaid/mermaid.css?1562416314" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1562416314"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
