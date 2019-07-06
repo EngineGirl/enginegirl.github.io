@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+/* Tags */
+@import "tags.css";
 
 #top-github-link, #body #breadcrumbs {
     position: relative;
@@ -27,7 +29,7 @@
 @font-face {
     font-family: 'Work Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     src: url("../fonts/Work_Sans_300.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_300.woff") format("woff"), url("../fonts/Work_Sans_300.woff2") format("woff2"), url("../fonts/Work_Sans_300.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_300.ttf") format("truetype");
 }
 @font-face {
@@ -148,7 +150,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border: 0;
     padding: 0 25px 0 30px;
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
 }
 .searchbox input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -425,8 +427,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     max-width: 80%;
 }
 #chapter h3 {
-    font-family: "Roboto", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    font-weight: 400;
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300;
     text-align: center;
 }
 #chapter h1 {
@@ -446,13 +448,13 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin: 0;
 }
 body {
-    font-family: "Roboto", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    font-weight: 400;
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300;
     line-height: 1.6;
     font-size: 18px !important;
 }
 h2, h3, h4, h5, h6 {
-    font-family: "Roboto", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
     font-weight: 400;
@@ -494,8 +496,9 @@ div.notices p:first-child:before {
     position: absolute;
     top: 2px;
     color: #fff;
-    font-family: FontAwesome;
-    content: '';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f06a";
     left: 10px;
 }
 div.notices p:first-child:after {
@@ -643,7 +646,7 @@ code + .copy-to-clipboard {
 pre {
     padding: 1rem;
     margin: 2rem 0;
-    background: #1d1f21;
+    background: #282c34;
     border: 0;
     border-radius: 2px;
     line-height: 1.15;
@@ -799,7 +802,7 @@ td {
     z-index: 1000000;
     display: none;
     padding: 5px 8px;
-    font: normal normal 11px/1.5 "Roboto", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font: normal normal 11px/1.5 "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -1075,7 +1078,7 @@ pre .copy-to-clipboard {
     position: absolute;
     right: 4px;
     top: 4px;
-    background-color: #4d5257;
+    background-color: #949bab;
     color: #ccc;
     border-radius: 2px;
 }
@@ -1127,5 +1130,3 @@ pre .copy-to-clipboard:hover {
 #searchResults {
     text-align: left;
 }
-
-/*# sourceMappingURL=theme.css.map */
