@@ -5,26 +5,26 @@ date: 2019-07-01T00:10:14+08:00
 
 #### 概述
 
-这篇文章介绍如何解决 Leetcode 常见的 DFS 问题的模式，了解这个基本模式之后，相信面对大部分 DFS 问题（如果 hard 难度的需要一些变形）都能够迎刃而解。阅读之前希望你对图的基础知识有一定的了解，例如什么是图，常见的图有那些，如何遍历图，Leetcode 上 DFS 问题常见的都是无环图，所以我们这里也只讨论无环图的解法。
+这篇文章介绍 **Leetcode 常见 DFS 问题的解题模式**，希望你了解这些模式之后，对大部分 DFS 问题（hard 难度的需要一些变形）都能够迎刃而解。由于 Leetcode 上 DFS 问题中常见的都是无环图，所以我们这里也只讨论无环图的解题模式。阅读本文之前你需要对**图的基础知识**有一定的了解，包括什么是图？常见的图的类型有那些？（有向无环图，有向有环图），如何遍历图？（前序遍历以及后序遍历）。
 
 #### 辨别问题
-那么什么样的问题可以用 DFS 来解决呢？在 Leetcode 中，DFS 问题常见的表达形式为：
+那么什么样的问题可以用 DFS 来解决呢？，DFS 问题常见的表达形式为：
 
 > “给定一个图（树，字符串，矩阵），找到在遍历图的过程中，符合特定条件的数值或路径。”
 
 
-（这里我把返回布尔值当成返回默认值或空路径的特殊情况），上面的这个定义有点抽象，举两个例子：
+上面的这个定义有点抽象，举两个例子：
 
 - [Leetcode 113 Path Sum II](https://leetcode.com/problems/path-sum-ii/)
 
     > "Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum."
     
-    > “给定一个有向无环图（非空二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
+    > “给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
 
         Given the below binary tree and sum = 22, 
 
         input:
-
+        
               5
              / \
             4   8
@@ -48,99 +48,118 @@ date: 2019-07-01T00:10:14+08:00
     > “给定一个无向无环图（矩阵），找到在遍历图的过程中，符合特定条件的数值（岛的数量）”
         
         Input:
-        11110
+        
         11010
+        11000
         11000
         00000
 
-        Output: 1
+        Output: 2
 
 
 #### 解题模式
-很多 DFS 问题可以用 DP 来解决，通常效率也会更高。不过 DP 的状态转移方程有时候不好想，那么这时候即使头脑空白也能遵循一个固定的思路，先实现 DFS 的解法然后优化成 DP，首先我们先描述算法中要做的事情。
+虽然许多 DFS 问题都可以用 DP 来解决，通常效率也更高。不过 DP 的状态转移方程往往不容易想到，所以在面试的时候，**先快速按照解题模式实现 DFS 的解法然后再优化成 DP 也是一个不错的方法**。解题模式主要包括三个部分：
 
-1. 遍历图
+1. 主函数
 
-    如果题目要求返回的只是布尔值的话，遍历可以提早结束，不然遍历目标都是遍历整个图，若根节点不能访问所有其他节点，**那么就需要对每个节点进行 DFS 遍历**。
+    主函数要做的有两件事：**第一，处理边界情况，例如图为空，第二，遍历整个图**，如果题目要求返回的是布尔值（图中是否存在符合此条件的路径），那么遍历在找到符合条件的路径时就可以结束，**除了这种情况，都需要遍历图中所有可达节点。**若不能通过初始节点访问所有可达节点，**那么在主函数就需要对每个节点进行 DFS 遍历**。上面的例子 **Leetcode 200 Number of Islands**，遍历完初始节点后，因为其他节点都是未知状态，所以需要继续遍历。
+
+        # 左侧为遍历初始节点后递归遍历过的点，右侧为仍需遍历的点
+        110       0
+        110       0
+        110       0
+        000       0
+
+    题目                     | 要求                  | 初始节点可以遍历到整个图 |
+    ------------------------ | --------------------- | ------------------------ |
+    Leetcode 113 Path Sum II | 返回所有符合条件的路径| 是                       |
+    Leetcode 200 Number of Islands | 返回符合条件的路径的数量 | 否              |
     
-2. DFS 函数
+2. DFS 递归函数
 
-    这个函数是一个递归函数，里面包含了 **is_valid** 以及 **match** 两个子函数。分别用作判断子节点是否合法，以及当前状态是否符合条件。
-    
-3. 返回结果
+    这个函数是一个递归函数，里面调用了辅助函数，DFS 函数只需要对当前节点的子节点（如果是无向图则临近节点）进行遍历即可，其他功能通过辅助函数实现。
 
+3. 辅助函数
+
+    里面包含了 **is_valid** 以及 **match** 两个子函数。分别用作判断子节点是否合法，以及当前状态是否符合条件。
 
 #### 具体实现
-1. 遍历图
 
-注意这里我把 is_valid 的状态判断放到了 DFS 的子节点遍历中，所以主函数需要处理一些边界条件
+1. 主函数
 
-   1. 从根节点可以访问所有其他节点（例子 1）：
+   1. 从根节点可以访问所有其他节点（Leetcode 113 Path Sum II）：
     
-        function main_function(graph):
-            # 边界条件，例如如果图是空的，或者根节点本身就符合条件
-            if not graph:
-                return []
-            # 如果需要返回数值则创建变量（例如最大值，最小值），返回路径则创建数组：
-            res = val // list[]
-            element = first element in the graph
-            # 对根节点进行 DFS 遍历
-            dfs(element, res)
-            return res
-
-   2. 根节点不能访问其他所有节点（例子 2)：
-    
-        function main_function(graph):
-            # 边界条件，例如如果图是空的，或者根节点本身就符合条件
-            if not graph:
-                return []
-            res = val // list[]
-            # 对图里面每个元素进行 DFS 遍历
-            for element in the matrix:
+            function main_function(graph):
+                # 边界情况，例如如果图是空的，或者根节点本身就符合条件
+                if not graph:
+                    return []
+                # 如果需要返回数值则创建变量（例如最大值，最小值），返回路径则创建数组：
+                res = val // array
+                element = first element in the graph
+                # 对根节点进行 DFS 遍历
                 dfs(element, res)
-            return res
+                # 返回结果
+                return res
+
+   2. 根节点不能访问其他所有节点（Leetcode 200 Number of Islands)：
+    
+            function main_function(graph):
+                # 边界条件，例如如果图是空的，或者根节点本身就符合条件
+                if not graph:
+                    return []
+                res = val // array
+                # 对图里面每个元素进行 DFS 遍历
+                for element in the matrix:
+                    dfs(element, res)
+                # 返回结果
+                return res
               
    3. 如果题目要求的返回值是布尔值的话，遍历图可以提前结束：
 
-        function main_function(graph):
-            res = val // list[]
-            for in the graph:
-                if dfs(element, res) is True:
-                    return True
-            return False
+            function main_function(graph):
+                res = val // array
+                for in the graph:
+                    if dfs(element, res) is True:
+                        return True
+                return False
               
 2. DFS 递归函数
 
-    1. 找到需要遍历的子节点
+    1. 写代码前，先需要遍历节点的层级关系
 
-        遍历的子节点有时候不好找，对于有向图来说，树结构通常是它的子树节点，字符串根据实际情况可以是其他任意一个字符。无向图如某些矩阵则可能是上下左右节点，或者下右节点，这些看题目要求，同时因为要防止重复遍历，所以这里可以使用一个小技巧，把当前节点的值设为无效，DFS 遍历结束再还原。（下面的可选 2），函数中的的 **is_valid** 和 **match** 都是子函数
+        对于有向图来说，如果是树结构则是它的子节点，字符串根据实际情况可能是临近字符串也可能是其他任意字符。无向图如矩阵则可能是临近节点，这些看题目要求。我建议大家在面试实现的时候可以绘制出遍历图，这样写代码的时候会比较有把握。以下是 Leetcode 200 Number of Islands 的遍历流程图：
+
+
+        
+
+        上图中，要防止无向图中（1，1）被重复遍历，这里可以使用一个小技巧，先把当前节点的值设为无效值（这样在递归遍历中不会原路返回），DFS 遍历结束再还原。
     
     2. 函数实现
     
-        这里有四个重点，**1. 防止点被重复遍历**，**2. 检查节点是否合法**，**3. 检查更新后的状态是否符合要求**，**4. 更新接下来 DFS 的参数**。形式一我们把 match 函数放在子节点的遍历中，这样速度相对比较快，不过主函数需要处理边界情况。形式二则把 match 函数放在 DFS 函数的开头，虽然速度较慢，但是容易实现：
+        这里有四个重点，**1. 防止点被重复遍历**，**2. 检查节点是否合法**，**3. 检查更新后的状态是否符合要求**，**4. 更新接下来 DFS 遍历的参数**。以下实现了两种形式，形式一把 match 函数放在子节点的遍历中，这样速度相对比较快，不过主函数需要处理边界情况。形式二则把 match 函数放在 DFS 函数的开头，虽然速度较慢，但是容易实现，以下是伪代码：
                     
             function dfs_first(element, res, current, target, path):
                 # 输入参数中，
                 # element 代表需要遍历的节点
                 # res 代表保存结果的最终容器
-                # current 代表当前状态（可选）
+                # current 代表当前状态
                 # target 代表目标状态
                 # path 代表遍历路径（可选）
                 
                 # 遍历每一个子节点
                 for each child in element:
-                    # 1. 修改图的节点值为非法（可选）
+                    # 1. 大部分问题中，在同一节点的遍历中都不能重复使用同一节点，所以在无向图中，需要修改图的节点值为非法，
                     graph->val = unvalid value
-                    # 2. 检查子节点是否合法，是否已经访问过，是否越界
+                    # 2. 检查子节点是否合法，包括是否已经遍历过，是否越界
                     if is_valid(child):
                         # 3. 检查子节点与元素组成的新状态是否符合条件
                         if match(current, child, target):
                             # 更新最终结果
                             res += new_res
                         else:
-                            # 4. 遍历所有合法子节点，更新状态
+                            # 4. 遍历所有合法子节点，更新当前状态以及路径
                             dfs_first(child, res, current+child.val, target, path+child)
-                    # 恢复图的节点值（可选）
+                    # 恢复图的节点值
                     graph->val = valid value
 
             function dfs_second(element, res, current, target, path):
@@ -151,60 +170,62 @@ date: 2019-07-01T00:10:14+08:00
                 # target 代表目标状态
                 # path 代表遍历路径（可选）
 
-                # 如果当前节点符合条件
+                # 1. 先验证当前状态是否符合条件
                 if match(current, element, target):
                     # 更新最终结果
                     res += new_res
                     return
-                # 遍历每一个子节点
+                # 2. 遍历每一个子节点
                 for each child in element:
-                    # 1. 修改图的节点值为非法（可选）
                     graph->val = unvalid value
-                    # 2. 检查子节点是否合法，是否已经访问过，是否越界
                     if is_valid(child):
-                        # 4. 遍历所有合法子节点，更新状态
                         dfs_first(child, res, current+child.val, target, path+child)
-                    # 恢复图的节点值（可选）
                     graph->val = valid value
                     
             function is_valid(child):
                 # 如果 child 合法则返回真，否则返回假
+                # 例如 child 在矩阵范围中
+                if 0 <= child.i < length of matrix and 0 <= child.y < length of first row of matrix
+                    return True
+                return False
                 
             function match(current, child, target):
                 # 如果当前 child 与 current 的组合满足题目与 target 的要求，则返回真
-                
+                if current + child.val equal to target
+                    return True
+                return False
                        
 #### 原题分析
 
-按照此解题模式，第一个例子可以这样实现：（形式一，Python 代码）
+我们试试在例子中运用此解题模式，第一题：（形式一，Python 代码）
 
     class Solution:
         def pathSum(self, root, sum):
             # 边界情况
             if not root:
                 return []
-            # 边界情况2，因为我们是在遍历中验证是否符合条件，所以这里要处理另外一个边界情况
+            # 边界情况2，因为我们是在遍历中验证是否符合条件，所以要检查初始条件是否已经符合要求
             if root.val == sum and not root.left and not root.right:
                 return [[root.val]]
-            # 因为根节点可以访问所有子节点，所以只需要遍历根节点
+            # 因为初始节点可以访问所有可达节点，所以只需要遍历根节点
             return self.dfs(root, [], root.val, sum, [root.val])
 
         def dfs(self, node, res, current, target, path):
-            # 遍历每一个子节点
+            # 1. 遍历每一个子节点
             for n in [node.left, node.right]:
-                # 检查子节点是否合法，是否已经访问过，是否越界
+                # 2. 检查子节点是否合法，是否已经访问过，是否越界
                 if self.is_valid(n):
-                    # 检查子节点与元素组成的新状态是否符合条件
+                    # 3. 检查子节点与元素组成的新状态是否符合条件
                     if self.match(current, n, target):
-                        # 更新最终结果
+                        # 4. 更新最终结果
                         res.append(path+[n.val])
                     else:
-                        # 遍历所有合法子节点，更新状态
+                        # 5. 遍历所有合法子节点，更新状态
                         self.dfs(n, res, current+n.val, target, path+[n.val])
             return res
 
         def is_valid(self, node):
-            # 子节点在不同的 path 中可以重复遍历，所以只要存在则返回真
+            # 只要存在则为真
             if node:
                 return True
             return False
@@ -216,7 +237,7 @@ date: 2019-07-01T00:10:14+08:00
             return False
             
          
-第二题也是类似的方法，形式一以及形式二都能实现，这里我选择了另一种特殊的方式，把 match 函数提前。
+第二题也是类似的方法，形式一以及形式二都能实现，因为形式一以及形式二区别不大，所以这里我选择了另一种特殊的方式，把 match 函数提前。
 
     class Solution:
         def numIslands(self, grid):
@@ -239,7 +260,6 @@ date: 2019-07-01T00:10:14+08:00
             for k, v in [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
                 if self.is_valid(k, v, grid):
                     # 我把 match 函数抽离出来放在主函数中了，
-                    # 这里也可以使用 match 函数的形式，即当周围节点都不为 1 的时候， count 增加 1
                     grid[k][v] = '#'
                     self.dfs(grid, k, v)
     
@@ -250,4 +270,4 @@ date: 2019-07-01T00:10:14+08:00
             return True
 
 #### 总结
-解决 DFS 问题最重要的是四点，**1. 防止点被重复遍历**，**2. 检查节点是否合法**，**3. 检查更新后的状态是否符合要求**，**4. 更新接下来 DFS 的参数**，只要按照这个思路，形式怎么写都没关系。
+解决 DFS 问题最重要的是四点，**1. 防止点被重复遍历**，**2. 检查节点是否合法**，**3. 检查更新后的状态是否符合要求**，**4. 更新接下来 DFS遍历 的参数**，只要按照这个思路，形式怎么写都没关系。
