@@ -12,20 +12,20 @@
     <title>DFS 解题模式 :: Engine GO</title>
 
     
-    <link href="/css/nucleus.css?1562501862" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1562501862" rel="stylesheet">
-    <link href="/css/hybrid.css?1562501862" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1562501862" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1562501862" rel="stylesheet">
-    <link href="/css/auto-complete.css?1562501862" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1562501862" rel="stylesheet">
-    <link href="/css/theme.css?1562501862" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1562501862" rel="stylesheet">
+    <link href="/css/nucleus.css?1562502547" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1562502547" rel="stylesheet">
+    <link href="/css/hybrid.css?1562502547" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1562502547" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1562502547" rel="stylesheet">
+    <link href="/css/auto-complete.css?1562502547" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1562502547" rel="stylesheet">
+    <link href="/css/theme.css?1562502547" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1562502547" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1562501862" rel="stylesheet">
+      <link href="/css/theme-blue.css?1562502547" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1562501862"></script>
+    <script src="/js/jquery-3.3.1.min.js?1562502547"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -1459,7 +1459,7 @@ function dfs_second(element, res, current, target, path):
     # 输入参数中，
     # element 代表需要遍历的节点
     # res 代表保存结果的最终容器
-    # current 代表当前状态（可选）
+    # current 代表当前状态
     # target 代表目标状态
     # path 代表遍历路径（可选）
 
@@ -1493,7 +1493,7 @@ function match(current, child, target):
 
 <h4 id="原题分析">原题分析</h4>
 
-<p>我们试试在例子中运用此解题模式，第一题：（<strong>以下为 Python 代码，形式二只需要把 is_valid 以及以及 match 移在 DFS 函数开头即可</strong>）</p>
+<p>我们试试在例子中运用此解题模式，第一题：（<strong>以下为 Python 代码，形式二只需要把 match 函数移在 DFS 函数开头即可</strong>）</p>
 
 <pre><code>class Solution:
     # 形式一
@@ -1532,6 +1532,11 @@ function match(current, child, target):
         if not child.left and not child.right and current + child.val == target:
             return True
         return False
+
+114 / 114 test cases passed.
+Status: Accepted
+Runtime: 60 ms
+Memory Usage: 19.1 MB
 </code></pre>
 
 <p>第二题也是类似的方法，形式一以及形式二都能实现，因为形式一以及形式二区别不大，所以这里我选择了另一种特殊的方式，把 match 函数提前。</p>
@@ -1565,6 +1570,11 @@ function match(current, child, target):
         if i &lt; 0 or j &lt; 0 or i &gt;= len(grid) or j &gt;= len(grid[0]) or grid[i][j] != '1':
             return False
         return True
+
+47 / 47 test cases passed.
+Status: Accepted
+Runtime: 84 ms
+Memory Usage: 14.1 MB
 </code></pre>
 
 <h4 id="总结">总结</h4>
@@ -2408,20 +2418,20 @@ function match(current, child, target):
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1562501862"></script>
-    <script src="/js/perfect-scrollbar.min.js?1562501862"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1562501862"></script>
-    <script src="/js/jquery.sticky.js?1562501862"></script>
-    <script src="/js/featherlight.min.js?1562501862"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1562501862"></script>
-    <script src="/js/highlight.pack.js?1562501862"></script>
+    <script src="/js/clipboard.min.js?1562502547"></script>
+    <script src="/js/perfect-scrollbar.min.js?1562502547"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1562502547"></script>
+    <script src="/js/jquery.sticky.js?1562502547"></script>
+    <script src="/js/featherlight.min.js?1562502547"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1562502547"></script>
+    <script src="/js/highlight.pack.js?1562502547"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1562501862"></script>
-    <script src="/js/learn.js?1562501862"></script>
-    <script src="/js/hugo-learn.js?1562501862"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1562502547"></script>
+    <script src="/js/learn.js?1562502547"></script>
+    <script src="/js/hugo-learn.js?1562502547"></script>
 
-    <link href="/mermaid/mermaid.css?1562501862" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1562501862"></script>
+    <link href="/mermaid/mermaid.css?1562502547" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1562502547"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
