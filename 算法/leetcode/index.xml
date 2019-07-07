@@ -6,10 +6,28 @@
     <description>Recent content in Leetcode 算法 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jul 2019 00:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 00:10:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>二分查找解题模式（未完成）</title>
+      <link>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 04 Jul 2019 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</guid>
+      <description>概述 二分查找是 Leetcode 常见的题型，难点主要有二，第一是编写正确的二分查找程序。第二是想到用二分查找来解这道题，这点我觉得更加难。
+辨别问题 先仔细阅读二分查找的使用范围：
+ 从一个有限的递增区间中，找到目标值或其索引
+ 像我说的这个看起来容易，但是不少题目往往不那么容易找到这个递增区间，常见的提示是
+ 题目要求的答案与数据结构的和有关。 所求答案有明确的上下界限范围。  这里举几个例子：
+ Leetcode 33 Search in Rotated Sorted Array
+ Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+You may assume no duplicate exists in the array.</description>
+    </item>
     
     <item>
       <title>DFS 解题模式</title>
@@ -25,25 +43,6 @@
  &amp;ldquo;Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.&amp;rdquo;
 “给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
  Given the below binary tree and sum = 22, input: 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 output: [ [5,4,11,2], [5,8,4,5] ]  Leetcode 200 Number of Islands</description>
-    </item>
-    
-    <item>
-      <title>二分查找解题模式（未完成）</title>
-      <link>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Mon, 01 Jul 2019 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</guid>
-      <description>概述 二分查找是 Leetcode 常见的题型，难点主要有二，第一是编写正确的二分查找程序，过来人都知道，这一开始并不容易。第二是想到用二分查找来解这道题，这点比较难，因为要从题目中阅读到二分查找的必须条件，从递增的有限区间，找到目标值或其索引。
-辨别问题 我们仔细阅读下二分查找的必要条件：
- 从一个有限的递增区间种，找到目标值或其索引
- 像我说的这个看起来容易，但是不少题目往往不那么容易找到这个递增区间，常见的提示是
- 题目要求的答案与数组的和有关 数组都是正整数（二分查找的最小范围不会小于0）  这里有两个例子，你可以从中找下递增区间，相信可以慢慢找到感觉。
-解题模式 如果我们找到了递增区间，那么就可以开始编写二分查找的程序了，二分查找的程序有几种返回值
- 查找目标元素是否在区间内 查找目标元素插入的索引值（左边或者右边） 查找区间内符合 is_valid 函数的最大值/最小值  我们先过一遍二分查找的程序，二分查找实现方式有多种，这里只要不混淆即可，里面有几个要注意的点，循环不变式：
-在左边界以及右边界之间的递增区间中，找到目标值或其索引
-这里面有几个容易犯错的地方
-   实现方式 右边界初始值 右边界是否可达 左右边界能否相等 更新右边界     1 数组长度 不能 不能 等于 mid   2 数组长度减一 可以 可以 等于 mid - 1     右边界的范围 常见的实现方式中，右边界可以是数组长度（因为索引从零开始，所以不可达），也可以是数组长度减一（可达）， 之后的几点都是间接地遵循这个初始条件。这里可以推理出，因为  右边界是数组长度-&amp;gt;不可达-&amp;gt;循环是找有效值，所以当左边界等于右边界的时候应该跳出循环。—&amp;gt;右边界更新的时候更新为mid而是mid-1（因为mid-1还没验证过，可能是结果） 以下的实现是形式1，同时注解中描述了两种形式都要注意的问题
-function binary_search(array, target): left = 0 or minimal val right = length of array while left &amp;lt; right: # 1.</description>
     </item>
     
   </channel>

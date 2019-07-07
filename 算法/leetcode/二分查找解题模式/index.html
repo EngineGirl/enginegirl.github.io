@@ -12,20 +12,20 @@
     <title>二分查找解题模式（未完成） :: Engine GO</title>
 
     
-    <link href="/css/nucleus.css?1562502547" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1562502547" rel="stylesheet">
-    <link href="/css/hybrid.css?1562502547" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1562502547" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1562502547" rel="stylesheet">
-    <link href="/css/auto-complete.css?1562502547" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1562502547" rel="stylesheet">
-    <link href="/css/theme.css?1562502547" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1562502547" rel="stylesheet">
+    <link href="/css/nucleus.css?1562511439" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1562511439" rel="stylesheet">
+    <link href="/css/hybrid.css?1562511439" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1562511439" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1562511439" rel="stylesheet">
+    <link href="/css/auto-complete.css?1562511439" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1562511439" rel="stylesheet">
+    <link href="/css/theme.css?1562511439" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1562511439" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1562502547" rel="stylesheet">
+      <link href="/css/theme-blue.css?1562511439" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1562502547"></script>
+    <script src="/js/jquery-3.3.1.min.js?1562511439"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -1095,9 +1095,9 @@
  
   
     
-      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="DFS 解题模式" class="dd-item ">
-        <a href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
-        DFS 解题模式
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="二分查找解题模式（未完成）" class="dd-item active">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
+        二分查找解题模式（未完成）
         
         </a>
     </li>
@@ -1114,9 +1114,9 @@
  
   
     
-      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="二分查找解题模式（未完成）" class="dd-item active">
-        <a href="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
-        二分查找解题模式（未完成）
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="DFS 解题模式" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
+        DFS 解题模式
         
         </a>
     </li>
@@ -1244,7 +1244,7 @@
           
              <h1>二分查找解题模式（未完成）</h1>
              <h5>作者：Windson Yang</h5>
-             <h5>更新时间：July 1, 2019</h5>
+             <h5>更新时间：July 4, 2019</h5>
              <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
              <hr>
           
@@ -1257,28 +1257,110 @@
 
 <h4 id="概述">概述</h4>
 
-<p>二分查找是 Leetcode 常见的题型，难点主要有二，第一是编写正确的二分查找程序，过来人都知道，这一开始并不容易。第二是想到用二分查找来解这道题，这点比较难，因为要从题目中阅读到二分查找的必须条件，<strong>从递增的有限区间，找到目标值或其索引。</strong></p>
+<p>二分查找是 Leetcode 常见的题型，难点主要有二，<strong>第一是编写正确的二分查找程序。第二是想到用二分查找来解这道题，这点我觉得更加难。</strong></p>
 
 <h4 id="辨别问题">辨别问题</h4>
 
-<p>我们仔细阅读下二分查找的必要条件：</p>
+<p>先仔细阅读二分查找的使用范围：</p>
 
 <blockquote>
-<p>从一个有限的递增区间种，找到目标值或其索引</p>
+<p>从一个有限的递增区间中，找到目标值或其索引</p>
 </blockquote>
 
 <p>像我说的这个看起来容易，但是不少题目往往不那么容易找到这个递增区间，常见的提示是</p>
 
 <ol>
-<li>题目要求的答案与数组的和有关</li>
-<li>数组都是正整数（二分查找的最小范围不会小于0）</li>
+<li>题目要求的答案与数据结构的和有关。</li>
+<li>所求答案有明确的上下界限范围。</li>
 </ol>
 
-<p>这里有两个例子，你可以从中找下递增区间，相信可以慢慢找到感觉。</p>
+<p>这里举几个例子：</p>
+
+<ul>
+<li><p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">Leetcode 33 Search in Rotated Sorted Array</a></p>
+
+<blockquote>
+<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+
+<p>(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).</p>
+
+<p>You are given a target value to search. If found in the array return its index, otherwise return -1.</p>
+
+<p>You may assume no duplicate exists in the array.</p>
+
+<p>Your algorithm&rsquo;s runtime complexity must be in the order of O(log n).</p>
+
+<p>Example 1:</p>
+</blockquote>
+
+<pre><code>Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+</code></pre>
+
+<p><strong>有限递增区间是 [4, 5, 6, 7] 以及 [0, 1, 2]，要求返回 target 的索引。</strong></p></li>
+
+<li><p><a href="https://leetcode.com/problems/sqrtx/">69. Sqrt(x)</a></p>
+
+<blockquote>
+<p>Implement int sqrt(int x).</p>
+
+<p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.</p>
+
+<p>Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
+
+<p>Example 1:</p>
+</blockquote>
+
+<pre><code>Input: 4
+Output: 2
+</code></pre>
+
+<p><strong>有限递增区间是 [0, 1, 2, 3, 4] 要求返回数组中最接近 4 的平方根的值。</strong></p></li>
+
+<li><p><a href="https://leetcode.com/problems/longest-duplicate-substring/">1044. Longest Duplicate Substring</a></p>
+
+<blockquote>
+<p>Given a string S, consider all duplicated substrings: (contiguous) substrings of S that occur 2 or more times.  (The occurrences may overlap.)</p>
+
+<p>Return any duplicated substring that has the longest possible length.  (If S does not have a duplicated substring, the answer is &ldquo;&rdquo;.)</p>
+
+<p>Example 1:</p>
+</blockquote>
+
+<pre><code>Input: &quot;banana&quot;
+Output: &quot;ana&quot;
+</code></pre>
+
+<p><strong>有限递增区间是 [0, 1, 2, 3, 4, 5]（字符串的长度），要求返回最长的重复的字符串。</strong></p></li>
+
+<li><p><a href="https://leetcode.com/problems/swim-in-rising-water/">778. Swim in Rising Water</a></p>
+
+<blockquote>
+<p>On an N x N grid, each square grid[i][j] represents the elevation at that point (i,j).</p>
+
+<p>Now rain starts to fall. At time t, the depth of the water everywhere is t. You can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most t. You can swim infinite distance in zero time. Of course, you must stay within the boundaries of the grid during your swim.</p>
+
+<p>You start at the top left square (0, 0). What is the least time until you can reach the bottom right square (N-1, N-1)?</p>
+
+<p>Example 1:</p>
+</blockquote>
+
+<pre><code>Input: [[0,2],[1,3]]
+Output: 3
+
+Explanation:
+At time 0, you are in grid location (0, 0).
+You cannot go anywhere else because 4-directionally adjacent neighbors have a higher elevation than t = 0.
+You cannot reach point (1, 1) until time 3.
+When the depth of water is 3, we can swim anywhere inside the grid.
+</code></pre>
+
+<p><strong>有限递增区间是 [0, 1, 2, 3]（矩阵的节点数量），要求返回最小的可达右下角的时间。</strong></p></li>
+</ul>
 
 <h4 id="解题模式">解题模式</h4>
 
-<p>如果我们找到了递增区间，那么就可以开始编写二分查找的程序了，二分查找的程序有几种返回值</p>
+<p>如果我们足够幸运找到了这个递增区间，那么就可以开始编写二分查找的程序了，二分查找的程序有几种返回值。</p>
 
 <ol>
 <li>查找目标元素是否在区间内</li>
@@ -1286,11 +1368,21 @@
 <li>查找区间内符合 <strong>is_valid</strong> 函数的最大值/最小值</li>
 </ol>
 
-<p>我们先过一遍二分查找的程序，二分查找实现方式有多种，这里只要不混淆即可，里面有几个要注意的点，循环不变式：</p>
+<p>我们先过一遍二分查找的程序，二分查找实现方式有多种，我们这里只介绍三种，这里只要不混淆即可，里面有几个要注意的点。<strong>1.右边界的可达性, 2. 跳出循环的时间，3. 更新右边界的大小</strong>，什么意思呢？我们有一个数组：</p>
 
-<p>在左边界以及右边界之间的递增区间中，找到目标值或其索引</p>
+<pre><code>[1, 2, 3, 4, 5]
+</code></pre>
 
-<p>这里面有几个容易犯错的地方</p>
+<p>通常我们会先设立左右边界，左边界是第一个元素，那么右边界呢？有两种实现方式：</p>
+
+<pre><code>[1, 2, 3, 4, 5]
+ |           |               
+ left        right（可达）
+
+[1, 2, 3, 4, 5]
+ |              |               
+ left           right（不可达）
+</code></pre>
 
 <table>
 <thead>
@@ -1305,7 +1397,7 @@
 
 <tbody>
 <tr>
-<td>1</td>
+<td>一</td>
 <td>数组长度</td>
 <td>不能</td>
 <td>不能</td>
@@ -1313,7 +1405,7 @@
 </tr>
 
 <tr>
-<td>2</td>
+<td>二</td>
 <td>数组长度减一</td>
 <td>可以</td>
 <td>可以</td>
@@ -1324,32 +1416,47 @@
 
 <ol>
 <li>右边界的范围
-常见的实现方式中，右边界可以是数组长度（因为索引从零开始，所以不可达），也可以是数组长度减一（可达），
-之后的几点都是间接地遵循这个初始条件。这里可以推理出，因为</li>
+要注意的几点都是间接地遵循这个初始条件。</li>
 </ol>
 
-<p>右边界是数组长度-&gt;不可达-&gt;循环是找有效值，所以当左边界等于右边界的时候应该跳出循环。—&gt;右边界更新的时候更新为mid而是mid-1（因为mid-1还没验证过，可能是结果）
-以下的实现是形式1，同时注解中描述了两种形式都要注意的问题</p>
+<blockquote>
+<p>右边界不可达 -&gt; 当左边界等于右边界的时候应该跳出循环 -&gt; 右边界更新的时候更新为mid而是mid-1（因为mid-1还没验证过，可能是结果）</p>
+</blockquote>
 
-<pre><code>function binary_search(array, target):
-    left = 0 or minimal val
+<pre><code>function binary_search_one(array, target):
+    left = 0
+    # 右边界不可达
     right = length of array
+    # left = right 的时候跳出循环
     while left &lt; right:
-        # 1. 根据题目要求，有时候会使用 left += (right-left)/2 的方式防止正整数移除，之后就把 left 当作 mid 即可。
-        # 2. 我们找的目标值是整数还是浮点数来觉得是否使用整除。
-        # Leetcode xxx 这里要对比的值是浮点数，就不能使用整除，而且之后 left 与 right 都应该更新为 mid，因为 mid + 1 有可能会错过正确答案
         mid = (left+right) / 2
         if array-&gt;mid equal to target:
             return mid
         else if array-&gt;mid &lt; target:
             left = mid + 1
         else:
+            # mid 不是答案，所有右边界设立为 mid
             right = mid
+
+function binary_search_two(array, target):
+    left = 0
+    # 右边界可达
+    right = length of array minus one
+    # left = right 的时候跳出循环
+    while left &lt;= right:
+        mid = (left+right) / 2
+        if array-&gt;mid equal to target:
+            return mid
+        else if array-&gt;mid &lt; target:
+            left = mid + 1
+        else:
+            # 所有右边界设立为 mid -1
+            right = mid - 1
+
+
+1. 根据题目要求，有时候会使用 left += (right-left) / 2 的方式防止正整数溢出，之后就把 left 当作 mid 即可。
+2. 需要根据我们找的目标值是整数还是浮点数来觉得是否使用整除。
 </code></pre>
-
-<p>找目标值这个是最基础的二分查找，比较复杂的是找插入的索引值，或者查找数组中满足 is_valid 函数的值。这里举例：</p>
-
-<p>Leetcode 778. Swim in Rising Water</p>
 
 
 <footer class=" footline" >
@@ -2129,8 +2236,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -2148,6 +2253,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -2175,7 +2282,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="DFS 解题模式"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/%E7%AE%97%E6%B3%95/leetcode/" title="Leetcode 算法"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="DFS 解题模式" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -2188,20 +2295,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1562502547"></script>
-    <script src="/js/perfect-scrollbar.min.js?1562502547"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1562502547"></script>
-    <script src="/js/jquery.sticky.js?1562502547"></script>
-    <script src="/js/featherlight.min.js?1562502547"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1562502547"></script>
-    <script src="/js/highlight.pack.js?1562502547"></script>
+    <script src="/js/clipboard.min.js?1562511439"></script>
+    <script src="/js/perfect-scrollbar.min.js?1562511439"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1562511439"></script>
+    <script src="/js/jquery.sticky.js?1562511439"></script>
+    <script src="/js/featherlight.min.js?1562511439"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1562511439"></script>
+    <script src="/js/highlight.pack.js?1562511439"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1562502547"></script>
-    <script src="/js/learn.js?1562502547"></script>
-    <script src="/js/hugo-learn.js?1562502547"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1562511439"></script>
+    <script src="/js/learn.js?1562511439"></script>
+    <script src="/js/hugo-learn.js?1562511439"></script>
 
-    <link href="/mermaid/mermaid.css?1562502547" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1562502547"></script>
+    <link href="/mermaid/mermaid.css?1562511439" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1562511439"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
