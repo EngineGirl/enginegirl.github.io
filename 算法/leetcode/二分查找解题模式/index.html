@@ -12,20 +12,20 @@
     <title>二分查找解题模式 :: Engine GO</title>
 
     
-    <link href="/css/nucleus.css?1562595528" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1562595528" rel="stylesheet">
-    <link href="/css/hybrid.css?1562595528" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1562595528" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1562595528" rel="stylesheet">
-    <link href="/css/auto-complete.css?1562595528" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1562595528" rel="stylesheet">
-    <link href="/css/theme.css?1562595528" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1562595528" rel="stylesheet">
+    <link href="/css/nucleus.css?1562596121" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1562596121" rel="stylesheet">
+    <link href="/css/hybrid.css?1562596121" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1562596121" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1562596121" rel="stylesheet">
+    <link href="/css/auto-complete.css?1562596121" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1562596121" rel="stylesheet">
+    <link href="/css/theme.css?1562596121" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1562596121" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1562595528" rel="stylesheet">
+      <link href="/css/theme-blue.css?1562596121" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1562595528"></script>
+    <script src="/js/jquery-3.3.1.min.js?1562596121"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -1308,10 +1308,10 @@
 <p>先分析二分查找算法的使用场景：</p>
 
 <blockquote>
-<p>从一个有限的递增区间中，找到目标值或其索引</p>
+<p>从一个有限的递增区间中，找到符合条件的极值。</p>
 </blockquote>
 
-<p>所以我们需要从题目中找到<strong>有限递增区间以及目标值</strong>，先从最基础的二分查找程序开始，</p>
+<p>所以我们需要从题目中找到<strong>有限递增区间以及条件</strong>，先从最基础的二分查找程序开始，</p>
 
 <blockquote>
 <p><a href="https://leetcode.com/problems/binary-search/">Leetcode 704. Binary Search</a></p>
@@ -1327,7 +1327,7 @@ Output: 4
 Explanation: 9 exists in nums and its index is 4
 </code></pre>
 
-<p><strong>有限递增区间是 [-1, 0, 3, 5, 9, 12]，目标值是 9。</strong></p>
+<p><strong>有限递增区间是 [-1, 0, 3, 5, 9, 12]，条件是值等于 9。</strong></p>
 
 <p>这题的有限递增区间与目标值都非常明显，其中<strong>递增数组，返回目标值的索引</strong>，这两个词都可以把我们引领到二分查找算法点。不过一些难题往往不那么容易找到这些信息，这里有几个例子，你可以试试找出递增区间以及目标值：</p>
 
@@ -1348,7 +1348,7 @@ Explanation: 9 exists in nums and its index is 4
 Output: 2
 </code></pre>
 
-<p><strong>有限递增区间是 [0, 1, 2, 3, 4]，目标值是数组中最接近 4 的平方根转成整数后的值。我们计算数组中 2 的平方与 4 的大小关系，然后更新搜索区间。</strong></p></li>
+<p><strong>有限递增区间是 [0, 1, 2, 3, 4]，条件是最大的数组中平方小于等于 4 的值。先计算递增区间中 2 的平方与 4 的大小关系，然后更新搜索区间。</strong></p></li>
 
 <li><p><a href="https://leetcode.com/problems/longest-duplicate-substring/">1044. Longest Duplicate Substring</a></p>
 
@@ -1364,7 +1364,7 @@ Output: 2
 Output: &quot;ana&quot;
 </code></pre>
 
-<p><strong>有限递增区间是 [0, 1, 2, 3, 4, 5]（零到字符串的长度减一），目标值是最长的重复出现的字符串的长度。我们先计算字符串长度为 2 的所有字符串是否符合条件，如果符合的话，我们尝试找更长的字符串，直到循环结束。</strong></p></li>
+<p><strong>有限递增区间是 [0, 1, 2, 3, 4, 5]（零到字符串的长度减一），条件是最长的有重复出现的字符串。我们先计算字符串长度为 2 的所有字符串是否符合条件，如果符合的话，我们尝试找更长的字符串，直到循环结束。</strong></p></li>
 
 <li><p><a href="https://leetcode.com/problems/swim-in-rising-water/">778. Swim in Rising Water</a></p>
 
@@ -1386,7 +1386,7 @@ You cannot reach point (1, 1) until time 3.
 When the depth of water is 3, we can swim anywhere inside the grid.
 </code></pre>
 
-<p><strong>有限递增区间是 [0, 1, 2, 3]（矩阵的节点总数即题目中的时间），目标值是数组中合法的最小能够到达右下角的时间。先计算 time 为 1 的时候能否到达右下角，可以的话，就更新区间，找更短的时间。</strong></p></li>
+<p><strong>有限递增区间是 [0, 1, 2, 3]（矩阵的节点总数即题目中的时间），条件是数组中最小的能够到达右下角的合法值。先计算 time 为 1 的时候能否到达右下角，可以的话，就更新区间，找更短的时间。</strong></p></li>
 </ul>
 
 <p>像我一开始说的，二分查找的程序本身并不难，但是想到这题可以用二分查找来解答并不容易，另外题目常见的几个提示二分查找的提示语分别是：</p>
@@ -2458,20 +2458,20 @@ ana -&gt; in the hashmap -&gt; return 'ana'
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1562595528"></script>
-    <script src="/js/perfect-scrollbar.min.js?1562595528"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1562595528"></script>
-    <script src="/js/jquery.sticky.js?1562595528"></script>
-    <script src="/js/featherlight.min.js?1562595528"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1562595528"></script>
-    <script src="/js/highlight.pack.js?1562595528"></script>
+    <script src="/js/clipboard.min.js?1562596121"></script>
+    <script src="/js/perfect-scrollbar.min.js?1562596121"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1562596121"></script>
+    <script src="/js/jquery.sticky.js?1562596121"></script>
+    <script src="/js/featherlight.min.js?1562596121"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1562596121"></script>
+    <script src="/js/highlight.pack.js?1562596121"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1562595528"></script>
-    <script src="/js/learn.js?1562595528"></script>
-    <script src="/js/hugo-learn.js?1562595528"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1562596121"></script>
+    <script src="/js/learn.js?1562596121"></script>
+    <script src="/js/hugo-learn.js?1562596121"></script>
 
-    <link href="/mermaid/mermaid.css?1562595528" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1562595528"></script>
+    <link href="/mermaid/mermaid.css?1562596121" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1562596121"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
