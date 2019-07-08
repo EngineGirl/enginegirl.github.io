@@ -30,7 +30,32 @@ You may assume no duplicate exists in the array.</description>
     </item>
     
     <item>
+      <title>单调队列解题模式（未完成）</title>
+      <link>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Thu, 04 Jul 2019 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</guid>
+      <description>概述 496. Next Greater Element I</description>
+    </item>
+    
+    <item>
       <title>DFS 解题模式</title>
+      <link>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8A/</link>
+      <pubDate>Mon, 01 Jul 2019 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8A/</guid>
+      <description>概述 这篇文章介绍 Leetcode 常见 DFS 问题的解题模式，希望你了解这些模式之后，对大部分 DFS 问题（hard 难度的需要一些变形）都能够迎刃而解。由于 Leetcode 上 DFS 问题中常见的都是无环图，所以我们这里也只讨论无环图的解题模式。阅读本文之前你需要对图的基础知识有一定的了解，包括什么是图？常见的图的类型有那些？（有向无环图，有向有环图），如何遍历图？（前序遍历以及后序遍历）。
+辨别问题 那么什么样的问题可以用 DFS 来解决呢？，DFS 问题常见的表达形式为：
+ “给定一个图（树，字符串，矩阵），找到在遍历图的过程中，符合特定条件的数值或路径。”
+ 上面的这个定义有点抽象，举两个例子：
+ Leetcode 113 Path Sum II
+ &amp;ldquo;Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.&amp;rdquo;
+“给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
+ Given the below binary tree and sum = 22, input: 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 output: [ [5,4,11,2], [5,8,4,5] ]  Leetcode 200 Number of Islands</description>
+    </item>
+    
+    <item>
+      <title>DFS 解题模式（上）</title>
       <link>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Mon, 01 Jul 2019 00:10:14 +0800</pubDate>
       
