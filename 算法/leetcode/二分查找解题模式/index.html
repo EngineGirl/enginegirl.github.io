@@ -12,20 +12,20 @@
     <title>二分查找解题模式 :: Engine GO</title>
 
     
-    <link href="/css/nucleus.css?1562596121" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1562596121" rel="stylesheet">
-    <link href="/css/hybrid.css?1562596121" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1562596121" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1562596121" rel="stylesheet">
-    <link href="/css/auto-complete.css?1562596121" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1562596121" rel="stylesheet">
-    <link href="/css/theme.css?1562596121" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1562596121" rel="stylesheet">
+    <link href="/css/nucleus.css?1562632244" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1562632244" rel="stylesheet">
+    <link href="/css/hybrid.css?1562632244" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1562632244" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1562632244" rel="stylesheet">
+    <link href="/css/auto-complete.css?1562632244" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1562632244" rel="stylesheet">
+    <link href="/css/theme.css?1562632244" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1562632244" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1562596121" rel="stylesheet">
+      <link href="/css/theme-blue.css?1562632245" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1562596121"></script>
+    <script src="/js/jquery-3.3.1.min.js?1562632245"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -1308,10 +1308,10 @@
 <p>先分析二分查找算法的使用场景：</p>
 
 <blockquote>
-<p>从一个有限的递增区间中，找到符合条件的极值。</p>
+<p>从一个有限的递增区间中，找到符合要求的极值。</p>
 </blockquote>
 
-<p>所以我们需要从题目中找到<strong>有限递增区间以及条件</strong>，先从最基础的二分查找程序开始，</p>
+<p>我们需要从题目中找到<strong>有限递增区间以及目标</strong>，先从最基础的二分查找程序开始，</p>
 
 <blockquote>
 <p><a href="https://leetcode.com/problems/binary-search/">Leetcode 704. Binary Search</a></p>
@@ -1327,9 +1327,14 @@ Output: 4
 Explanation: 9 exists in nums and its index is 4
 </code></pre>
 
-<p><strong>有限递增区间是 [-1, 0, 3, 5, 9, 12]，条件是值等于 9。</strong></p>
+<p><strong>有限递增区间是 [-1, 0, 3, 5, 9, 12]，目标是找到值等于 9 的元素。</strong></p>
 
-<p>这题的有限递增区间与目标值都非常明显，其中<strong>递增数组，返回目标值的索引</strong>，这两个词都可以把我们引领到二分查找算法点。不过一些难题往往不那么容易找到这些信息，这里有几个例子，你可以试试找出递增区间以及目标值：</p>
+<p>如果你不太熟悉二分查找，可以从这张 Gif 中观察查找的过程：
+<img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/al/bs_gif.gif" alt="binary_search" /></p>
+
+<p>(引用自 <a href="https://brilliant.org/wiki/binary-search/">https://brilliant.org/wiki/binary-search/</a>)</p>
+
+<p>这题的有限递增区间与目标值都非常明显，其中<strong>递增数组，返回目标值的索引</strong>，这两个词暗示着使用二分查找解答。不过一些题往往不会直接给出这些关键信息，所以也不容易想到可以使用二分查找解答。这里有几个例子，你可以试试在其中找出<strong>有限递增区间以及目标</strong>：</p>
 
 <ul>
 <li><p><a href="https://leetcode.com/problems/sqrtx/">69. Sqrt(x)</a></p>
@@ -1348,7 +1353,7 @@ Explanation: 9 exists in nums and its index is 4
 Output: 2
 </code></pre>
 
-<p><strong>有限递增区间是 [0, 1, 2, 3, 4]，条件是最大的数组中平方小于等于 4 的值。先计算递增区间中 2 的平方与 4 的大小关系，然后更新搜索区间。</strong></p></li>
+<p><strong>有限递增区间是 [0, 1, 2, 3, 4]（0 到 目标值的值），目标是找到最大的数组中平方小于等于 4 的值。例子中，我们会先计算递增区间里 2 的平方与 4 的大小关系，然后更新搜索区间。</strong></p></li>
 
 <li><p><a href="https://leetcode.com/problems/longest-duplicate-substring/">1044. Longest Duplicate Substring</a></p>
 
@@ -1364,7 +1369,7 @@ Output: 2
 Output: &quot;ana&quot;
 </code></pre>
 
-<p><strong>有限递增区间是 [0, 1, 2, 3, 4, 5]（零到字符串的长度减一），条件是最长的有重复出现的字符串。我们先计算字符串长度为 2 的所有字符串是否符合条件，如果符合的话，我们尝试找更长的字符串，直到循环结束。</strong></p></li>
+<p><strong>有限递增区间是 [0, 1, 2, 3, 4, 5]（零到字符串的长度减一），目标是找到最长的有重复出现的字符串。例子中我们先计算字符串长度为 2 的所有字符串是否有重复出现的字符串，如果有的话，我们尝试找更长的长度为 3 的字符串，更新搜索区间，直到循环结束。</strong></p></li>
 
 <li><p><a href="https://leetcode.com/problems/swim-in-rising-water/">778. Swim in Rising Water</a></p>
 
@@ -1386,20 +1391,20 @@ You cannot reach point (1, 1) until time 3.
 When the depth of water is 3, we can swim anywhere inside the grid.
 </code></pre>
 
-<p><strong>有限递增区间是 [0, 1, 2, 3]（矩阵的节点总数即题目中的时间），条件是数组中最小的能够到达右下角的合法值。先计算 time 为 1 的时候能否到达右下角，可以的话，就更新区间，找更短的时间。</strong></p></li>
+<p><strong>有限递增区间是 [0, 1, 2, 3]（矩阵的节点总数），目标是找到数组中最小的且能够到达右下角的合法值。例子中先计算 time 为 1 的时候能否到达右下角，可以的话，就更新区间，找更短的时间。</strong></p></li>
 </ul>
 
-<p>像我一开始说的，二分查找的程序本身并不难，但是想到这题可以用二分查找来解答并不容易，另外题目常见的几个提示二分查找的提示语分别是：</p>
+<p>像我一开始说的，二分查找的程序本身并不难，但是想到这题可以用二分查找来解答并不容易，<strong>另外常见的几个使用二分查找的提示语分别是：</strong></p>
 
 <ol>
 <li>时间复杂度与 O(log(n)) 有关</li>
 <li>所求答案有明确的上下界限范围。</li>
-<li>题目描述中包括数据结构的和（如正整数数组的和，此时可以使用累积和使用二分查找）。</li>
+<li>题目描述中涉及到数据结构的和（如一个全部为正整数的数组，此时可以先计算累积和（保证是递增数组），然后使用二分查找）。</li>
 </ol>
 
 <h4 id="解题模式">解题模式</h4>
 
-<p>如果我们足够幸运找到了递增区间与目标值，那么就可以开始编写二分查找的程序了，解题模式比较直观，先从递增区间的中间开始，验证 mid 是否符合条件，根据返回值更新查找范围，每次缩小一半范围直到跳出循环：</p>
+<p>如果我们足够幸运找到了递增区间与目标，那么就可以开始编写二分查找的程序了，解题模式比较直观，先从递增区间的中间开始，验证 mid 是否符合条件，然后根据返回值更新查找范围，每次缩小一半范围直到跳出循环，以下是伪代码：</p>
 
 <pre><code>function binary_search(array, target):
     left = 0
@@ -1419,12 +1424,32 @@ function is_valid(mid):
     # 返回 mid 是否符合条件的布尔值
 </code></pre>
 
-<p>程序本身实现并不难，不过初学者容易混淆一些边界条件导致死循环，我们这里通过分析两种正确的二分查找程序来说明如何避免死循环，给定数组：</p>
+<p>以上是最基础的二分查找程序，只需要找到符合条件的值即退出循环，不过在上面的 Leetcode 例子中，大多需要找到极大值或者极小值，所以需要变形为：</p>
+
+<pre><code>function binary_search(array, target):
+    left = 0
+    right = length of array
+    while left smaller than right
+        mid = (left + right) / 2
+        # 使用 left 保存上次符合条件的值
+        if is_valid(mid) is True
+            left = mid + 1
+        else:
+            right = mid 
+    # 返回最后的合法值
+    return left
+
+
+function is_valid(mid):
+    # 返回 mid 是否符合条件的布尔值
+</code></pre>
+
+<p>以上的程序实现起来并不难，不过初学者容易混淆一些边界条件导致死循环，我们这里通过分析<strong>两种正确的二分查找程序</strong>来说明如何编写正确的程序，给定数组：</p>
 
 <pre><code>[1, 2, 3, 4, 5]
 </code></pre>
 
-<p>两种实现方式区别在于右边界的值：第一种实现方式定义右边界为递增区间长度，第二种实现方式定义右边界为递增区间长度减一：</p>
+<p>两种实现方式区别在于<strong>右边界的初始值</strong>：第一种实现方式定义右边界为递增区间长度，第二种实现方式定义右边界为递增区间长度减一：</p>
 
 <pre><code>[1, 2, 3, 4, 5]
  |              |               
@@ -1441,36 +1466,6 @@ function is_valid(mid):
 <li><strong>跳出循环条件</strong>：当左边界等于右边界时，因为右边界不可达，所以此时的左边界也不可达，所以查找结束，跳出循环。</li>
 <li><strong>右边界更新值</strong>：右边界不可达是在整个函数都不变的，所以在更新右边界的时候，应该更新为验证过的 mid，而不是 mid - 1。（因为 mid - 1 是可达的）</li>
 </ol>
-
-<table>
-<thead>
-<tr>
-<th>实现方式</th>
-<th>右边界初始值</th>
-<th>右边界是否可达</th>
-<th>跳出循环条件</th>
-<th>更新右边界</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>一</td>
-<td>递增区间长度</td>
-<td>不能</td>
-<td>while left &lt; right</td>
-<td>等于 mid</td>
-</tr>
-
-<tr>
-<td>二</td>
-<td>递增区间长度减一</td>
-<td>可以</td>
-<td>while left &lt;= right</td>
-<td>等于 mid - 1</td>
-</tr>
-</tbody>
-</table>
 
 <p>以下是两种形式的伪代码：</p>
 
@@ -1511,15 +1506,44 @@ function binary_search_two(array, target):
             right = mid - 1
 </code></pre>
 
-<p>两种实现方式也有共同需要注意的地方，在代码：</p>
+<table>
+<thead>
+<tr>
+<th>实现方式</th>
+<th>右边界初始值</th>
+<th>右边界是否可达</th>
+<th>跳出循环条件</th>
+<th>更新右边界</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>一</td>
+<td>递增区间长度</td>
+<td>不能</td>
+<td>while left &lt; right</td>
+<td>等于 mid</td>
+</tr>
+
+<tr>
+<td>二</td>
+<td>递增区间长度减一</td>
+<td>可以</td>
+<td>while left &lt;= right</td>
+<td>等于 mid - 1</td>
+</tr>
+</tbody>
+</table>
+
+<p>你可以试试解决 <a href="https://leetcode.com/problems/binary-search/">Binary Search</a> 来验证自己是否正确理解，其中两种实现方式也有共同需要注意的地方，在代码段：</p>
 
 <pre><code>mid = (left + right) / 2
 </code></pre>
 
 <ol>
-<li>根据题目要求，有时候会使用 <strong>left += (right-left) / 2</strong> 的方式防止正整数溢出。</li>
-<li>需要根据我们找的目标值是整数还是浮点数来觉得是否使用整除。</li>
-<li>如果答案可能是浮点数的话，left 与 right 更新边界都应该为 mid。</li>
+<li>根据题目要求，可能需要改为 <strong>left += (right-left) / 2</strong> 的方式防止正整数溢出。</li>
+<li>需要根据我们找的目标值是整数还是浮点数来决定是否使用整除，若目标值是浮点数，left 与 right 应该更新边界为 mid。(如果像之前一样更新为 mid - 1 或 mid + 1 的话，会错过 mid 到 mid - 1 / mid + 1 之间的可能答案）</li>
 </ol>
 
 <h4 id="原题分析">原题分析</h4>
@@ -1549,7 +1573,7 @@ nan -&gt; not in the hashmap -&gt; hashmap = {ban, ana, nan}
 ana -&gt; in the hashmap -&gt; return 'ana'
 </code></pre>
 
-<p>在 Leetcode 中，某些 testcase 会导致 Memory Limit Exceeded，所以需要我们自己实现简单的 hash table。不过这里为了主要说明二分查找，我使用 hash table。以下是 Python 代码：</p>
+<p>在 Leetcode 中，某些 testcase 会导致 Memory Limit Exceeded，所以需要我们自己实现简单的 hash table。不过本文主要说明二分查找，欧意我直接使用 hash table。以下是 Python 代码：</p>
 
 <pre><code>class Solution:
     '''
@@ -1563,14 +1587,14 @@ ana -&gt; in the hashmap -&gt; return 'ana'
             # 不同于简单的二分查找，我们要找的是符合条件的
             # 最大值或者最小值，所以当 is_valid 返回 True 的时候
             # 并不直接返回，得到答案，而是先保存当前符合条件的答案，然后持续更新
-            pos = self.is_valid(mi)
+            pos = self.is_valid(mi, S)
             if pos:
                 lo = mi
             else:
                 hi = mi - 1
         return self.ans
 
-    def is_valid(self, L):
+    def is_valid(self, L, S):
         dic = {}
         for i in range(len(S)-L+1):
             if S[i:i+L] in dic:
@@ -1578,13 +1602,13 @@ ana -&gt; in the hashmap -&gt; return 'ana'
                 self.ans = S[i:i+L]
                 return True
             else:
-                dic[S[i:i+L]] = S[i:i+L]
+                dic[S[i:i+L]] = True
         return False
 </code></pre>
 
 <h4 id="总结">总结</h4>
 
-<p>正确实现二分查找算法是解题的第一步（<strong>注意右边界的可达性</strong>），接下来就是观察题目能否用二分查找解决，通常都是找出符合条件的极大值或者极小值，注意使用 is_valid 函数进行验证，在其中更新答案，或者在二分查找的最后返回 left / right 的值（符合条件的极值）。</p>
+<p>观察题目能否用二分查找是解题的第一步，需要观察题目，找到<strong>有限递增区间以及目标</strong>，第二部则是正确实现二分查找算法（<strong>注意右边界的可达性</strong>）。</p>
 
 
 <footer class=" footline" >
@@ -2458,20 +2482,20 @@ ana -&gt; in the hashmap -&gt; return 'ana'
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1562596121"></script>
-    <script src="/js/perfect-scrollbar.min.js?1562596121"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1562596121"></script>
-    <script src="/js/jquery.sticky.js?1562596121"></script>
-    <script src="/js/featherlight.min.js?1562596121"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1562596121"></script>
-    <script src="/js/highlight.pack.js?1562596121"></script>
+    <script src="/js/clipboard.min.js?1562632245"></script>
+    <script src="/js/perfect-scrollbar.min.js?1562632245"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1562632245"></script>
+    <script src="/js/jquery.sticky.js?1562632245"></script>
+    <script src="/js/featherlight.min.js?1562632245"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1562632245"></script>
+    <script src="/js/highlight.pack.js?1562632245"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1562596121"></script>
-    <script src="/js/learn.js?1562596121"></script>
-    <script src="/js/hugo-learn.js?1562596121"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1562632245"></script>
+    <script src="/js/learn.js?1562632245"></script>
+    <script src="/js/hugo-learn.js?1562632245"></script>
 
-    <link href="/mermaid/mermaid.css?1562596121" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1562596121"></script>
+    <link href="/mermaid/mermaid.css?1562632245" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1562632245"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
