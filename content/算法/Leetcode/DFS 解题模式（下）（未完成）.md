@@ -1,6 +1,6 @@
 ---
-title: "DFS 解题模式"
-date: 2019-07-01T00:10:14+08:00
+title: "DFS 解题模式（下）（未完成）"
+date: 2019-07-07T00:10:14+08:00
 ---
 
 #### 概述
@@ -58,7 +58,7 @@ date: 2019-07-01T00:10:14+08:00
 
 
 #### 解题模式
-虽然许多 DFS 问题都可以用 DP 来解决，通常效率也更高。不过 DP 的状态转移方程往往不容易想到，所以在面试的时候，**先快速按照解题模式实现 DFS 的解法然后再优化成 DP 也是一个不错的方法**。解题模式主要包括三个部分：
+虽然许多 DFS 问题都可以用 DP 来解决，通常效率也更高。不过 DP 的状态转移方程往往不容易想到，所以在面试的时候，**先快速按照解题模式实现 DFS 的解法然后再优化成 DP 也是一个不错的方法**。解决 DFS 问题最重要的是四点，**1. 防止节点被重复遍历**，**2. 遍历前，检查节点是否合法**，**3. 检查遍历后的状态是否符合要求**，**4. 更新接下来 DFS遍历 的参数**，解题模式主要包括三个部分：
 
 1. 主函数
 
@@ -85,31 +85,32 @@ date: 2019-07-01T00:10:14+08:00
 
 #### 具体实现
 
-1. 主函数
+1. 主函数伪代码
 
-   1. 从根节点可以访问所有其他节点（Leetcode 113 Path Sum II）：
+   1. 从初始节点可以访问所有可达节点（Leetcode 113 Path Sum II）：
     
             function main_function(graph):
-                # 边界情况，例如如果图是空的，或者根节点本身就符合条件
-                if not graph:
-                    return []
+                # 边界情况，例如如果图是空的，或者初始节点本身就符合条件
+                if graph is empty
+                    return empty
                 # 如果需要返回数值则创建变量（例如最大值，最小值），返回路径则创建数组：
-                res = val // array
-                element = first element in the graph
-                # 对根节点进行 DFS 遍历
+                res -> a variable or array
+                # 只需要遍历初始节点
+                element -> first element in the graph
+                # 对初始节点进行 DFS 遍历
                 dfs(element, res)
                 # 返回结果
                 return res
 
-   2. 根节点不能访问其他所有节点（Leetcode 200 Number of Islands)：
+   2. 初始节点不能访问其他可达节点（Leetcode 200 Number of Islands)：
     
             function main_function(graph):
-                # 边界条件，例如如果图是空的，或者根节点本身就符合条件
-                if not graph:
-                    return []
-                res = val // array
+                # 边界条件，例如如果图是空的，或者初始节点本身就符合条件
+                if graph is empty
+                    return empty
+                res -> a variable or array
                 # 对图里面每个元素进行 DFS 遍历
-                for element in the matrix:
+                for every element in the matrix
                     dfs(element, res)
                 # 返回结果
                 return res
@@ -117,9 +118,9 @@ date: 2019-07-01T00:10:14+08:00
    3. 如果题目要求的返回值是布尔值的话，遍历图可以提前结束：
 
             function main_function(graph):
-                res = val // array
-                for in the graph:
-                    if dfs(element, res) is True:
+                res -> a variable or array
+                for every element in the matrix
+                    if dfs(element, res) -> True
                         return True
                 return False
               
@@ -127,10 +128,10 @@ date: 2019-07-01T00:10:14+08:00
 
     1. 写代码前，先需要遍历节点的层级关系
 
-        对于有向图来说，如果是树结构则是它的子节点，字符串根据实际情况可能是临近字符串也可能是其他任意字符。无向图如矩阵则可能是临近节点，这些看题目要求。我建议大家在面试实现的时候可以绘制出遍历图，这样写代码的时候会比较有把握。以下是 Leetcode 200 Number of Islands 的遍历流程图：
+        对于有向图来说，某一节点需要进行遍历它的子节点（如果是二叉树则是左右子节点，如果是字符则可能是临近字符）。无向图则遍历临近节点（如矩阵，可能遍历上下左右或者下右节点）。我建议大家在面试实现的时候可以绘制出遍历图，这样写代码的时候会比较有把握。以下是 Leetcode 200 Number of Islands 的遍历流程图：
 
 
-        
+        ![dfs_one](https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/al/dfs_one.png) 
 
         上图中，要防止无向图中（1，1）被重复遍历，这里可以使用一个小技巧，先把当前节点的值设为无效值（这样在递归遍历中不会原路返回），DFS 遍历结束再还原。
     
@@ -166,7 +167,7 @@ date: 2019-07-01T00:10:14+08:00
                 # 输入参数中，
                 # element 代表需要遍历的节点
                 # res 代表保存结果的最终容器
-                # current 代表当前状态（可选）
+                # current 代表当前状态
                 # target 代表目标状态
                 # path 代表遍历路径（可选）
 
@@ -197,9 +198,10 @@ date: 2019-07-01T00:10:14+08:00
                        
 #### 原题分析
 
-我们试试在例子中运用此解题模式，第一题：（形式一，Python 代码）
+我们试试在例子中运用此解题模式，第一题：（**以下为 Python 代码，形式二只需要把 match 函数移在 DFS 函数开头即可**）
 
     class Solution:
+        # 形式一
         def pathSum(self, root, sum):
             # 边界情况
             if not root:
@@ -207,10 +209,10 @@ date: 2019-07-01T00:10:14+08:00
             # 边界情况2，因为我们是在遍历中验证是否符合条件，所以要检查初始条件是否已经符合要求
             if root.val == sum and not root.left and not root.right:
                 return [[root.val]]
-            # 因为初始节点可以访问所有可达节点，所以只需要遍历根节点
+            # 因为初始节点可以访问所有可达节点，所以只需要遍历初始节点
             return self.dfs(root, [], root.val, sum, [root.val])
 
-        def dfs(self, node, res, current, target, path):
+        def dfs_first(self, node, res, current, target, path):
             # 1. 遍历每一个子节点
             for n in [node.left, node.right]:
                 # 2. 检查子节点是否合法，是否已经访问过，是否越界
@@ -221,7 +223,7 @@ date: 2019-07-01T00:10:14+08:00
                         res.append(path+[n.val])
                     else:
                         # 5. 遍历所有合法子节点，更新状态
-                        self.dfs(n, res, current+n.val, target, path+[n.val])
+                        self.dfs_first(n, res, current+n.val, target, path+[n.val])
             return res
 
         def is_valid(self, node):
@@ -235,7 +237,11 @@ date: 2019-07-01T00:10:14+08:00
             if not child.left and not child.right and current + child.val == target:
                 return True
             return False
-            
+ 
+    114 / 114 test cases passed.
+    Status: Accepted
+    Runtime: 60 ms
+    Memory Usage: 19.1 MB
          
 第二题也是类似的方法，形式一以及形式二都能实现，因为形式一以及形式二区别不大，所以这里我选择了另一种特殊的方式，把 match 函数提前。
 
@@ -269,5 +275,10 @@ date: 2019-07-01T00:10:14+08:00
                 return False
             return True
 
+    47 / 47 test cases passed.
+    Status: Accepted
+    Runtime: 84 ms
+    Memory Usage: 14.1 MB
+
 #### 总结
-解决 DFS 问题最重要的是四点，**1. 防止点被重复遍历**，**2. 检查节点是否合法**，**3. 检查更新后的状态是否符合要求**，**4. 更新接下来 DFS遍历 的参数**，只要按照这个思路，形式怎么写都没关系。
+解决 DFS 问题最重要的是四点，**1. 防止节点被重复遍历**，**2. 遍历前，检查节点是否合法**，**3. 检查遍历后的状态是否符合要求**，**4. 更新接下来 DFS遍历 的参数**，只要按照这个思路，形式怎么写都没关系。
