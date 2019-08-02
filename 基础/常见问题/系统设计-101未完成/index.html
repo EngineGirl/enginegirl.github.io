@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>基础知识 :: Engine GO</title>
+    <title>系统设计 101 :: Engine GO</title>
 
     
     <link href="/css/nucleus.css?1564763461" rel="stylesheet">
@@ -48,7 +48,7 @@
 </style>
 
   </head>
-  <body class="" data-url="/%E5%9F%BA%E7%A1%80/">
+  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-101%E6%9C%AA%E5%AE%8C%E6%88%90/">
     <nav id="sidebar" class="">
 
 
@@ -273,7 +273,7 @@
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/%E5%9F%BA%E7%A1%80/">
@@ -371,7 +371,7 @@
   
     
     <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题" class="dd-item 
-        
+        parent
         
         
         ">
@@ -471,7 +471,7 @@
  
   
     
-      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-101%E6%9C%AA%E5%AE%8C%E6%88%90/" title="系统设计 101" class="dd-item ">
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-101%E6%9C%AA%E5%AE%8C%E6%88%90/" title="系统设计 101" class="dd-item active">
         <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-101%E6%9C%AA%E5%AE%8C%E6%88%90/">
         系统设计 101
         
@@ -1235,6 +1235,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1245,7 +1247,19 @@
             
           
           
-            <a href='/'>编程超能力入门班</a> > 基础知识
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>编程超能力入门班</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/'>常见问题</a> > 系统设计 101
+          
+         
+          
+         
           
          
           
@@ -1254,6 +1268,26 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#多问问题">多问问题</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1261,9 +1295,13 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+             <h1>系统设计 101</h1>
+             <h5>作者：Windson Yang</h5>
+             <h5>更新时间：July 21, 2019</h5>
+             <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
+             <hr>
           
 
         
@@ -1271,43 +1309,72 @@
 
 
 
-	
 
-<h3 id="基础知识">基础知识</h3>
-
-<p>这章解释了计算机基础中常见的术语以及常见问题。</p>
-
-<h4 id="常见问题">常见问题</h4>
+<p>求职系列文章：</p>
 
 <ul>
-<li><a href="./常见问题/一文理解字符串编码/">一文理解字符串编码</a></li>
-<li><a href="./常见问题/公私钥加密/">公私钥加密</a></li>
-<li><a href="./常见问题/编程语言选择/">编程语言选择</a></li>
-<li><a href="./常见问题/面试准备/">如何准备技术面试</a></li>
-<li><a href="./常见问题/如何写一份更好的简历/">如何写一份更好的简历</a></li>
+<li><a href="../面试准备/">如何准备技术面试</a></li>
+<li><a href="../如何写一份更好的简历/">如何写一份更好的简历</a></li>
+<li><a href="../程序员国外求职指南/">程序员国外求职指南</a></li>
 </ul>
 
-<h4 id="术语">术语</h4>
+<p>在没进行过系统设计面试之前，我猜想系统设计问的问题一定非常难而且详细，例如谈到用 Nginx 做负载均衡的话，要回答它使用什么模型来处理请求，以及什么情况下会失效。但是经过多次的面试，以及阅读大量的教程以及视频后，我发现解决系统设计，对于有一定项目经验的人来说，流程往往比细节更重要，只要把主要功能点与框架理清楚，再就自己熟悉的方向深入作答，就能得到不错的评价。这篇文章并不是教你如何设计一套高可用的系统，而是让你能发挥出自己真实的架构能力。总体可以分成六个部分：</p>
 
-<ul>
-<li><a href="./术语/ping命令/">Ping命令</a></li>
-<li><a href="./术语/dns查询/">DNS查询</a></li>
-<li><a href="./术语/协议/">协议</a></li>
-<li><a href="./术语/域名/">域名</a></li>
-<li><a href="./术语/终端/">终端</a></li>
-<li><a href="./术语/路径/">路径</a></li>
-</ul>
+<ol>
+<li>多问问题</li>
+<li>列出功能点</li>
+<li>列出每秒请求数以及数据存储量</li>
+<li>系统架构</li>
+<li>分析瓶颈</li>
+<li>架构优化</li>
+</ol>
 
+<h4 id="多问问题">多问问题</h4>
 
+<p>通常一开始我们得到的要求都是比较简单的一句话：</p>
 
+<blockquote>
+<p>“如何设计像uber这样的应用？”</p>
+
+<p>“如何设计像Twitter这样的应用？”</p>
+
+<p>“如何设计一个分布式日志系统？”</p>
+</blockquote>
+
+<p>这是命题者故意的，因为我们在现实解决问题的时候都从一个粗略的命题开始，然后一步步细化一步步分析，如何提出好的问题，找到解决问题的方案就是系统设计的第一个考点。花费一些时间去问问题非常重要，问题要问出要求的功能点以及系统的要求，例如：</p>
+
+<blockquote>
+<p>“uber包括很多功能，例如用户叫车，派单给司机，路径显示，支付，评价等等。我要实现的是哪几个功能？”</p>
+</blockquote>
+
+<p>要知道，面试官并不期待你可以在一小时内把uber全部功能的架构设计出来，通常会关注某些特定的功能点。在这里，可能是叫车，派单，路径显示这几个功能。那么之后我们就可以着重在这几个功能点。</p>
+
+<blockquote>
+<p>“每秒请求数知道吗？我们对服务器数量，API 响应时间，存储可用性有什么要求？”</p>
+</blockquote>
+
+<p>运气好的话，面试官会告诉叫车模块每秒可能1000个请求，运气不好的话，面试官只会告诉你每天有多少有请求，然后我们自己计算。</p>
+
+<blockquote>
+<p>“每天有100万名用户使用我们的叫车系统。”</p>
+</blockquote>
+
+<p>一些基础的数据可以帮助我们计算：</p>
+
+<p>一天有86400秒</p>
+
+<p>80%的请求出现在20%的时间，也就是说5小时18000秒中包含了80万个请求，平均 44 res/s。我们假设峰值为100 res/s，100 res/s 是什么水平呢？一般来说，一台普通服务器，100名用户并发的时候，处理 html 纯静态文件，响应可以达到 7000 res/s，处理简单的动态请求（不考虑数据库花费的时间），响应数可以达到 400 res/s，如果访问数据库的话，可能会降至 50 res/s，不过其中涉及了非常多的细节。总体来说，你可以先问每台服务器的能接受</p>
+
+<p>“日志系统的存储可用性达到99.99%，或者刷新 Twitter 的时候响应时间要在200ms以内，核心点每秒请求数，数据每秒写入数或者只能使用20台服务器。理清楚这些要点对以后的优化非常有帮助。这些都需要在白板上记录下来。</p>
+
+<p>![白板]()</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1539,6 +1606,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1551,6 +1619,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1616,6 +1687,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1631,6 +1703,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2172,10 +2247,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="macOS 安装编辑器"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/" title="如何写一份更好的简历"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" title="编程的第一步" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E6%B1%82%E8%81%8C%E6%8C%87%E5%8D%97/" title="程序员国外求职指南" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2206,3 +2281,4 @@
 
   </body>
 </html>
+
