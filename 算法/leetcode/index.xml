@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leetcode 算法 on Engine GO</title>
+    <title>算法从零到一 on Engine GO</title>
     <link>https://www.enginego.org/%E7%AE%97%E6%B3%95/leetcode/</link>
-    <description>Recent content in Leetcode 算法 on Engine GO</description>
+    <description>Recent content in 算法从零到一 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Jul 2019 00:10:14 +0800</lastBuildDate>

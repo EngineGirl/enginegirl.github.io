@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>LLDB 快速教程 :: Engine GO</title>
+
+    
+    <link href="/css/nucleus.css?1581481779" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581481779" rel="stylesheet">
+    <link href="/css/hybrid.css?1581481779" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581481779" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581481779" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581481779" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581481779" rel="stylesheet">
+    <link href="/css/theme.css?1581481779" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581481779" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1581481779" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1581481779"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <style type="text/css">
+  * {
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+
+  body {
+    font-weight: 400;
+  }
+
+  blockquote p {
+    font-size: 0.9rem;
+  }
+</style>
+
+  </head>
+  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/lldb-%E5%8D%81%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <h2 style="color: white !important;">EngineGo</h2>
+      <h5 style="color: white !important;">编程超能力入门班</h5>
+    </div>
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%BA%8F%E7%AB%A0/" title="序章" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%BA%8F%E7%AB%A0/">
+          序章
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="环境搭建" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+          <b>1. </b>环境搭建
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/" title="安装 Python" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/">
+          <b>1.1 </b>安装 Python
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/" title="Windows 安装 Python" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/">
+        Windows 安装 Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/" title="macOS 安装 Python" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/">
+        macOS 安装 Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="安装 Atom 编辑器" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/">
+          <b>1.2 </b>安装 Atom 编辑器
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="Windows 安装编辑器" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/">
+        Windows 安装编辑器
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="macOS 安装编辑器" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/">
+        macOS 安装编辑器
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/">
+          <b>2. </b>基础知识
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" title="编程的第一步" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/">
+          <b>2.1 </b>编程的第一步
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/" title="Python 是如何运行的（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/">
+        Python 是如何运行的（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/" title="什么是编程（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/">
+        什么是编程（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+          <b>2.2 </b>常见问题
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/lldb-%E5%8D%81%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B/" title="LLDB 快速教程" class="dd-item active">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/lldb-%E5%8D%81%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B/">
+        LLDB 快速教程
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/" title="一文理解字符串编码" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/">
+        一文理解字符串编码
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/" title="公私钥加密" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/">
+        公私钥加密
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" title="如何准备技术面试" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">
+        如何准备技术面试
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/" title="如何写一份更好的简历" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/">
+        如何写一份更好的简历
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95-101/" title="系统设计面试 101" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95-101/">
+        系统设计面试 101
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E6%B1%82%E8%81%8C%E6%8C%87%E5%8D%97/" title="程序员国外求职指南" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E6%B1%82%E8%81%8C%E6%8C%87%E5%8D%97/">
+        程序员国外求职指南
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%8A%B3%E5%8A%A8%E6%B3%95%E8%B5%94%E5%81%BF101/" title="劳动法赔偿 101" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%8A%B3%E5%8A%A8%E6%B3%95%E8%B5%94%E5%81%BF101/">
+        劳动法赔偿 101
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%88%91%E4%BB%AC%E5%8F%AA%E8%BF%BD%E9%80%90%E8%B1%AA%E9%97%A8%E8%AF%91/" title="我们只追逐豪门（译）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%88%91%E4%BB%AC%E5%8F%AA%E8%BF%BD%E9%80%90%E8%B1%AA%E9%97%A8%E8%AF%91/">
+        我们只追逐豪门（译）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E6%9C%AA%E5%AE%8C%E6%88%90/" title="编程语言选择（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        编程语言选择（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/">
+          <b>2.3 </b>术语
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/" title="DNS查询" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/">
+        DNS查询
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/" title="终端" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/">
+        终端
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/" title="Ping命令" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/">
+        Ping命令
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/" title="协议" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/">
+        协议
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/" title="路径" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/">
+        路径
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/" title="hook（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/">
+        hook（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/" title="内存（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/">
+        内存（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/" title="堆栈（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/">
+        堆栈（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/" title="嵌套字（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/">
+        嵌套字（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/" title="抓包（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/">
+        抓包（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        操作系统（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
+        环境变量（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/" title="进程（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/">
+        进程（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
+        域名
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" title="服务端" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
+        服务端
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/" title="爬虫基础" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/">
+          <b>2.4 </b>爬虫基础
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" title="Python爬虫基础（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/">
+        Python爬虫基础（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="数据分析" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+          <b>3. </b>数据分析
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/" title="App Store 无用评价过滤" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        App Store 无用评价过滤
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%BE%AE%E5%8D%9A%E6%8A%BD%E5%A5%96%E5%88%B0%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="微博抽奖到数据分析" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%BE%AE%E5%8D%9A%E6%8A%BD%E5%A5%96%E5%88%B0%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+        微博抽奖到数据分析
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/" title="理解贝叶斯分类" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">
+        理解贝叶斯分类
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/" title="" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/" title="算法" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/">
+          <b>4. </b>算法
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/" title="算法从零到一" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/leetcode/">
+          <b>1. </b>算法从零到一
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8A/" title="DFS 解题模式（上）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8A/">
+        DFS 解题模式（上）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9C%AA%E5%AE%8C%E6%88%90/" title="DFS 解题模式（下）（未完成）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        DFS 解题模式（下）（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="二分查找解题模式" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
+        二分查找解题模式
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="单调队列解题模式（未完成）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
+        单调队列解题模式（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/" title="" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/">
+          
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/" title="基础结构s" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/">
+          基础结构s
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%91%E7%BB%93%E6%9E%84/%E6%A0%91%E7%BB%93%E6%9E%84%E4%B8%8A/" title="树结构（上）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%91%E7%BB%93%E6%9E%84/%E6%A0%91%E7%BB%93%E6%9E%84%E4%B8%8A/">
+        树结构（上）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84/" title="" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84/">
+          
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84%E4%B8%8A%E6%9C%AA%E5%AE%8C%E6%88%90/" title="栈结构（上）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84%E4%B8%8A%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        栈结构（上）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84/%E6%A0%88%E4%B8%8A%E6%9C%AA%E5%AE%8C%E6%88%90/" title="栈（上）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84/%E6%A0%88%E7%BB%93%E6%9E%84/%E6%A0%88%E4%B8%8A%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        栈（上）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%95%B4%E6%95%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA/" title="" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%95%B4%E6%95%B0%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%A0%88/" title="" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/%E8%B0%B7%E6%AD%8C%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80/%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%A0%88/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Star on <a href="https://github.com/EngineGirl/enginegirl.github.io"/>GitHub</a></p>
+<p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="https://github.com/Windsooon">Windson</a>, <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>编程超能力入门班</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/'>常见问题</a> > LLDB 快速教程
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#概述">概述</a></li>
+<li><a href="#lldb-实现原理">LLDB 实现原理</a></li>
+<li><a href="#常用指令">常用指令</a></li>
+<li><a href="#示例">示例</a></li>
+<li><a href="#运行程序">运行程序</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+             <h1>LLDB 快速教程</h1>
+             <h5>作者：Windson Yang</h5>
+             <h5>更新时间：February 11, 2020</h5>
+             <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
+             <hr>
+          
+
+        
+
+
+
+
+
+<h3 id="概述">概述</h3>
+
+<p>macOS 默认使用 LLDB 来进行 C/C++ 程序的调试， LLDB 能够逐行调试程序，使开发者能够了解程序的变量值以及堆栈是如何变化的，一旦学会之后使用起来也比 <code>printf</code> 更加方便和简单，赶紧学起来吧。</p>
+
+<h3 id="lldb-实现原理">LLDB 实现原理</h3>
+
+<p>在此之前，请考虑如何实现一个能够监听其他程序（被监听者称为 Client）运行情况的程序（监听者称为 Server）。</p>
+
+<ol>
+<li>第一种方式是 Server 拷贝 Client 的代码来模拟 Client 运行，并且在运行的过程中，Server 通过在模拟过程中使用额外的指令从而能够查看和修改 Client 的运行堆栈和数据信息，其中，Valgrind 就是这样实现的。这种方式的优点是无需预先编译 Client 程序，缺点是因为需要运行额外的指令所以 Server 的运行会比 Client 慢很多（Valgrind 大概会会原程序慢 20-50 倍）。</li>
+
+<li><p>第二种方式是使用操作系统的 <code>ptrace</code> 系统调用，这也是 LLDB 的实现方式。<code>ptrace</code> 系统调用可以让 A 进程监听和控制 B 进程的内存和寄存器。<code>ptrace</code> 系统调用有以下几个主要功能：</p>
+
+<ul>
+<li>捕获 <code>exec</code> 系统调用并阻止程序的运行。</li>
+<li>查询 CPU 的寄存器来获取当前的指令，数据和栈地址。</li>
+<li>监听 clone/fork 事件来判断是否创建新的线程。</li>
+<li>读取或者修改 Client 内存变量。</li>
+</ul></li>
+</ol>
+
+<p>也就是说利用 <code>ptrace</code> 系统调用，Client 运行的每一行代码的情况 Server 都能知道。</p>
+
+<h3 id="常用指令">常用指令</h3>
+
+<p>这里我们先简单列出来 LLDB 的常见指令，接下来的例子会介绍如何使用（其中括号中的为指令的缩写，例如 <code>break main</code> 可以缩写为 <code>b main</code>）：</p>
+
+<pre><code>break (b) - 设置断点，也就是程序暂停的地方
+run (r) - 启动目标程序，如果遇到断点则暂停
+step (s) - 进入下一条指令中的函数内部
+backtrace (bt) - 显示当前的有效函数
+frame (f) - 默认显示当前栈的内容，可以通过 `frame arg` 进入特定的 frame（用作输出本地变量）
+next (n) - 运行当前箭头指向行
+continue (c) - 继续运行程序直到遇到断点。
+</code></pre>
+
+<h3 id="示例">示例</h3>
+
+<p>C 标准库中的 <code>strlen</code> 函数的作用是找到字符串 s 的长度，例子如下：</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+size_t strlen(const char *s) {
+    const char *sc;
+
+    for (sc = s; *sc != '\0'; ++sc)
+        /* nothing */;
+    return sc - s;
+}
+
+int main() {
+    // 创建 str 字符串
+    char str[] = &quot;Hello World&quot;;
+    // 调用 strlen 函数，并把值赋予 length
+    int length = strlen(str);
+    // 在终端打印内容
+    printf(&quot;The length of str is %d\n&quot;, length);
+    return 0;
+}
+</code></pre>
+
+<p>如果你不熟悉 C/C++ 的话，可能不太理解 <code>strlen</code> 函数的实现方式，这时候就是 LLDB 大显身手的时候了，使用 LLDB 调试以下程序之前，有几个步骤：</p>
+
+<ol>
+<li>把上面的例子保存为 test.c</li>
+<li>在终端运行 <code>gcc test.c -g -o test</code> （这里的 -g 参数保证 LLDB 显示的是源代码而不是汇编代码）</li>
+
+<li><p>终端运行 <code>lldb test</code>，这是告诉 LLDB 要调试哪个程序，没有问题的话，终端会输出：</p>
+
+<pre><code>/path $ lldb test
+(lldb) target create &quot;test&quot;
+Current executable set to 'test' (x86_64).
+</code></pre></li>
+</ol>
+
+<h3 id="运行程序">运行程序</h3>
+
+<p>这时候 LLDB 已经在监听 test 程序了，test 的一举一动都逃不过 LLDB 的法眼。最基础的命令是 <code>run</code>，这条指令会开始运行 test 程序。终端会输出：</p>
+
+<pre><code>1. Process 9782 launched: '/path/test' (x86_64)
+2. The length of str is 11
+3. Process 9782 exited with status = 0 (0x00000000) 
+</code></pre>
+
+<p>这里，第一行标示了进程的 ID，第二行是 test 程序的输出，也就是 str 字符串的长度。最后的是程序的返回值，在这里 0 则为正常结束。当然，像这样仅仅有一个输出和返回值对我们调试没有什么帮助。因为程序运行得太快一下子就结束了，我们还没有来得及理解这个程序。LLDB 对于 printf 的优点在于可以逐步调试，我们可以选择一行行地运行程序，然后输出我们需要的堆栈信息以及变量值。让我们重新开始，我们先使用 <code>Control + C</code> 退出 LLDB 重新运行 <code>lldb test</code> ，然后运行 <code>break main</code>，这句指令代表我们在 <code>main</code> 函数的开头打上断点，（<code>break 11</code> 也能得到相同的结果，这里 11 是 main 的行号）代表让 test 程序在运行到 main 函数的时候暂停，这时候再次运行 <code>run</code>, 程序就会在 12 行停止。</p>
+
+<pre><code>(lldb) break main
+Breakpoint 1: where = test`main + 33 at test.c:12:10, address = 0x0000000100000f01
+(lldb) run
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+    frame #0: 0x0000000100000f01 test`main at test.c:12:10
+   9    }
+   10   
+   11   int main() {
+-&gt; 12       char str[] = &quot;Hello World&quot;;
+   13       int length = strlen(str);
+   14       printf(&quot;The length of str is %d\n&quot;, length);
+   15       return 0;
+Target 0: (test) stopped.
+</code></pre>
+
+<p>那么 <code>break</code> 指令是怎么实现的呢？为什么可以让程序在特定的地方暂停呢？简单来说：</p>
+
+<pre><code>1. `break` 指令 会在参数所在地写入一个无效的地址值，在例子中，则是 main 函数。
+2. 因为地址无效，所以 `test` 程序运行出错，抛出异常，系统会传送 SIGTRAP 信号给 LLDB。
+3. LLDB 这时候可以查看需要的堆栈信息或者变量值。
+4. LLDB 把正确的下一条指令重新写入到 test 程序中。
+</code></pre>
+
+<p>箭头指向的 12 行是<strong>下一条要执行的指令</strong>，这时候 str 还没进行定义，使用 <code>print</code> 指令来验证。</p>
+
+<pre><code>(lldb) print *str
+(char) $0 = '\0'
+</code></pre>
+
+<p>要运行 12行 的代码，我们试试 <code>next</code> 指令：</p>
+
+<pre><code>(lldb) next
+* thread #1, queue = 'com.apple.main-thread', stop reason = step over
+    frame #0: 0x0000000100000f15 test`main at test.c:13:18
+   10   
+   11   int main() {
+   12       char str[] = &quot;Hello World&quot;;
+-&gt; 13       int length = strlen(str);
+   14       printf(&quot;The length of str is %d\n&quot;, length);
+   15       return 0;
+   16   }
+</code></pre>
+
+<p>再次查看 str 的值：</p>
+
+<pre><code>(lldb) p *str
+(char) $1 = 'H'
+</code></pre>
+
+<p>这时候 str 已经被定义了，指向了 &lsquo;H&rsquo;，这也是我们预料之中。<code>frame variable</code> 用作列出当前所有的变量值。</p>
+
+<pre><code>(lldb) frame variable
+(char [12]) str = &quot;Hello World&quot;
+(int) length = 0
+</code></pre>
+
+<p>如果要修改某个变量的值，可以使用 <code>expr</code></p>
+
+<pre><code>(lldb) expr *str = 'A'
+(char) $2 = 'A'
+// 再次查看
+(lldb) frame variable
+(char [12]) str = &quot;Aello World&quot;
+(int) length = 0
+</code></pre>
+
+<p>使用 <code>expr</code> 之后，str 的值已经变成 &ldquo;Aello World&rdquo; 了。下一行要运行的代码是 13 行，这个表达式包含了一个函数调用，当运行 13 行的时候，strlen 函数会被压到 test 程序的栈顶，如下图。</p>
+
+<p>![img]()</p>
+
+<p>使用 <code>step</code> 进入函数内部（如果使用 next 的话我们会运行到 14 行，这时候 strlen 函数已经执行完毕了）。</p>
+
+<pre><code>(lldb) step
+Process 14972 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = step in
+    frame #0: 0x0000000100000e98 test`strlen(s=&quot;Aello World&quot;) at test.c:6:15
+   3    size_t strlen(const char *s) {
+   4        const char *sc;
+   5    
+-&gt; 6        for (sc = s; *sc != '\0'; ++sc)
+   7            /* nothing */;
+   8        return sc - s;
+   9    }
+Target 0: (test) stopped.
+</code></pre>
+
+<p>看到箭头指向的是 6 行，我们已经进入到 strlen 函数内部了。使用 <code>backtrace</code> 来显示当前的有效函数信息，可以看到我们当前 fram #0 也就是当前在 strlen。</p>
+
+<pre><code>(lldb) backtrace
+* thread #1, queue = 'com.apple.main-thread', stop reason = step in
+  * frame #0: 0x0000000100000e98 test`strlen(s=&quot;Aello World&quot;) at test.c:6:15
+    frame #1: 0x0000000100000f1a test`main at test.c:13:18
+    frame #2: 0x00007fff6d7e77fd libdyld.dylib`start + 1
+</code></pre>
+
+<p>从 6行的代码我们可以看到程序一直在 for 循环中运行，每次运行都会判断 sc 是否已经到达 s 字符串的结尾，如果是则停止 for 循环，strlen 函数最后返回 sc 和 s 的距离。strlen 函数结束后，返回值被赋予到 main 函数的 length 中。继续运行 next 命令，箭头指向 14 行，</p>
+
+<pre><code>(lldb) n
+Process 15186 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = step over
+    frame #0: 0x0000000100000f1f test`main at test.c:14:41
+   11   int main() {
+   12       char str[] = &quot;Hello World&quot;;
+   13       int length = strlen(str);
+-&gt; 14       printf(&quot;The length of str is %d\n&quot;, length);
+   15       return 0;
+   16   }
+</code></pre>
+
+<p>这时候 length 的值已经更新了，我们可以通过 <code>frame variable</code> 来验证：</p>
+
+<pre><code>(char [12]) str = &quot;Aello World&quot;
+(int) length = 11
+</code></pre>
+
+<p>再次使用 <code>next</code> 命令，终端输出了 <code>The length of str is 11</code>，这也是我们想要的结果。</p>
+
+<h3 id="总结">总结</h3>
+
+<p>LLDB 的基本用法已经介绍结束了，虽然 LLDB 的命令非常多，不过关键的就是 break, next, step, frame, 这几个，更多的使用例子可以参考官方文档：<a href="https://lldb.llvm.org/use/map.html">https://lldb.llvm.org/use/map.html</a></p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/" title="一文理解字符串编码" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1581481779"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581481779"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581481779"></script>
+    <script src="/js/jquery.sticky.js?1581481779"></script>
+    <script src="/js/featherlight.min.js?1581481779"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1581481779"></script>
+    <script src="/js/highlight.pack.js?1581481779"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581481779"></script>
+    <script src="/js/learn.js?1581481779"></script>
+    <script src="/js/hugo-learn.js?1581481779"></script>
+
+    <link href="/mermaid/mermaid.css?1581481779" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581481779"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

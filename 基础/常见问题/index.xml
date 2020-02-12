@@ -6,10 +6,22 @@
     <description>Recent content in 常见问题 on Engine GO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jul 2019 00:10:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 00:10:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LLDB 快速教程</title>
+      <link>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/lldb-%E5%8D%81%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 11 Feb 2020 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/lldb-%E5%8D%81%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B/</guid>
+      <description>概述 macOS 默认使用 LLDB 来进行 C/C++ 程序的调试， LLDB 能够逐行调试程序，使开发者能够了解程序的变量值以及堆栈是如何变化的，一旦学会之后使用起来也比 printf 更加方便和简单，赶紧学起来吧。
+LLDB 实现原理 在此之前，请考虑如何实现一个能够监听其他程序（被监听者称为 Client）运行情况的程序（监听者称为 Server）。
+ 第一种方式是 Server 拷贝 Client 的代码来模拟 Client 运行，并且在运行的过程中，Server 通过在模拟过程中使用额外的指令从而能够查看和修改 Client 的运行堆栈和数据信息，其中，Valgrind 就是这样实现的。这种方式的优点是无需预先编译 Client 程序，缺点是因为需要运行额外的指令所以 Server 的运行会比 Client 慢很多（Valgrind 大概会会原程序慢 20-50 倍）。 第二种方式是使用操作系统的 ptrace 系统调用，这也是 LLDB 的实现方式。ptrace 系统调用可以让 A 进程监听和控制 B 进程的内存和寄存器。ptrace 系统调用有以下几个主要功能：
+ 捕获 exec 系统调用并阻止程序的运行。 查询 CPU 的寄存器来获取当前的指令，数据和栈地址。 监听 clone/fork 事件来判断是否创建新的线程。 读取或者修改 Client 内存变量。   也就是说利用 ptrace 系统调用，Client 运行的每一行代码的情况 Server 都能知道。</description>
+    </item>
     
     <item>
       <title>一文理解字符串编码</title>
