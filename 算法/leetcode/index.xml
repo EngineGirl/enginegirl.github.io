@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leetcode 算法 on Engine GO</title>
@@ -21,10 +21,10 @@
 辨别问题 那么什么样的问题可以用 DFS 来解决呢？，DFS 问题常见的表达形式为：
  “给定一个图（树，字符串，矩阵），找到在遍历图的过程中，符合特定条件的数值或路径。”
  上面的这个定义有点抽象，举两个例子：
- Leetcode 113 Path Sum II
+  Leetcode 113 Path Sum II
  &amp;ldquo;Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.&amp;rdquo;
-“给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
- Given the below binary tree and sum = 22, input: 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 output: [ [5,4,11,2], [5,8,4,5] ]  Leetcode 200 Number of Islands</description>
+  “给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
+  Given the below binary tree and sum = 22, input: 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 output: [ [5,4,11,2], [5,8,4,5] ]    Leetcode 200 Number of Islands</description>
     </item>
     
     <item>
@@ -37,10 +37,10 @@
 辨别问题 那么什么样的问题可以用 DFS 来解决呢？，DFS 问题常见的表达形式为：
  “给定一个图（树，字符串，矩阵），找到在遍历图的过程中，符合特定条件的数值或路径。”
  上面的这个定义有点抽象，举两个例子：
- Leetcode 113 Path Sum II
+  Leetcode 113 Path Sum II
  &amp;ldquo;Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.&amp;rdquo;
-“给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
- Given the below binary tree and sum = 22, input: 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 output: [ [5,4,11,2], [5,8,4,5] ]  Leetcode 200 Number of Islands</description>
+  “给定一个有向无环图（二叉树），找到在遍历图的过程中，符合特定条件的数值（路径和等于 sum ）”
+  Given the below binary tree and sum = 22, input: 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 output: [ [5,4,11,2], [5,8,4,5] ]    Leetcode 200 Number of Islands</description>
     </item>
     
     <item>
@@ -54,8 +54,8 @@
  从一个有限的递增区间中，找到符合要求的极值。
  我们需要从题目中找到有限递增区间以及目标，先从最基础的二分查找程序开始，
  Leetcode 704. Binary Search
-Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
-给定一个递增数组以及一个目标值，如果目标值在数组内，则返回其索引值，否则返回 -1。
+  Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
+  给定一个递增数组以及一个目标值，如果目标值在数组内，则返回其索引值，否则返回 -1。
  Input: nums = [-1,0,3,5,9,12], target = 9 Output: 4 Explanation: 9 exists in nums and its index is 4  有限递增区间是 [-1, 0, 3, 5, 9, 12]，目标是找到值等于 9 的元素。</description>
     </item>
     

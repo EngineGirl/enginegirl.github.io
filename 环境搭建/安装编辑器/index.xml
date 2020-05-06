@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安装 Atom 编辑器 on Engine GO</title>
@@ -12,31 +12,31 @@
     
     
     <item>
-      <title>Windows 安装编辑器</title>
-      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
-      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
-      
-      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
-      <description> 安装 Atom 编辑器  访问 Atom 下载地址，点击下图中的 Download 按钮
- 下载后双击打开就可以了，软件的界面如下：
- 点击左上角 File 然后 new 来创建新的文件，接下来就可以在文档中写代码并且保存。
-  </description>
-    </item>
-    
-    <item>
       <title>macOS 安装编辑器</title>
       <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
       <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
       
       <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
-      <description> 安装Atom编辑器  访问 Atom 下载地址，点击下图中的 Download 按钮
- 下载完之后安装，安装之后打开 Atom 程序，出现下图，点击蓝色框中的 Install a Package
- 在左边的搜索框中输入 script，然后点击右边的 Install，稍等5分钟
- 安装成功
- 安装成功之后可以尝试运行，在 Atom 中新建名为 first.py 的文件。粘贴这段代码进去：
-print(&#39;hello world&#39;)  如下图：
-然后使用快捷键&amp;rdquo;command&amp;rdquo; + &amp;ldquo;i&amp;rdquo;就能运行代码了。你可以看到上图的最下面显示了：
-hello, world [Finished in 0.276s]   </description>
+      <description>安装Atom编辑器   访问 Atom 下载地址，点击下图中的 Download 按钮
+  下载完之后安装，安装之后打开 Atom 程序，出现下图，点击蓝色框中的 Install a Package
+  在左边的搜索框中输入 script，然后点击右边的 Install，稍等5分钟
+  安装成功
+  安装成功之后可以尝试运行，在 Atom 中新建名为 first.py 的文件。粘贴这段代码进去：
+ print(&#39;hello world&#39;)  如下图：
+然后使用快捷键&amp;quot;command&amp;rdquo; + &amp;ldquo;i&amp;quot;就能运行代码了。你可以看到上图的最下面显示了：
+ hello, world [Finished in 0.276s]    </description>
+    </item>
+    
+    <item>
+      <title>Windows 安装编辑器</title>
+      <link>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Wed, 22 Aug 2018 00:10:14 +0800</pubDate>
+      
+      <guid>https://www.enginego.org/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description>安装 Atom 编辑器   访问 Atom 下载地址，点击下图中的 Download 按钮
+  下载后双击打开就可以了，软件的界面如下：
+  点击左上角 File 然后 new 来创建新的文件，接下来就可以在文档中写代码并且保存。
+  </description>
     </item>
     
   </channel>
